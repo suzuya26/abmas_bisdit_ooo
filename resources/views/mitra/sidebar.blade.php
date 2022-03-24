@@ -111,13 +111,13 @@
               </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="addproduk.html" class="nav-link">
+                  <a href="/tambahproduk" class="nav-link">
                     <i class="nav-icon fas fas fa-cart-plus"></i>
                     <p>Tambah Produk</p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="listproduk.html" class="nav-link">
+                  <a href="/daftarproduk" class="nav-link">
                     <i class="nav-icon fas fas fas fas fa-list"></i>
                     <p>Daftar Produk</p>
                   </a>
@@ -125,7 +125,7 @@
               </ul>
             </li>
             <li class="nav-item has-treeview">
-              <a href="mitra/profil" class="nav-link">
+              <a href="/profil" class="nav-link">
                 <i class="nav-icon fas fa-user"></i>
                 <p>
                   Profil

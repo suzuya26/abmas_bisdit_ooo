@@ -45,7 +45,7 @@
   <div class="row ">
     <div class="col-12 mb-3">
 
-      <a href="updateprofil.html" class="btn btn-success float-right">Edit Profil</a>
+      <a href="/updateprofil" class="btn btn-success float-right">Edit Profil</a>
     </div>
   </div>
   <!-- /.row -->
