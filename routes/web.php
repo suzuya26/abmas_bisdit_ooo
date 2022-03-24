@@ -37,6 +37,6 @@ Route::get('mitra', [MitraController::class, 'mitra']);
 Route::get('search', [SearchController::class, 'search']);
 Route::get('/favorit/hapus/{idbookmark}',[FavoriteController::class,'hapusfavorit']);
 
-Route::get('mitra', function () {return view('mitra.sidebar');
+Route::get('mitra', function () {return view('mitra.dashboard');
 
 });
