@@ -302,12 +302,7 @@
                             <h5 class="card-title">Almond Crispy Cheese</h5>
                             <br>
                             <h6 class="card-title">50 pcs</h6>
-                            <div style='z-index: 2; position: relative;'>
-                                <a class="card-text bi bi-geo-alt text-decoration-none" href="/filter/daerah/Surabaya"
-                                    style='color: inherit;'>
-
-                                </a>
-                            </div>
+                            <br>
                             <div class="card-footer bg-transparent">
                                 Rp. 20.000
                             </div>
@@ -327,12 +322,7 @@
                             <h5 class="card-title">Cokelat Tempe</h5>
                             <br>
                             <h6 class="card-title">50 pcs</h6>
-                            <div style='z-index: 2; position: relative;'>
-                                <a class="card-text bi bi-geo-alt text-decoration-none" href="/filter/daerah/Malang"
-                                    style='color: inherit;'>
-
-                                </a>
-                            </div>
+                            <br>
                             <div class="card-footer bg-transparent">
                                 Rp. 20.000
                             </div>
@@ -352,12 +342,7 @@
                             <h5 class="card-title">Cokelat Tempe</h5>
                             <br>
                             <h6 class="card-title">50 pcs</h6>
-                            <div style='z-index: 2; position: relative;'>
-                                <a class="card-text bi bi-geo-alt text-decoration-none" href="/filter/daerah/Malang"
-                                    style='color: inherit;'>
-
-                                </a>
-                            </div>
+                            <br>
                             <div class="card-footer bg-transparent">
                                 Rp. 20.000
                             </div>
@@ -378,12 +363,7 @@
                             <h5 class="card-title">Bakpia Khas Malang</h5>
                             <br>
                             <h6 class="card-title">50 pcs</h6>
-                            <div style='z-index: 2; position: relative;'>
-                                <a class="card-text bi bi-geo-alt text-decoration-none" href="/filter/daerah/Malang"
-                                    style='color: inherit;'>
-
-                                </a>
-                            </div>
+                            <br>
                             <div class="card-footer bg-transparent">
                                 Rp. 20.000
                             </div>
