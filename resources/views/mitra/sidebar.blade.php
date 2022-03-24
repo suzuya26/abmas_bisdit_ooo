@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Oasis</title>
-  <link rel="icon" href="dist/img/Trinity.png">
+  <link rel="icon" href="{{ asset('admintemplate/') }}/dist/img/Trinity.png">
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Font Awesome -->
@@ -53,7 +53,13 @@
 
         <!-- Notifications Dropdown Menu -->
         <li class="nav-item dropdown">
-          <a href="index3.html" class="nav-link">Logout</a>
+            <form action="logout" method="POST">
+                @csrf
+                <button type="submit">
+                    Logout
+                </button>
+            </form>
+
         </li>
 
       </ul>
@@ -87,7 +93,7 @@
             <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
             <li class="nav-item">
-              <a href="index.html" class="nav-link">
+              <a href="/mitra" class="nav-link">
                 <i class="nav-icon fas fa-tachometer-alt"></i>
                 <p>
                   Dashboard
@@ -119,7 +125,7 @@
               </ul>
             </li>
             <li class="nav-item has-treeview">
-              <a href="profil.html" class="nav-link">
+              <a href="mitra/profil" class="nav-link">
                 <i class="nav-icon fas fa-user"></i>
                 <p>
                   Profil

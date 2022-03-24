@@ -40,3 +40,6 @@ Route::get('/favorit/hapus/{idbookmark}',[FavoriteController::class,'hapusfavori
 Route::get('mitra', function () {return view('mitra.dashboard');
 
 });
+Route::get('mitra/profil', function () {return view('mitra.profil');
+
+});
