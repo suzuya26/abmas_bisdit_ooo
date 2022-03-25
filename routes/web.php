@@ -37,9 +37,9 @@ Route::get('mitra', [MitraController::class, 'mitra']);
 Route::get('search', [SearchController::class, 'search']);
 Route::get('/favorit/hapus/{idbookmark}',[FavoriteController::class,'hapusfavorit']);
 
-Route::get('mitra', function () {return view('mitra.dashboard');});
+Route::get('mitras', function () {return view('mitra.dashboard');});
 Route::get('/profil', function () {return view('mitra.profil');});
-Route::get('mitra', function () {return view('mitra.dashboard');});
+Route::get('mitras', function () {return view('mitra.dashboard');});
 Route::get('/daftarproduk', function () {return view('mitra.daftarproduk');});
 Route::get('/tambahproduk', function () {return view('mitra.tambahproduk');});
 Route::get('/updateprofil', function () {return view('mitra.updateprofil');});
