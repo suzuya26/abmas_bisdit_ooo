@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 15 Des 2021 pada 03.50
--- Versi server: 10.4.22-MariaDB
--- Versi PHP: 8.0.13
+-- Generation Time: Apr 05, 2022 at 12:08 PM
+-- Server version: 10.4.21-MariaDB
+-- PHP Version: 7.4.25
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `bahandasar`
+-- Table structure for table `bahandasar`
 --
 
 CREATE TABLE `bahandasar` (
@@ -38,7 +38,7 @@ CREATE TABLE `bahandasar` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data untuk tabel `bahandasar`
+-- Dumping data for table `bahandasar`
 --
 
 INSERT INTO `bahandasar` (`idbahan`, `namabahan`, `gambarbahan`, `pantangan`, `created_at`, `updated_at`, `manfaat`) VALUES
@@ -67,7 +67,7 @@ INSERT INTO `bahandasar` (`idbahan`, `namabahan`, `gambarbahan`, `pantangan`, `c
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `failed_jobs`
+-- Table structure for table `failed_jobs`
 --
 
 CREATE TABLE `failed_jobs` (
@@ -83,7 +83,7 @@ CREATE TABLE `failed_jobs` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `favorit`
+-- Table structure for table `favorit`
 --
 
 CREATE TABLE `favorit` (
@@ -93,7 +93,7 @@ CREATE TABLE `favorit` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data untuk tabel `favorit`
+-- Dumping data for table `favorit`
 --
 
 INSERT INTO `favorit` (`idfavorit`, `idoleh`, `id`) VALUES
@@ -108,7 +108,7 @@ INSERT INTO `favorit` (`idfavorit`, `idoleh`, `id`) VALUES
 (20, 11, 6);
 
 --
--- Trigger `favorit`
+-- Triggers `favorit`
 --
 DELIMITER $$
 CREATE TRIGGER `hapusfavorit` BEFORE DELETE ON `favorit` FOR EACH ROW UPDATE `varianoleh` SET favorit_count=favorit_count-1
@@ -124,7 +124,7 @@ DELIMITER ;
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `jenisoleh`
+-- Table structure for table `jenisoleh`
 --
 
 CREATE TABLE `jenisoleh` (
@@ -137,7 +137,7 @@ CREATE TABLE `jenisoleh` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data untuk tabel `jenisoleh`
+-- Dumping data for table `jenisoleh`
 --
 
 INSERT INTO `jenisoleh` (`idjenis`, `namajenis`, `deskripsijenis`, `gambarjenis`, `created_at`, `updated_at`) VALUES
@@ -153,7 +153,7 @@ INSERT INTO `jenisoleh` (`idjenis`, `namajenis`, `deskripsijenis`, `gambarjenis`
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `lokasi`
+-- Table structure for table `lokasi`
 --
 
 CREATE TABLE `lokasi` (
@@ -166,7 +166,7 @@ CREATE TABLE `lokasi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data untuk tabel `lokasi`
+-- Dumping data for table `lokasi`
 --
 
 INSERT INTO `lokasi` (`idlokasi`, `kota`, `provinsi`, `gambarlokasi`, `created_at`, `updated_at`) VALUES
@@ -270,7 +270,7 @@ INSERT INTO `lokasi` (`idlokasi`, `kota`, `provinsi`, `gambarlokasi`, `created_a
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `masak`
+-- Table structure for table `masak`
 --
 
 CREATE TABLE `masak` (
@@ -282,7 +282,7 @@ CREATE TABLE `masak` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data untuk tabel `masak`
+-- Dumping data for table `masak`
 --
 
 INSERT INTO `masak` (`idmasak`, `namamasak`, `gambarmasak`, `created_at`, `updated_at`) VALUES
@@ -301,7 +301,7 @@ INSERT INTO `masak` (`idmasak`, `namamasak`, `gambarmasak`, `created_at`, `updat
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `migrations`
+-- Table structure for table `migrations`
 --
 
 CREATE TABLE `migrations` (
@@ -311,7 +311,7 @@ CREATE TABLE `migrations` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data untuk tabel `migrations`
+-- Dumping data for table `migrations`
 --
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
@@ -347,12 +347,13 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (42, '2021_12_05_074245_ubah_kolom_kolom', 20),
 (43, '2021_12_05_152409_nambah_kolomz', 21),
 (44, '2021_12_09_081623_nambah_kolom_lokasi', 22),
-(45, '2021_12_14_075124_drop_harga', 23);
+(45, '2021_12_14_075124_drop_harga', 23),
+(46, '2022_04_05_100249_create_toko_oleh_table', 24);
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `mitra`
+-- Table structure for table `mitra`
 --
 
 CREATE TABLE `mitra` (
@@ -372,7 +373,7 @@ CREATE TABLE `mitra` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data untuk tabel `mitra`
+-- Dumping data for table `mitra`
 --
 
 INSERT INTO `mitra` (`idmitra`, `namamitra`, `kontak`, `idlokasi`, `foto_mitra`, `deskripsimitra`, `created_at`, `updated_at`, `cicip`, `gmap_mitra`, `alamat_mitra`, `jam_buka_mitra`, `link`) VALUES
@@ -381,7 +382,7 @@ INSERT INTO `mitra` (`idmitra`, `namamitra`, `kontak`, `idlokasi`, `foto_mitra`,
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `password_resets`
+-- Table structure for table `password_resets`
 --
 
 CREATE TABLE `password_resets` (
@@ -393,7 +394,7 @@ CREATE TABLE `password_resets` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `personal_access_tokens`
+-- Table structure for table `personal_access_tokens`
 --
 
 CREATE TABLE `personal_access_tokens` (
@@ -411,7 +412,7 @@ CREATE TABLE `personal_access_tokens` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `produk_mitra`
+-- Table structure for table `produk_mitra`
 --
 
 CREATE TABLE `produk_mitra` (
@@ -426,7 +427,7 @@ CREATE TABLE `produk_mitra` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data untuk tabel `produk_mitra`
+-- Dumping data for table `produk_mitra`
 --
 
 INSERT INTO `produk_mitra` (`id_produk_mitra`, `nama_produk_mitra`, `gambar_produk_mitra`, `harga_produk_mitra`, `status_produkmitra`, `idoleh`, `idmitra`, `best_seller`) VALUES
@@ -439,7 +440,7 @@ INSERT INTO `produk_mitra` (`id_produk_mitra`, `nama_produk_mitra`, `gambar_prod
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `rasa`
+-- Table structure for table `rasa`
 --
 
 CREATE TABLE `rasa` (
@@ -451,7 +452,7 @@ CREATE TABLE `rasa` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data untuk tabel `rasa`
+-- Dumping data for table `rasa`
 --
 
 INSERT INTO `rasa` (`idrasa`, `namarasa`, `gambarasa`, `created_at`, `updated_at`) VALUES
@@ -465,7 +466,7 @@ INSERT INTO `rasa` (`idrasa`, `namarasa`, `gambarasa`, `created_at`, `updated_at
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tekstur`
+-- Table structure for table `tekstur`
 --
 
 CREATE TABLE `tekstur` (
@@ -477,7 +478,7 @@ CREATE TABLE `tekstur` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data untuk tabel `tekstur`
+-- Dumping data for table `tekstur`
 --
 
 INSERT INTO `tekstur` (`idtekstur`, `namatekstur`, `gambartekstur`, `created_at`, `updated_at`) VALUES
@@ -496,7 +497,7 @@ INSERT INTO `tekstur` (`idtekstur`, `namatekstur`, `gambartekstur`, `created_at`
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tempatbeli`
+-- Table structure for table `tempatbeli`
 --
 
 CREATE TABLE `tempatbeli` (
@@ -524,7 +525,7 @@ CREATE TABLE `tempatbeli` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data untuk tabel `tempatbeli`
+-- Dumping data for table `tempatbeli`
 --
 
 INSERT INTO `tempatbeli` (`idtempatbeli`, `merk`, `gambarproduk`, `varianjual`, `idoleh`, `idlokasi`, `idmitra`, `created_at`, `updated_at`, `bundle`, `kemasan`, `alamat`, `link`, `google_map`, `jambuka`, `rentang_harga`, `best_seller`, `satuan`, `bpom`, `cara_bayar`, `sosmed`) VALUES
@@ -569,7 +570,27 @@ INSERT INTO `tempatbeli` (`idtempatbeli`, `merk`, `gambarproduk`, `varianjual`, 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `users`
+-- Table structure for table `toko_oleh`
+--
+
+CREATE TABLE `toko_oleh` (
+  `idtoko` bigint(20) UNSIGNED NOT NULL,
+  `nama_toko` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `gambar_utama` mediumtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `map_toko` mediumtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `jam_operasional` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `fasilitas_toko` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `sekitar_toko` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `kontak_toko` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `galeri_toko` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
 --
 
 CREATE TABLE `users` (
@@ -586,7 +607,7 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data untuk tabel `users`
+-- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `photo`, `remember_token`, `created_at`, `updated_at`, `pernah_wisata`) VALUES
@@ -594,12 +615,14 @@ INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `ph
 (3, 'Farhan Septiadi', 'septiadifarhan26@gmail.com', NULL, '$2y$10$2qS4C5TOeQU/EuBG2bpAXO5xM0u87.4H9ObYB55Doq2jyDUne2NuS', 'https://ui-avatars.com/api/?name=Farhan+Septiadi&background=7F9CF5&color=EBF4FF', NULL, '2021-12-10 04:20:44', '2021-12-10 04:20:44', NULL),
 (4, 'Eula Lawrance', 'eulawangy@genshin.impact.com', NULL, '$2y$10$q7VMO3cCM9VTSLYuEIvwWOmFCKp6pmHsn9xy/SUdfkmPFUEYpdnRy', 'https://ui-avatars.com/api/?name=Eula+Lawrance&background=7F9CF5&color=EBF4FF', NULL, '2021-12-10 04:23:21', '2021-12-10 04:23:21', 'Jakarta,Padang,Surabaya'),
 (5, 'Keqing', 'keqing@wangy.com', NULL, '$2y$10$NPLz/Cdx1NbSO90QjeQiSey8InHxV5G49Bm80nVQnEfkSkUUSJM1q', 'https://ui-avatars.com/api/?name=Keqing&background=7F9CF5&color=EBF4FF', NULL, '2021-12-10 05:10:29', '2021-12-10 05:10:29', 'Bukittingi,Jakarta,Bogor'),
-(6, 'Audrey', 'audreyaurelya811@gmail.com', NULL, '$2y$10$Yz1qSHiRId2S3mxa1jjFluI/6r47VZFpSQJiNguHMUrQ6z9jacdsG', 'https://ui-avatars.com/api/?name=Audrey&background=7F9CF5&color=EBF4FF', NULL, '2021-12-14 04:34:30', '2021-12-14 04:34:30', 'Bogor');
+(6, 'Audrey', 'audreyaurelya811@gmail.com', NULL, '$2y$10$Yz1qSHiRId2S3mxa1jjFluI/6r47VZFpSQJiNguHMUrQ6z9jacdsG', 'https://ui-avatars.com/api/?name=Audrey&background=7F9CF5&color=EBF4FF', NULL, '2021-12-14 04:34:30', '2021-12-14 04:34:30', 'Bogor'),
+(7, 'Daffa', 'dagg@1234.com', NULL, '$2y$10$sXu0J/je/3gk/6KLGfgBYeAI9GWF.9m4JO05csMl6ZMtOn0JIBjiC', 'https://ui-avatars.com/api/?name=Daffa&background=7F9CF5&color=EBF4FF', NULL, '2022-03-30 18:32:27', '2022-03-30 18:32:27', NULL),
+(8, 'Daffa', 'daffa@gmail.com', NULL, '$2y$10$TK8fCX5zUE14iMfsVhIpXetnn.zLf29p8/ieYKaipxixYIZpqsi4a', 'https://ui-avatars.com/api/?name=Daffa&background=7F9CF5&color=EBF4FF', NULL, '2022-03-31 05:34:40', '2022-03-31 05:34:40', NULL);
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `varianjenis`
+-- Table structure for table `varianjenis`
 --
 
 CREATE TABLE `varianjenis` (
@@ -613,7 +636,7 @@ CREATE TABLE `varianjenis` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data untuk tabel `varianjenis`
+-- Dumping data for table `varianjenis`
 --
 
 INSERT INTO `varianjenis` (`id_varian`, `namavarian`, `deskripsivarian`, `gambarvarian`, `idjenis`, `created_at`, `updated_at`) VALUES
@@ -639,7 +662,7 @@ INSERT INTO `varianjenis` (`id_varian`, `namavarian`, `deskripsivarian`, `gambar
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `varianoleh`
+-- Table structure for table `varianoleh`
 --
 
 CREATE TABLE `varianoleh` (
@@ -676,7 +699,7 @@ CREATE TABLE `varianoleh` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data untuk tabel `varianoleh`
+-- Dumping data for table `varianoleh`
 --
 
 INSERT INTO `varianoleh` (`idoleh`, `namaoleh`, `namalain`, `gambarutama`, `gambaroleh`, `deskripsioleh`, `idrasa`, `idtekstur`, `idbahan`, `komposisi`, `idmasak`, `idlokasi`, `statushalal`, `kadarluarsa`, `carapenyimpanan`, `carapenyajian`, `trivia`, `namacocok`, `idmitra`, `created_at`, `updated_at`, `id_varian`, `idjenis`, `favorit_count`, `satuan`, `hargamin`, `hargamax`, `vegan`, `vegetarian`, `gluten_free`) VALUES
@@ -733,20 +756,20 @@ INSERT INTO `varianoleh` (`idoleh`, `namaoleh`, `namalain`, `gambarutama`, `gamb
 --
 
 --
--- Indeks untuk tabel `bahandasar`
+-- Indexes for table `bahandasar`
 --
 ALTER TABLE `bahandasar`
   ADD PRIMARY KEY (`idbahan`);
 
 --
--- Indeks untuk tabel `failed_jobs`
+-- Indexes for table `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `failed_jobs_uuid_unique` (`uuid`);
 
 --
--- Indeks untuk tabel `favorit`
+-- Indexes for table `favorit`
 --
 ALTER TABLE `favorit`
   ADD PRIMARY KEY (`idfavorit`),
@@ -754,44 +777,44 @@ ALTER TABLE `favorit`
   ADD KEY `favorit_id_foreign` (`id`);
 
 --
--- Indeks untuk tabel `jenisoleh`
+-- Indexes for table `jenisoleh`
 --
 ALTER TABLE `jenisoleh`
   ADD PRIMARY KEY (`idjenis`);
 
 --
--- Indeks untuk tabel `lokasi`
+-- Indexes for table `lokasi`
 --
 ALTER TABLE `lokasi`
   ADD PRIMARY KEY (`idlokasi`);
 
 --
--- Indeks untuk tabel `masak`
+-- Indexes for table `masak`
 --
 ALTER TABLE `masak`
   ADD PRIMARY KEY (`idmasak`);
 
 --
--- Indeks untuk tabel `migrations`
+-- Indexes for table `migrations`
 --
 ALTER TABLE `migrations`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `mitra`
+-- Indexes for table `mitra`
 --
 ALTER TABLE `mitra`
   ADD PRIMARY KEY (`idmitra`),
   ADD KEY `mitra_idlokasi_foreign` (`idlokasi`);
 
 --
--- Indeks untuk tabel `password_resets`
+-- Indexes for table `password_resets`
 --
 ALTER TABLE `password_resets`
   ADD KEY `password_resets_email_index` (`email`);
 
 --
--- Indeks untuk tabel `personal_access_tokens`
+-- Indexes for table `personal_access_tokens`
 --
 ALTER TABLE `personal_access_tokens`
   ADD PRIMARY KEY (`id`),
@@ -799,7 +822,7 @@ ALTER TABLE `personal_access_tokens`
   ADD KEY `personal_access_tokens_tokenable_type_tokenable_id_index` (`tokenable_type`,`tokenable_id`);
 
 --
--- Indeks untuk tabel `produk_mitra`
+-- Indexes for table `produk_mitra`
 --
 ALTER TABLE `produk_mitra`
   ADD PRIMARY KEY (`id_produk_mitra`),
@@ -807,19 +830,19 @@ ALTER TABLE `produk_mitra`
   ADD KEY `produk_mitra_idmitra_foreign` (`idmitra`);
 
 --
--- Indeks untuk tabel `rasa`
+-- Indexes for table `rasa`
 --
 ALTER TABLE `rasa`
   ADD PRIMARY KEY (`idrasa`);
 
 --
--- Indeks untuk tabel `tekstur`
+-- Indexes for table `tekstur`
 --
 ALTER TABLE `tekstur`
   ADD PRIMARY KEY (`idtekstur`);
 
 --
--- Indeks untuk tabel `tempatbeli`
+-- Indexes for table `tempatbeli`
 --
 ALTER TABLE `tempatbeli`
   ADD PRIMARY KEY (`idtempatbeli`),
@@ -828,21 +851,27 @@ ALTER TABLE `tempatbeli`
   ADD KEY `tempatbeli_idmitra_foreign` (`idmitra`);
 
 --
--- Indeks untuk tabel `users`
+-- Indexes for table `toko_oleh`
+--
+ALTER TABLE `toko_oleh`
+  ADD PRIMARY KEY (`idtoko`);
+
+--
+-- Indexes for table `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `users_email_unique` (`email`);
 
 --
--- Indeks untuk tabel `varianjenis`
+-- Indexes for table `varianjenis`
 --
 ALTER TABLE `varianjenis`
   ADD PRIMARY KEY (`id_varian`),
   ADD KEY `varian_jenis_idjenis_foreign` (`idjenis`);
 
 --
--- Indeks untuk tabel `varianoleh`
+-- Indexes for table `varianoleh`
 --
 ALTER TABLE `varianoleh`
   ADD PRIMARY KEY (`idoleh`),
@@ -856,131 +885,137 @@ ALTER TABLE `varianoleh`
   ADD KEY `varianoleh_idjenis_foreign` (`idjenis`);
 
 --
--- AUTO_INCREMENT untuk tabel yang dibuang
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT untuk tabel `bahandasar`
+-- AUTO_INCREMENT for table `bahandasar`
 --
 ALTER TABLE `bahandasar`
   MODIFY `idbahan` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
--- AUTO_INCREMENT untuk tabel `failed_jobs`
+-- AUTO_INCREMENT for table `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `favorit`
+-- AUTO_INCREMENT for table `favorit`
 --
 ALTER TABLE `favorit`
-  MODIFY `idfavorit` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `idfavorit` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
--- AUTO_INCREMENT untuk tabel `jenisoleh`
+-- AUTO_INCREMENT for table `jenisoleh`
 --
 ALTER TABLE `jenisoleh`
   MODIFY `idjenis` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT untuk tabel `lokasi`
+-- AUTO_INCREMENT for table `lokasi`
 --
 ALTER TABLE `lokasi`
   MODIFY `idlokasi` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=108;
 
 --
--- AUTO_INCREMENT untuk tabel `masak`
+-- AUTO_INCREMENT for table `masak`
 --
 ALTER TABLE `masak`
   MODIFY `idmasak` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
--- AUTO_INCREMENT untuk tabel `migrations`
+-- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
 
 --
--- AUTO_INCREMENT untuk tabel `mitra`
+-- AUTO_INCREMENT for table `mitra`
 --
 ALTER TABLE `mitra`
   MODIFY `idmitra` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT untuk tabel `personal_access_tokens`
+-- AUTO_INCREMENT for table `personal_access_tokens`
 --
 ALTER TABLE `personal_access_tokens`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `produk_mitra`
+-- AUTO_INCREMENT for table `produk_mitra`
 --
 ALTER TABLE `produk_mitra`
   MODIFY `id_produk_mitra` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT untuk tabel `rasa`
+-- AUTO_INCREMENT for table `rasa`
 --
 ALTER TABLE `rasa`
   MODIFY `idrasa` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT untuk tabel `tekstur`
+-- AUTO_INCREMENT for table `tekstur`
 --
 ALTER TABLE `tekstur`
   MODIFY `idtekstur` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
--- AUTO_INCREMENT untuk tabel `tempatbeli`
+-- AUTO_INCREMENT for table `tempatbeli`
 --
 ALTER TABLE `tempatbeli`
   MODIFY `idtempatbeli` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
--- AUTO_INCREMENT untuk tabel `users`
+-- AUTO_INCREMENT for table `toko_oleh`
 --
-ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+ALTER TABLE `toko_oleh`
+  MODIFY `idtoko` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `varianjenis`
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `varianjenis`
 --
 ALTER TABLE `varianjenis`
   MODIFY `id_varian` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
--- AUTO_INCREMENT untuk tabel `varianoleh`
+-- AUTO_INCREMENT for table `varianoleh`
 --
 ALTER TABLE `varianoleh`
   MODIFY `idoleh` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
 
 --
--- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
+-- Constraints for dumped tables
 --
 
 --
--- Ketidakleluasaan untuk tabel `favorit`
+-- Constraints for table `favorit`
 --
 ALTER TABLE `favorit`
   ADD CONSTRAINT `favorit_id_foreign` FOREIGN KEY (`id`) REFERENCES `users` (`id`),
   ADD CONSTRAINT `favorit_idoleh_foreign` FOREIGN KEY (`idoleh`) REFERENCES `varianoleh` (`idoleh`);
 
 --
--- Ketidakleluasaan untuk tabel `mitra`
+-- Constraints for table `mitra`
 --
 ALTER TABLE `mitra`
   ADD CONSTRAINT `mitra_idlokasi_foreign` FOREIGN KEY (`idlokasi`) REFERENCES `lokasi` (`idlokasi`);
 
 --
--- Ketidakleluasaan untuk tabel `produk_mitra`
+-- Constraints for table `produk_mitra`
 --
 ALTER TABLE `produk_mitra`
   ADD CONSTRAINT `produk_mitra_idmitra_foreign` FOREIGN KEY (`idmitra`) REFERENCES `mitra` (`idmitra`),
   ADD CONSTRAINT `produk_mitra_idoleh_foreign` FOREIGN KEY (`idoleh`) REFERENCES `varianoleh` (`idoleh`);
 
 --
--- Ketidakleluasaan untuk tabel `tempatbeli`
+-- Constraints for table `tempatbeli`
 --
 ALTER TABLE `tempatbeli`
   ADD CONSTRAINT `tempatbeli_idlokasi_foreign` FOREIGN KEY (`idlokasi`) REFERENCES `lokasi` (`idlokasi`),
@@ -988,13 +1023,13 @@ ALTER TABLE `tempatbeli`
   ADD CONSTRAINT `tempatbeli_idoleh_foreign` FOREIGN KEY (`idoleh`) REFERENCES `varianoleh` (`idoleh`);
 
 --
--- Ketidakleluasaan untuk tabel `varianjenis`
+-- Constraints for table `varianjenis`
 --
 ALTER TABLE `varianjenis`
   ADD CONSTRAINT `varian_jenis_idjenis_foreign` FOREIGN KEY (`idjenis`) REFERENCES `jenisoleh` (`idjenis`);
 
 --
--- Ketidakleluasaan untuk tabel `varianoleh`
+-- Constraints for table `varianoleh`
 --
 ALTER TABLE `varianoleh`
   ADD CONSTRAINT `varianoleh_id_varian_foreign` FOREIGN KEY (`id_varian`) REFERENCES `varianjenis` (`id_varian`),
