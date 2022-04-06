@@ -48,3 +48,5 @@ Route::get('/updateprofil', function () {return view('mitra.updateprofil');});
 Route::get('/toko', [TokoController::class, 'show']);
 
 
+
+

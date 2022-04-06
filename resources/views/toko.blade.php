@@ -56,5 +56,99 @@
         </div>
     </div>
 </div>
+<div class="container ">
+    <div class="row mt-3">
+        <div class="col-4">
+            <img width="410px" src="https://images.pexels.com/photos/9938862/pexels-photo-9938862.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+        </div>
+        <div class="col-5 mt-4">
+            <h1>Spikoe Kunoe Coklade</h1>
+            <h3>Rp20.000</h3>
+            <a href="" class="btn btn-secondary" style="font-size: 1.7rem"><i><span style="color: orange; font-weight:bold">#1</span> Spikoe di Toko ini</i></a>
+        </div>
+        <div class="col-3 mt-4">
+            <a href="" class="btn btn-primary button-produk"><i class="fa fa-thumbs-up" style="font-size:24px"></i> Rekomendasikan</a> <br>
+            <a href="" class="btn btn-primary mt-3 button-produk"><i class="fa fa-thumbs-up" style="font-size:24px"></i> Simpan Produk</a>
+        </div>
+    </div>
+</div>
+<div class="container ">
+    <div class="row mt-3">
+        <div class="col-4">
+            <img width="410px" src="https://images.pexels.com/photos/9938862/pexels-photo-9938862.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+        </div>
+        <div class="col-5 mt-4">
+            <h1>Spikoe Kunoe Coklade</h1>
+            <h3>Rp20.000</h3>
+            <a href="" class="btn btn-secondary" style="font-size: 1.7rem"><i><span style="color: orange; font-weight:bold">#1</span> Spikoe di Toko ini</i></a>
+        </div>
+        <div class="col-3 mt-4">
+            <a href="" class="btn btn-primary button-produk"><i class="fa fa-thumbs-up" style="font-size:24px"></i> Rekomendasikan</a> <br>
+            <a href="" class="btn btn-primary mt-3 button-produk"><i class="fa fa-thumbs-up" style="font-size:24px"></i> Simpan Produk</a>
+        </div>
+    </div>
+    <hr>
+</div>
+<div class="container">
+    <h1>Informasi Spikoe Surabaya</h1>
+    <div class="row">
+        <div class="col-8">
+            <div class="mapouter"><div class="gmap_canvas"><iframe width="720" height="360" id="gmap_canvas" src="https://maps.google.com/maps?q=ir.%20soekarno&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://putlocker-is.org"></a><br><style>.mapouter{position:relative;text-align:right;height:360px;width:720px;}</style><a href="https://www.embedgooglemap.net">google maps on my web site</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:360px;width:720px;}</style></div></div>
+        </div>
+        <div class="col-4">
+            <div class="row">
+                <div class="col-4">
+                    <i class='far fa-calendar-alt' style='font-size:36px'></i>
+                </div>
+                <div class="col-4">
+                   <h4 style="color: green">BUKA</h4>
+                   <H5>10.00-16.00</H5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h2 class="mt-3">Kontak dan Informasi Toko:</h2>
+    <div class="container" style="font-size: 1.5rem">
+        <div class="row">
+            <div class="col-3">
+                <i class='far fa-address-book'></i> <a href="www.spikoekuno.co.id">www.spikoekuno.co.id</a>
+            </div>
+            <div class="col-3">
+                <i class='far fa-address-book'></i> <span href="www.spikoekuno.co.id"><i>081283421383</i></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3">
+                <i class='far fa-address-book'></i> <span href="www.spikoekuno.co.id"><i>@spikoekunosby</i></span>
+            </div>
+            <div class="col-3">
+                <i class='far fa-address-book'></i> <span ><i>@sspanikoekunosby</i></span>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="container">
+    <h1 class="mt-3">Galeri Spikoe Resep Kuno Surabaya</h1>
+    <div id="demo" class="carousel slide mt-4" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="" class=""
+                    aria-current="" aria-label="Slide "></button>
+        </div>
+        <div class="carousel-inner">
+                <div class="carousel-item">
+                    <img class="d-block ratio ratio-16x9 rounded" src="https://images.pexels.com/photos/9938862/pexels-photo-9938862.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" style="object-fit: cover;">
+                </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
 
 @endsection
