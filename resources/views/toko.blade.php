@@ -52,7 +52,7 @@
         </div>
         <div class="col-3 mt-4">
             <a href="" class=" button-produk"><i class="fa fa-thumbs-up" style="font-size:24px"></i> Rekomendasikan</a> <br>
-            <a href="" class=" mt-3 button-produk"><i class="fa fa-thumbs-up" style="font-size:24px"></i> Simpan Produk</a>
+            <a href="" class=" mt-3 button-produk"><i class="far fa-bookmark" style="font-size:24px"></i> Simpan Produk</a>
         </div>
     </div>
 </div>
@@ -68,7 +68,7 @@
         </div>
         <div class="col-3 mt-4">
             <a href="" class=" button-produk"><i class="fa fa-thumbs-up" style="font-size:24px"></i> Rekomendasikan</a> <br>
-            <a href="" class=" mt-3 button-produk"><i class="fa fa-thumbs-up" style="font-size:24px"></i> Simpan Produk</a>
+            <a href="" class=" mt-3 button-produk"><i class="far fa-bookmark" style="font-size:24px"></i> Simpan Produk</a>
         </div>
     </div>
 </div>
@@ -84,7 +84,7 @@
         </div>
         <div class="col-3 mt-4">
             <a href="" class=" button-produk"><i class="fa fa-thumbs-up" style="font-size:24px"></i> Rekomendasikan</a> <br>
-            <a href="" class=" mt-3 button-produk"><i class="fa fa-thumbs-up" style="font-size:24px"></i> Simpan Produk</a>
+            <a href="" class=" mt-3 button-produk"><i class="far fa-bookmark" style="font-size:24px"></i> Simpan Produk</a>
         </div>
     </div>
     <hr>
@@ -97,13 +97,34 @@
         </div>
         <div class="col-4">
             <div class="row">
-                <div class="col-4">
-                    <i class='far fa-calendar-alt' style='font-size:36px'></i>
+                <div class="col-4" style="margin-left: -130px">
+                    <i class='far fa-calendar-alt' style='font-size:66px'></i>
+
                 </div>
-                <div class="col-4">
-                   <h4 style="color: green">BUKA</h4>
+                <div class="col-4" style="margin-left: -50px">
+                   <h3 style="color: lightgreen">BUKA</h3>
                    <H5>10.00-16.00</H5>
+
                 </div>
+            </div>
+            <h3 style="margin-left: -130px" class="mt-2">Fasilitas Toko</h3>
+            <div class="row" style="margin-left: -130px">
+                <div class="col-5" >
+                   <p> <i class="fas fa-car-alt"></i> Parkir Mobil & Motor</p>
+                </div>
+                <div class="col-5" >
+                   <p> <i class="fas fa-car-alt"></i> Wifi Gratis</p>
+                </div>
+                <div class="col-5" >
+                   <p> <i class="fas fa-car-alt"></i> Pesan Antar</p>
+                </div>
+                <div class="col-5" >
+                   <p> <i class="fas fa-car-alt"></i> Pembayaran Non-Tunai</p>
+                </div>
+                <div class="col-5" >
+                   <p> <i class="fas fa-car-alt"></i> Makan di Tempat</p>
+                </div>
+
             </div>
         </div>
     </div>
