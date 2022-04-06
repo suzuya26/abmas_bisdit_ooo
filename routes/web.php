@@ -10,6 +10,7 @@ use App\Http\Controllers\FavoriteController;
 use App\Http\Controllers\favoriteController as ControllersFavoriteController;
 use App\Http\Controllers\MitraController;
 use App\Http\Controllers\SearchController;
+use App\Http\Controllers\TokoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,5 +44,7 @@ Route::get('mitras', function () {return view('mitra.dashboard');});
 Route::get('/daftarproduk', function () {return view('mitra.daftarproduk');});
 Route::get('/tambahproduk', function () {return view('mitra.tambahproduk');});
 Route::get('/updateprofil', function () {return view('mitra.updateprofil');});
+
+Route::get('/toko', [TokoController::class, 'show']);
 
 
