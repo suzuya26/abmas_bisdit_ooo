@@ -51,8 +51,8 @@
             <a href="" class="btn btn-secondary" style="font-size: 1.7rem"><i><span style="color: orange; font-weight:bold">#1</span> Spikoe di Toko ini</i></a>
         </div>
         <div class="col-3 mt-4">
-            <a href="" class="btn btn-primary button-produk"><i class="fa fa-thumbs-up" style="font-size:24px"></i> Rekomendasikan</a> <br>
-            <a href="" class="btn btn-primary mt-3 button-produk"><i class="fa fa-thumbs-up" style="font-size:24px"></i> Simpan Produk</a>
+            <a href="" class=" button-produk"><i class="fa fa-thumbs-up" style="font-size:24px"></i> Rekomendasikan</a> <br>
+            <a href="" class=" mt-3 button-produk"><i class="fa fa-thumbs-up" style="font-size:24px"></i> Simpan Produk</a>
         </div>
     </div>
 </div>
@@ -67,8 +67,8 @@
             <a href="" class="btn btn-secondary" style="font-size: 1.7rem"><i><span style="color: orange; font-weight:bold">#1</span> Spikoe di Toko ini</i></a>
         </div>
         <div class="col-3 mt-4">
-            <a href="" class="btn btn-primary button-produk"><i class="fa fa-thumbs-up" style="font-size:24px"></i> Rekomendasikan</a> <br>
-            <a href="" class="btn btn-primary mt-3 button-produk"><i class="fa fa-thumbs-up" style="font-size:24px"></i> Simpan Produk</a>
+            <a href="" class=" button-produk"><i class="fa fa-thumbs-up" style="font-size:24px"></i> Rekomendasikan</a> <br>
+            <a href="" class=" mt-3 button-produk"><i class="fa fa-thumbs-up" style="font-size:24px"></i> Simpan Produk</a>
         </div>
     </div>
 </div>
@@ -83,8 +83,8 @@
             <a href="" class="btn btn-secondary" style="font-size: 1.7rem"><i><span style="color: orange; font-weight:bold">#1</span> Spikoe di Toko ini</i></a>
         </div>
         <div class="col-3 mt-4">
-            <a href="" class="btn btn-primary button-produk"><i class="fa fa-thumbs-up" style="font-size:24px"></i> Rekomendasikan</a> <br>
-            <a href="" class="btn btn-primary mt-3 button-produk"><i class="fa fa-thumbs-up" style="font-size:24px"></i> Simpan Produk</a>
+            <a href="" class=" button-produk"><i class="fa fa-thumbs-up" style="font-size:24px"></i> Rekomendasikan</a> <br>
+            <a href="" class=" mt-3 button-produk"><i class="fa fa-thumbs-up" style="font-size:24px"></i> Simpan Produk</a>
         </div>
     </div>
     <hr>
