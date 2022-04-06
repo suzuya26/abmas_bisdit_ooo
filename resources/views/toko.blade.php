@@ -1,5 +1,45 @@
 @extends('layouts.master')
 @section('content')
+<style>
+    .carousel-item{
+        height: 32rem;
+        background: #777777;
+        color: white;
+        position: relative;
+        background-position: center;
+        background-size: cover;
+    }
+    .container{
+        position: relative;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 40px;
+    }
+    .carousel-caption{
+        text-align: left;
+        background: rgba(0, 0, 0, 0.5);
+        left: 0%;
+        right: 0%;
+        bottom: 0%;
+        text-indent: 10%;
+    }
+    #myCarousel {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    .carousel-control.left {
+        margin-left: -25px;
+    }
+
+    .carousel-control.right {
+        margin-right: -25px;
+    }
+    .carousel-control {
+        width: 0%;
+    }
+</style>
 <div class="container">
     <div class="row">
         <div class="col-5 mt-3">
@@ -130,25 +170,44 @@
 </div>
 <div class="container">
     <h1 class="mt-3">Galeri Spikoe Resep Kuno Surabaya</h1>
-    <div id="demo" class="carousel slide mt-4" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-                <button type="button" data-bs-target="#demo" data-bs-slide-to="" class=""
-                    aria-current="" aria-label="Slide "></button>
-        </div>
+    <div class="container" style="position: center">
+    <div id="myCarousel" class="carousel" data-bs-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
+            <li data-bs-target="#myCarousel" data-bs-slide-to="1" class="active"></li>
+            <li data-bs-target="#myCarousel" data-bs-slide-to="2" class="active"></li>
+        </ol>
         <div class="carousel-inner">
-                <div class="carousel-item">
-                    <img class="d-block ratio ratio-16x9 rounded" src="https://images.pexels.com/photos/9938862/pexels-photo-9938862.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" style="object-fit: cover;">
-                </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+          <div class="carousel-item active" style="background-image:url(https://i0.wp.com/www.emporioarchitect.com/upload/portofolio/1280/desain-rumah-dan-toko-modern-2-lantai-43010721-94431946010721023307-3.jpg)">
+            <div class="carousel-caption">
+                <h1>Tampak Samping Toko</h1>
+                <p>Jalan Tunjungan Plaza 78, Tunjungan, Plaza</p>
+            </div>
+          </div>
+          <div class="carousel-item" style="background-image:url(https://sribu-sg.s3.amazonaws.com/assets/media/contest_attachment/5768d146fcbda3e74f5b142ab561c0df/2585cb9dbc.jpg)">
+            <div class="carousel-caption">
+                <h1>Tampak Depan Toko</h1>
+                <p>Jalan Tunjungan Plaza 78, Tunjungan, Plaza</p>
+            </div>
+          </div>
+          <div class="carousel-item" style="background-image:url(https://i0.wp.com/www.emporioarchitect.com/upload/portofolio/thumb/desain-rumah-dan-toko-modern-2-lantai-43010721-94431946010721023307-5.jpg)">
+            <div class="carousel-caption">
+                <h1>Tampak Belakang Toko</h1>
+                <p>Jalan Tunjungan Plaza 78, Tunjungan, Plaza</p>
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#myCarousel" role="button" data-bs-slide="next">
+            <span class="sr-only">Previous</span>
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+          </a>
+          <a class="carousel-control-next" href="#myCarousel" role="button" data-bs-slide="prev">
+            <span class="sr-only">Next</span>
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
+          </a>
     </div>
+</div>
+
+
 </div>
 
 @endsection
