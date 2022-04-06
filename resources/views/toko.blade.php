@@ -9,7 +9,7 @@
         background-position: center;
         background-size: cover;
     }
-    .container{
+    .container .carousel{
         position: relative;
         bottom: 0;
         left: 0;
@@ -189,7 +189,7 @@
     </div>
 
 </div>
-<div class="container">
+<div class="container carousel">
     <h1 class="mt-3">Galeri Spikoe Resep Kuno Surabaya</h1>
     <div class="container" style="position: center">
     <div id="myCarousel" class="carousel" data-bs-ride="carousel">
