@@ -146,7 +146,7 @@
 
                 </div>
                 <div class="col-4" style="margin-left: -50px">
-                   <h3 style="color: lightgreen">BUKA</h3>
+                   <h3 style="color: #8fd14f" class="fw-bold">BUKA</h3>
                    <H5>{{ $t->jam_operasional }}</H5>
 
                 </div>
@@ -192,7 +192,7 @@
                 </div> --}}
 
             </div>
-            <h3 style="margin-left: -130px" class="mt-2">Disekitar Toko</h3>
+            <h3 style="margin-left: -130px" class="mt-2">Di Sekitar Toko</h3>
             <div class="row" style="margin-left: -130px">
             @php
                 $sekita_toko = preg_split('/---/', $t->sekitar_toko);
@@ -256,7 +256,7 @@
 
 </div>
 <div class="container carousel">
-    <h1 class="mt-3">Galeri Spikoe Resep Kuno Surabaya</h1>
+    <h1 class="mt-3">Galeri {{ $t->nama_toko }}</h1>
     <div class="container" style="position: center">
     <div id="myCarousel" class="carousel" data-bs-ride="carousel">
         <div class="carousel-inner">
