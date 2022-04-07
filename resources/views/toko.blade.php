@@ -176,6 +176,25 @@
                 </div> --}}
 
             </div>
+            <h3 style="margin-left: -130px" class="mt-2">Disekitar Toko</h3>
+            <div class="row" style="margin-left: -130px">
+            @php
+                $sekita_toko = preg_split('/---/', $t->sekitar_toko);
+            @endphp
+            @foreach ($sekita_toko as $s )
+                @if ($loop->odd)
+                <div class="col-5" >
+                    <p> <i class="fa-solid fa-location-dot"></i> {{ $s }}</p>
+                </div>
+                @endif
+                @if ($loop->even)
+                <div class="col-5" >
+                    <p> {{ $s }}</p>
+                </div>
+                @endif
+            @endforeach
+
+            </div>
         </div>
     </div>
     <h2 class="mt-3">Kontak dan Informasi Toko:</h2>
@@ -218,7 +237,7 @@
             </div>
         </div>
     </div>
-    @endforeach
+
 </div>
 <div class="container carousel">
     <h1 class="mt-3">Galeri Spikoe Resep Kuno Surabaya</h1>
@@ -232,13 +251,13 @@
         <div class="carousel-inner">
           <div class="carousel-item active" style="background-image:url(https://i0.wp.com/www.emporioarchitect.com/upload/portofolio/1280/desain-rumah-dan-toko-modern-2-lantai-43010721-94431946010721023307-3.jpg)">
             <div class="carousel-caption">
-                <h1>Tampak Samping Toko</h1>
+                <h1>Tampak Depan Toko</h1>
                 <p>Jalan Tunjungan Plaza 78, Tunjungan, Plaza</p>
             </div>
           </div>
           <div class="carousel-item" style="background-image:url(https://sribu-sg.s3.amazonaws.com/assets/media/contest_attachment/5768d146fcbda3e74f5b142ab561c0df/2585cb9dbc.jpg)">
             <div class="carousel-caption">
-                <h1>Tampak Depan Toko</h1>
+                <h1>Tampak Samping Toko</h1>
                 <p>Jalan Tunjungan Plaza 78, Tunjungan, Plaza</p>
             </div>
           </div>
@@ -258,7 +277,7 @@
           </a>
     </div>
 </div>
-
+@endforeach
 
 </div>
 
