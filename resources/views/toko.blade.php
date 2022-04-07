@@ -243,11 +243,6 @@
     <h1 class="mt-3">Galeri Spikoe Resep Kuno Surabaya</h1>
     <div class="container" style="position: center">
     <div id="myCarousel" class="carousel" data-bs-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
-            <li data-bs-target="#myCarousel" data-bs-slide-to="1" class="active"></li>
-            <li data-bs-target="#myCarousel" data-bs-slide-to="2" class="active"></li>
-        </ol>
         <div class="carousel-inner">
           <div class="carousel-item active" style="background-image:url(https://i0.wp.com/www.emporioarchitect.com/upload/portofolio/1280/desain-rumah-dan-toko-modern-2-lantai-43010721-94431946010721023307-3.jpg)">
             <div class="carousel-caption">
