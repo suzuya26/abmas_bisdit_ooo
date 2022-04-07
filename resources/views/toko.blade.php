@@ -44,7 +44,11 @@
     <div class="row">
         <div class="col-5 mt-3">
             <p style="font-size: 2rem">Kamu sedang menelusuri toko, </p>
-            <h1>Spikoe Surabaya</h1>
+            @foreach ($toko as $t )
+
+
+            <h1>{{ $t->nama_toko }}</h1>
+
             <h4># Toko Oleh-Oleh Surabaya</h4>
             <p><i>Menurut <b> <span style="color: orange">100</span> </b> Orang Surabaya</i></p>
             <p><i>Menurut <b> <span style="color: orange">230</span> </b> Wisatawan</i></p> <br>
@@ -72,7 +76,7 @@
 <div class="container">
     <div class="row mt-4">
         <div class="col-8">
-            <h1 class="">Produk Oleh-oleh dari Spikoe Surabaya</h1>
+            <h1 class="">Produk Oleh-oleh dari {{ $t->nama_toko }}</h1>
         </div>
         <div class="col-2"></div>
         <div class="col-2" >
@@ -130,7 +134,7 @@
     <hr>
 </div>
 <div class="container">
-    <h1>Informasi Spikoe Surabaya</h1>
+    <h1>Informasi {{ $t->nama_toko }}</h1>
     <div class="row">
         <div class="col-8">
             <div class="mapouter"><div class="gmap_canvas"><iframe width="720" height="360" id="gmap_canvas" src="https://maps.google.com/maps?q=ir.%20soekarno&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://putlocker-is.org"></a><br><style>.mapouter{position:relative;text-align:right;height:360px;width:720px;}</style><a href="https://www.embedgooglemap.net">google maps on my web site</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:360px;width:720px;}</style></div></div>
@@ -143,16 +147,22 @@
                 </div>
                 <div class="col-4" style="margin-left: -50px">
                    <h3 style="color: lightgreen">BUKA</h3>
-                   <H5>10.00-16.00</H5>
+                   <H5>{{ $t->jam_operasional }}</H5>
 
                 </div>
             </div>
             <h3 style="margin-left: -130px" class="mt-2">Fasilitas Toko</h3>
             <div class="row" style="margin-left: -130px">
-                <div class="col-5" >
-                   <p> <i class="fas fa-car-alt"></i> Parkir Mobil & Motor</p>
-                </div>
-                <div class="col-5" >
+            @php
+                $fasil_toko = preg_split('/---/', $t->fasilitas_toko);
+            @endphp
+            @foreach ($fasil_toko as $f )
+            <div class="col-5" >
+                <p> <i class="fas fa-car-alt"></i> {{ $f }}</p>
+             </div>
+            @endforeach
+
+                {{-- <div class="col-5" >
                    <p> <i class="fas fa-car-alt"></i> Wifi Gratis</p>
                 </div>
                 <div class="col-5" >
@@ -163,14 +173,14 @@
                 </div>
                 <div class="col-5" >
                    <p> <i class="fas fa-car-alt"></i> Makan di Tempat</p>
-                </div>
+                </div> --}}
 
             </div>
         </div>
     </div>
     <h2 class="mt-3">Kontak dan Informasi Toko:</h2>
     <div class="container" style="font-size: 1.5rem">
-        <div class="row">
+        {{-- <div class="row">
             <div class="col-3">
                 <i class='far fa-address-book'></i> <a href="www.spikoekuno.co.id">www.spikoekuno.co.id</a>
             </div>
@@ -185,9 +195,30 @@
             <div class="col-3">
                 <i class='far fa-address-book'></i> <span ><i>@sspanikoekunosby</i></span>
             </div>
+        </div> --}}
+        <div class="row">
+            <div class="col-6">
+            @php
+                $kontak_toko = preg_split('/---/', $t->kontak_toko);
+            @endphp
+                <div class="row">
+                    @foreach ($kontak_toko as $k )
+                    <div class="col-6">
+                        <i class='far fa-address-book'></i> <span href="www.spikoekuno.co.id"><i>{{ $k }}</i></span>
+                    </div>
+                    @endforeach
+
+                    {{-- <div class="col-6">
+                        <i class='far fa-address-book'></i> <a href="www.spikoekuno.co.id">www.spikoekuno.co.id</a>
+                    </div>
+                    <div class="col-6">
+                        <i class='far fa-address-book'></i> <a href="www.spikoekuno.co.id">www.spikoekuno.co.id</a>
+                    </div> --}}
+                </div>
+            </div>
         </div>
     </div>
-
+    @endforeach
 </div>
 <div class="container carousel">
     <h1 class="mt-3">Galeri Spikoe Resep Kuno Surabaya</h1>
