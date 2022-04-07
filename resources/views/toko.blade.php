@@ -158,7 +158,23 @@
             @endphp
             @foreach ($fasil_toko as $f )
             <div class="col-5" >
-                <p> <i class="fas fa-car-alt"></i> {{ $f }}</p>
+                <p>
+                    @if ($f==='Parkir Mobil & Motor')
+                    <i class="fas fa-car-alt"></i>
+                    @endif
+                    @if ($f==='Wifi Gratis')
+                    <i class="fas fa-wifi"></i>
+                    @endif
+                    @if ($f==='Pesan Antar')
+                    <i class="fas fa-motorcycle"></i>
+                    @endif
+                    @if ($f==='Pembayaran Non-Tunai')
+                    <i class="fas fa-money-check"></i>
+                    @endif
+                    @if ($f==='Makan di Tempat')
+                    <i class="fas fa-utensils"></i>
+                    @endif
+                    {{ $f }}</p>
              </div>
             @endforeach
 
