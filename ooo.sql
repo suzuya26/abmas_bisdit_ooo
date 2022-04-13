@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 05, 2022 at 12:08 PM
--- Server version: 10.4.21-MariaDB
--- PHP Version: 7.4.25
+-- Generation Time: Apr 13, 2022 at 09:49 AM
+-- Server version: 10.4.22-MariaDB
+-- PHP Version: 8.1.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -348,7 +348,11 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (43, '2021_12_05_152409_nambah_kolomz', 21),
 (44, '2021_12_09_081623_nambah_kolom_lokasi', 22),
 (45, '2021_12_14_075124_drop_harga', 23),
-(46, '2022_04_05_100249_create_toko_oleh_table', 24);
+(46, '2022_04_05_100249_create_toko_oleh_table', 24),
+(47, '2022_04_13_070250_tambah__kolom__table__toko', 25),
+(48, '2022_04_13_072302_create_toko_mitra', 26),
+(49, '2022_04_13_072624_create_produk_toko', 26),
+(50, '2022_04_13_073802_create_mitra_produk', 27);
 
 -- --------------------------------------------------------
 
@@ -378,6 +382,24 @@ CREATE TABLE `mitra` (
 
 INSERT INTO `mitra` (`idmitra`, `namamitra`, `kontak`, `idlokasi`, `foto_mitra`, `deskripsimitra`, `created_at`, `updated_at`, `cicip`, `gmap_mitra`, `alamat_mitra`, `jam_buka_mitra`, `link`) VALUES
 (1, 'Sanjai Amak Haji', '(0752) 35480', 19, 'https://cdn.discordapp.com/attachments/906163180328325130/914050025682771978/lokasi_mitra.png', 'Sudah berdiri sejak 1984, usaha ini menjual produk oleh – oleh khas Sumatera Barat yaitu keripik sanjai beserta makanan khas lain seperti kue kering dan olahan manisan lainnya. Pembeli utama dari usaha ini adalah wisatawan yang datang ke toko fisik di kota Bukittinggi. ', NULL, NULL, 'Ada', '<div class=\"mapouter\"><div class=\"gmap_canvas\"><iframe width=\"640\" height=\"360\" id=\"gmap_canvas\" src=\"https://maps.google.com/maps?q=Jl.%20Mr.%20Asa\'at%20No.33,%20Manggis%20Ganting,%20Kec.%20Mandiangin%20Koto%20Selayan,%20Kota%20Bukittinggi,%20Sumatera%20Barat%2026117&t=&z=13&ie=UTF8&iwloc=&output=embed\" frameborder=\"0\" scrolling=\"no\" marginheight=\"0\" marginwidth=\"0\"></iframe><a href=\"https://www.embedgooglemap.net/blog/divi-discount-code-elegant-themes-coupon/\"></a><br><style>.mapouter{position:relative;text-align:right;height:360px;width:640px;}</style><a href=\"https://www.embedgooglemap.net\">google maps on your website</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:360px;width:640px;}</style></div></div>', 'Jl. Mr. Asa\'at No.33, Manggis Ganting, Kec. Mandiangin Koto Selayan', '06.00–21.00 WIB Setiap Hari', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `mitra_produk`
+--
+
+CREATE TABLE `mitra_produk` (
+  `id_produk_mitra` bigint(20) UNSIGNED NOT NULL,
+  `nama_produk_mitra` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `gambar_produk_mitra` mediumtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `harga_produk_mitra` int(11) NOT NULL,
+  `kemasan_produk_mitra` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `idmitra` bigint(20) UNSIGNED NOT NULL,
+  `idoleh` bigint(20) UNSIGNED NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -436,6 +458,24 @@ INSERT INTO `produk_mitra` (`id_produk_mitra`, `nama_produk_mitra`, `gambar_prod
 (5, 'Kipang Kacang', 'https://cdn.discordapp.com/attachments/906163180328325130/914381510876987402/Kipang_Kacang.jpg', 'Rp 10.000', 0, NULL, 1, NULL),
 (6, 'Rakik Maco (Persegi)', 'https://cdn.discordapp.com/attachments/906163180328325130/914381675004297246/Rakik_Macho.jpg', 'Rp 10.000', 0, NULL, 1, NULL),
 (7, 'Sanjai Balado Panjang', 'https://cdn.discordapp.com/attachments/906163180328325130/914382100357074944/Sanjai_Balado_Panjang.jpg', 'Rp 12.000', 1, NULL, 1, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `produk_toko`
+--
+
+CREATE TABLE `produk_toko` (
+  `id_produk` bigint(20) UNSIGNED NOT NULL,
+  `nama_produk` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `gambar_produk` mediumtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `harga_produk` int(11) NOT NULL,
+  `kemasan_produk` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `idtoko` bigint(20) UNSIGNED NOT NULL,
+  `idoleh` bigint(20) UNSIGNED NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -570,6 +610,29 @@ INSERT INTO `tempatbeli` (`idtempatbeli`, `merk`, `gambarproduk`, `varianjual`, 
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `toko_mitra`
+--
+
+CREATE TABLE `toko_mitra` (
+  `idmitra` bigint(20) UNSIGNED NOT NULL,
+  `nama_mitra` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `alamat_mitra` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `gambar_utama` mediumtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `map_mitra` mediumtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `jam_operasional` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `fasilitas_mitra` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `sekitar_mitra` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `kontak_mitra` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `website_mitra` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `sosmed_mitra` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `galeri_mitra` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `toko_oleh`
 --
 
@@ -580,12 +643,21 @@ CREATE TABLE `toko_oleh` (
   `map_toko` mediumtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `jam_operasional` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `fasilitas_toko` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `sekitar_toko` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `jenis_sekitar` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `kontak_toko` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `galeri_toko` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `value_jenis_sekitar` text COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `toko_oleh`
+--
+
+INSERT INTO `toko_oleh` (`idtoko`, `nama_toko`, `gambar_utama`, `map_toko`, `jam_operasional`, `fasilitas_toko`, `jenis_sekitar`, `kontak_toko`, `galeri_toko`, `created_at`, `updated_at`, `value_jenis_sekitar`) VALUES
+(1, 'Spikoe Surabaya', 'assa', ' <div class=\"mapouter\"><div class=\"gmap_canvas\"><iframe width=\"720\" height=\"360\" id=\"gmap_canvas\" src=\"https://maps.google.com/maps?q=ir.%20soekarno&t=&z=13&ie=UTF8&iwloc=&output=embed\" frameborder=\"0\" scrolling=\"no\" marginheight=\"0\" marginwidth=\"0\"></iframe><a href=\"https://putlocker-is.org\"></a><br><style>.mapouter{position:relative;text-align:right;height:360px;width:720px;}</style><a href=\"https://www.embedgooglemap.net\">google maps on my web site</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:360px;width:720px;}</style></div></div>', '10.00-16.00', 'Parkir Mobil & Motor---Wifi Gratis---Pesan Antar---Pembayaran Non-Tunai---Makan di Tempat', 'ATM BCA---50M---Bandara Juanda---10.3KM', 'www.spikoekuno.co.id---081234567890---@spikoekunosby---@spikoekunosby', 'assasd', NULL, NULL, ''),
+(2, 'Spikoe Kuno', '-', ' <div class=\"mapouter\"><div class=\"gmap_canvas\"><iframe width=\"720\" height=\"360\" id=\"gmap_canvas\" src=\"https://maps.google.com/maps?q=ir.%20soekarno&t=&z=13&ie=UTF8&iwloc=&output=embed\" frameborder=\"0\" scrolling=\"no\" marginheight=\"0\" marginwidth=\"0\"></iframe><a href=\"https://putlocker-is.org\"></a><br><style>.mapouter{position:relative;text-align:right;height:360px;width:720px;}</style><a href=\"https://www.embedgooglemap.net\">google maps on my web site</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:360px;width:720px;}</style></div></div>', '10.00-16.00', 'Parkir Mobil & Motor---Wifi Gratis---Pesan Antar---Pembayaran Non-Tunai---Makan di Tempat', 'ATM BCA---50M---Bandara Juanda---10.3KM', 'www.spikoekuno.co.id---081234567890---@spikoekunosby---@spikoekunosby', '', NULL, NULL, '');
 
 -- --------------------------------------------------------
 
@@ -808,6 +880,14 @@ ALTER TABLE `mitra`
   ADD KEY `mitra_idlokasi_foreign` (`idlokasi`);
 
 --
+-- Indexes for table `mitra_produk`
+--
+ALTER TABLE `mitra_produk`
+  ADD PRIMARY KEY (`id_produk_mitra`),
+  ADD KEY `mitra_produk_idmitra_foreign` (`idmitra`),
+  ADD KEY `mitra_produk_idoleh_foreign` (`idoleh`);
+
+--
 -- Indexes for table `password_resets`
 --
 ALTER TABLE `password_resets`
@@ -830,6 +910,14 @@ ALTER TABLE `produk_mitra`
   ADD KEY `produk_mitra_idmitra_foreign` (`idmitra`);
 
 --
+-- Indexes for table `produk_toko`
+--
+ALTER TABLE `produk_toko`
+  ADD PRIMARY KEY (`id_produk`),
+  ADD KEY `produk_toko_idtoko_foreign` (`idtoko`),
+  ADD KEY `produk_toko_idoleh_foreign` (`idoleh`);
+
+--
 -- Indexes for table `rasa`
 --
 ALTER TABLE `rasa`
@@ -849,6 +937,12 @@ ALTER TABLE `tempatbeli`
   ADD KEY `tempatbeli_idoleh_foreign` (`idoleh`),
   ADD KEY `tempatbeli_idlokasi_foreign` (`idlokasi`),
   ADD KEY `tempatbeli_idmitra_foreign` (`idmitra`);
+
+--
+-- Indexes for table `toko_mitra`
+--
+ALTER TABLE `toko_mitra`
+  ADD PRIMARY KEY (`idmitra`);
 
 --
 -- Indexes for table `toko_oleh`
@@ -928,13 +1022,19 @@ ALTER TABLE `masak`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 
 --
 -- AUTO_INCREMENT for table `mitra`
 --
 ALTER TABLE `mitra`
   MODIFY `idmitra` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `mitra_produk`
+--
+ALTER TABLE `mitra_produk`
+  MODIFY `id_produk_mitra` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`
@@ -947,6 +1047,12 @@ ALTER TABLE `personal_access_tokens`
 --
 ALTER TABLE `produk_mitra`
   MODIFY `id_produk_mitra` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT for table `produk_toko`
+--
+ALTER TABLE `produk_toko`
+  MODIFY `id_produk` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `rasa`
@@ -967,10 +1073,16 @@ ALTER TABLE `tempatbeli`
   MODIFY `idtempatbeli` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
+-- AUTO_INCREMENT for table `toko_mitra`
+--
+ALTER TABLE `toko_mitra`
+  MODIFY `idmitra` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `toko_oleh`
 --
 ALTER TABLE `toko_oleh`
-  MODIFY `idtoko` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `idtoko` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `users`
@@ -1008,11 +1120,25 @@ ALTER TABLE `mitra`
   ADD CONSTRAINT `mitra_idlokasi_foreign` FOREIGN KEY (`idlokasi`) REFERENCES `lokasi` (`idlokasi`);
 
 --
+-- Constraints for table `mitra_produk`
+--
+ALTER TABLE `mitra_produk`
+  ADD CONSTRAINT `mitra_produk_idmitra_foreign` FOREIGN KEY (`idmitra`) REFERENCES `toko_mitra` (`idmitra`),
+  ADD CONSTRAINT `mitra_produk_idoleh_foreign` FOREIGN KEY (`idoleh`) REFERENCES `varianoleh` (`idoleh`);
+
+--
 -- Constraints for table `produk_mitra`
 --
 ALTER TABLE `produk_mitra`
   ADD CONSTRAINT `produk_mitra_idmitra_foreign` FOREIGN KEY (`idmitra`) REFERENCES `mitra` (`idmitra`),
   ADD CONSTRAINT `produk_mitra_idoleh_foreign` FOREIGN KEY (`idoleh`) REFERENCES `varianoleh` (`idoleh`);
+
+--
+-- Constraints for table `produk_toko`
+--
+ALTER TABLE `produk_toko`
+  ADD CONSTRAINT `produk_toko_idoleh_foreign` FOREIGN KEY (`idoleh`) REFERENCES `varianoleh` (`idoleh`),
+  ADD CONSTRAINT `produk_toko_idtoko_foreign` FOREIGN KEY (`idtoko`) REFERENCES `toko_oleh` (`idtoko`);
 
 --
 -- Constraints for table `tempatbeli`

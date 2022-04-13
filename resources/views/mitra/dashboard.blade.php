@@ -4,12 +4,12 @@
     <!-- Main content -->
     <section class="content">
         <div class="container-fluid">
-            <div class="row mb-2">
+            <div class="row mb-2" hidden>
                 <div class="col-sm-6">
                     <h1 class="db-title m-0 text-dark" style="font-size: 25px; font-weight:600;">Online Visitor</h1>
                 </div>
             </div>
-            <div class="row">
+            <div class="row" hidden>
                 <div class="card" style="width: 100vw;">
                     <div class="card-header border-0">
                         <div class="d-flex justify-content-between">
@@ -63,12 +63,12 @@
                     </div>
                 </div>
             </div>
-            <div class="row mb-2">
+            <div class="row mb-2" hidden>
                 <div class="col-sm-6">
                     <h1 class="db-title m-0 text-dark " style="font-size: 25px;font-weight:600;">Feedback</h1>
                 </div>
             </div>
-            <div class="row mb-2">
+            <div class="row mb-2" hidden>
                 <div class="col-md-3 mb-3">
                     <div class="card">
                         <div class="card-body">

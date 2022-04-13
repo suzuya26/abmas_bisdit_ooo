@@ -201,7 +201,7 @@
             <h3 style="margin-left: -130px" class="mt-2">Di Sekitar Toko</h3>
             <div class="row" style="margin-left: -130px">
             @php
-                $sekita_toko = preg_split('/---/', $toko->sekitar_toko);
+                $sekita_toko = preg_split('/---/', $toko->jenis_sekitar);
             @endphp
             @foreach ($sekita_toko as $s )
                 @if ($loop->odd)
