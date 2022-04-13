@@ -44,10 +44,10 @@
     <div class="row">
         <div class="col-5 mt-3">
             <p style="font-size: 2rem">Kamu sedang menelusuri toko, </p>
-            @foreach ($toko as $t )
 
 
-            <h1>{{ $t->nama_toko }}</h1>
+
+            <h1>{{ $toko->nama_toko }}</h1>
 
             <h4># Toko Oleh-Oleh Surabaya</h4>
             <p><i>Menurut <b> <span style="color: orange">100</span> </b> Orang Surabaya</i></p>
@@ -76,7 +76,7 @@
 <div class="container">
     <div class="row mt-4">
         <div class="col-8">
-            <h1 class="">Produk Oleh-oleh dari {{ $t->nama_toko }}</h1>
+            <h1 class="">Produk Oleh-oleh dari {{ $toko->nama_toko }}</h1>
         </div>
         <div class="col-2"></div>
         <div class="col-2" >
@@ -134,10 +134,16 @@
     <hr>
 </div>
 <div class="container">
-    <h1>Informasi {{ $t->nama_toko }}</h1>
+    <h1>Informasi {{ $toko->nama_toko }}</h1>
     <div class="row">
         <div class="col-8">
-            <div class="mapouter"><div class="gmap_canvas"><iframe width="720" height="360" id="gmap_canvas" src="https://maps.google.com/maps?q=ir.%20soekarno&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://putlocker-is.org"></a><br><style>.mapouter{position:relative;text-align:right;height:360px;width:720px;}</style><a href="https://www.embedgooglemap.net">google maps on my web site</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:360px;width:720px;}</style></div></div>
+            @php
+            $embed = $toko->map_toko;
+            $peta = stripslashes($embed);
+            echo $embed;
+
+            @endphp
+            {{-- <div class="mapouter"><div class="gmap_canvas"><iframe width="720" height="360" id="gmap_canvas" src="https://maps.google.com/maps?q=ir.%20soekarno&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://putlocker-is.org"></a><br><style>.mapouter{position:relative;text-align:right;height:360px;width:720px;}</style><a href="https://www.embedgooglemap.net">google maps on my web site</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:360px;width:720px;}</style></div></div> --}}
         </div>
         <div class="col-4">
             <div class="row">
@@ -147,14 +153,14 @@
                 </div>
                 <div class="col-4" style="margin-left: -50px">
                    <h3 style="color: #8fd14f" class="fw-bold">BUKA</h3>
-                   <H5>{{ $t->jam_operasional }}</H5>
+                   <H5>{{ $toko->jam_operasional }}</H5>
 
                 </div>
             </div>
             <h3 style="margin-left: -130px" class="mt-2">Fasilitas Toko</h3>
             <div class="row" style="margin-left: -130px">
             @php
-                $fasil_toko = preg_split('/---/', $t->fasilitas_toko);
+                $fasil_toko = preg_split('/---/', $toko->fasilitas_toko);
             @endphp
             @foreach ($fasil_toko as $f )
             <div class="col-5" >
@@ -195,7 +201,7 @@
             <h3 style="margin-left: -130px" class="mt-2">Di Sekitar Toko</h3>
             <div class="row" style="margin-left: -130px">
             @php
-                $sekita_toko = preg_split('/---/', $t->sekitar_toko);
+                $sekita_toko = preg_split('/---/', $toko->sekitar_toko);
             @endphp
             @foreach ($sekita_toko as $s )
                 @if ($loop->odd)
@@ -234,7 +240,7 @@
         <div class="row">
             <div class="col-6">
             @php
-                $kontak_toko = preg_split('/---/', $t->kontak_toko);
+                $kontak_toko = preg_split('/---/', $toko->kontak_toko);
             @endphp
                 <div class="row">
                     @foreach ($kontak_toko as $k )
@@ -256,7 +262,7 @@
 
 </div>
 <div class="container carousel">
-    <h1 class="mt-3">Galeri {{ $t->nama_toko }}</h1>
+    <h1 class="mt-3">Galeri {{ $toko->nama_toko }}</h1>
     <div class="container" style="position: center">
     <div id="myCarousel" class="carousel" data-bs-ride="carousel">
         <div class="carousel-inner">
@@ -288,7 +294,7 @@
           </a>
     </div>
 </div>
-@endforeach
+
 
 </div>
 
