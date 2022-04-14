@@ -37,7 +37,6 @@
                                     'Nov',
                                     'Des',
                                 ];
-
                                 const data = {
                                     labels: labels,
                                     datasets: [{
