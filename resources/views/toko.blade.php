@@ -84,7 +84,25 @@
         </div>
     </div>
 </div>
+@foreach ($produk_toko as $p )
 <div class="container ">
+    <div class="row mt-3">
+        <div class="col-4">
+            <img width="410px" src="https://images.pexels.com/photos/9938862/pexels-photo-9938862.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+        </div>
+        <div class="col-5 mt-4">
+            <h1>{{ $p->nama_produk }}</h1>
+            <h3>Rp.{{ number_format($p->harga_produk) }}</h3>
+            <a href="" class="btn btn-secondary" style="font-size: 1.7rem"><i><span style="color: orange; font-weight:bold">#1</span> Spikoe di Toko ini</i></a>
+        </div>
+        <div class="col-3 mt-4">
+            <a href="" class=" button-produk"><i class="fa fa-thumbs-up" style="font-size:24px"></i> Rekomendasikan</a> <br>
+            <a href="" class=" mt-3 button-produk"><i class="far fa-bookmark" style="font-size:24px"></i> Simpan Produk</a>
+        </div>
+    </div>
+</div>
+@endforeach
+{{-- <div class="container ">
     <div class="row mt-3">
         <div class="col-4">
             <img width="410px" src="https://images.pexels.com/photos/9938862/pexels-photo-9938862.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
@@ -99,24 +117,8 @@
             <a href="" class=" mt-3 button-produk"><i class="far fa-bookmark" style="font-size:24px"></i> Simpan Produk</a>
         </div>
     </div>
-</div>
-<div class="container ">
-    <div class="row mt-3">
-        <div class="col-4">
-            <img width="410px" src="https://images.pexels.com/photos/9938862/pexels-photo-9938862.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
-        </div>
-        <div class="col-5 mt-4">
-            <h1>Spikoe Kunoe Coklade</h1>
-            <h3>Rp20.000</h3>
-            <a href="" class="btn btn-secondary" style="font-size: 1.7rem"><i><span style="color: orange; font-weight:bold">#1</span> Spikoe di Toko ini</i></a>
-        </div>
-        <div class="col-3 mt-4">
-            <a href="" class=" button-produk"><i class="fa fa-thumbs-up" style="font-size:24px"></i> Rekomendasikan</a> <br>
-            <a href="" class=" mt-3 button-produk"><i class="far fa-bookmark" style="font-size:24px"></i> Simpan Produk</a>
-        </div>
-    </div>
-</div>
-<div class="container ">
+</div> --}}
+{{-- <div class="container ">
     <div class="row mt-3">
         <div class="col-4">
             <img width="410px" src="https://images.pexels.com/photos/9938862/pexels-photo-9938862.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
@@ -132,7 +134,7 @@
         </div>
     </div>
     <hr>
-</div>
+</div> --}}
 <div class="container">
     <h1>Informasi {{ $toko->nama_toko }}</h1>
     <div class="row">
