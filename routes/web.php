@@ -11,6 +11,7 @@ use App\Http\Controllers\favoriteController as ControllersFavoriteController;
 use App\Http\Controllers\MitraController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\TokoController;
+use App\Http\Controllers\ProfilMitraController;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,13 +40,17 @@ Route::get('search', [SearchController::class, 'search']);
 Route::get('/favorit/hapus/{idbookmark}',[FavoriteController::class,'hapusfavorit']);
 
 Route::get('mitras', function () {return view('mitra.dashboard');});
-Route::get('/profil', function () {return view('mitra.profil');});
 Route::get('mitras', function () {return view('mitra.dashboard');});
 Route::get('/daftarproduk', function () {return view('mitra.daftarproduk');});
 Route::get('/tambahproduk', function () {return view('mitra.tambahproduk');});
 Route::get('/updateprofil', function () {return view('mitra.updateprofil');});
 
 Route::get('/toko/{id}', [TokoController::class, 'show']);
+Route::post('/update/{id}', [ProfilMitraController::class, 'update']);
+Route::get('/profil/{id}', [ProfilMitraController::class, 'index']);
+Route::get('/edit/{id}', [ProfilMitraController::class, 'edit']);
+
+
 
 
 
