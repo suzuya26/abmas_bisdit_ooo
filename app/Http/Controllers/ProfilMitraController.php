@@ -26,6 +26,6 @@ class ProfilMitraController extends Controller
             'website_mitra' => $request->web,
             'sosmed_mitra' => $request->ig,
         ]);
-        return redirect()->back();
+        return redirect('/profil/'.$id);
     }
 }

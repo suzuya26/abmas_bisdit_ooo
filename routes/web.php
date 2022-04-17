@@ -49,6 +49,7 @@ Route::get('/toko/{id}', [TokoController::class, 'show']);
 Route::post('/update/{id}', [ProfilMitraController::class, 'update']);
 Route::get('/profil/{id}', [ProfilMitraController::class, 'index']);
 Route::get('/edit/{id}', [ProfilMitraController::class, 'edit']);
+Route::post('/tambah/{id}', [ProdukController::class, 'tambah']);
 
 
 
