@@ -139,13 +139,13 @@
     <h1>Informasi {{ $toko->nama_toko }}</h1>
     <div class="row">
         <div class="col-8">
-            @php
+            {{-- @php
             $embed = $toko->map_toko;
             $peta = stripslashes($embed);
             echo $embed;
 
-            @endphp
-            {{-- <div class="mapouter"><div class="gmap_canvas"><iframe width="720" height="360" id="gmap_canvas" src="https://maps.google.com/maps?q=ir.%20soekarno&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://putlocker-is.org"></a><br><style>.mapouter{position:relative;text-align:right;height:360px;width:720px;}</style><a href="https://www.embedgooglemap.net">google maps on my web site</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:360px;width:720px;}</style></div></div> --}}
+            @endphp --}}
+           <div class="mapouter"><div class="gmap_canvas"><iframe width="640" height="360" id="gmap_canvas" src="https://maps.google.com/maps?q=2880%20Broadway,%20New%20York&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://fmovies-online.net">fmovies</a><br><style>.mapouter{position:relative;text-align:right;height:360px;width:640px;}</style><a href="https://www.embedgooglemap.net">google maps html code</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:360px;width:640px;}</style></div></div>
         </div>
         <div class="col-4">
             <div class="row">
@@ -217,11 +217,37 @@
                 </div>
                 @endif
             @endforeach
-
+            {{-- @php
+                $jenis_sekitar = preg_split('/---/', $toko->jenis_sekitar);
+                $value_sekitar = preg_split('/---/', $toko->value_jenis_sekitar);
+            @endphp
+            @foreach ($jenis_sekitar as $j )
+            <div class="col-5" >
+                @if ($j==='ATM')
+                    <p> <i class="far fa-dollar-sign"></i></p>
+                @endif
+                @if ($j==='Bandara')
+                    <p> <i class="far fa-plane-alt"></i></p>
+                @endif
+                @if ($j==='Stasiun')
+                    <p> <i class="fas fa-train"></i></p>
+                @endif
+            </div>
+            @endforeach
+            <div class="col-5" >
+            @foreach ($value_sekitar as $v)
+                @if ($loop->odd)
+                <p style="margin-left:30px"> {{ $v }}</p>
+                @endif
+                @if ($loop->odd)
+                <p> {{ $v }}</p>
+                @endif
+            @endforeach
+            </div> --}}
             </div>
         </div>
     </div>
-    <h2 class="mt-3">Kontak dan Informasi Toko:</h2>
+    <h2  class="mt-3">Kontak dan Informasi Toko:</h2>
     <div class="container" style="font-size: 1.5rem">
         {{-- <div class="row">
             <div class="col-3">
@@ -240,7 +266,7 @@
             </div>
         </div> --}}
         <div class="row">
-            <div class="col-6">
+            <div class="col-8">
             @php
                 $kontak_toko = preg_split('/---/', $toko->kontak_toko);
             @endphp
