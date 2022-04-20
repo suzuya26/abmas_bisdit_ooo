@@ -145,22 +145,24 @@
             echo $embed;
 
             @endphp --}}
-            <div class="mapouter"><div class="gmap_canvas"><iframe width="400" height="400" id="gmap_canvas" src="https://maps.google.com/maps?q=2880%20Broadway,%20New%20York&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://putlocker-is.org"></a><br><style>.mapouter{position:relative;text-align:right;height:400px;width:400px;}</style><a href="https://www.embedgooglemap.net">google map for web</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:400px;width:400px;}</style></div></div>
+
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31660.513906147913!2d112.79651086582963!3d-7.290317142661231!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7f09c510751b5%3A0xb04b9f70e748e85!2sKeputih%2C%20Sukolilo%2C%20Surabaya%20City%2C%20East%20Java!5e0!3m2!1sen!2sid!4v1650439226496!5m2!1sen!2sid" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
         </div>
         <div class="col-6">
             <div class="row">
-                <div class="col-4" style="margin-left: -130px">
+                <div class="col-4" >
                     <i class='far fa-calendar-alt' style='font-size:66px'></i>
 
                 </div>
-                <div class="col-4" style="margin-left: -50px">
+                <div class="col-4" >
                    <h3 style="color: #8fd14f" class="fw-bold">BUKA</h3>
                    <H5>{{ $toko->jam_operasional }}</H5>
 
                 </div>
             </div>
-            <h3 style="margin-left: -130px" class="mt-2">Fasilitas Toko</h3>
-            <div class="row" style="margin-left: -130px">
+            <h3  class="mt-2">Fasilitas Toko</h3>
+            <div class="row" >
             @php
                 $fasil_toko = preg_split('/---/', $toko->fasilitas_toko);
             @endphp
@@ -200,8 +202,8 @@
                 </div> --}}
 
             </div>
-            <h3 style="margin-left: -130px" class="mt-2">Di Sekitar Toko</h3>
-            <div class="row" style="margin-left: -130px">
+            <h3  class="mt-2">Di Sekitar Toko</h3>
+            <div class="row" >
             @php
                 $sekita_toko = preg_split('/---/', $toko->jenis_sekitar);
             @endphp
