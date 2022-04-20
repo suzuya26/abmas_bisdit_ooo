@@ -138,16 +138,16 @@
 <div class="container">
     <h1>Informasi {{ $toko->nama_toko }}</h1>
     <div class="row">
-        <div class="col-8">
+        <div class="col-6">
             {{-- @php
             $embed = $toko->map_toko;
             $peta = stripslashes($embed);
             echo $embed;
 
             @endphp --}}
-           <div class="mapouter"><div class="gmap_canvas"><iframe width="640" height="360" id="gmap_canvas" src="https://maps.google.com/maps?q=2880%20Broadway,%20New%20York&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://fmovies-online.net">fmovies</a><br><style>.mapouter{position:relative;text-align:right;height:360px;width:640px;}</style><a href="https://www.embedgooglemap.net">google maps html code</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:360px;width:640px;}</style></div></div>
+            <div class="mapouter"><div class="gmap_canvas"><iframe width="400" height="400" id="gmap_canvas" src="https://maps.google.com/maps?q=2880%20Broadway,%20New%20York&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://putlocker-is.org"></a><br><style>.mapouter{position:relative;text-align:right;height:400px;width:400px;}</style><a href="https://www.embedgooglemap.net">google map for web</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:400px;width:400px;}</style></div></div>
         </div>
-        <div class="col-4">
+        <div class="col-6">
             <div class="row">
                 <div class="col-4" style="margin-left: -130px">
                     <i class='far fa-calendar-alt' style='font-size:66px'></i>
