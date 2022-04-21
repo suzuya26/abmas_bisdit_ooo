@@ -49,12 +49,10 @@
 
             <h1>{{ $toko->nama_toko }}</h1>
 
-            <h4># Toko Oleh-Oleh Surabaya</h4>
+            <h4>#1 Toko Oleh-Oleh Surabaya</h4>
             <p><i>Menurut <b> <span style="color: orange">100</span> </b> Orang Surabaya</i></p>
             <p><i>Menurut <b> <span style="color: orange">230</span> </b> Wisatawan</i></p> <br>
-            <h4>#3 Toko Kue Lapis</h4>
-            <p><i>Menurut <b> <span style="color: orange">100</span> </b> Orang Surabaya</i></p>
-            <p><i>Menurut <b> <span style="color: orange">230</span> </b> Wisatawan</i></p>
+
             {{-- <p>Pernah ke toko ini?    Ingin berkunjung ke toko ini?</p> --}}
             <div class="row">
                 <div class="col-5">

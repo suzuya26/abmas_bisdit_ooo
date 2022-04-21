@@ -42,5 +42,10 @@ class MitraController extends Controller
         ]);
         return redirect('/profil/'.$id);
     }
+    public function show($id){
+        $toko = DB::table('toko_mitra')->where('idmitra', $id)->first();
+        $produk_mitra = DB::table('mitra_produk')->where('idmitra', $id)->get();
+        return view('mitra', compact('toko', 'produk_mitra'));
+    }
 
 }
