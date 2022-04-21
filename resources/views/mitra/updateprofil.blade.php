@@ -39,7 +39,7 @@
 
                             <div class="card-body">
                                 <div class="form-group">
-                                    <label for="formFileMultiple" class="form-label">Nama Toko</label>
+                                    <label for="inputName" class="form-label">Nama Toko</label>
                                     <input type="text" name="nama" value={{ $toko_mitra->nama_mitra}} class="form-control">
                                 </div>
                                 <div class="form-group">

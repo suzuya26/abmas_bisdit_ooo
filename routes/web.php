@@ -11,7 +11,7 @@ use App\Http\Controllers\favoriteController as ControllersFavoriteController;
 use App\Http\Controllers\MitraController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\TokoController;
-use App\Http\Controllers\ProfilMitraController;
+use App\Http\Controllers\ProdukController;
 
 /*
 |--------------------------------------------------------------------------
@@ -46,9 +46,10 @@ Route::get('/tambahproduk', function () {return view('mitra.tambahproduk');});
 Route::get('/updateprofil', function () {return view('mitra.updateprofil');});
 
 Route::get('/toko/{id}', [TokoController::class, 'show']);
-Route::post('/update/{id}', [ProfilMitraController::class, 'update']);
-Route::get('/profil/{id}', [ProfilMitraController::class, 'index']);
-Route::get('/edit/{id}', [ProfilMitraController::class, 'edit']);
+Route::post('/update/{id}', [MitraController::class, 'update']);
+Route::get('/profil/{id}', [MitraController::class, 'index']);
+Route::get('/edit/{id}', [MitraController::class, 'edit']);
+Route::get('/tambahproduk/{id}', [ProdukController::class, 'tambahproduk']);
 Route::post('/tambah/{id}', [ProdukController::class, 'tambah']);
 
 
