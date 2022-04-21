@@ -35,7 +35,7 @@
                                     </button>
                                 </div>
                             </div>
-                            <input name="idmitra" type="hidden" value="1">
+                            <input name="idmitra" type="hidden" value="{{ $mitra_produk->idmitra }}">
                             <input name="idoleh" type="hidden" value="1">
                             <div class="card-body">
                                 <div class="form-group">

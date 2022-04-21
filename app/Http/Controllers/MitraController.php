@@ -9,8 +9,8 @@ use Illuminate\Support\Facades\DB;
 class MitraController extends Controller
 {
     public function mitra(){
-        $mitra = DB::table('mitra')
-        ->join('lokasi', 'lokasi.idlokasi', '=', 'mitra.idlokasi')
+        $mitra = DB::table('produk_mitra')
+        ->join('mitra_produk', 'mitra_produk.idmitra', '=', 'produk_mitra.idmitra')
         ->get();
         $idmitra = '';
         foreach ($mitra as $m) {

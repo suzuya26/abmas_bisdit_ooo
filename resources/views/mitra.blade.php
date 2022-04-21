@@ -1,9 +1,7 @@
 @extends("layouts.master")
 @section('content')
-
-
     <style>
-        .carousel-item{
+        .carousel-item {
             height: 32rem;
             background: #777777;
             color: white;
@@ -11,14 +9,16 @@
             background-position: center;
             background-size: cover;
         }
-        .container .carousel{
+
+        .container .carousel {
             position: relative;
             bottom: 0;
             left: 0;
             right: 0;
             padding: 40px;
         }
-        .carousel-caption{
+
+        .carousel-caption {
             text-align: left;
             background: rgba(0, 0, 0, 0.5);
             left: 0%;
@@ -26,6 +26,7 @@
             bottom: 0%;
             text-indent: 10%;
         }
+
         #myCarousel {
             margin-left: 50px;
             margin-right: 50px;
@@ -38,9 +39,11 @@
         .carousel-control.right {
             margin-right: -25px;
         }
+
         .carousel-control {
             width: 0%;
         }
+
     </style>
     <div class="container">
         <div class="row">
@@ -68,7 +71,9 @@
                 </div>
             </div>
             <div class="col-7 mt-3">
-                <img width="90%" src="https://images.unsplash.com/photo-1580757468214-c73f7062a5cb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80" alt="">
+                <img width="90%"
+                    src="https://images.unsplash.com/photo-1580757468214-c73f7062a5cb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80"
+                    alt="">
             </div>
         </div> <br>
         <hr class="mt-3">
@@ -79,28 +84,32 @@
                 <h1 class="">Produk Oleh-oleh dari {{ $toko->nama_mitra }}</h1>
             </div>
             <div class="col-2"></div>
-            <div class="col-2" >
-               <h1> <span><i class="fas fa-filter"></i></span>  <i class='fas fa-angle-left'></i> <i class='fas fa-angle-right'></i> </h1>
+            <div class="col-2">
+                <h1> <span><i class="fas fa-filter"></i></span> <i class='fas fa-angle-left'></i> <i
+                        class='fas fa-angle-right'></i> </h1>
             </div>
         </div>
     </div>
-    @foreach ($produk_mitra as $p )
-    <div class="container ">
-        <div class="row mt-3">
-            <div class="col-4">
-                <img width="410px" src="{{ $p->gambar_produk_mitra }}" alt="">
-            </div>
-            <div class="col-5 mt-4">
-                <h1>{{ $p->nama_produk_mitra }}</h1>
-                <h3>Rp.{{ number_format($p->harga_produk_mitra) }}</h3>
-                <a href="" class="btn btn-secondary" style="font-size: 1.7rem"><i><span style="color: orange; font-weight:bold">#1</span> Spikoe di Toko ini</i></a>
-            </div>
-            <div class="col-3 mt-4">
-                <a href="" class=" button-produk"><i class="fa fa-thumbs-up" style="font-size:24px"></i> Rekomendasikan</a> <br>
-                <a href="" class=" mt-3 button-produk"><i class="far fa-bookmark" style="font-size:24px"></i> Simpan Produk</a>
+    @foreach ($produk_mitra as $p)
+        <div class="container ">
+            <div class="row mt-3">
+                <div class="col-4">
+                    <img width="410px" src="{{ $p->gambar_produk_mitra }}" alt="">
+                </div>
+                <div class="col-5 mt-4">
+                    <h1>{{ $p->nama_produk_mitra }}</h1>
+                    <h3>Rp.{{ number_format($p->harga_produk_mitra) }}</h3>
+                    <a href="" class="btn btn-secondary" style="font-size: 1.7rem"><i><span
+                                style="color: orange; font-weight:bold">#1</span> Spikoe di Toko ini</i></a>
+                </div>
+                <div class="col-3 mt-4">
+                    <a href="" class=" button-produk"><i class="fa fa-thumbs-up" style="font-size:24px"></i>
+                        Rekomendasikan</a> <br>
+                    <a href="" class=" mt-3 button-produk"><i class="far fa-bookmark" style="font-size:24px"></i> Simpan
+                        Produk</a>
+                </div>
             </div>
         </div>
-    </div>
     @endforeach
     {{-- <div class="container ">
         <div class="row mt-3">
@@ -136,7 +145,7 @@
         <hr>
     </div> --}}
     <div class="container mt-4">
-        <h1 >Informasi {{ $toko->nama_mitra }}</h1>
+        <h1>Informasi {{ $toko->nama_mitra }}</h1>
         <div class="row">
             <div class="col-6">
                 {{-- @php
@@ -146,47 +155,51 @@
 
                 @endphp --}}
 
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31660.513906147913!2d112.79651086582963!3d-7.290317142661231!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7f09c510751b5%3A0xb04b9f70e748e85!2sKeputih%2C%20Sukolilo%2C%20Surabaya%20City%2C%20East%20Java!5e0!3m2!1sen!2sid!4v1650439226496!5m2!1sen!2sid" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31660.513906147913!2d112.79651086582963!3d-7.290317142661231!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7f09c510751b5%3A0xb04b9f70e748e85!2sKeputih%2C%20Sukolilo%2C%20Surabaya%20City%2C%20East%20Java!5e0!3m2!1sen!2sid!4v1650439226496!5m2!1sen!2sid"
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
 
             </div>
             <div class="col-6">
                 <div class="row">
-                    <div class="col-4" >
+                    <div class="col-4">
                         <i class='far fa-calendar-alt' style='font-size:66px'></i>
 
                     </div>
-                    <div class="col-4" >
-                       <h3 style="color: #8fd14f" class="fw-bold">BUKA</h3>
-                       <H5>{{ $toko->jam_operasional }}</H5>
+                    <div class="col-4">
+                        <h3 style="color: #8fd14f" class="fw-bold">BUKA</h3>
+                        <H5>{{ $toko->jam_operasional }}</H5>
 
                     </div>
                 </div>
-                <h3  class="mt-2">Fasilitas Toko</h3>
-                <div class="row" >
-                @php
-                    $fasil_toko = preg_split('/---/', $toko->fasilitas_mitra);
-                @endphp
-                @foreach ($fasil_toko as $f )
-                <div class="col-5" >
-                    <p>
-                        @if ($f==='Parkir Mobil & Motor')
-                        <i class="fas fa-car-alt"></i>
-                        @endif
-                        @if ($f==='Wifi Gratis')
-                        <i class="fas fa-wifi"></i>
-                        @endif
-                        @if ($f==='Pesan Antar')
-                        <i class="fas fa-motorcycle"></i>
-                        @endif
-                        @if ($f==='Pembayaran Non-Tunai')
-                        <i class="fas fa-money-check"></i>
-                        @endif
-                        @if ($f==='Makan di Tempat')
-                        <i class="fas fa-utensils"></i>
-                        @endif
-                        {{ $f }}</p>
-                 </div>
-                @endforeach
+                <h3 class="mt-2">Fasilitas Toko</h3>
+                <div class="row">
+                    @php
+                        $fasil_toko = preg_split('/---/', $toko->fasilitas_mitra);
+                    @endphp
+                    @foreach ($fasil_toko as $f)
+                        <div class="col-5">
+                            <p>
+                                @if ($f === 'Parkir Mobil & Motor')
+                                    <i class="fas fa-car-alt"></i>
+                                @endif
+                                @if ($f === 'Wifi Gratis')
+                                    <i class="fas fa-wifi"></i>
+                                @endif
+                                @if ($f === 'Pesan Antar')
+                                    <i class="fas fa-motorcycle"></i>
+                                @endif
+                                @if ($f === 'Pembayaran Non-Tunai')
+                                    <i class="fas fa-money-check"></i>
+                                @endif
+                                @if ($f === 'Makan di Tempat')
+                                    <i class="fas fa-utensils"></i>
+                                @endif
+                                {{ $f }}
+                            </p>
+                        </div>
+                    @endforeach
 
                     {{-- <div class="col-5" >
                        <p> <i class="fas fa-car-alt"></i> Wifi Gratis</p>
@@ -202,36 +215,36 @@
                     </div> --}}
 
                 </div>
-                <h3  class="mt-2">Di Sekitar Toko</h3>
-                <div class="row" >
-                @php
-                    $sekita_toko = preg_split('/---/', $toko->sekitar_mitra);
-                @endphp
-                @foreach ($sekita_toko as $s )
-                    @if ($loop->odd)
-                    <div class="col-5" >
-                        <p> <i class="fa-solid fa-location-dot"></i> {{ $s }}</p>
-                    </div>
-                    @endif
-                    @if ($loop->even)
-                    <div class="col-5" >
-                        <p> {{ $s }}</p>
-                    </div>
-                    @endif
-                @endforeach
-                {{-- @php
+                <h3 class="mt-2">Di Sekitar Toko</h3>
+                <div class="row">
+                    @php
+                        $sekita_toko = preg_split('/---/', $toko->sekitar_mitra);
+                    @endphp
+                    @foreach ($sekita_toko as $s)
+                        @if ($loop->odd)
+                            <div class="col-5">
+                                <p> <i class="fa-solid fa-location-dot"></i> {{ $s }}</p>
+                            </div>
+                        @endif
+                        @if ($loop->even)
+                            <div class="col-5">
+                                <p> {{ $s }}</p>
+                            </div>
+                        @endif
+                    @endforeach
+                    {{-- @php
                     $jenis_sekitar = preg_split('/---/', $toko->jenis_sekitar);
                     $value_sekitar = preg_split('/---/', $toko->value_jenis_sekitar);
                 @endphp
-                @foreach ($jenis_sekitar as $j )
+                @foreach ($jenis_sekitar as $j)
                 <div class="col-5" >
-                    @if ($j==='ATM')
+                    @if ($j === 'ATM')
                         <p> <i class="far fa-dollar-sign"></i></p>
                     @endif
-                    @if ($j==='Bandara')
+                    @if ($j === 'Bandara')
                         <p> <i class="far fa-plane-alt"></i></p>
                     @endif
-                    @if ($j==='Stasiun')
+                    @if ($j === 'Stasiun')
                         <p> <i class="fas fa-train"></i></p>
                     @endif
                 </div>
@@ -249,7 +262,7 @@
                 </div>
             </div>
         </div>
-        <h2  class="mt-3">Kontak dan Informasi Toko:</h2>
+        <h2 class="mt-3">Kontak dan Informasi Toko:</h2>
         <div class="container" style="font-size: 1.5rem">
             {{-- <div class="row">
                 <div class="col-3">
@@ -269,14 +282,15 @@
             </div> --}}
             <div class="row">
                 <div class="col-8">
-                @php
-                    $kontak_mitra = preg_split('/---/', $toko->kontak_mitra);
-                @endphp
+                    @php
+                        $kontak_mitra = preg_split('/---/', $toko->kontak_mitra);
+                    @endphp
                     <div class="row">
-                        @foreach ($kontak_mitra as $k )
-                        <div class="col-6">
-                            <i class='far fa-address-book'></i> <span href="www.spikoekuno.co.id"><i>{{ $k }}</i></span>
-                        </div>
+                        @foreach ($kontak_mitra as $k)
+                            <div class="col-6">
+                                <i class='far fa-address-book'></i> <span
+                                    href="www.spikoekuno.co.id"><i>{{ $k }}</i></span>
+                            </div>
                         @endforeach
 
                         {{-- <div class="col-6">
@@ -294,34 +308,37 @@
     <div class="container carousel">
         <h1 class="mt-3">Galeri {{ $toko->nama_mitra }}</h1>
         <div class="container" style="position: center">
-        <div id="myCarousel" class="carousel" data-bs-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active" style="background-image:url(https://i0.wp.com/www.emporioarchitect.com/upload/portofolio/1280/desain-rumah-dan-toko-modern-2-lantai-43010721-94431946010721023307-3.jpg)">
-                <div class="carousel-caption">
-                    <h1>Tampak Depan Toko</h1>
-                    <p>Jalan Tunjungan Plaza 78, Tunjungan, Plaza</p>
+            @php
+                $galeri_toko = preg_split('/---/', $toko->galeri_toko);
+                $galeri_toko_caption = preg_split('/---/', $toko->galeri_toko_caption);
+            @endphp
+            <div id="myCarousel" class="carousel" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    @foreach ($galeri_toko as $key => $g)
+                    <div class="carousel-item {{$key == 0 ? 'active' : '' }}">
+                        <img src="{{$g}}" class="d-block w-100"  alt="...">
+                    </div>
+                    @endforeach
+                    @foreach ($galeri_toko_caption as $gc)
+                        <div class="carousel-caption">
+                            @if ($loop->odd)
+                                <h1>{{ $gc }}</h1>
+                            @endif
+                            @if ($loop->even)
+                                <p>{{ $gc }}</p>
+                            @endif
+                        </div>
+                    @endforeach
+                    </div>
                 </div>
-              </div>
-              <div class="carousel-item" style="background-image:url(https://sribu-sg.s3.amazonaws.com/assets/media/contest_attachment/5768d146fcbda3e74f5b142ab561c0df/2585cb9dbc.jpg)">
-                <div class="carousel-caption">
-                    <h1>Tampak Samping Toko</h1>
-                    <p>Jalan Tunjungan Plaza 78, Tunjungan, Plaza</p>
-                </div>
-              </div>
-              <div class="carousel-item" style="background-image:url(https://i0.wp.com/www.emporioarchitect.com/upload/portofolio/thumb/desain-rumah-dan-toko-modern-2-lantai-43010721-94431946010721023307-5.jpg)">
-                <div class="carousel-caption">
-                    <h1>Tampak Belakang Toko</h1>
-                    <p>Jalan Tunjungan Plaza 78, Tunjungan, Plaza</p>
-                </div>
-              </div>
-              <a class="carousel-control-prev" href="#myCarousel" role="button" data-bs-slide="next">
+            <a class="carousel-control-prev" href="#myCarousel" role="button" data-bs-slide="next">
                 <span class="sr-only">Previous</span>
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              </a>
-              <a class="carousel-control-next" href="#myCarousel" role="button" data-bs-slide="prev">
+            </a>
+            <a class="carousel-control-next" href="#myCarousel" role="button" data-bs-slide="prev">
                 <span class="sr-only">Next</span>
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              </a>
+            </a>
         </div>
     </div>
 
