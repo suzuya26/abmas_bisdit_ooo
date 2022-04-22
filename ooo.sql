@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 13, 2022 at 09:49 AM
--- Server version: 10.4.22-MariaDB
--- PHP Version: 8.1.2
+-- Generation Time: Apr 22, 2022 at 03:36 AM
+-- Server version: 10.4.21-MariaDB
+-- PHP Version: 7.4.25
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -350,9 +350,9 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (45, '2021_12_14_075124_drop_harga', 23),
 (46, '2022_04_05_100249_create_toko_oleh_table', 24),
 (47, '2022_04_13_070250_tambah__kolom__table__toko', 25),
-(48, '2022_04_13_072302_create_toko_mitra', 26),
-(49, '2022_04_13_072624_create_produk_toko', 26),
-(50, '2022_04_13_073802_create_mitra_produk', 27);
+(48, '2022_04_13_072302_create_toko_mitra', 25),
+(49, '2022_04_13_072624_create_produk_toko', 25),
+(50, '2022_04_13_073802_create_mitra_produk', 25);
 
 -- --------------------------------------------------------
 
@@ -373,15 +373,17 @@ CREATE TABLE `mitra` (
   `gmap_mitra` mediumtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `alamat_mitra` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `jam_buka_mitra` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `link` text COLLATE utf8mb4_unicode_ci DEFAULT NULL
+  `link` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `galeri_toko` mediumint(9) NOT NULL,
+  `galeri_toko_caption` mediumtext COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `mitra`
 --
 
-INSERT INTO `mitra` (`idmitra`, `namamitra`, `kontak`, `idlokasi`, `foto_mitra`, `deskripsimitra`, `created_at`, `updated_at`, `cicip`, `gmap_mitra`, `alamat_mitra`, `jam_buka_mitra`, `link`) VALUES
-(1, 'Sanjai Amak Haji', '(0752) 35480', 19, 'https://cdn.discordapp.com/attachments/906163180328325130/914050025682771978/lokasi_mitra.png', 'Sudah berdiri sejak 1984, usaha ini menjual produk oleh – oleh khas Sumatera Barat yaitu keripik sanjai beserta makanan khas lain seperti kue kering dan olahan manisan lainnya. Pembeli utama dari usaha ini adalah wisatawan yang datang ke toko fisik di kota Bukittinggi. ', NULL, NULL, 'Ada', '<div class=\"mapouter\"><div class=\"gmap_canvas\"><iframe width=\"640\" height=\"360\" id=\"gmap_canvas\" src=\"https://maps.google.com/maps?q=Jl.%20Mr.%20Asa\'at%20No.33,%20Manggis%20Ganting,%20Kec.%20Mandiangin%20Koto%20Selayan,%20Kota%20Bukittinggi,%20Sumatera%20Barat%2026117&t=&z=13&ie=UTF8&iwloc=&output=embed\" frameborder=\"0\" scrolling=\"no\" marginheight=\"0\" marginwidth=\"0\"></iframe><a href=\"https://www.embedgooglemap.net/blog/divi-discount-code-elegant-themes-coupon/\"></a><br><style>.mapouter{position:relative;text-align:right;height:360px;width:640px;}</style><a href=\"https://www.embedgooglemap.net\">google maps on your website</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:360px;width:640px;}</style></div></div>', 'Jl. Mr. Asa\'at No.33, Manggis Ganting, Kec. Mandiangin Koto Selayan', '06.00–21.00 WIB Setiap Hari', NULL);
+INSERT INTO `mitra` (`idmitra`, `namamitra`, `kontak`, `idlokasi`, `foto_mitra`, `deskripsimitra`, `created_at`, `updated_at`, `cicip`, `gmap_mitra`, `alamat_mitra`, `jam_buka_mitra`, `link`, `galeri_toko`, `galeri_toko_caption`) VALUES
+(1, 'Sanjai Amak Haji', '(0752) 35480', 19, 'https://cdn.discordapp.com/attachments/906163180328325130/914050025682771978/lokasi_mitra.png', 'Sudah berdiri sejak 1984, usaha ini menjual produk oleh – oleh khas Sumatera Barat yaitu keripik sanjai beserta makanan khas lain seperti kue kering dan olahan manisan lainnya. Pembeli utama dari usaha ini adalah wisatawan yang datang ke toko fisik di kota Bukittinggi. ', NULL, NULL, 'Ada', '<div class=\"mapouter\"><div class=\"gmap_canvas\"><iframe width=\"640\" height=\"360\" id=\"gmap_canvas\" src=\"https://maps.google.com/maps?q=Jl.%20Mr.%20Asa\'at%20No.33,%20Manggis%20Ganting,%20Kec.%20Mandiangin%20Koto%20Selayan,%20Kota%20Bukittinggi,%20Sumatera%20Barat%2026117&t=&z=13&ie=UTF8&iwloc=&output=embed\" frameborder=\"0\" scrolling=\"no\" marginheight=\"0\" marginwidth=\"0\"></iframe><a href=\"https://www.embedgooglemap.net/blog/divi-discount-code-elegant-themes-coupon/\"></a><br><style>.mapouter{position:relative;text-align:right;height:360px;width:640px;}</style><a href=\"https://www.embedgooglemap.net\">google maps on your website</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:360px;width:640px;}</style></div></div>', 'Jl. Mr. Asa\'at No.33, Manggis Ganting, Kec. Mandiangin Koto Selayan', '06.00–21.00 WIB Setiap Hari', NULL, 0, '');
 
 -- --------------------------------------------------------
 
@@ -400,6 +402,15 @@ CREATE TABLE `mitra_produk` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `mitra_produk`
+--
+
+INSERT INTO `mitra_produk` (`id_produk_mitra`, `nama_produk_mitra`, `gambar_produk_mitra`, `harga_produk_mitra`, `kemasan_produk_mitra`, `idmitra`, `idoleh`, `created_at`, `updated_at`) VALUES
+(1, 'Spikoe', 'data:image/jpeg;base64,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', 10000, 'S', 1, 10, NULL, NULL),
+(2, 'Spikooe', 'ac6b20ef7cc23dce50e132509dea003e.jpg', 2000000, 'S', 1, 1, NULL, NULL),
+(3, 'mitra_produk', 'WhatsApp Image 2022-03-10 at 11.01.09.jpeg', 1121, 'M', 1, 1, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -627,8 +638,18 @@ CREATE TABLE `toko_mitra` (
   `sosmed_mitra` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `galeri_mitra` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `galeri_toko` mediumtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `galeri_toko_caption` mediumtext COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `toko_mitra`
+--
+
+INSERT INTO `toko_mitra` (`idmitra`, `nama_mitra`, `alamat_mitra`, `gambar_utama`, `map_mitra`, `jam_operasional`, `fasilitas_mitra`, `sekitar_mitra`, `kontak_mitra`, `website_mitra`, `sosmed_mitra`, `galeri_mitra`, `created_at`, `updated_at`, `galeri_toko`, `galeri_toko_caption`) VALUES
+(1, 'spikoekoe', 'Keputih, Surabaya', NULL, NULL, NULL, NULL, NULL, '085456623', 'www.spikoe.com', '@spikoekoe', NULL, NULL, NULL, 'https://i0.wp.com/www.emporioarchitect.com/upload/portofolio/thumb/desain-rumah-dan-toko-modern-2-lantai-43010721-94431946010721023307-5.jpg---https://i0.wp.com/www.emporioarchitect.com/upload/portofolio/thumb/desain-rumah-dan-toko-modern-2-lantai-43010721-94431946010721023307-5.jpg---https://i0.wp.com/www.emporioarchitect.com/upload/portofolio/1280/desain-rumah-dan-toko-modern-2-lantai-43010721-94431946010721023307-3.jpg', 'Tampak Samping Toko---Jalan Tunjungan Plaza 78, Tunjungan, Plaza---Tampak Depan Toko---Jalan Tunjungan Plaza 78, Tunjungan, Plaza---Tampak Belakang Toko'),
+(9, 'daffa', 'Lumajang', NULL, NULL, NULL, NULL, NULL, '085456623', 'www.spikoe.com', '@spikoekoe', NULL, NULL, NULL, '', '');
 
 -- --------------------------------------------------------
 
@@ -648,16 +669,16 @@ CREATE TABLE `toko_oleh` (
   `galeri_toko` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
-  `value_jenis_sekitar` text COLLATE utf8mb4_unicode_ci NOT NULL
+  `value_jenis_sekitar` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `galeri_toko_caption` mediumtext COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `toko_oleh`
 --
 
-INSERT INTO `toko_oleh` (`idtoko`, `nama_toko`, `gambar_utama`, `map_toko`, `jam_operasional`, `fasilitas_toko`, `jenis_sekitar`, `kontak_toko`, `galeri_toko`, `created_at`, `updated_at`, `value_jenis_sekitar`) VALUES
-(1, 'Spikoe Surabaya', 'assa', ' <div class=\"mapouter\"><div class=\"gmap_canvas\"><iframe width=\"720\" height=\"360\" id=\"gmap_canvas\" src=\"https://maps.google.com/maps?q=ir.%20soekarno&t=&z=13&ie=UTF8&iwloc=&output=embed\" frameborder=\"0\" scrolling=\"no\" marginheight=\"0\" marginwidth=\"0\"></iframe><a href=\"https://putlocker-is.org\"></a><br><style>.mapouter{position:relative;text-align:right;height:360px;width:720px;}</style><a href=\"https://www.embedgooglemap.net\">google maps on my web site</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:360px;width:720px;}</style></div></div>', '10.00-16.00', 'Parkir Mobil & Motor---Wifi Gratis---Pesan Antar---Pembayaran Non-Tunai---Makan di Tempat', 'ATM BCA---50M---Bandara Juanda---10.3KM', 'www.spikoekuno.co.id---081234567890---@spikoekunosby---@spikoekunosby', 'assasd', NULL, NULL, ''),
-(2, 'Spikoe Kuno', '-', ' <div class=\"mapouter\"><div class=\"gmap_canvas\"><iframe width=\"720\" height=\"360\" id=\"gmap_canvas\" src=\"https://maps.google.com/maps?q=ir.%20soekarno&t=&z=13&ie=UTF8&iwloc=&output=embed\" frameborder=\"0\" scrolling=\"no\" marginheight=\"0\" marginwidth=\"0\"></iframe><a href=\"https://putlocker-is.org\"></a><br><style>.mapouter{position:relative;text-align:right;height:360px;width:720px;}</style><a href=\"https://www.embedgooglemap.net\">google maps on my web site</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:360px;width:720px;}</style></div></div>', '10.00-16.00', 'Parkir Mobil & Motor---Wifi Gratis---Pesan Antar---Pembayaran Non-Tunai---Makan di Tempat', 'ATM BCA---50M---Bandara Juanda---10.3KM', 'www.spikoekuno.co.id---081234567890---@spikoekunosby---@spikoekunosby', '', NULL, NULL, '');
+INSERT INTO `toko_oleh` (`idtoko`, `nama_toko`, `gambar_utama`, `map_toko`, `jam_operasional`, `fasilitas_toko`, `jenis_sekitar`, `kontak_toko`, `galeri_toko`, `created_at`, `updated_at`, `value_jenis_sekitar`, `galeri_toko_caption`) VALUES
+(1, 'Spikoe Surabaya', 'assa', 'assas', '10.00-16.00', 'Parkir Mobil & Motor---Wifi Gratis---Pesan Antar---Pembayaran Non-Tunai---Makan di Tempat', 'ATM BCA---50M---Bandara Juanda---10.3KM', 'www.spikoekuno.co.id---081234567890---@spikoekunosby---@spikoekunosby', 'https://i0.wp.com/www.emporioarchitect.com/upload/portofolio/1280/desain-rumah-dan-toko-modern-2-lantai-43010721-94431946010721023307-3.jpg---https://i0.wp.com/www.emporioarchitect.com/upload/portofolio/thumb/desain-rumah-dan-toko-modern-2-lantai-43010721-94431946010721023307-5.jpg---https://i0.wp.com/www.emporioarchitect.com/upload/portofolio/1280/desain-rumah-dan-toko-modern-2-lantai-43010721-94431946010721023307-3.jpg', NULL, NULL, '', 'Tampak Depan Toko---Jalan Tunjungan Plaza 78, Tunjungan, Plaza---Tampak Samping Toko---Jalan Tunjungan Plaza 78, Tunjungan, Plaza---Tampak Belakang Toko---Jalan Tunjungan Plaza 78, Tunjungan, Plaza');
 
 -- --------------------------------------------------------
 
@@ -1034,7 +1055,7 @@ ALTER TABLE `mitra`
 -- AUTO_INCREMENT for table `mitra_produk`
 --
 ALTER TABLE `mitra_produk`
-  MODIFY `id_produk_mitra` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id_produk_mitra` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`
@@ -1076,13 +1097,13 @@ ALTER TABLE `tempatbeli`
 -- AUTO_INCREMENT for table `toko_mitra`
 --
 ALTER TABLE `toko_mitra`
-  MODIFY `idmitra` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `idmitra` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `toko_oleh`
 --
 ALTER TABLE `toko_oleh`
-  MODIFY `idtoko` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `idtoko` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `users`
