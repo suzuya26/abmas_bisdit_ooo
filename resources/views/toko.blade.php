@@ -317,21 +317,27 @@
             <div id="myCarousel" class="carousel" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     @foreach ($galeri_toko as $key => $g)
-                    <div class="carousel-item {{$key == 0 ? 'active' : '' }}">
-                        <img src="{{$g}}" class="d-block w-100"  alt="...">
-                    </div>
-                    @endforeach
-                    @foreach ($galeri_toko_caption as $gc)
-                        <div class="carousel-caption">
-                            @if ($loop->odd)
-                                <h1>{{ $gc }}</h1>
-                            @elseif ($loop->even)
-                                <p>{{ $gc }}</p>
-                            @endif
+                        <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
+                            <img src="{{ $g }}" class="d-block w-100" alt="...">
                         </div>
+
+                        @foreach ($galeri_toko_caption as $gc)
+                            <div class="carousel-caption">
+                                <h1>
+                                    @if ($loop->odd)
+                                        {{ $gc }}
+                                    @endif
+                                </h1><br><br>
+                                <p>
+                                    @if ($loop->even)
+                                        {{ $gc }}
+                                    @endif
+                                </p>
+                            </div>
+                        @endforeach
                     @endforeach
-                    </div>
                 </div>
+            </div>
             <a class="carousel-control-prev" href="#myCarousel" role="button" data-bs-slide="next">
                 <span class="sr-only">Previous</span>
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>

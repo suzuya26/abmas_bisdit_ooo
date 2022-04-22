@@ -321,12 +321,16 @@
                     @endforeach
                     @foreach ($galeri_toko_caption as $gc)
                         <div class="carousel-caption">
-                            @if ($loop->odd)
-                                <h1>{{ $gc }}</h1>
-                            @endif
-                            @if ($loop->even)
-                                <p>{{ $gc }}</p>
-                            @endif
+                            <h1>
+                                @if ($loop->odd)
+                                    {{ $gc }}
+                                @endif
+                            </h1><br><br>
+                            <p>
+                                @if ($loop->even)
+                                    {{ $gc }}
+                                @endif
+                            </p>
                         </div>
                     @endforeach
                     </div>
