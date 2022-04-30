@@ -23,6 +23,7 @@ class CreateTokoOlehTable extends Migration
             $table->text('sekitar_toko');
             $table->text('kontak_toko');
             $table->longText('galeri_toko');
+            $table->string('galeri_toko_caption');
             $table->timestamps();
         });
 

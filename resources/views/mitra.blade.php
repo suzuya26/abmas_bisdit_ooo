@@ -72,7 +72,7 @@
             </div>
             <div class="col-7 mt-3">
                 <img width="90%"
-                    src="https://images.unsplash.com/photo-1580757468214-c73f7062a5cb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80"
+                    src="{{ $toko->gambar_utama }}"
                     alt="">
             </div>
         </div> <br>
@@ -100,7 +100,7 @@
                     <h1>{{ $p->nama_produk_mitra }}</h1>
                     <h3>Rp.{{ number_format($p->harga_produk_mitra) }}</h3>
                     <a href="" class="btn btn-secondary" style="font-size: 1.7rem"><i><span
-                                style="color: orange; font-weight:bold">#1</span> Spikoe di Toko ini</i></a>
+                                style="color: orange; font-weight:bold">#1</span> {{ $p->nama_produk_mitra }} di Toko ini</i></a>
                 </div>
                 <div class="col-3 mt-4">
                     <a href="" class=" button-produk"><i class="fa fa-thumbs-up" style="font-size:24px"></i>
@@ -167,8 +167,8 @@
                         <i class='far fa-calendar-alt' style='font-size:66px'></i>
 
                     </div>
-                    <div class="col-4">
-                        <h3 style="color: #8fd14f" class="fw-bold">BUKA</h3>
+                    <div class="col-4" style="margin-left:-130px">
+                        <h3 style="color: #8fd14f; " class="fw-bold">BUKA</h3>
                         <H5>{{ $toko->jam_operasional }}</H5>
 
                     </div>
@@ -309,8 +309,8 @@
         <h1 class="mt-3">Galeri {{ $toko->nama_mitra }}</h1>
         <div class="container" style="position: center">
             @php
-                $galeri_toko = preg_split('/---/', $toko->galeri_toko);
-                $galeri_toko_caption = preg_split('/---/', $toko->galeri_toko_caption);
+                $galeri_toko = preg_split('/---/', $toko->galeri_mitra);
+                $galeri_toko_caption = preg_split('/---/', $toko->galeri_mitra_caption);
             @endphp
             <div id="myCarousel" class="carousel" data-bs-ride="carousel">
                 <div class="carousel-inner">

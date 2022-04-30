@@ -26,6 +26,7 @@ class CreateTokoMitra extends Migration
             $table->text('website_mitra')->nullable();
             $table->text('sosmed_mitra')->nullable();
             $table->longText('galeri_mitra')->nullable();
+            $table->string('galeri_mitra_caption')->nullable();
             $table->timestamps();
         });
     }

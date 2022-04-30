@@ -320,7 +320,6 @@
                         <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
                             <img src="{{ $g }}" class="d-block w-100" alt="...">
                         </div>
-
                         @foreach ($galeri_toko_caption as $gc)
                             <div class="carousel-caption">
                                 <h1>
