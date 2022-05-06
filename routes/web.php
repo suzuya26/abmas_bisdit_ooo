@@ -25,6 +25,7 @@ use App\Http\Controllers\ProdukController;
 */
 
 Route::get('/', [IndexController::class, 'index']);
+Route::get('/utama', [IndexController::class, 'utama']);
 Route::get('varianoleh/{idoleh}', [OlehController::class, 'detailvarianoleh']);
 Route::get('login', [LoginController::class, 'index'])->middleware('guest');
 Route::post('login', [LoginController::class, 'auth']);

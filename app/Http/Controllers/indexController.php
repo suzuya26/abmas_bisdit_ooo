@@ -136,4 +136,7 @@ class IndexController extends Controller
         }
         return view('index', compact('kota', 'provinsi', 'olehKolega', 'olehKeluarga', 'olehPopuler', 'harga', 'pernahwisata', 'lokasilalu'));
     }
+    public function utama(){
+        return view('layouts.utama');
+    }
 }
