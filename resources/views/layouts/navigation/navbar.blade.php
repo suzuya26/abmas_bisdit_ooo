@@ -1,4 +1,31 @@
-    <nav class="navbar navbar-expand-md navbar-light">
+<style>
+    .register{
+        width: 115px;
+        height: 45px;
+        background: #2F2F2F;
+        box-shadow: 0px 16.5453px 26.4725px -6.61813px rgba(0, 0, 0, 0.2);
+        border-radius: 69.4904px;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 13.5453px;
+        line-height: 94.8%;
+        color: #F4ECE1;
+        transition: .3s;
+        /* display: flex; */
+        align-items: center;
+        text-align: center;
+    }
+    .register span{
+        margin-top: 50px
+    }
+    .search{
+        background: linear-gradient(92.73deg, rgba(244, 106, 6, 0.25) 8.08%, rgba(244, 106, 6, 0.11) 86.34%);
+box-shadow: 0px 9.9272px 33.0907px -13.2363px rgba(0, 0, 0, 0.1);
+border-radius: 24.818px;
+
+    }
+</style>
+    <nav class="navbar navbar-expand-md navbar-light" style="background: #F4ECE1">
         <a href="/" class="navbar-brand" style="margin-left: 10px">
             <img src="https://cdn.discordapp.com/attachments/906163180328325130/919144472237977640/Trinity.png"
                 class="bi me-2" height="32">
@@ -11,7 +38,7 @@
             <ul class="navbar-nav">
                 <li class="nav-item dropdown" style="position: initial;">
                     <form>
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
+                        <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdownMenuLink"
                             data-bs-auto-close="outside" data-bs-toggle="dropdown" aria-haspopup="true"
                             aria-expanded="false">
                             Kategori
@@ -172,19 +199,19 @@
                     </form>
                 </li>
                 <li>
-                    <a class="nav-link" href="/mitra">Mitra</a>
+                    <a class="nav-link text-dark" href="/mitra">Mitra</a>
                 </li>
             </ul>
         </div>
         <div class="collapse navbar-collapse justify-content-end" id=" toggleMenu">
             <form class="d-flex" action="/search" method="GET" role="search">
                 @csrf
-                <input type="search" class="form-control me-2" placeholder="Search..." aria-label="Search" name="param">
+                <input type="search" class="form-control me-2 search" placeholder="Search..." aria-label="Search" name="param">
             </form>
             @guest
-                <ul class="nav" style="margin-right: 10px">
-                    <li><a href="/login" class="nav-link px-2 link-secondary">Login</a></li>
-                    <li><a href="/register" class="nav-link px-2 link-secondary">Register</a></li>
+                <ul class="nav" style="margin-right: 10px; filter: drop-shadow(0px 4.71429px 4.71429px rgba(0, 0, 0, 0.25));">
+                    <li class="mx-4"><a href="/login" class="nav-link px-2 btn btn-light text-dark" style="border: 1px solid; border-radius:23.5714px; width:125px;height:45px"><span>Login</span></a></li>
+                    <li><a href="/register" class="nav-link px-2 btn btn-dark text-white" style="border-radius:23.5714px; width:125px;height:45px"><span>Register</span></a></li>
                 </ul>
             @endguest
             @auth

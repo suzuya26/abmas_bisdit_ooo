@@ -32,7 +32,7 @@
         @yield('content')
     </div>
     @livewireScripts
-    @include('layouts.navigation.footer')
+    @include('layouts.navigation.footer2')
 </body>
 
 </html>
