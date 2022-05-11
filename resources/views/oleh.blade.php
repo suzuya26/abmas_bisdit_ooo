@@ -226,97 +226,150 @@
             padding: 0px 10px 0px 20px;
             line-height: 25px;
         }
+        .foto-beli {
+            margin:-500px -50px 0px 0px;
+            width: 250px;
+            height: 236.65px;
+            background: #9B9B9B;
+            border-radius: 40px;
+        }
+        .nama-beli {
+            margin:50px 50px 50px 15px;
+            width: 220px;
+            height: 443px;
+            background: #DEECF3;
+            /* Shadow01 */
+            box-shadow: 0px 24px 48px rgba(0, 24, 52, 0.080899);
+            border-radius: 40px;
+
+        }
+        .teks-nama {
+            vertical-align: bottom;
+            text-align: left;
+            padding: 250px 10px 0px 10px;
+        }
+        .teks-nama h2 {
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 25px;
+            line-height: 32px;
+        }
+        #carousel {
+            margin-top: 300px;
+        }
+        #buka {
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 25px;
+            line-height: 20px;
+            color: #0CBB3D;
+        }
+        #jam-buka {
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 15px;
+            line-height: 25px;
+        }
+        .icon-buka {
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 15px;
+            line-height: 15px;
+        }
+
     </style>
     @foreach ($varianoleh as $v)
-    <div class="container">
-
-        <section>
-            <div class="row Rectangle-bg">
-                <div class="deskripsi-utama col-6 mt-3">
-                    <div class="row ">
-                        <div class="col-8 mt-3">
-                            <h1>{{ $v->namaoleh }}</h1>
+    <section id="header">
+            <div class="container">
+                <div class="row Rectangle-bg">
+                    <div class="deskripsi-utama col-6 mt-3">
+                        <div class="row ">
+                            <div class="col-8 mt-3">
+                                <h1>{{ $v->namaoleh }}</h1>
+                            </div>
+                            <br>
+                            <div class="col-2 mt-3">
+                                <img src="{{ asset('img/logo-halal.png') }}" width="90px" height="90px" >
+                            </div>
+                            <div class="col-2 mt-3">
+                                <img src="{{ asset('img/logo-mui.png') }}" width="90px" height="90px" >
+                            </div>
                         </div>
-                        <br>
-                        <div class="col-2 mt-3">
-                            <img src="{{ asset('img/logo-halal.png') }}" width="90px" height="90px" >
-                         </div>
-                        <div class="col-2 mt-3">
-                            <img src="{{ asset('img/logo-mui.png') }}" width="90px" height="90px" >
+                        <div class="row deskripsi">
+                            @php
+                                $desc = preg_split('/---/', $v->deskripsioleh);
+                            @endphp
+                            @foreach ($desc as $desk)
+                            <p>{{ $desk }}</p>
+                            @endforeach
+                        </div>
+                        <div class="row stat">
+                            <h4 id="rank">#1 Oleh-Oleh Terlaris Surabaya</h4>
+                            <p id="stat"><i>Menurut <b> <span style="color: #EB0000">100</span> </b> Orang Surabaya</i></p>
+                            <p id="stat"><i>Menurut <b> <span style="color: #EB0000">230</span> </b> Wisatawan</i></p> <br>
+                            <h4 id="rank">#1 Oleh-oleh yang ingin dibeli</h4>
+                            <p id="stat"><i>Menurut <b> <span style="color: #EB0000">230</span> </b> Wisatawan</i></p> <br>
                         </div>
                     </div>
-                    <div class="row deskripsi">
-                        @php
-                            $desc = preg_split('/---/', $v->deskripsioleh);
-                        @endphp
-                        @foreach ($desc as $desk)
-                        <p>{{ $desk }}</p>
-                        @endforeach
-                    </div>
-                    <div class="row stat">
-                        <h4 id="rank">#1 Oleh-Oleh Terlaris Surabaya</h4>
-                        <p id="stat"><i>Menurut <b> <span style="color: #EB0000">100</span> </b> Orang Surabaya</i></p>
-                        <p id="stat"><i>Menurut <b> <span style="color: #EB0000">230</span> </b> Wisatawan</i></p> <br>
-                        <h4 id="rank">#1 Oleh-oleh yang ingin dibeli</h4>
-                        <p id="stat"><i>Menurut <b> <span style="color: #EB0000">230</span> </b> Wisatawan</i></p> <br>
+                    <div class="col-6 mt-3">
+                        <div class="foto-oleh">
+                            <img src="{{ asset('img/oleholeh.png') }}" width="100%" height="50%" >
+                        </div>
+                        <div class="row rekom mt-3">
+                            <div class="col-6">
+                                <p>Pernah beli produk ini?</p>
+                                <a href="" class="button-oleh">Rekomendasikan</a>
+                            </div>
+                            <div class="col-6">
+                                <p>Ingin beli produk ini?</p>
+                                <a href="" class="button-oleh">Tambah ke list</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-6 mt-3">
-                    <div class="foto-oleh">
-                        <img src="{{ asset('img/oleholeh.png') }}" width="100%" height="50%" >
-                    </div>
-                    <div class="row rekom mt-3">
-                        <div class="col-6">
-                            <p>Pernah beli produk ini?</p>
-                            <a href="" class="button-oleh">Rekomendasikan</a>
-                        </div>
-                        <div class="col-6">
-                            <p>Ingin beli produk ini?</p>
-                            <a href="" class="button-oleh">Tambah ke list</a>
-                        </div>
-                    </div>
-                </div>
-
             </div>
-        </section>
-
-    </div>
+    </section>
     <hr>
-    <div class="container">
-        <div class="row mt-4">
-            <div class="info col-4">
-                <div class="card infocard">
-                    <img class="mx-auto d-block mt-5" src="{{ asset('img/detail.png') }}" alt="" width="168px" height="168px">
-                    <h6 class="mt-3">Detail</h6>
-                    <p class="px-5">Informasi penting terkait Varian, Rasa, Bahan Dasar untuk menyesuaikan seleramu</p>
-                    <a class="" data-bs-toggle="modal" data-bs-target="#detailModal">
-                        <i class="bi bi-chevron-compact-down"></i>
-                    </a>
+    <section id="funfact">
+        <div class="container">
+            <div class="row mt-4">
+                <div class="info col-4">
+                    <div class="card infocard">
+                        <img class="mx-auto d-block mt-5" src="{{ asset('img/detail.png') }}" alt="" width="168px" height="168px">
+                        <h6 class="mt-3">Detail</h6>
+                        <p class="px-5">Informasi penting terkait Varian, Rasa, Bahan Dasar untuk menyesuaikan seleramu</p>
+                        <a class="" data-bs-toggle="modal" data-bs-target="#detailModal">
+                            <i class="bi bi-chevron-compact-down"></i>
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <div class="info col-4">
-                <div class="card infocard" style="margin-top:-48px">
-                    <img class="mx-auto d-block mt-5" src="{{ asset('img/standar.png') }}" alt="" width="168px" height="168px">
-                    <h6 class="mt-3">Standar</h6>
-                    <p class="px-5">Spesifikasi ketahanan lama produk untuk menjaga kualitas oleh-oleh yang khas</p>
-                    <a class="" data-bs-toggle="modal" data-bs-target="#standarModal">
-                        <i class="bi bi-chevron-compact-down"></i>
-                    </a>
+                <div class="info col-4">
+                    <div class="card infocard" style="margin-top:-48px">
+                        <img class="mx-auto d-block mt-5" src="{{ asset('img/standar.png') }}" alt="" width="168px" height="168px">
+                        <h6 class="mt-3">Standar</h6>
+                        <p class="px-5">Spesifikasi ketahanan lama produk untuk menjaga kualitas oleh-oleh yang khas</p>
+                        <a class="" data-bs-toggle="modal" data-bs-target="#standarModal">
+                            <i class="bi bi-chevron-compact-down"></i>
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <div class="info col-4">
-                <div class="card infocard">
-                    <img class="mx-auto d-block mt-5" src="{{ asset('img/trivia.png') }}" alt="" width="168px" height="168px">
-                    <h6 class="mt-3">Trivia</h6>
-                    <p class="px-5">Temukan informasi dan fakta menarik dari oleh-oleh</p>
-                    <a class="" data-bs-toggle="modal" data-bs-target="#triviaModal">
-                        <i class="bi bi-chevron-compact-down"></i>
-                    </a>
+                <div class="info col-4">
+                    <div class="card infocard">
+                        <img class="mx-auto d-block mt-5" src="{{ asset('img/trivia.png') }}" alt="" width="168px" height="168px">
+                        <h6 class="mt-3">Trivia</h6>
+                        <p class="px-5">Temukan informasi dan fakta menarik dari oleh-oleh</p>
+                        <a class="" data-bs-toggle="modal" data-bs-target="#triviaModal">
+                            <i class="bi bi-chevron-compact-down"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    </div>
+    </section>
     <div class="modal fade"  data-bs-backdrop="false" data-bs-focus="true" data-bs-keyboard="true" id="detailModal" tabindex="-1" aria-labelledby="triviaModal" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-xl" style="width:90%">
             <div class="modal-content">
@@ -439,7 +492,7 @@
                             </div>
                             <div class="icon-isi-plusmin row mt-5">
                                 <div class="kotak-icon-plusmin col-4">
-                                    <div class="kotak-icon">
+                                    <div class="col-4 kotak-icon">
                                         <img src="{{ asset('img/sad.png') }}" width="70px" height="70px" >
                                     </div>
                                 </div>
@@ -534,49 +587,98 @@
                 </div>
             </div>
         </div>
-    </div
-    {{-- <div class="container carousel">
-        <h1 class="mt-3">Galeri {{ $toko->nama_toko }}</h1>
-        <div class="container" style="position: center">
-            @php
-                $galeri_toko = preg_split('/---/', $toko->galeri_toko);
-                $galeri_toko_caption = preg_split('/---/', $toko->galeri_toko_caption);
-            @endphp
-            <div id="myCarousel" class="carousel" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    @foreach ($galeri_toko as $key => $g)
-                        <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
-                            <img src="{{ $g }}" class="d-block w-100" alt="...">
+    </div>
+    <section id="tempatbeli">
+        <div class="container">
+            <h1>Tempat Beli</h1>
+            <div class="row">
+                <div class="col-3">
+                    <div class="nama-beli">
+                        <div class="teks-nama">
+                            <h2>Toko Bolu Jago</h2>
+                            <h2 id="buka">Buka <p id="jam-buka">(07.00-10.00)</p></h2>
+                            <i class="icon-buka bi bi-geo-alt-fill">Jalan Ir. Soekarno 5B</i> <br>
+                            <i class="icon-buka bi bi-telephone-fill">(031) 12345678</i>
                         </div>
-
-                        @foreach ($galeri_toko_caption as $gc)
-                            <div class="carousel-caption">
-                                <h1>
-                                    @if ($loop->odd)
-                                        {{ $gc }}
-                                    @endif
-                                </h1><br><br>
-                                <p>
-                                    @if ($loop->even)
-                                        {{ $gc }}
-                                    @endif
-                                </p>
-                            </div>
-                        @endforeach
-                    @endforeach
+                    </div>
+                    <div class="foto-beli">
+                        <img src="{{ asset('img/logo-halal.png') }}" width= "250px"
+                        height="236.65px">
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="nama-beli">
+                        <div class="teks-nama">
+                            <h2>Toko Bolu Jago</h2>
+                            <h2 id="buka">Buka <p id="jam-buka">(07.00-10.00)</p></h2>
+                            <i class="icon-buka bi bi-geo-alt-fill">Jalan Ir. Soekarno 5B</i> <br>
+                            <i class="icon-buka bi bi-telephone-fill">(031) 12345678</i>
+                        </div>
+                    </div>
+                    <div class="foto-beli">
+                        <img src="{{ asset('img/logo-halal.png') }}" width= "250px"
+                        height="236.65px">
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="nama-beli">
+                        <div class="teks-nama">
+                            <h2>Toko Bolu Jago</h2>
+                            <h2 id="buka">Buka <p id="jam-buka">(07.00-10.00)</p></h2>
+                            <i class="icon-buka bi bi-geo-alt-fill">Jalan Ir. Soekarno 5B</i> <br>
+                            <i class="icon-buka bi bi-telephone-fill">(031) 12345678</i>
+                        </div>
+                    </div>
+                    <div class="foto-beli">
+                        <img src="{{ asset('img/logo-halal.png') }}" width= "250px"
+                        height="236.65px">
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="nama-beli">
+                        <div class="teks-nama">
+                            <h2>Toko Bolu Jago</h2>
+                            <h2 id="buka">Buka <p id="jam-buka">(07.00-10.00)</p></h2>
+                            <i class="icon-buka bi bi-geo-alt-fill">Jalan Ir. Soekarno 5B</i> <br>
+                            <i class="icon-buka bi bi-telephone-fill">(031) 12345678</i>
+                        </div>
+                    </div>
+                    <div class="foto-beli">
+                        <img src="{{ asset('img/logo-halal.png') }}" width= "250px"
+                        height="236.65px">
+                    </div>
                 </div>
             </div>
-            <a class="carousel-control-prev" href="#myCarousel" role="button" data-bs-slide="next">
-                <span class="sr-only">Previous</span>
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            </a>
-            <a class="carousel-control-next" href="#myCarousel" role="button" data-bs-slide="prev">
-                <span class="sr-only">Next</span>
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            </a>
+        </div>
+    </section>
+    <section id="carousel">
+        <div class="container carousel">
+            <h1 class="mt-3">Galeri {{ $v->namaoleh }}</h1>
+            <div class="container" style="position: center">
+                @php
+                    $gambaroleh = preg_split('/---/', $v->gambaroleh);
+                @endphp
+                <div id="myCarousel" class="carousel" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        @foreach ($gambaroleh as $key => $g)
+                            <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
+                                <img src="{{ $g }}" class="d-block w-100" alt="...">
+                            </div>
+                        @endforeach
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#myCarousel" role="button" data-bs-slide="next">
+                    <span class="sr-only">Previous</span>
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </a>
+                <a class="carousel-control-next" href="#myCarousel" role="button" data-bs-slide="prev">
+                    <span class="sr-only">Next</span>
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </a>
 
-        </div> --}}
-        @endforeach
-    </div>
+            </div>
+            @endforeach
+        </div>
+    </section>
 
 @endsection
