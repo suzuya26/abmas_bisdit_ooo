@@ -150,6 +150,12 @@
             margin-top: 20px;
             font-size: 24px;
         }
+        .poin-detail {
+            width: 550px;
+            margin-top: 20px;
+            font-size: 24px;
+            line-height: 75px;
+        }
         .card-icon {
             width: 530px;
             text-align: center;
@@ -455,7 +461,7 @@
                     <div class="modal-isi col-6">
                         <img class="gambar-modal" src={{ $v->gambarutama }}>
                         <h2>{{ $v->namaoleh }}</h2>
-                        <div class="poin mt-3">
+                        <div class="poin-detail mt-3">
                             @php
                                 $kadarluarsa = str_replace('---', ', ', $v->kadarluarsa)
                             @endphp
