@@ -54,7 +54,7 @@ Route::get('/mitra/{id}', [MitraController::class, 'show']);
 Route::get('/tambahproduk/{id}', [ProdukController::class, 'tambahproduk']);
 Route::post('/tambah/{id}', [ProdukController::class, 'tambah']);
 
-
+Route::get('oleh/{idoleh}', [OlehController::class, 'detailoleh']);
 
 
 
