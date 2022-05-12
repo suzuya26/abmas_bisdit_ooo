@@ -201,15 +201,21 @@
             vertical-align: center;
             padding: 100px 0px 100px 50px;
         }
+        .kotak-icon-plusmin-bawah {
+            vertical-align: center;
+            padding: 0px 0px 100px 50px;
+        }
         .kotak-icon-plusmin img{
-            padding: 25px 0px 0px 0px;
+            margin: 15px 0px 0px 0px;
+            padding: 0px 0px 0px 0px;
         }
         .kotak-icon-plusmin-bawah {
             vertical-align: center;
             padding: -100px 0px 0px 50px;
         }
         .kotak-icon-plusmin-bawah img{
-            padding: 25px 0px 0px 0px;
+            margin: 15px 0px 0px 0px;
+            padding: 0px 0px 0px 0px;
         }
         .icon-komposisi-atas {
             margin-top: 24px;
@@ -234,15 +240,19 @@
         }
         .foto-beli {
             margin:-500px -50px 0px 0px;
-            width: 250px;
-            height: 236.65px;
+            width: 301px;
+            height: 285.65px;
+            left: 5px;
+            top: 32px;
             background: #9B9B9B;
             border-radius: 40px;
         }
         .nama-beli {
             margin:50px 50px 50px 15px;
-            width: 220px;
-            height: 443px;
+            width: 280px;
+            height: 400px;
+            left: 16px;
+            top: 32px;
             background: #DEECF3;
             /* Shadow01 */
             box-shadow: 0px 24px 48px rgba(0, 24, 52, 0.080899);
@@ -252,7 +262,7 @@
         .teks-nama {
             vertical-align: bottom;
             text-align: left;
-            padding: 250px 10px 0px 10px;
+            padding: 250px 25px 0px 30px;
         }
         .teks-nama h2 {
             font-family: 'Poppins';
@@ -269,7 +279,7 @@
             font-style: normal;
             font-weight: 700;
             font-size: 25px;
-            line-height: 20px;
+            line-height: 32px;
             color: #0CBB3D;
         }
         #jam-buka {
@@ -277,7 +287,8 @@
             font-style: normal;
             font-weight: 700;
             font-size: 15px;
-            line-height: 25px;
+            line-height: 32px;
+            color: #333333;
         }
         .icon-buka {
             font-family: 'Poppins';
@@ -285,6 +296,27 @@
             font-weight: 700;
             font-size: 15px;
             line-height: 15px;
+        }
+        .tempatbeli {
+            margin: 100px 0px 75px 0px;
+            vertical-align: center;
+        }
+        .info-beli i{
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 15px;
+            line-height: 10px;
+        }
+        .icon-buka {
+            color: red;
+        }
+        .text-beli {
+            margin-left: 5px;
+            color: #333333;
+        }
+        #funfact {
+            margin-top: 100px;
         }
 
     </style>
@@ -485,7 +517,7 @@
                             <div class="icon-isi-plusmin row">
                                 <div class="kotak-icon-plusmin col-4 ">
                                     <div class="col-4 kotak-icon">
-                                        <img src="{{ asset('img/smile.png') }}" width="70px" height="70px" >
+                                        <img src="{{ asset('img/smile.png') }}" width="60px" height="60px" >
                                     </div>
                                 </div>
                                 <div class="col-8 kelebihan">
@@ -497,9 +529,9 @@
                                 </div>
                             </div>
                             <div class="icon-isi-plusmin row mt-5">
-                                <div class="kotak-icon-plusmin col-4">
+                                <div class="kotak-icon-plusmin-bawah col-4">
                                     <div class="col-4 kotak-icon">
-                                        <img src="{{ asset('img/sad.png') }}" width="70px" height="70px" >
+                                        <img src="{{ asset('img/sad.png') }}" width="60px" height="60px" >
                                     </div>
                                 </div>
                                 <div class="col-8 kekurangan">
@@ -596,62 +628,72 @@
     </div>
     <section id="tempatbeli">
         <div class="container">
-            <h1>Tempat Beli</h1>
+            <div class="tempatbeli row">
+                <h1>Tempat Beli</h1>
+            </div>
             <div class="row">
                 <div class="col-3">
                     <div class="nama-beli">
                         <div class="teks-nama">
                             <h2>Toko Bolu Jago</h2>
-                            <h2 id="buka">Buka <p id="jam-buka">(07.00-10.00)</p></h2>
-                            <i class="icon-buka bi bi-geo-alt-fill">Jalan Ir. Soekarno 5B</i> <br>
-                            <i class="icon-buka bi bi-telephone-fill">(031) 12345678</i>
+                            <h2 id="buka">Buka <span id="jam-buka">(07.00-10.00)</span></h2>
+                            <div class="info-beli">
+                                <i class="icon-buka bi bi-geo-alt-fill"><span class="text-beli">Jalan Ir. Soekarno 5B</span></i> <br>
+                                <i class="icon-buka bi bi-telephone-fill"><span class="text-beli">(031) 12345678</span></i>
+                            </div>
                         </div>
                     </div>
                     <div class="foto-beli">
-                        <img src="{{ asset('img/logo-halal.png') }}" width= "250px"
-                        height="236.65px">
+                        <img src="{{ asset('img/logo-halal.png') }}" width= "301px"
+                        height="285.65px">
                     </div>
                 </div>
                 <div class="col-3">
                     <div class="nama-beli">
                         <div class="teks-nama">
                             <h2>Toko Bolu Jago</h2>
-                            <h2 id="buka">Buka <p id="jam-buka">(07.00-10.00)</p></h2>
-                            <i class="icon-buka bi bi-geo-alt-fill">Jalan Ir. Soekarno 5B</i> <br>
-                            <i class="icon-buka bi bi-telephone-fill">(031) 12345678</i>
+                            <h2 id="buka">Buka <span id="jam-buka">(07.00-10.00)</span></h2>
+                            <div class="info-beli">
+                                <i class="icon-buka bi bi-geo-alt-fill"><span class="text-beli">Jalan Ir. Soekarno 5B</span></i> <br>
+                                <i class="icon-buka bi bi-telephone-fill"><span class="text-beli">(031) 12345678</span></i>
+                            </div>
                         </div>
                     </div>
                     <div class="foto-beli">
-                        <img src="{{ asset('img/logo-halal.png') }}" width= "250px"
-                        height="236.65px">
+                        <img src="{{ asset('img/logo-halal.png') }}" width= "301px"
+                        height="285.65px">
                     </div>
                 </div>
                 <div class="col-3">
                     <div class="nama-beli">
                         <div class="teks-nama">
                             <h2>Toko Bolu Jago</h2>
-                            <h2 id="buka">Buka <p id="jam-buka">(07.00-10.00)</p></h2>
-                            <i class="icon-buka bi bi-geo-alt-fill">Jalan Ir. Soekarno 5B</i> <br>
-                            <i class="icon-buka bi bi-telephone-fill">(031) 12345678</i>
+                            <h2 id="buka">Buka <span id="jam-buka">(07.00-10.00)</span></h2>
+                            <div class="info-beli">
+                                <i class="icon-buka bi bi-geo-alt-fill"><span class="text-beli">Jalan Ir. Soekarno 5B</span></i> <br>
+                                <i class="icon-buka bi bi-telephone-fill"><span class="text-beli">(031) 12345678</span></i>
+                            </div>
                         </div>
                     </div>
                     <div class="foto-beli">
-                        <img src="{{ asset('img/logo-halal.png') }}" width= "250px"
-                        height="236.65px">
+                        <img src="{{ asset('img/logo-halal.png') }}" width= "301px"
+                        height="285.65px">
                     </div>
                 </div>
                 <div class="col-3">
                     <div class="nama-beli">
                         <div class="teks-nama">
                             <h2>Toko Bolu Jago</h2>
-                            <h2 id="buka">Buka <p id="jam-buka">(07.00-10.00)</p></h2>
-                            <i class="icon-buka bi bi-geo-alt-fill">Jalan Ir. Soekarno 5B</i> <br>
-                            <i class="icon-buka bi bi-telephone-fill">(031) 12345678</i>
+                            <h2 id="buka">Buka <span id="jam-buka">(07.00-10.00)</span></h2>
+                            <div class="info-beli">
+                                <i class="icon-buka bi bi-geo-alt-fill"><span class="text-beli">Jalan Ir. Soekarno 5B</span></i> <br>
+                                <i class="icon-buka bi bi-telephone-fill"><span class="text-beli">(031) 12345678</span></i>
+                            </div>
                         </div>
                     </div>
                     <div class="foto-beli">
-                        <img src="{{ asset('img/logo-halal.png') }}" width= "250px"
-                        height="236.65px">
+                        <img src="{{ asset('img/logo-halal.png') }}" width= "301px"
+                        height="285.65px">
                     </div>
                 </div>
             </div>
