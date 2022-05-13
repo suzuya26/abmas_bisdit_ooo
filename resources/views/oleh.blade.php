@@ -319,6 +319,7 @@
             margin-top: 100px;
         }
 
+
     </style>
     @foreach ($varianoleh as $v)
     <section id="header">
@@ -408,7 +409,7 @@
             </div>
         </div>
     </section>
-    <div class="modal fade"  data-bs-backdrop="false" data-bs-focus="true" data-bs-keyboard="true" id="detailModal" tabindex="-1" aria-labelledby="triviaModal" aria-hidden="true">
+    <div class="modal fade"  data-bs-backdrop="true" data-bs-focus="true" data-bs-keyboard="true" id="detailModal" tabindex="-1" aria-labelledby="triviaModal" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-xl" style="width:90%">
             <div class="modal-content">
                 <div class="row">
@@ -486,7 +487,7 @@
             </div>
         </div>
     </div>
-    <div class="modal fade"  data-bs-backdrop="false" data-bs-focus="true" data-bs-keyboard="true" id="standarModal" tabindex="-1" aria-labelledby="triviaModal" aria-hidden="true">
+    <div class="modal fade"  data-bs-backdrop="true" data-bs-focus="true" data-bs-keyboard="true" id="standarModal" tabindex="-1" aria-labelledby="triviaModal" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-xl" style="width:90%">
             <div class="modal-content">
                 <div class="row">
@@ -548,7 +549,7 @@
             </div>
         </div>
     </div>
-    <div class="modal fade"  data-bs-backdrop="false" data-bs-focus="true" data-bs-keyboard="true" id="triviaModal" tabindex="-1" aria-labelledby="triviaModal" aria-hidden="true">
+    <div class="modal fade"  data-bs-backdrop="true" data-bs-focus="true" data-bs-keyboard="true" id="triviaModal" tabindex="-1" aria-labelledby="triviaModal" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-xl" style="width:90%">
             <div class="modal-content">
                 <div class="row">
