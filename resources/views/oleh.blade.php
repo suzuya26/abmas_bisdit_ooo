@@ -318,8 +318,9 @@
         #funfact {
             margin-top: 100px;
         }
-
-
+        .foto-oleh img {
+            border-radius: 100px 0px 0px 0px;
+        }
     </style>
     @foreach ($varianoleh as $v)
     <section id="header">
@@ -356,7 +357,7 @@
                     </div>
                     <div class="col-6 mt-3">
                         <div class="foto-oleh">
-                            <img src="{{ asset('img/oleholeh.png') }}" width="100%" height="50%" >
+                            <img src="{{ $v->gambarutama }}" width="645px" height="679px" >
                         </div>
                         <div class="row rekom mt-3">
                             <div class="col-6">
@@ -417,9 +418,9 @@
                         <img class="gambar-modal" src={{ $v->gambarutama }}>
                         <h2>{{ $v->namaoleh }}</h2>
                         <div class="poin mt-3">
-                            <i class="bi bi-people-fill"> {{ $v->namacocok }}</i><br>
-                            <i class="bi bi-geo-alt-fill"> {{ $v->kota }},
-                                {{ $v->provinsi }}</i>
+                            <i class="bi bi-people-fill"><span> {{ $v->namacocok }}</span></i><br>
+                            <i class="bi bi-geo-alt-fill"><span> {{ $v->kota }},
+                                {{ $v->provinsi }}</span></i>
                         </div>
                         @php
                             $komposisi = preg_split('/, /', $v->komposisi);
@@ -498,15 +499,15 @@
                             @php
                                 $kadarluarsa = str_replace('---', ', ', $v->kadarluarsa)
                             @endphp
-                            <i class="bi bi-people-fill"> {{ $kadarluarsa }}</i><br>
+                            <i class="bi bi-calendar-week"><span> {{ $kadarluarsa }}</span></i><br>
                             @php
                                 $carapenyimpanan=str_replace('Bisa disimpan di ', '', $v->carapenyimpanan)
                             @endphp
-                            <i class="bi bi-geo-alt-fill"> {{ ucfirst($carapenyimpanan) }}</i><br>
+                            <i class="bi bi-box"><span> {{ ucfirst($carapenyimpanan) }}</span></i><br>
                             @php
                                 $carapenyajian=str_replace(' menjadi beberapa bagian,', ' dan ', $v->carapenyajian)
                             @endphp
-                            <i class="bi bi-people-fill"> {{ $carapenyajian }}</i>
+                            <i class="bi bi-disc"><span> {{ $carapenyajian }}</span></i>
                         </div>
                     </div>
                     <div class="card-icon col-6">
