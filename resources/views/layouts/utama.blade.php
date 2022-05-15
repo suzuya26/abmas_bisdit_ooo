@@ -87,6 +87,39 @@ filter: drop-shadow(40px 54px 64px rgba(0, 0, 0, 0.25));
 transform: rotate(37.85deg);
 
     }
+    .nama-beli {
+            margin:50px 50px 50px 15px;
+            width: 280px;
+            height: 400px;
+            left: 16px;
+            top: 32px;
+            background: #DEECF3;
+            /* Shadow01 */
+            box-shadow: 0px 24px 48px rgba(0, 24, 52, 0.080899);
+            border-radius: 40px;
+
+        }
+        .teks-nama {
+            vertical-align: bottom;
+            text-align: left;
+            padding: 250px 25px 0px 30px;
+        }
+        .teks-nama h2 {
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 25px;
+            line-height: 32px;
+        }
+        .foto-beli {
+            margin:-500px -50px 0px 0px;
+            width: 301px;
+            height: 285.65px;
+            left: 5px;
+            top: 32px;
+            background: #9B9B9B;
+            border-radius: 40px;
+        }
 </style>
 <div class="section utama" style="background: #C4C4C4; height:450px">
     <div class="container">
@@ -178,20 +211,17 @@ transform: rotate(37.85deg);
     <h2><i class="fas fa-map-marker-alt" style="color: rgb(255, 148, 49)"></i> Surabaya, Jawa Timur</h2>
    </div>
 </section> <hr>
-<section>
+<section style="margin-bottom: 200px">
     <div class="container">
         <h1 class="fw-bold">Rekomendasi Oleh-oleh Khas Surabaya</h1>
         <div class="row">
-            <div class="col-8">
-                <h5>Rekomendasi oleh-oleh lain dari Jawa Timur </h5>
-            </div>
+            <div class="col-8"></div>
             <div class="col-4 text-end">
-
-                <a class="btn btn-secondary mb-3 mr-1 btn-sm"
+                <a class="btn btn-dark text-light mb-3 mr-1 btn-sm"
                     data-bs-target="#carouselExampleIndicators2" role="button" data-bs-slide="prev">
                     <i class="bi bi-arrow-left"></i>
                 </a>
-                <a class="btn btn-secondary mb-3 btn-sm" data-bs-target="#carouselExampleIndicators2"
+                <a class="btn btn-dark text-light mb-3 btn-sm" data-bs-target="#carouselExampleIndicators2"
                     role="button" data-bs-slide="next">
                     <i class="bi bi-arrow-right"></i>
                 </a>
@@ -202,159 +232,211 @@ transform: rotate(37.85deg);
                     <div class="carousel">
                         <div class="carousel-item active">
                             <div class="row">
-
-                                {{-- @foreach ($rekomlokasi->slice(0, 3) as $rek) --}}
-                                <div class="col-md-4 mb-3">
-                                    <div class="card">
-                                        <img class="img-fluid" alt="100%x280"
-                                            src="{{ asset('img/mitra.png') }}">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Tahu Bulat
-                                            </h5>
-                                            <div style='z-index: 2; position: relative;'>
-                                                <a class="card-text bi bi-geo-alt text-decoration-none"
-                                                    href="/olehbydaerah/sby"
-                                                    style='color: inherit;'>
-                                                    Surabaya
-                                                </a>
+                                <div class="col-3">
+                                    <div class="nama-beli">
+                                        <div class="teks-nama">
+                                            <h2>Toko Bolu Jago</h2>
+                                            <h5 id="buka" class=""><span class="text-success fw-bold">BUKA</span> <span id="jam-buka">(07.00-10.00)</span></h5>
+                                            <div class="info-beli">
+                                                <i class="icon-buka bi bi-geo-alt-fill"><span class="text-beli">Jalan Ir. Soekarno 5B</span></i> <br>
+                                                <i class="icon-buka bi bi-telephone-fill"><span class="text-beli">(031) 12345678</span></i>
                                             </div>
-                                            <a href="/varianoleh/1"
-                                                class="stretched-link"></a>
                                         </div>
-
+                                    </div>
+                                    <div class="foto-beli">
+                                        <img src="{{ asset('img/logo-halal.png') }}" width= "301px"
+                                        height="285.65px">
                                     </div>
                                 </div>
-                                <div class="col-md-4 mb-3">
-                                    <div class="card">
-                                        <img class="img-fluid" alt="100%x280"
-                                            src="{{ asset('img/mitra.png') }}">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Tahu Bulat
-                                            </h5>
-                                            <div style='z-index: 2; position: relative;'>
-                                                <a class="card-text bi bi-geo-alt text-decoration-none"
-                                                    href="/olehbydaerah/sby"
-                                                    style='color: inherit;'>
-                                                    Surabaya
-                                                </a>
+                                <div class="col-3">
+                                    <div class="nama-beli">
+                                        <div class="teks-nama">
+                                            <h2>Toko Bolu Jago</h2>
+                                            <h5 id="buka" class=""><span class="text-success fw-bold">BUKA</span> <span id="jam-buka">(07.00-10.00)</span></h5>
+                                            <div class="info-beli">
+                                                <i class="icon-buka bi bi-geo-alt-fill"><span class="text-beli">Jalan Ir. Soekarno 5B</span></i> <br>
+                                                <i class="icon-buka bi bi-telephone-fill"><span class="text-beli">(031) 12345678</span></i>
                                             </div>
-                                            <a href="/varianoleh/1"
-                                                class="stretched-link"></a>
                                         </div>
-
+                                    </div>
+                                    <div class="foto-beli">
+                                        <img src="{{ asset('img/logo-halal.png') }}" width= "301px"
+                                        height="285.65px">
                                     </div>
                                 </div>
-                                <div class="col-md-4 mb-3">
-                                    <div class="card">
-                                        <img class="img-fluid" alt="100%x280"
-                                            src="{{ asset('img/mitra.png') }}">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Tahu Bulat
-                                            </h5>
-                                            <div style='z-index: 2; position: relative;'>
-                                                <a class="card-text bi bi-geo-alt text-decoration-none"
-                                                    href="/olehbydaerah/sby"
-                                                    style='color: inherit;'>
-                                                    Surabaya
-                                                </a>
+                                <div class="col-3">
+                                    <div class="nama-beli">
+                                        <div class="teks-nama">
+                                            <h2>Toko Bolu Jago</h2>
+                                            <h5 id="buka" class=""><span class="text-success fw-bold">BUKA</span> <span id="jam-buka">(07.00-10.00)</span></h5>
+                                            <div class="info-beli">
+                                                <i class="icon-buka bi bi-geo-alt-fill"><span class="text-beli">Jalan Ir. Soekarno 5B</span></i> <br>
+                                                <i class="icon-buka bi bi-telephone-fill"><span class="text-beli">(031) 12345678</span></i>
                                             </div>
-                                            <a href="/varianoleh/1"
-                                                class="stretched-link"></a>
                                         </div>
-
+                                    </div>
+                                    <div class="foto-beli">
+                                        <img src="{{ asset('img/logo-halal.png') }}" width= "301px"
+                                        height="285.65px">
                                     </div>
                                 </div>
-                                <div class="col-md-4 mb-3">
-                                    <div class="card">
-                                        <img class="img-fluid" alt="100%x280"
-                                            src="{{ asset('img/mitra.png') }}">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Tahu Bulat
-                                            </h5>
-                                            <div style='z-index: 2; position: relative;'>
-                                                <a class="card-text bi bi-geo-alt text-decoration-none"
-                                                    href="/olehbydaerah/sby"
-                                                    style='color: inherit;'>
-                                                    Surabaya
-                                                </a>
+                                <div class="col-3">
+                                    <div class="nama-beli">
+                                        <div class="teks-nama">
+                                            <h2>Toko Bolu Jago</h2>
+                                            <h5 id="buka" class=""><span class="text-success fw-bold">BUKA</span> <span id="jam-buka">(07.00-10.00)</span></h5>
+                                            <div class="info-beli">
+                                                <i class="icon-buka bi bi-geo-alt-fill"><span class="text-beli">Jalan Ir. Soekarno 5B</span></i> <br>
+                                                <i class="icon-buka bi bi-telephone-fill"><span class="text-beli">(031) 12345678</span></i>
                                             </div>
-                                            <a href="/varianoleh/1"
-                                                class="stretched-link"></a>
                                         </div>
-
+                                    </div>
+                                    <div class="foto-beli">
+                                        <img src="{{ asset('img/logo-halal.png') }}" width= "301px"
+                                        height="285.65px">
                                     </div>
                                 </div>
-
-
-
-
-
-                                {{-- @endforeach --}}
-
                             </div>
                         </div>
-                        {{-- @if (count($rekomlokasi) > 3)
-
                             <div class="carousel-item">
                                 <div class="row">
-
-                                    @foreach ($rekomlokasi->slice(3, 3) as $rek)
-                                        <div class="col-md-4 mb-3">
-                                            <div class="card">
-                                                <img class="img-fluid" alt="100%x280"
-                                                    src={{ $rek->gambarutama }}>
-                                                <div class="card-body">
-                                                    <h5 class="card-title">{{ $rek->namaoleh }}
-                                                    </h5>
-                                                    <div style='z-index: 2; position: relative;'>
-                                                        <a class="card-text bi bi-geo-alt text-decoration-none"
-                                                            href="/olehbydaerah/{{ $rek->kota }}"
-                                                            style='color: inherit;'>
-                                                            {{ $rek->kota }}
-                                                        </a>
-                                                    </div>
-                                                    <a href="/varianoleh/{{ $rek->idoleh }}"
-                                                        class="stretched-link"></a>
+                                    <div class="col-3">
+                                        <div class="nama-beli">
+                                            <div class="teks-nama">
+                                                <h2>Toko Bolu Jago</h2>
+                                                <h5 id="buka" class=""><span class="text-success fw-bold">BUKA</span> <span id="jam-buka">(07.00-10.00)</span></h5>
+                                                <div class="info-beli">
+                                                    <i class="icon-buka bi bi-geo-alt-fill"><span class="text-beli">Jalan Ir. Soekarno 5B</span></i> <br>
+                                                    <i class="icon-buka bi bi-telephone-fill"><span class="text-beli">(031) 12345678</span></i>
                                                 </div>
-
                                             </div>
                                         </div>
-                                    @endforeach
+                                        <div class="foto-beli">
+                                            <img src="{{ asset('img/logo-halal.png') }}" width= "301px"
+                                            height="285.65px">
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="nama-beli">
+                                            <div class="teks-nama">
+                                                <h2>Toko Bolu Jago</h2>
+                                                <h5 id="buka" class=""><span class="text-success fw-bold">BUKA</span> <span id="jam-buka">(07.00-10.00)</span></h5>
+                                                <div class="info-beli">
+                                                    <i class="icon-buka bi bi-geo-alt-fill"><span class="text-beli">Jalan Ir. Soekarno 5B</span></i> <br>
+                                                    <i class="icon-buka bi bi-telephone-fill"><span class="text-beli">(031) 12345678</span></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="foto-beli">
+                                            <img src="{{ asset('img/logo-halal.png') }}" width= "301px"
+                                            height="285.65px">
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="nama-beli">
+                                            <div class="teks-nama">
+                                                <h2>Toko Bolu Jago</h2>
+                                                <h5 id="buka" class=""><span class="text-success fw-bold">BUKA</span> <span id="jam-buka">(07.00-10.00)</span></h5>
+                                                <div class="info-beli">
+                                                    <i class="icon-buka bi bi-geo-alt-fill"><span class="text-beli">Jalan Ir. Soekarno 5B</span></i> <br>
+                                                    <i class="icon-buka bi bi-telephone-fill"><span class="text-beli">(031) 12345678</span></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="foto-beli">
+                                            <img src="{{ asset('img/logo-halal.png') }}" width= "301px"
+                                            height="285.65px">
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="nama-beli">
+                                            <div class="teks-nama">
+                                                <h2>Toko Bolu Jago</h2>
+                                                <h5 id="buka" class=""><span class="text-success fw-bold">BUKA</span> <span id="jam-buka">(07.00-10.00)</span></h5>
+                                                <div class="info-beli">
+                                                    <i class="icon-buka bi bi-geo-alt-fill"><span class="text-beli">Jalan Ir. Soekarno 5B</span></i> <br>
+                                                    <i class="icon-buka bi bi-telephone-fill"><span class="text-beli">(031) 12345678</span></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="foto-beli">
+                                            <img src="{{ asset('img/logo-halal.png') }}" width= "301px"
+                                            height="285.65px">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <div class="nama-beli">
+                                            <div class="teks-nama">
+                                                <h2>Toko Bolu Jago</h2>
+                                                <h5 id="buka" class=""><span class="text-success fw-bold">BUKA</span> <span id="jam-buka">(07.00-10.00)</span></h5>
+                                                <div class="info-beli">
+                                                    <i class="icon-buka bi bi-geo-alt-fill"><span class="text-beli">Jalan Ir. Soekarno 5B</span></i> <br>
+                                                    <i class="icon-buka bi bi-telephone-fill"><span class="text-beli">(031) 12345678</span></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="foto-beli">
+                                            <img src="{{ asset('img/logo-halal.png') }}" width= "301px"
+                                            height="285.65px">
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="nama-beli">
+                                            <div class="teks-nama">
+                                                <h2>Toko Bolu Jago</h2>
+                                                <h5 id="buka" class=""><span class="text-success fw-bold">BUKA</span> <span id="jam-buka">(07.00-10.00)</span></h5>
+                                                <div class="info-beli">
+                                                    <i class="icon-buka bi bi-geo-alt-fill"><span class="text-beli">Jalan Ir. Soekarno 5B</span></i> <br>
+                                                    <i class="icon-buka bi bi-telephone-fill"><span class="text-beli">(031) 12345678</span></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="foto-beli">
+                                            <img src="{{ asset('img/logo-halal.png') }}" width= "301px"
+                                            height="285.65px">
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="nama-beli">
+                                            <div class="teks-nama">
+                                                <h2>Toko Bolu Jago</h2>
+                                                <h5 id="buka" class=""><span class="text-success fw-bold">BUKA</span> <span id="jam-buka">(07.00-10.00)</span></h5>
+                                                <div class="info-beli">
+                                                    <i class="icon-buka bi bi-geo-alt-fill"><span class="text-beli">Jalan Ir. Soekarno 5B</span></i> <br>
+                                                    <i class="icon-buka bi bi-telephone-fill"><span class="text-beli">(031) 12345678</span></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="foto-beli">
+                                            <img src="{{ asset('img/logo-halal.png') }}" width= "301px"
+                                            height="285.65px">
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="nama-beli">
+                                            <div class="teks-nama">
+                                                <h2>Toko Bolu Jago</h2>
+                                                <h5 id="buka" class=""><span class="text-success fw-bold">BUKA</span> <span id="jam-buka">(07.00-10.00)</span></h5>
+                                                <div class="info-beli">
+                                                    <i class="icon-buka bi bi-geo-alt-fill"><span class="text-beli">Jalan Ir. Soekarno 5B</span></i> <br>
+                                                    <i class="icon-buka bi bi-telephone-fill"><span class="text-beli">(031) 12345678</span></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="foto-beli">
+                                            <img src="{{ asset('img/logo-halal.png') }}" width= "301px"
+                                            height="285.65px">
+                                        </div>
+                                    </div>
+                                    
 
                                 </div>
                             </div>
-                        @endif --}}
-                        {{-- @if (count($rekomlokasi) > 6)
-
-                            <div class="carousel-item">
-                                <div class="row">
-
-                                    @foreach ($rekomlokasi->slice(6, 3) as $rek)
-                                        <div class="col-md-4 mb-3">
-                                            <div class="card">
-                                                <img class="img-fluid" alt="100%x280"
-                                                    src={{ $rek->gambarutama }}>
-                                                <div class="card-body">
-                                                    <h5 class="card-title">
-                                                        {{ $rek->namaoleh }}</h5>
-                                                    <div style='z-index: 2; position: relative;'>
-                                                        <a class="card-text bi bi-geo-alt text-decoration-none"
-                                                            href="/olehbydaerah/{{ $rek->kota }}"
-                                                            style='color: inherit;'>
-                                                            {{ $rek->kota }}
-                                                        </a>
-                                                    </div>
-                                                    <a href="/varianoleh/{{ $rek->idoleh }}"
-                                                        class="stretched-link"></a>
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                    @endforeach
-
-                                </div>
-                            </div>
-                        @endif --}}
+                        
                     </div>
                 </div>
             </div>

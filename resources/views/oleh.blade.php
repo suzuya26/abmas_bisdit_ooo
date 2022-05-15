@@ -451,7 +451,7 @@
                                 </div>
                             </div>
                             <div class="icon-komposisi row ">
-                                <h1>Ingridients</h1>
+                                <h1>Ingredients</h1>
                                 <div class="icon-komposisi-atas row ">
                                     <div class="icon-atas col-4">
                                         <div class="kotak-icon">
