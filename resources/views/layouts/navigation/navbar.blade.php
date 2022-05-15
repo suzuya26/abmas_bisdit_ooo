@@ -22,7 +22,6 @@
         background: linear-gradient(92.73deg, rgba(244, 106, 6, 0.25) 8.08%, rgba(244, 106, 6, 0.11) 86.34%);
 box-shadow: 0px 9.9272px 33.0907px -13.2363px rgba(0, 0, 0, 0.1);
 border-radius: 24.818px;
-
     }
 </style>
     <nav class="navbar navbar-expand-md navbar-light" style="background: #F4ECE1">
@@ -210,8 +209,8 @@ border-radius: 24.818px;
             </form>
             @guest
                 <ul class="nav" style="margin-right: 10px; filter: drop-shadow(0px 4.71429px 4.71429px rgba(0, 0, 0, 0.25));">
-                    <li class="mx-4"><a href="/login" class="nav-link px-2 btn btn-light text-dark" style="border: 1px solid; border-radius:23.5714px; width:125px;height:45px"><span>Login</span></a></li>
-                    <li><a href="/register" class="nav-link px-2 btn btn-dark text-white" style="border-radius:23.5714px; width:125px;height:45px"><span>Register</span></a></li>
+                    <li class="mx-4"><a href="/login" class="nav-link px-2 btn btn-light text-dark login2" style="border: 1px solid; border-radius:23.5714px; width:125px;height:45px"><span>Login</span></a></li>
+                    <li><a href="/register" class="nav-link px-2 btn btn-dark text-white register2" style="border-radius:23.5714px; width:125px;height:45px"><span>Register</span></a></li>
                 </ul>
             @endguest
             @auth

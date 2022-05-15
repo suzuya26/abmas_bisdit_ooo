@@ -71,7 +71,7 @@
                 </div>
             </div>
             <div class="col-7 mt-3">
-                <img width="90%"
+                <img width="750px" height="400px"
                     src="{{ $toko->gambar_utama }}"
                     alt="">
             </div>
@@ -218,9 +218,9 @@
                 <h3 class="mt-2">Di Sekitar Toko</h3>
                 <div class="row">
                     @php
-                        $sekita_toko = preg_split('/---/', $toko->sekitar_mitra);
+                        $sekitar_mitra = preg_split('/---/', $toko->sekitar_mitra);
                     @endphp
-                    @foreach ($sekita_toko as $s)
+                    @foreach ($sekitar_mitra as $s)
                         @if ($loop->odd)
                             <div class="col-5">
                                 <p> <i class="fa-solid fa-location-dot"></i> {{ $s }}</p>
@@ -309,17 +309,17 @@
         <h1 class="mt-3">Galeri {{ $toko->nama_mitra }}</h1>
         <div class="container" style="position: center">
             @php
-                $galeri_toko = preg_split('/---/', $toko->galeri_mitra);
-                $galeri_toko_caption = preg_split('/---/', $toko->galeri_mitra_caption);
+                $galeri_mitra = preg_split('/---/', $toko->galeri_mitra);
+                $galeri_mitra_caption = preg_split('/---/', $toko->galeri_mitra_caption);
             @endphp
             <div id="myCarousel" class="carousel" data-bs-ride="carousel">
                 <div class="carousel-inner">
-                    @foreach ($galeri_toko as $key => $g)
+                    @foreach ($galeri_mitra as $key => $g)
                     <div class="carousel-item {{$key == 0 ? 'active' : '' }}">
                         <img src="{{$g}}" class="d-block w-100"  alt="...">
                     </div>
                     @endforeach
-                    @foreach ($galeri_toko_caption as $gc)
+                    @foreach ($galeri_mitra_caption as $gc)
                         <div class="carousel-caption">
                             <h1>
                                 @if ($loop->odd)

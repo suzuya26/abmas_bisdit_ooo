@@ -50,7 +50,7 @@ Route::get('/toko/{id}', [TokoController::class, 'show']);
 Route::post('/update/{id}', [MitraController::class, 'update']);
 Route::get('/profil/{id}', [MitraController::class, 'index']);
 Route::get('/edit/{id}', [MitraController::class, 'edit']);
-Route::get('/mitra/{id}', [MitraController::class, 'show']);
+Route::get('/mitra/{id}', [MitraController::class, 'show'])->middleware('mitra');
 Route::get('/tambahproduk/{id}', [ProdukController::class, 'tambahproduk']);
 Route::post('/tambah/{id}', [ProdukController::class, 'tambah']);
 

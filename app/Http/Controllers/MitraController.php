@@ -32,7 +32,6 @@ class MitraController extends Controller
     }
     public function update(Request $request, $id)
     {
-
         DB::table('toko_mitra')->where('idmitra', $id)->update([
             'nama_mitra' => $request->nama,
             'alamat_mitra' => $request->alamat,

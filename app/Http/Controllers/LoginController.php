@@ -25,7 +25,17 @@ class LoginController extends Controller
 
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
-            return redirect()->intended('/');
+            $id = Auth::user()->id;
+            if(Auth::user()->peran==0){ // 0 == pelanggan
+                return redirect('/utama');
+            }
+            if(Auth::user()->peran==1){ // 1 == mitra
+                return redirect('/mitra/'.$id);
+            } 
+            if(Auth::user()->peran==2){ // 2 == admin
+                return redirect('/utama');
+            } 
+            return redirect('/');
         }
 
         return back()->with('loginError', 'Login failed');
