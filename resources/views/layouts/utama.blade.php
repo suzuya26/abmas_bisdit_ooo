@@ -211,9 +211,97 @@ transform: rotate(37.85deg);
     <h2><i class="fas fa-map-marker-alt" style="color: rgb(255, 148, 49)"></i> Surabaya, Jawa Timur</h2>
    </div>
 </section> <hr>
+<section style="margin-bottom: 200px" class="mt-3">
+    <div class="container">
+        <h1 class="fw-bold mt-5">Rekomendasi Oleh-oleh Khas Surabaya</h1>
+    <div class="row">
+        <div class="col-8"></div>
+            <div class="col-4 text-end">
+                <a class="btn btn-dark text-light mb-3 mr-1 btn-sm"
+                    data-bs-target="#carouselExampleIndicators1" role="button" data-bs-slide="prev">
+                    <i class="bi bi-arrow-left"></i>
+                </a>
+                <a class="btn btn-dark text-light mb-3 btn-sm" data-bs-target="#carouselExampleIndicators1"
+                    role="button" data-bs-slide="next">
+                    <i class="bi bi-arrow-right"></i>
+                </a>
+            </div>
+            <div class="col-12">
+                <div id="carouselExampleIndicators1" class="carousel slide" data-ride="carousel">
+                    <div class="carousel">
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <div class="col-3">
+                                    <div class="nama-beli">
+                                        <div class="teks-nama">
+                                            <h2>Spikoe Surabaya</h2>
+                                            <h5 id="buka" class=""><span class="text-danger fw-bold">Rp</span> <span id="jam-buka">100.000 - 120.000</span></h5>
+                                            <div class="info-beli" style="font-size: 25px">
+                                                <i class="fas fa-thumbs-up"><span class="text-beli"><span class="text-danger"> 350</span> Users</span></i> <br>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="foto-beli">
+                                        <img src="{{ asset('img/logo-halal.png') }}" width= "301px"
+                                        height="285.65px">
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="nama-beli">
+                                        <div class="teks-nama">
+                                            <h2>Spikoe Surabaya</h2>
+                                            <h5 id="buka" class=""><span class="text-danger fw-bold">Rp</span> <span id="jam-buka">100.000 - 120.000</span></h5>
+                                            <div class="info-beli" style="font-size: 25px">
+                                                <i class="fas fa-thumbs-up"><span class="text-beli"><span class="text-danger"> 350</span> Users</span></i> <br>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="foto-beli">
+                                        <img src="{{ asset('img/logo-halal.png') }}" width= "301px"
+                                        height="285.65px">
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="nama-beli">
+                                        <div class="teks-nama">
+                                            <h2>Spikoe Surabaya</h2>
+                                            <h5 id="buka" class=""><span class="text-danger fw-bold">Rp</span> <span id="jam-buka">100.000 - 120.000</span></h5>
+                                            <div class="info-beli" style="font-size: 25px">
+                                                <i class="fas fa-thumbs-up"><span class="text-beli"><span class="text-danger"> 350</span> Users</span></i> <br>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="foto-beli">
+                                        <img src="{{ asset('img/logo-halal.png') }}" width= "301px"
+                                        height="285.65px">
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="nama-beli">
+                                        <div class="teks-nama">
+                                            <h2>Spikoe Surabaya</h2>
+                                            <h5 id="buka" class=""><span class="text-danger fw-bold">Rp</span> <span id="jam-buka">100.000 - 120.000</span></h5>
+                                            <div class="info-beli" style="font-size: 25px">
+                                                <i class="fas fa-thumbs-up"><span class="text-beli"><span class="text-danger"> 350</span> Users</span></i> <br>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="foto-beli">
+                                        <img src="{{ asset('img/logo-halal.png') }}" width= "301px"
+                                        height="285.65px">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </div>
+</section>
 <section style="margin-bottom: 200px">
     <div class="container">
-        <h1 class="fw-bold">Rekomendasi Oleh-oleh Khas Surabaya</h1>
+        <h1 class="fw-bold">Rekomendasi Toko Oleh-oleh yang Sering Dikunjungi</h1>
         <div class="row">
             <div class="col-8"></div>
             <div class="col-4 text-end">
@@ -442,6 +530,50 @@ transform: rotate(37.85deg);
             </div>
             {{-- <a href="#" class="link-dark text-end col-12">Lebih Banyak >>></a> --}}
         </div>
+    </div>
+</section>
+<section style="margin-bottom:200px">
+    <div class="container">
+        <h1 class="fw-bold">Rekomendasi Oleh-Oleh dengan harga di bawah Rp40.000</h1>
+            <div class="row">
+                <div class="col-8"></div>
+                <div class="col-4 text-end">
+                <a class="btn btn-dark text-light mb-3 mr-1 btn-sm"
+                    data-bs-target="#carouselExampleIndicators2" role="button" data-bs-slide="prev">
+                    <i class="bi bi-arrow-left"></i>
+                </a>
+                <a class="btn btn-dark text-light mb-3 btn-sm" data-bs-target="#carouselExampleIndicators2"
+                    role="button" data-bs-slide="next">
+                    <i class="bi bi-arrow-right"></i>
+                </a>
+                </div>
+                <div class="col-12">
+                    <div id="carouselExampleIndicators3" class="carousel slide" data-ride="carousel">
+                        <div class="carousel">
+                            <div class="carousel-item active">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <div class="nama-beli">
+                                            <div class="teks-nama">
+                                                <h2>Suoklat</h2>
+                                                <h5 id="buka" class=""><span class="text-danger fw-bold">Rp</span> <span id="jam-buka">35.000</span></h5>
+                                                <div class="info-beli">
+                                                    <span class="text-beli" style="font-size: 1.2rem">Pasar Atom</span> <br>
+                                                    <i class="fas fa-map-marker-alt"> <span class="text-beli" style="font-size: 0.8rem">Jalan Jemursari Raya IV</span></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="foto-beli">
+                                            <img src="{{ asset('img/logo-halal.png') }}" width= "301px"
+                                            height="285.65px">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
     </div>
 </section>
 @endsection
