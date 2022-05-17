@@ -208,12 +208,13 @@ transform: rotate(37.85deg);
     <h2>Hi, <span class="fw-bold"><i>Tamu!</i></span></h2>
     @endauth
     <h2>Sekarang lokasi kamu ada di</h2>
-    <h2><i class="fas fa-map-marker-alt" style="color: rgb(255, 148, 49)"></i> Surabaya, Jawa Timur</h2>
+    <h2><i class="fas fa-map-marker-alt" style="color: rgb(255, 148, 49)"></i> {{ $kota . ', ' . $provinsi }}</h2>
    </div>
 </section> <hr>
+@if (count($olehPopuler) > 0)
 <section style="margin-bottom: 200px" class="mt-3">
     <div class="container">
-        <h1 class="fw-bold mt-5">Rekomendasi Oleh-oleh Khas Surabaya</h1>
+        <h1 class="fw-bold mt-5">Rekomendasi Oleh-oleh Khas {{$kota}}</h1>
     <div class="row">
         <div class="col-8"></div>
             <div class="col-4 text-end">
@@ -231,7 +232,7 @@ transform: rotate(37.85deg);
                     <div class="carousel">
                         <div class="carousel-item active">
                             <div class="row">
-                                @foreach ($varianoleh->slice(0,4) as $v)
+                                @foreach ($olehPopuler->slice(0,4) as $v)
                                 <div class="col-3">
                                     <div class="nama-beli">
                                         <div class="teks-nama">
@@ -250,10 +251,10 @@ transform: rotate(37.85deg);
                                 @endforeach
                             </div>
                         </div>
-                                @if (count($varianoleh)>4)
+                                @if (count($olehPopuler)>4)
                                 <div class="carousel-item">
                                     <div class="row">
-                                        @foreach ($varianoleh->slice(4, 4) as $v)
+                                        @foreach ($olehPopuler->slice(4, 4) as $v)
                                         <div class="col-3">
                                             <div class="nama-beli">
                                                 <div class="teks-nama">
@@ -273,10 +274,10 @@ transform: rotate(37.85deg);
                                     </div>
                                 </div>
                                 @endif
-                                @if (count($varianoleh)>8)
+                                @if (count($olehPopuler)>8)
                                 <div class="carousel-item">
                                     <div class="row">
-                                        @foreach ($varianoleh->slice(8, 4) as $v)
+                                        @foreach ($olehPopuler->slice(8, 4) as $v)
                                         <div class="col-3">
                                             <div class="nama-beli">
                                                 <div class="teks-nama">
@@ -305,6 +306,7 @@ transform: rotate(37.85deg);
     </div>
     </div>
 </section>
+@endif
 <section style="margin-bottom: 200px">
     <div class="container">
         <h1 class="fw-bold">Rekomendasi Toko Oleh-oleh yang Sering Dikunjungi</h1>
@@ -538,6 +540,7 @@ transform: rotate(37.85deg);
         </div>
     </div>
 </section>
+@if (count($harga) > 0)
 <section style="margin-bottom:200px">
     <div class="container">
         <h1 class="fw-bold">Rekomendasi Oleh-Oleh dengan harga di bawah Rp40.000</h1>
@@ -545,10 +548,10 @@ transform: rotate(37.85deg);
                 <div class="col-8"></div>
                 <div class="col-4 text-end">
                 <a class="btn btn-dark text-light mb-3 mr-1 btn-sm"
-                    data-bs-target="#carouselExampleIndicators2" role="button" data-bs-slide="prev">
+                    data-bs-target="#carouselExampleIndicators3" role="button" data-bs-slide="prev">
                     <i class="bi bi-arrow-left"></i>
                 </a>
-                <a class="btn btn-dark text-light mb-3 btn-sm" data-bs-target="#carouselExampleIndicators2"
+                <a class="btn btn-dark text-light mb-3 btn-sm" data-bs-target="#carouselExampleIndicators3"
                     role="button" data-bs-slide="next">
                     <i class="bi bi-arrow-right"></i>
                 </a>
@@ -558,11 +561,12 @@ transform: rotate(37.85deg);
                         <div class="carousel">
                             <div class="carousel-item active">
                                 <div class="row">
-                                    <div class="col-3">
+                                    @foreach ($harga->slice(0, 4) as $rek)
+                                    <div class="col-3" onclick="location.href='/varianoleh/{{$rek->idoleh}}'">
                                         <div class="nama-beli">
                                             <div class="teks-nama">
-                                                <h2>Suoklat</h2>
-                                                <h5 id="buka" class=""><span class="text-danger fw-bold">Rp</span> <span id="jam-buka">35.000</span></h5>
+                                                <h2>{{ $rek->namaoleh }}</h2>
+                                                <h5 id="buka" class=""><span class="text-danger fw-bold">Rp</span> <span id="jam-buka">{{ number_format($rek->hargamin) }}</span></h5>
                                                 <div class="info-beli">
                                                     <span class="text-beli" style="font-size: 1.2rem">Pasar Atom</span> <br>
                                                     <i class="fas fa-map-marker-alt"> <span class="text-beli" style="font-size: 0.8rem">Jalan Jemursari Raya IV</span></i>
@@ -570,16 +574,66 @@ transform: rotate(37.85deg);
                                             </div>
                                         </div>
                                         <div class="foto-beli">
-                                            <img src="{{ asset('img/logo-halal.png') }}" width= "301px"
+                                            <img src="{{ $rek->gambarutama }}" width= "301px"
                                             height="285.65px">
                                         </div>
                                     </div>
+                                    @endforeach
                                 </div>
                             </div>
+                        @if (count($harga) > 4)
+                        <div class="carousel-item">
+                            <div class="row">
+                                @foreach ($harga->slice(4, 4) as $rek)
+                                <div class="col-3" onclick="location.href='/varianoleh/{{$rek->idoleh}}'">
+                                    <div class="nama-beli">
+                                        <div class="teks-nama">
+                                            <h2>{{ $rek->namaoleh }}</h2>
+                                            <h5 id="buka" class=""><span class="text-danger fw-bold">Rp</span> <span id="jam-buka">{{ number_format($rek->hargamin) }}</span></h5>
+                                            <div class="info-beli">
+                                                <span class="text-beli" style="font-size: 1.2rem">Pasar Atom</span> <br>
+                                                <i class="fas fa-map-marker-alt"> <span class="text-beli" style="font-size: 0.8rem">Jalan Jemursari Raya IV</span></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="foto-beli">
+                                        <img src="{{ $rek->gambarutama }}" width= "301px"
+                                        height="285.65px">
+                                    </div>
+                                </div>
+                                @endforeach
+                            </div>
+                        </div>
+                        @endif
+                        @if (count($harga) > 8)
+                        <div class="carousel-item">
+                            <div class="row">
+                                @foreach ($harga->slice(8, 4) as $rek)
+                                <div class="col-3" onclick="location.href='/varianoleh/{{$rek->idoleh}}'">
+                                    <div class="nama-beli">
+                                        <div class="teks-nama">
+                                            <h2>{{ $rek->namaoleh }}</h2>
+                                            <h5 id="buka" class=""><span class="text-danger fw-bold">Rp</span> <span id="jam-buka">{{ number_format($rek->hargamin) }}</span></h5>
+                                            <div class="info-beli">
+                                                <span class="text-beli" style="font-size: 1.2rem">Pasar Atom</span> <br>
+                                                <i class="fas fa-map-marker-alt"> <span class="text-beli" style="font-size: 0.8rem">Jalan Jemursari Raya IV</span></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="foto-beli">
+                                        <img src="{{ $rek->gambarutama }}" width= "301px"
+                                        height="285.65px">
+                                    </div>
+                                </div>
+                                @endforeach
+                            </div>
+                        </div>
+                        @endif
                         </div>
                     </div>
                 </div>
             </div>
     </div>
 </section>
+@endif
 @endsection
