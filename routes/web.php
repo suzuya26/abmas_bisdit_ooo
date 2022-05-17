@@ -12,6 +12,7 @@ use App\Http\Controllers\MitraController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\TokoController;
 use App\Http\Controllers\ProdukController;
+use App\Http\Controllers\UtamaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,7 +26,7 @@ use App\Http\Controllers\ProdukController;
 */
 
 Route::get('/', [IndexController::class, 'index']);
-Route::get('/utama', [IndexController::class, 'utama']);
+Route::get('/utama', [UtamaController::class, 'show']);
 Route::get('varianoleh/{idoleh}', [OlehController::class, 'detailvarianoleh']);
 Route::get('login', [LoginController::class, 'index'])->middleware('guest');
 Route::post('login', [LoginController::class, 'auth']);

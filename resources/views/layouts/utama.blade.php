@@ -231,66 +231,72 @@ transform: rotate(37.85deg);
                     <div class="carousel">
                         <div class="carousel-item active">
                             <div class="row">
+                                @foreach ($varianoleh->slice(0,4) as $v)
                                 <div class="col-3">
                                     <div class="nama-beli">
                                         <div class="teks-nama">
-                                            <h2>Spikoe Surabaya</h2>
-                                            <h5 id="buka" class=""><span class="text-danger fw-bold">Rp</span> <span id="jam-buka">100.000 - 120.000</span></h5>
+                                            <h2>{{$v->namaoleh}}</h2>
+                                            <h5 id="buka" class=""><span class="text-danger fw-bold">Rp</span> <span id="jam-buka">{{ number_format($v->hargamin) }} - {{ number_format($v->hargamax) }}</span></h5>
                                             <div class="info-beli" style="font-size: 25px">
                                                 <i class="fas fa-thumbs-up"><span class="text-beli"><span class="text-danger"> 350</span> Users</span></i> <br>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="foto-beli">
-                                        <img src="{{ asset('img/logo-halal.png') }}" width= "301px"
-                                        height="285.65px">
+                                        <img src="{{ $v->gambarutama }}" width= "301px"
+                                        height="285.65px" style="border-radius: 20%">
                                     </div>
                                 </div>
-                                <div class="col-3">
-                                    <div class="nama-beli">
-                                        <div class="teks-nama">
-                                            <h2>Spikoe Surabaya</h2>
-                                            <h5 id="buka" class=""><span class="text-danger fw-bold">Rp</span> <span id="jam-buka">100.000 - 120.000</span></h5>
-                                            <div class="info-beli" style="font-size: 25px">
-                                                <i class="fas fa-thumbs-up"><span class="text-beli"><span class="text-danger"> 350</span> Users</span></i> <br>
+                                @endforeach
+                            </div>
+                        </div>
+                                @if (count($varianoleh)>4)
+                                <div class="carousel-item">
+                                    <div class="row">
+                                        @foreach ($varianoleh->slice(4, 4) as $v)
+                                        <div class="col-3">
+                                            <div class="nama-beli">
+                                                <div class="teks-nama">
+                                                    <h2>{{$v->namaoleh}}</h2>
+                                                    <h5 id="buka" class=""><span class="text-danger fw-bold">Rp</span> <span id="jam-buka">{{ $v->hargamin }} - {{ $v->hargamax }}</span></h5>
+                                                    <div class="info-beli" style="font-size: 25px">
+                                                        <i class="fas fa-thumbs-up"><span class="text-beli"><span class="text-danger"> 350</span> Users</span></i> <br>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="foto-beli">
+                                                <img src="{{ $v->gambarutama }}" width= "301px"
+                                                height="285.65px">
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="foto-beli">
-                                        <img src="{{ asset('img/logo-halal.png') }}" width= "301px"
-                                        height="285.65px">
+                                        @endforeach
                                     </div>
                                 </div>
-                                <div class="col-3">
-                                    <div class="nama-beli">
-                                        <div class="teks-nama">
-                                            <h2>Spikoe Surabaya</h2>
-                                            <h5 id="buka" class=""><span class="text-danger fw-bold">Rp</span> <span id="jam-buka">100.000 - 120.000</span></h5>
-                                            <div class="info-beli" style="font-size: 25px">
-                                                <i class="fas fa-thumbs-up"><span class="text-beli"><span class="text-danger"> 350</span> Users</span></i> <br>
+                                @endif
+                                @if (count($varianoleh)>8)
+                                <div class="carousel-item">
+                                    <div class="row">
+                                        @foreach ($varianoleh->slice(8, 4) as $v)
+                                        <div class="col-3">
+                                            <div class="nama-beli">
+                                                <div class="teks-nama">
+                                                    <h2>{{$v->namaoleh}}</h2>
+                                                    <h5 id="buka" class=""><span class="text-danger fw-bold">Rp</span> <span id="jam-buka">{{ $v->hargamin }} - {{ $v->hargamax }}</span></h5>
+                                                    <div class="info-beli" style="font-size: 25px">
+                                                        <i class="fas fa-thumbs-up"><span class="text-beli"><span class="text-danger"> 350</span> Users</span></i> <br>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="foto-beli">
+                                                <img src="{{ $v->gambarutama }}" width= "301px"
+                                                height="285.65px">
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="foto-beli">
-                                        <img src="{{ asset('img/logo-halal.png') }}" width= "301px"
-                                        height="285.65px">
+                                        @endforeach
                                     </div>
                                 </div>
-                                <div class="col-3">
-                                    <div class="nama-beli">
-                                        <div class="teks-nama">
-                                            <h2>Spikoe Surabaya</h2>
-                                            <h5 id="buka" class=""><span class="text-danger fw-bold">Rp</span> <span id="jam-buka">100.000 - 120.000</span></h5>
-                                            <div class="info-beli" style="font-size: 25px">
-                                                <i class="fas fa-thumbs-up"><span class="text-beli"><span class="text-danger"> 350</span> Users</span></i> <br>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="foto-beli">
-                                        <img src="{{ asset('img/logo-halal.png') }}" width= "301px"
-                                        height="285.65px">
-                                    </div>
-                                </div>
+                                @endif
+                               
                             </div>
                         </div>
                     </div>
