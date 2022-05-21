@@ -165,12 +165,16 @@
             </div>
             <div class="col-6">
                 <div class="row">
-                    <div class="col-4">
+                    <div class="col-2">
                         <i class='far fa-calendar-alt' style='font-size:66px'></i>
-
                     </div>
                     <div class="col-4">
+                        @if($check)
                         <h3 style="color: #8fd14f" class="fw-bold">BUKA</h3>
+                        @else
+                        <h3 style="color: red" class="fw-bold">TUTUP</h3>
+                        @endif
+                        
                         <H5>{{ $toko->jam_operasional }}</H5>
 
                     </div>
