@@ -62,7 +62,8 @@
                 <div class="row">
                     <div class="col-5">
                         <p>Pernah ke toko ini?</p>
-                        <a href="" class=" button-toko" style="">Rekomendasikan</a>
+                        {{-- <a href="" class=" button-toko" style="">Rekomendasikan</a> --}}
+                        <livewire:rekomendasi-index :idtoko="$idtoko"></livewire:rekomendasi-index>
                     </div>
                     <div class="col-6">
                         <p>Ingin berkunjung ke toko ini?</p>
