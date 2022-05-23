@@ -18,6 +18,7 @@
     </div>
     <!-- /.content-header -->
 
+
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
@@ -43,40 +44,18 @@
                   <th>Stok</th>
                 </tr>
               </thead>
+              @foreach ($mitra_produk as $m)
               <tbody>
                 <tr>
                   <td>
-                    <img src="https://cdn.discordapp.com/attachments/906163180328325130/914060163638505542/AlmondCrispyCheese_1.jpg" alt="Product 1" class="img-circle img-size-32 mr-2">
-                    Almond Crispy Cheese
+                    <img src={{ $mitra_produk->gambar_produk_mitra }} alt="Product 1" class="img-circle img-size-32 mr-2">
+                    {{ $mitra_produk->nama_produk_mitra }}
                   </td>
-                  <td>Rp.20.000</td>
-                  <td>50</td>
-                </tr>
-                <tr>
-                  <td>
-                    <img src="https://cdn.discordapp.com/attachments/906163180328325130/916964212767621130/CokelatTempe.jpg" alt="Product 1" class="img-circle img-size-32 mr-2">
-                    Cokelat Tempe
-                  </td>
-                  <td>Rp.20.000</td>
-                  <td>50</td>
-                </tr>
-                <tr>
-                  <td>
-                    <img src="https://cdn.discordapp.com/attachments/906163180328325130/916964212767621130/CokelatTempe.jpg" alt="Product 1" class="img-circle img-size-32 mr-2">
-                    Cokelat Tempe
-                  </td>
-                  <td>Rp.20.000</td>
-                  <td>50</td>
-                </tr>
-                <tr>
-                  <td>
-                    <img src="https://cdn.discordapp.com/attachments/906163180328325130/916962624820879431/PiaMalang_2.jpg" alt="Product 1" class="img-circle img-size-32 mr-2">
-                    Bakpia Khas Malang
-                  </td>
-                  <td>Rp.20.000</td>
-                  <td>50</td>
+                  <td>Rp.{{ $mitra_produk->harga_produk_mitra }}</td>
+                  <td>{{ $mitra_produk->id_produk_mitra }}</td>
                 </tr>
               </tbody>
+              @endforeach
             </table>
           </div>
         </div>

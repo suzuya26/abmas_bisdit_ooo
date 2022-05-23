@@ -318,8 +318,16 @@
         #funfact {
             margin-top: 100px;
         }
+        .foto-oleh{
+            position: relative;
+        }
         .foto-oleh img {
             border-radius: 100px 0px 0px 0px;
+        }
+        .livewire {
+            position: absolute;
+            top : 600px;
+            padding: 5px;
         }
     </style>
     @foreach ($varianoleh as $v)
@@ -358,6 +366,9 @@
                     <div class="col-6 mt-3">
                         <div class="foto-oleh">
                             <img src="{{ $v->gambarutama }}" width="645px" height="679px" >
+                            <div class="livewire col-2 d-flex justify-content-end">
+                                <livewire:favorite-index :idoleh="$idoleh"></livewire:favorite-index>
+                            </div>
                         </div>
                         <div class="row rekom mt-3">
                             <div class="col-6">

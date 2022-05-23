@@ -48,11 +48,12 @@ Route::get('/tambahproduk', function () {return view('mitra.tambahproduk');});
 Route::get('/updateprofil', function () {return view('mitra.updateprofil');});
 
 Route::get('/toko/{id}', [TokoController::class, 'show']);
-Route::post('/update/{id}', [MitraController::class, 'update']);
-Route::get('/profil/{id}', [MitraController::class, 'index']);
-Route::get('/edit/{id}', [MitraController::class, 'edit']);
-Route::get('/mitra/{id}', [MitraController::class, 'show'])->middleware('mitra');
-Route::get('/tambahproduk/{id}', [ProdukController::class, 'tambahproduk']);
+Route::post('/update/{id}', [MitraController::class, 'update'])->name('update');
+Route::get('/profil/{id}', [MitraController::class, 'index'])->name('profil');
+Route::get('/edit/{id}', [MitraController::class, 'edit'])->name('edit');
+Route::get('/daftarproduk/{id}', [ProdukController::class, 'daftarproduk'])->name('daftarproduk');
+Route::get('/mitra/{id}', [MitraController::class, 'show'])->middleware('mitra')->name('mitra');
+Route::get('/tambahproduk/{id}', [ProdukController::class, 'tambahproduk'])->name('tambahproduk');
 Route::post('/tambah/{id}', [ProdukController::class, 'tambah']);
 
 Route::get('oleh/{idoleh}', [OlehController::class, 'detailoleh']);

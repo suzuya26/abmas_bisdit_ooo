@@ -71,7 +71,6 @@
       </ul>
     </nav>
     <!-- /.navbar -->
-
     <!-- Main Sidebar Container -->
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
       <!-- Brand Logo -->
@@ -117,13 +116,13 @@
               </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="/tambahproduk" class="nav-link">
+                  <a href={{route('tambahproduk', ['id' => 1])}} class="nav-link">
                     <i class="nav-icon fas fas fa-cart-plus"></i>
                     <p>Tambah Produk</p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="/daftarproduk" class="nav-link">
+                  <a href={{route('daftarproduk', ['id' => 1])}} class="nav-link">
                     <i class="nav-icon fas fas fas fas fa-list"></i>
                     <p>Daftar Produk</p>
                   </a>
@@ -131,7 +130,7 @@
               </ul>
             </li>
             <li class="nav-item has-treeview">
-              <a href="/profil" class="nav-link">
+              <a href={{route('profil', ['id' => 1])}} class="nav-link">
                 <i class="nav-icon fas fa-user"></i>
                 <p>
                   Profil
