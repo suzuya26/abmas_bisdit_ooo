@@ -55,20 +55,34 @@
 
 
       <!-- Right navbar links -->
-      <ul class="navbar-nav ml-auto" <!-- Messages Dropdown Menu -->
-
-        <!-- Notifications Dropdown Menu -->
-        <li class="nav-item dropdown">
-            <form action="logout" method="POST">
-                @csrf
-                <button type="submit">
-                    Logout
-                </button>
-            </form>
-
-        </li>
-
-      </ul>
+      <div class="collapse navbar-collapse justify-content-end" id=" toggleMenu">
+        @guest
+            <ul class="nav" style="margin-right: 10px">
+                <li><a href="/login" class="nav-link login">Login</a></li>
+                <li><a href="/register" class="nav-link px-2 link-secondary">Register</a></li>
+            </ul>
+        @endguest
+        @auth
+            <div class="dropdown text-end">
+                <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="{{ auth()->user()->photo }}" width="32" height="32" class="rounded-circle">
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-start text-small" style="margin-right: 10px;"
+                    aria-labelledby=" dropdownUser1">
+                    <li><a class="dropdown-item" href="#">Profil</a></li>
+                    <li><a class="dropdown-item" href="/favorit">Favorit</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <form action="/logout" method="post">
+                        @csrf
+                        <button class="dropdown-item" type="submit">Logout</button>
+                    </form>
+                </ul>
+            </div>
+        @endauth
+    </div>
     </nav>
     <!-- /.navbar -->
     <!-- Main Sidebar Container -->
