@@ -47,7 +47,7 @@ Route::get('/daftarproduk', function () {return view('mitra.daftarproduk');});
 Route::get('/tambahproduk', function () {return view('mitra.tambahproduk');});
 Route::get('/updateprofil', function () {return view('mitra.updateprofil');});
 
-Route::get('/toko/{id}', [TokoController::class, 'show']);
+Route::get('/toko/{idtoko}', [TokoController::class, 'show']);
 Route::post('/update/{id}', [MitraController::class, 'update'])->name('update');
 Route::get('/profil/{id}', [MitraController::class, 'index'])->name('profil');
 Route::get('/edit/{id}', [MitraController::class, 'edit'])->name('edit');

@@ -14,9 +14,8 @@ class TambahKolomToko extends Migration
     public function up()
     {
         Schema::table('toko_oleh', function (Blueprint $table) {
-           $table->string('jam_buka');
-           $table->string('jam_tutup');
-        });
+            $table->bigInteger('rekomendasi_count')->nullable();
+         });
     }
 
     /**
