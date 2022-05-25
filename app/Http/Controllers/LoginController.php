@@ -30,7 +30,7 @@ class LoginController extends Controller
                 return redirect('/utama');
             }
             if(Auth::user()->peran==1){ // 1 == mitra
-                return redirect('/mitra/'.$id);
+                return redirect('/profil/'.$id);
             } 
             if(Auth::user()->peran==2){ // 2 == admin
                 return redirect('/utama');
