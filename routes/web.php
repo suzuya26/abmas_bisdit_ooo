@@ -41,8 +41,8 @@ Route::get('mitra', [MitraController::class, 'mitra']);
 Route::get('search', [SearchController::class, 'search']);
 Route::get('/favorit/hapus/{idbookmark}',[FavoriteController::class,'hapusfavorit']);
 
-Route::get('mitras', function () {return view('mitra.dashboard');});
-Route::get('mitras', function () {return view('mitra.dashboard');});
+Route::get('mitras/{id}', [MitraController::class, 'mitras']);
+
 Route::get('/daftarproduk', function () {return view('mitra.daftarproduk');});
 Route::get('/tambahproduk', function () {return view('mitra.tambahproduk');});
 Route::get('/updateprofil', function () {return view('mitra.updateprofil');});
@@ -52,7 +52,7 @@ Route::post('/update/{id}', [MitraController::class, 'update'])->name('update');
 Route::get('/profil/{id}', [MitraController::class, 'index'])->name('profil');
 Route::get('/edit/{id}', [MitraController::class, 'edit'])->name('edit');
 Route::get('/daftarproduk/{id}', [ProdukController::class, 'daftarproduk'])->name('daftarproduk');
-Route::get('/mitra/{id}', [MitraController::class, 'show'])->middleware('mitra')->name('mitra');
+Route::get('/mitra/{idMitra}', [MitraController::class, 'show'])->middleware('mitra')->name('mitra');
 Route::get('/tambahproduk/{id}', [ProdukController::class, 'tambahproduk'])->name('tambahproduk');
 Route::post('/tambah/{id}', [ProdukController::class, 'tambah']);
 
