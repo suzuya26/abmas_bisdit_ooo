@@ -15,11 +15,20 @@
         <div class="card-body">
           <div class="form-group">
             <label for="formFileMultiple" class="form-label">Nama Toko</label>
-            <input type="text" id="inputName" class="form-control" value={{ $toko_mitra->nama_mitra}} readonly>
+            <input type="text" id="inputName" class="form-control" value="{{ $toko_mitra->nama_mitra}}" readonly>
           </div>
           <div class="form-group">
             <label for="inputName">Alamat</label>
-            <input type="text" id="inputName" class="form-control" value={{ $toko_mitra->alamat_mitra}} readonly>
+            <input type="text" id="inputName" class="form-control" value="{{ $toko_mitra->alamat_mitra}}" readonly>
+          </div>
+          <div class="form-group">
+            <label for="inputName">Jam Operasional</label>
+            <input type="text" id="inputName" class="form-control" value="{{ $toko_mitra->jam_operasional}}" readonly>
+          </div>
+          
+          <div class="form-group">
+            <label for="inputName">Fasilitas Toko</label>
+            <input type="text" id="inputName" class="form-control" value="{{ $toko_mitra->fasilitas_mitra}}" readonly>
           </div>
           <div class="form-group">
             <label for="inputName">Instagram</label>
@@ -44,7 +53,6 @@
   </div>
   <div class="row ">
     <div class="col-12 mb-3">
-
       <a href="{{ url('edit/'.$toko_mitra->idmitra) }}" class="btn btn-success float-right">Edit Profil</a>
     </div>
   </div>
