@@ -102,7 +102,7 @@
             <img src="{{ asset('admintemplate/') }}/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
           </div>
           <div class="info">
-            <a href="/profil" class="d-block">Nama Mitra</a>
+            <a href="/profil" class="d-block">{{$toko_mitra->nama_mitra}}</a>
           </div>
         </div>
 
@@ -112,7 +112,7 @@
             <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
             <li class="nav-item">
-              <a href="/mitras" class="nav-link">
+              <a href="/mitras/{{Auth::user()->mitra_id}}" class="nav-link">
                 <i class="nav-icon fas fa-tachometer-alt"></i>
                 <p>
                   Dashboard
@@ -130,13 +130,13 @@
               </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href={{route('tambahproduk', ['id' => 1])}} class="nav-link">
+                  <a href="tambahproduk/{{Auth::user()->mitra_id}}" class="nav-link">
                     <i class="nav-icon fas fas fa-cart-plus"></i>
                     <p>Tambah Produk</p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href={{route('daftarproduk', ['id' => 1])}} class="nav-link">
+                  <a href="daftarproduk/{{Auth::user()->mitra_id}}" class="nav-link">
                     <i class="nav-icon fas fas fas fas fa-list"></i>
                     <p>Daftar Produk</p>
                   </a>
@@ -144,7 +144,7 @@
               </ul>
             </li>
             <li class="nav-item has-treeview">
-              <a href={{route('profil', ['id' => 1])}} class="nav-link">
+              <a href="/profil/{{Auth::user()->mitra_id}}" class="nav-link">
                 <i class="nav-icon fas fa-user"></i>
                 <p>
                   Profil

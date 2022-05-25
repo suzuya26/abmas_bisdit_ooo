@@ -27,9 +27,19 @@
           </div>
           
           <div class="form-group">
-            <label for="inputName">Fasilitas Toko</label>
-            <input type="text" id="inputName" class="form-control" value="{{ $toko_mitra->fasilitas_mitra}}" readonly>
-          </div>
+            <label for="inputName">Fasilitas Toko</label> <br>
+            <div class="row">
+                <div class="col-6">
+                    <label><input disabled type="checkbox" name="fasilitas_mitra[]" {{in_array('Parkir Mobil dan Motor', $checkbox) ? 'checked' : ''}} value="Parkir Mobil dan Motor"> Parkir Mobil dan Motor</label> <br>
+                    <label><input disabled type="checkbox" name="fasilitas_mitra[]" {{in_array('Pesan Antar', $checkbox) ? 'checked' : ''}} value="Pesan Antar"> Pesan Antar</label> <br>
+                    <label><input disabled type="checkbox" name="fasilitas_mitra[]" {{in_array('Makan di Tempat', $checkbox) ? 'checked' : ''}} value="Makan di Tempat"> Makan di Tempat</label> <br>
+                </div>
+                <div class="col-6">
+                    <label><input disabled type="checkbox" name="fasilitas_mitra[]" {{in_array('Wifi Gratis', $checkbox) ? 'checked' : ''}} value="wifi"> Wifi Gratis</label> <br>
+                    <label><input disabled type="checkbox" name="fasilitas_mitra[]" {{in_array('Pembayaran Nontunai', $checkbox) ? 'checked' : ''}} value="Pembayaran Nontunai"> Pembayaran Nontunai</label>
+                </div>
+            </div>         
+        </div>
           <div class="form-group">
             <label for="inputName">Instagram</label>
             <input type="text" id="inputName" class="form-control" value={{ $toko_mitra->sosmed_mitra}} readonly>
@@ -52,9 +62,13 @@
 
   </div>
   <div class="row ">
+
     <div class="col-12 mb-3">
       <a href="{{ url('edit/'.$toko_mitra->idmitra) }}" class="btn btn-success float-right">Edit Profil</a>
     </div>
+   
+    
+    
   </div>
   <!-- /.row -->
   <!-- Main row -->

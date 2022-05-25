@@ -25,7 +25,7 @@ class LoginController extends Controller
 
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
-            $id = Auth::user()->id;
+            $id = Auth::user()->mitra_id;
             if(Auth::user()->peran==0){ // 0 == pelanggan
                 return redirect('/utama');
             }
