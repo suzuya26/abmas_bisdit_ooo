@@ -373,7 +373,7 @@
                         <div class="row rekom mt-3">
                             <div class="col-6">
                                 <p>Pernah beli produk ini?</p>
-                                <a href="" class="button-oleh">Rekomendasikan</a>
+                                <livewire:rekomendasioleh-index :idoleh="$idoleh"></livewire:rekomendasioleh-index>
                             </div>
                             <div class="col-6">
                                 <p>Ingin beli produk ini?</p>
