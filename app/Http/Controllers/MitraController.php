@@ -29,14 +29,16 @@ class MitraController extends Controller
         $toko_mitra2 = DB::table('toko_mitra')->where('idmitra', $id)->first();
         return view('mitra.profil', [
             'toko_mitra'=>$toko_mitra,
-            'checkbox' => explode('---', $toko_mitra2->fasilitas_mitra)
+            'checkbox' => explode('---', $toko_mitra2->fasilitas_mitra),
+            'checkbox1' => explode('---', $toko_mitra->sekitar_mitra)
         ]);
     }
     public function edit($id){
         $toko_mitra = DB::table('toko_mitra')->where('idmitra', $id)->first();
         return view('mitra.updateprofil', [
             'toko_mitra' => $toko_mitra,
-            'checkbox' => explode('---', $toko_mitra->fasilitas_mitra)
+            'checkbox' => explode('---', $toko_mitra->fasilitas_mitra),
+            'checkbox1' => explode('---', $toko_mitra->sekitar_mitra)
         ]);
     }
     public function update(Request $request, $id)
@@ -49,13 +51,120 @@ class MitraController extends Controller
             'website_mitra' => $request->web,
             'sosmed_mitra' => $request->ig,
         ]);
+        
         if(!empty($request->input('fasilitas_mitra'))){
             $checkbox = join('---', $request->input('fasilitas_mitra'));
             DB::table('toko_mitra')->where('idmitra',$id)->update(['fasilitas_mitra'=>$checkbox]);
         } else{
             $mitra = '';
         }
+        if(!empty($request->input('sekitar_mitra'))){
+            $checkbox = join('---', $request->input('sekitar_mitra'));
+            DB::table('toko_mitra')->where('idmitra',$id)->update(['sekitar_mitra'=>$checkbox]);
+        } else{
+            $mitra = '';
+        }
         return redirect('/profil/'.$id);
+    }
+    public function gambar1(Request $request, $id){
+        $mitra = DB::table('toko_mitra')->where('idmitra', $id);
+        $validatedData = $request->validate([
+            'image'=>'image|file|max:1024'
+        ]);
+        $file = $request->file('image');
+
+        $nama_file = time()."_".$file->getClientOriginalName();
+
+        $tujuan_upload = 'data_file';
+	    $file->move($tujuan_upload,$nama_file);
+
+        // if($request->file('image')){
+        //     $validatedData['image'] = $request->file('image')->store('post-images');
+        // }
+        $mitra->update([
+            'gambar_1' => $nama_file
+        ]);
+        return redirect()->back();
+    }
+    public function gambar2(Request $request, $id){
+        $mitra = DB::table('toko_mitra')->where('idmitra', $id);
+        $validatedData = $request->validate([
+            'image'=>'image|file|max:1024'
+        ]);
+        $file = $request->file('image');
+
+        $nama_file = time()."_".$file->getClientOriginalName();
+
+        $tujuan_upload = 'data_file';
+	    $file->move($tujuan_upload,$nama_file);
+
+        // if($request->file('image')){
+        //     $validatedData['image'] = $request->file('image')->store('post-images');
+        // }
+        $mitra->update([
+            'gambar_2' => $nama_file
+        ]);
+        return redirect()->back();
+    }
+    public function gambar3(Request $request, $id){
+        $mitra = DB::table('toko_mitra')->where('idmitra', $id);
+        $validatedData = $request->validate([
+            'image'=>'image|file|max:1024'
+        ]);
+        $file = $request->file('image');
+
+        $nama_file = time()."_".$file->getClientOriginalName();
+
+        $tujuan_upload = 'data_file';
+	    $file->move($tujuan_upload,$nama_file);
+
+        // if($request->file('image')){
+        //     $validatedData['image'] = $request->file('image')->store('post-images');
+        // }
+        $mitra->update([
+            'gambar_3' => $nama_file
+        ]);
+        return redirect()->back();
+    }
+    public function gambar4(Request $request, $id){
+        $mitra = DB::table('toko_mitra')->where('idmitra', $id);
+        $validatedData = $request->validate([
+            'image'=>'image|file|max:1024'
+        ]);
+        $file = $request->file('image');
+
+        $nama_file = time()."_".$file->getClientOriginalName();
+
+        $tujuan_upload = 'data_file';
+	    $file->move($tujuan_upload,$nama_file);
+
+        // if($request->file('image')){
+        //     $validatedData['image'] = $request->file('image')->store('post-images');
+        // }
+        $mitra->update([
+            'gambar_4' => $nama_file
+        ]);
+        return redirect()->back();
+    }
+    public function gambar5(Request $request, $id){
+        $mitra = DB::table('toko_mitra')->where('idmitra', $id);
+        $validatedData = $request->validate([
+            'image'=>'image|file|max:1024'
+        ]);
+        $file = $request->file('image');
+
+        $nama_file = time()."_".$file->getClientOriginalName();
+
+        $tujuan_upload = 'data_file';
+	    $file->move($tujuan_upload,$nama_file);
+
+        // if($request->file('image')){
+        //     $validatedData['image'] = $request->file('image')->store('post-images');
+        // }
+        $mitra->update([
+            'gambar_5' => $nama_file
+        ]);
+        return redirect()->back();
     }
     public function store(Request $request)
     {
