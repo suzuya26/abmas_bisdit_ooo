@@ -43,22 +43,67 @@
         .carousel-control {
             width: 0%;
         }
+        .nama-beli {
+            margin:50px 50px 50px 15px;
+            width: 280px;
+            height: 400px;
+            left: 16px;
+            top: 32px;
+            background: #DEECF3;
+            /* Shadow01 */
+            box-shadow: 0px 24px 48px rgba(0, 24, 52, 0.080899);
+            border-radius: 40px;
 
+        }
+        .teks-nama {
+            vertical-align: bottom;
+            text-align: left;
+            padding: 250px 25px 0px 30px;
+        }
+        .teks-nama h2 {
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 25px;
+            line-height: 32px;
+        }
+        .foto-beli {
+        margin:-500px -50px 0px 0px;
+            width: 301px;
+            height: 285.65px;
+            left: 5px;
+            top: 32px;
+            background: #9B9B9B;
+            border-radius: 40px;
+        }
+        #jam-buka, #buka{
+            font-size: 1.3rem
+        }
+        ul li{
+            line-height: 0.3em;
+            list-style: none
+        }
+        
     </style>
     <div class="body" style="background: #fff4ec">
         <div class="container">
             <div class="row">
                 <div class="col-5 mt-3">
-                    <p style="font-size: 2rem">Kamu sedang menelusuri toko, </p>
-    
-    
-    
-                    <h1>{{ $toko->nama_toko }}</h1>
-    
-                    <h4>#1 Toko Oleh-Oleh Surabaya</h4>
-                    <p><i>Menurut <b> <span style="color: orange">100</span> </b> Orang Surabaya</i></p>
-                    <p><i>Menurut <b> <span style="color: orange">230</span> </b> Wisatawan</i></p> <br>
-    
+                    <ul>
+                        <li><h1 style="font-size: 55px;" class="fw-bold">{{ $toko->nama_toko }}</h1> <br>
+                            <h4>#1 Toko Oleh-Oleh Surabaya</h4>
+                            <ul style="margin-bottom: 30px">
+                                <li> <p><i>Menurut <b> <span style="color: orange">100</span> </b> Orang Surabaya</i></li>
+                                <li>Menurut <b> <span style="color: orange">230</span> </b> Wisatawan</p></li>
+                            </ul></li>
+                            <li>
+                            <h4>#2 Toko Oleh-Oleh Surabaya</h4>
+                            <ul style="">
+                                 <li> <p><i>Menurut <b> <span style="color: orange">100</span> </b> Orang Surabaya</i></li>
+                                <li>Menurut <b> <span style="color: orange">230</span> </b> Wisatawan</p></li>
+                            </ul>
+                           </li>
+                    </ul>
                     {{-- <p>Pernah ke toko ini?    Ingin berkunjung ke toko ini?</p> --}}
                     <div class="row">
                         <div class="col-5">
@@ -80,41 +125,81 @@
             </div> <br>
             <hr class="mt-3">
         </div>
-        <div class="container">
-            <div class="row mt-4">
-                <div class="col-8">
-                    <h1 class="">Produk Oleh-oleh dari {{ $toko->nama_toko }}</h1>
+        <section id="tempatbeli" style="margin-bottom: 230px">
+            <div class="container">
+                <div class="tempatbeli row">
+                    <h1>Tempat Beli</h1>
                 </div>
-                <div class="col-2"></div>
-                <div class="col-2">
-                    <h1> <span><i class="fas fa-filter"></i></span> <i class='fas fa-angle-left'></i> <i
-                            class='fas fa-angle-right'></i> </h1>
+                <div class="row">
+                    <div class="col-3">
+                        <div class="nama-beli">
+                            <div class="teks-nama">
+                                <h2>Toko Bolu Jago</h2>
+                                <h2 id="buka">Buka <span id="jam-buka">(07.00-10.00)</span></h2>
+                                <div class="info-beli">
+                                    <i class="icon-buka bi bi-geo-alt-fill"><span class="text-beli">Jalan Ir. Soekarno 5B</span></i> <br>
+                                    <i class="icon-buka bi bi-telephone-fill"><span class="text-beli">(031) 12345678</span></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="foto-beli">
+                            <img src="{{ asset('img/logo-halal.png') }}" width= "301px"
+                            height="285.65px">
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="nama-beli">
+                            <div class="teks-nama">
+                                <h2>Toko Bolu Jago</h2>
+                                <h2 id="buka">Buka <span id="jam-buka">(07.00-10.00)</span></h2>
+                                <div class="info-beli">
+                                    <i class="icon-buka bi bi-geo-alt-fill"><span class="text-beli">Jalan Ir. Soekarno 5B</span></i> <br>
+                                    <i class="icon-buka bi bi-telephone-fill"><span class="text-beli">(031) 12345678</span></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="foto-beli">
+                            <img src="{{ asset('img/logo-halal.png') }}" width= "301px"
+                            height="285.65px">
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="nama-beli">
+                            <div class="teks-nama">
+                                <h2>Toko Bolu Jago</h2>
+                                <h2 id="buka">Buka <span id="jam-buka">(07.00-10.00)</span></h2>
+                                <div class="info-beli">
+                                    <i class="icon-buka bi bi-geo-alt-fill"><span class="text-beli">Jalan Ir. Soekarno 5B</span></i> <br>
+                                    <i class="icon-buka bi bi-telephone-fill"><span class="text-beli">(031) 12345678</span></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="foto-beli">
+                            <img src="{{ asset('img/logo-halal.png') }}" width= "301px"
+                            height="285.65px">
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="nama-beli">
+                            <div class="teks-nama">
+                                <h2>Toko Bolu Jago</h2>
+                                <h2 id="buka">Buka <span id="jam-buka">(07.00-10.00)</span></h2>
+                                <div class="info-beli">
+                                    <i class="icon-buka bi bi-geo-alt-fill"><span class="text-beli">Jalan Ir. Soekarno 5B</span></i> <br>
+                                    <i class="icon-buka bi bi-telephone-fill"><span class="text-beli">(031) 12345678</span></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="foto-beli">
+                            <img src="{{ asset('img/logo-halal.png') }}" width= "301px"
+                            height="285.65px">
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-        @foreach ($produk_toko as $p)
-            <div class="container ">
-                <div class="row mt-3">
-                    <div class="col-4">
-                        <img width="410px"
-                            src="https://images.pexels.com/photos/9938862/pexels-photo-9938862.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                            alt="">
-                    </div>
-                    <div class="col-5 mt-4">
-                        <h1>{{ $p->nama_produk }}</h1>
-                        <h3>Rp.{{ number_format($p->harga_produk) }}</h3>
-                        <a href="" class="btn btn-secondary" style="font-size: 1.7rem"><i><span
-                                    style="color: orange; font-weight:bold">#1</span> Spikoe di Toko ini</i></a>
-                    </div>
-                    <div class="col-3 mt-4">
-                        <a href="" class=" button-produk"><i class="fa fa-thumbs-up" style="font-size:24px"></i>
-                            Rekomendasikan</a> <br>
-                        <a href="" class=" mt-3 button-produk"><i class="far fa-bookmark" style="font-size:24px"></i> Simpan
-                            Produk</a>
-                    </div>
-                </div>
-            </div>
-        @endforeach
+        </section>
+       
+       
         {{-- <div class="container ">
         <div class="row mt-3">
             <div class="col-4">
