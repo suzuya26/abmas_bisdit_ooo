@@ -2,7 +2,7 @@
     .register{
         width: 115px;
         height: 45px;
-        background: #2F2F2F;
+        background: #EDEDED;
         box-shadow: 0px 16.5453px 26.4725px -6.61813px rgba(0, 0, 0, 0.2);
         border-radius: 69.4904px;
         font-style: normal;
@@ -24,10 +24,10 @@ box-shadow: 0px 9.9272px 33.0907px -13.2363px rgba(0, 0, 0, 0.1);
 border-radius: 24.818px;
     }
 </style>
-    <nav class="navbar navbar-expand-md navbar-light" style="background: #F4ECE1">
+    <nav class="navbar navbar-expand-md navbar-light" style="background: #ededed">
         <a href="/" class="navbar-brand" style="margin-left: 10px">
-            <img src="https://cdn.discordapp.com/attachments/906163180328325130/919144472237977640/Trinity.png"
-                class="bi me-2" height="32">
+            <img src="https://media.discordapp.net/attachments/950320671496482847/981772771765915658/OASIS_1_1.png"
+                class="bi me-2" height="50px" width="70px">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#toggleMenu"
             aria-controls="toggleMenu" aria-expanded="false" aria-label="Toogle Navigation">
@@ -209,8 +209,8 @@ border-radius: 24.818px;
             </form>
             @guest
                 <ul class="nav" style="margin-right: 10px; filter: drop-shadow(0px 4.71429px 4.71429px rgba(0, 0, 0, 0.25));">
-                    <li class="mx-4"><a href="/login" class="nav-link px-2 btn btn-light text-dark login2" style="border: 1px solid; border-radius:23.5714px; width:125px;height:45px"><span>Login</span></a></li>
-                    <li><a href="/register" class="nav-link px-2 btn btn-dark text-white register2" style="border-radius:23.5714px; width:125px;height:45px"><span>Register</span></a></li>
+                    <li class="mx-4"><a href="/login" class="nav-link px-2 btn btn-light text-dark login2" style="border: 1px solid; border-radius:23.5714px; width:125px;height:45px;background:#EDEDED"><span>Login</span></a></li>
+                    <li><a href="/register" class="nav-link px-2 btn btn-dark text-dark register2" style="border-radius:23.5714px; width:125px;height:45px;background:#EDEDED"><span>Register</span></a></li>
                 </ul>
             @endguest
             @auth
