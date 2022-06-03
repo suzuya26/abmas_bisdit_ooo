@@ -9,7 +9,7 @@
         font-weight: 600;
         font-size: 13.5453px;
         line-height: 94.8%;
-        color: #F4ECE1;
+        color: #EDEDED;
         transition: .3s;
         /* display: flex; */
         align-items: center;
@@ -24,7 +24,7 @@ box-shadow: 0px 9.9272px 33.0907px -13.2363px rgba(0, 0, 0, 0.1);
 border-radius: 24.818px;
     }
 </style>
-    <nav class="navbar navbar-expand-md navbar-light" style="background: #F4ECE1">
+    <nav class="navbar navbar-expand-md navbar-light" style="background: #EDEDED">
         <a href="/" class="navbar-brand" style="margin-left: 10px">
             <img src="https://cdn.discordapp.com/attachments/906163180328325130/919144472237977640/Trinity.png"
                 class="bi me-2" height="32">

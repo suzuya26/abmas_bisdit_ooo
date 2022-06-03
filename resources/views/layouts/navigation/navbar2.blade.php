@@ -10,7 +10,7 @@
         font-size: 16.5453px;
         line-height: 94.8%;
     /* identical to box height, or 16px */
-        color: #F4ECE1;
+        color: #EDEDED;
         transition: .3s
     }
 </style>

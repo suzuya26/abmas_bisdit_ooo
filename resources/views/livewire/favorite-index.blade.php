@@ -17,11 +17,11 @@
         @auth
             <div class="align-items-center">
                 @if (favorite::where(['idoleh' => $idoleh, 'id' => auth()->user()->id])->exists())
-                    <a wire:click="favorite({{ $idoleh }})" class="btn btn-light btn-lg bi bi-heart-fill">
-                        {{ $count }}</a>
+                <label style="font-size : 36px"><a wire:click="favorite({{ $idoleh }})" class="" style="text-decoration:none"><i class="bi bi-heart-fill" style="color: red"></i>
+                        {{ $count }}</a></label>
                 @else
-                    <a wire:click="favorite({{ $idoleh }})" class="btn btn-light btn-lg bi bi-heart">
-                        {{ $count }}</a>
+                <label style="font-size : 36px"><a wire:click="favorite({{ $idoleh }})" class="" style="text-decoration:none"><i class="bi bi-heart" style="color: red"></i>
+                        {{ $count }}</a></label>
                 @endif
             </div>
         @endauth
