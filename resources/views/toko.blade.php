@@ -306,7 +306,8 @@
             line-height: 15px;
         }
         .tempatbeli {
-            margin: 40px 0px 55px 0px;
+            /* margin: 40px 0px 25px 0px; */
+            margin-top: 80px;
             vertical-align: center;
         }
         .info-beli i{
@@ -390,12 +391,12 @@
                 </div>
             </div>
     </section>
-        <section id="tempatbeli" style="margin-bottom: 230px;margin-top:-30px">
+        <section id="tempatbeli" style="margin-bottom: 200px;margin-top:-30px">
             <div class="container">
                 <div class="tempatbeli row">
                     <h1>Produk Oleh-Oleh dari {{ $toko->nama_toko }}</h1>
                 </div>
-                <div class="row" style="margin-bottom: -20px">
+                <div class="row" >
                     <div class="col-3">
                         <div class="nama-beli">
                             <div class="teks-nama ">
