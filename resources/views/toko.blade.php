@@ -83,62 +83,327 @@
             line-height: 0.3em;
             list-style: none
         }
-        
+        .deskripsi-utama {
+            padding: 2px 50px 0px 0px;
+        }
+        .deskripsi {
+            margin-top: 10px;
+            padding: 2px 200px 0px 0px;
+            font-weight: 700;
+            font-size: 28px;
+            line-height: 28px;
+        }
+        #rank {
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 28px;
+        }
+        .rekom{
+            font-family: 'Quicksand';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 28px;
+            text-align: center;
+        }
+        .info {
+            padding: 60px 100px 60px 100px;
+            text-align: center;
+        }
+        .infocard {
+            width: 309px;
+            height: 417px;
+            background: #F5EDE1;
+            border-radius: 100px;
+            text-align: center;
+            filter: drop-shadow(27.46px 5.75px 5.75px rgba(0, 0, 0, 0.25));
+        }
+        .bi-chevron-compact-down{
+            font-size: 36px;
+            color: #555555;
+        }
+        .modal-content{
+            width: 1364px;
+            height: 700px;
+            background: linear-gradient(108.91deg, #FCB581 16.49%, rgba(248, 195, 159, 0.830833) 67%, rgba(250, 248, 248, 0.72) 100.1%);
+            border-radius: 100px;
+
+        }
+        .gambar-modal{
+            width: 532px;
+            height: 280px;
+
+        }
+        .modal-isi{
+            margin: 50px 0px 0px 50px;
+        }
+        .modal-isi h2{
+            margin-top: 24px;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 50px;
+            line-height: 50px;
+        }
+        .modal-isi i{
+            font-family: 'Quicksand';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 28px;
+            margin-top: 28px;
+        }
+        .poin {
+            width: 550px;
+            margin-top: 20px;
+            font-size: 24px;
+        }
+        .poin-detail {
+            width: 550px;
+            margin-top: 20px;
+            font-size: 24px;
+            line-height: 75px;
+        }
+        .card-icon {
+            width: 530px;
+            text-align: center;
+            padding: 50px 50px 50px 50px;
+
+        }
+        .icon-info {
+            width: 415px;
+            height: 605px;
+            background: #F3F2F2;
+            border-radius: 120px;
+            text-align: center;
+        }
+        .icon-isi {
+            padding: 100px 50px 0px 50px;
+        }
+
+        .icon-komposisi {
+            text-align: center;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 50px;
+            line-height: 50px;
+            margin-top: 65px;
+        }
+        .icon-atas {
+            text-align: center;
+            padding: 0px 0px 20px 32px;
+        }
+        .kotak-icon {
+            width: 100px;
+            height: 90px;
+            background: #FFF7F7;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 30px;
+            vertical-align: center;
+        }
+        .kotak-icon img{
+            padding: 25px 0px 0px 0px;
+        }
+        .kotak-icon-plusmin {
+            vertical-align: center;
+            padding: 100px 0px 100px 50px;
+        }
+        .kotak-icon-plusmin-bawah {
+            vertical-align: center;
+            padding: 0px 0px 100px 50px;
+        }
+        .kotak-icon-plusmin img{
+            margin: 15px 0px 0px 0px;
+            padding: 0px 0px 0px 0px;
+        }
+        .kotak-icon-plusmin-bawah {
+            vertical-align: center;
+            padding: -100px 0px 0px 50px;
+        }
+        .kotak-icon-plusmin-bawah img{
+            margin: 15px 0px 0px 0px;
+            padding: 0px 0px 0px 0px;
+        }
+        .icon-komposisi-atas {
+            margin-top: 24px;
+        }
+        .icon-komposisi-bawah {
+            margin: auto;
+            padding: 0px 50px 50px 80px;
+            text-align: center;
+            vertical-align: center;
+        }
+        .kelebihan ul {
+            list-style-type: "➕";
+            text-align: left;
+            padding: 50px 10px 0px 20px;
+            line-height: 25px;
+        }
+        .kekurangan ul {
+            list-style-type: "➖";
+            text-align: left;
+            padding: 0px 10px 0px 20px;
+            line-height: 25px;
+        }
+        .foto-beli {
+            margin:-500px -50px 0px 0px;
+            width: 301px;
+            height: 285.65px;
+            left: 5px;
+            top: 32px;
+            background: #9B9B9B;
+            border-radius: 40px;
+        }
+        .nama-beli {
+            margin:50px 50px 50px 15px;
+            width: 280px;
+            height: 450px;
+            left: 16px;
+            top: 32px;
+            background: #DEECF3;
+            /* Shadow01 */
+            box-shadow: 0px 24px 48px rgba(0, 24, 52, 0.080899);
+            border-radius: 40px;
+
+        }
+        .teks-nama {
+            vertical-align: bottom;
+            text-align: left;
+            padding: 250px 25px 0px 30px;
+        }
+        .teks-nama h2 {
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 25px;
+            line-height: 32px;
+        }
+        #carousel {
+            margin-top: 300px;
+        }
+        #buka {
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 25px;
+            line-height: 32px;
+            color: #0CBB3D;
+        }
+        #jam-buka {
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 15px;
+            line-height: 32px;
+            color: #333333;
+        }
+        .icon-buka {
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 15px;
+            line-height: 15px;
+        }
+        .tempatbeli {
+            margin: 40px 0px 55px 0px;
+            vertical-align: center;
+        }
+        .info-beli i{
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 15px;
+            line-height: 10px;
+        }
+        .info-beli2 i{
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 25px;
+            line-height: 25px;
+        }
+        .info-beli2{
+            line-height: 40px;
+        }
+        .icon-buka {
+            color: red;
+        }
+        .text-beli {
+            margin-left: 5px;
+            color: #333333;
+        }
+        #funfact {
+            margin-top: 100px;
+        }
+        .foto-oleh{
+            position: relative;
+        }
+        .foto-oleh img {
+            border-radius: 100px 0px 0px 0px;
+        }
+        .livewire {
+            position: absolute;
+            top : 600px;
+            padding: 5px;
+        }
     </style>
-    <div class="body" style="background: #fff4ec">
-        <div class="container">
-            <div class="row">
-                <div class="col-5 mt-3">
-                    <ul>
-                        <li><h1 style="font-size: 55px;" class="fw-bold">{{ $toko->nama_toko }}</h1> <br>
-                            <h4>#1 Toko Oleh-Oleh Surabaya</h4>
-                            <ul style="margin-bottom: 30px">
-                                <li> <p><i>Menurut <b> <span style="color: orange">100</span> </b> Orang Surabaya</i></li>
-                                <li>Menurut <b> <span style="color: orange">230</span> </b> Wisatawan</p></li>
-                            </ul></li>
-                            <li>
-                            <h4>#2 Toko Oleh-Oleh Surabaya</h4>
-                            <ul style="">
-                                 <li> <p><i>Menurut <b> <span style="color: orange">100</span> </b> Orang Surabaya</i></li>
-                                <li>Menurut <b> <span style="color: orange">230</span> </b> Wisatawan</p></li>
-                            </ul>
-                           </li>
-                    </ul>
-                    {{-- <p>Pernah ke toko ini?    Ingin berkunjung ke toko ini?</p> --}}
-                    <div class="row">
-                        <div class="col-5">
-                            <p>Pernah ke toko ini?</p>
-                            {{-- <a href="" class=" button-toko" style="">Rekomendasikan</a> --}}
-                            <livewire:rekomendasi-index :idtoko="$idtoko"></livewire:rekomendasi-index>
-                        </div>
-                        <div class="col-6">
-                            <p>Ingin berkunjung ke toko ini?</p>
-                            <a href="" class=" button-toko">Tambah ke list</a>
+    <div class="body" style="overflow:hidden">
+        <section id="header" class="" style="background: #f5ede1">
+            <div class="container">
+                <div class="row Rectangle-bg">
+                    <div class="deskripsi-utama col-6 mt-3">
+                        <div class="row ">
+                            <div class="col-8 mt-3">
+                                <h1 style="font-size: 65px">{{ $toko->nama_toko }}</h1>
+                            </div>
+                            <p><i class="far fa-clock"></i> 1998 - sekarang</p>
+                            <div class="info-beli2">
+                                <i class="icon-buka bi bi-geo-alt-fill"><span class="text-beli">Jalan Ir. Soekarno 5B</span></i> <br>
+                                <i class="icon-buka bi bi-telephone-fill" style="color: black"><span class="text-beli">(031) 12345678</span></i> <br>
+                                <a href="" class="btn btn-dark mt-3" style="width:175px;border-radius:30px;font-size:1.5rem">Cari Lokasi!</a>
+                            </div>
+
+                            <div class="row rekom mt-3">
+                                <div class="col-6">
+                                    <p>Pernah kunjungi toko ini?</p>
+                                    <livewire:rekomendasi-index :idtoko="$idtoko"></livewire:rekomendasi-index>
+                                </div>
+                                <div class="col-6">
+                                    <p>Ingin kunjungi toko ini?</p>
+                                    <livewire:list-toko-index :idtoko="$idtoko"></livewire:list-toko-index>
+                                    {{-- <a wire:click="rekomendasi({{ $idtoko }})" href="" class="button-toko bg-light" style="background:white">Tambah ke List   <i class="far fa-bookmark" style="font-size: 1.3rem"></i></a>
+                                    <p><i class="fas fa-bookmark mt-3" style="font-size: 1.3rem"></i> 5  orang</p> --}}
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    <div class="col-6 mt-3">
+                        <div class="foto-oleh">
+                            <img src="{{ $toko->gambar_utama }}" width="785px" height="575px" >
+                            {{-- <div class="livewire col-2 d-flex justify-content-end">
+                                <livewire:favorite-index :idoleh="$idtoko"></livewire:favorite-index>
+                            </div> --}}
+                        </div>
+
+                    </div>
                 </div>
-                <div class="col-7 mt-3">
-                    <img width="90%"
-                        src="https://images.unsplash.com/photo-1580757468214-c73f7062a5cb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80"
-                        alt="">
-                </div>
-            </div> <br>
-            <hr class="mt-3">
-        </div>
-        <section id="tempatbeli" style="margin-bottom: 230px">
+            </div>
+    </section>
+        <section id="tempatbeli" style="margin-bottom: 230px;margin-top:-30px">
             <div class="container">
                 <div class="tempatbeli row">
-                    <h1>Tempat Beli</h1>
+                    <h1>Produk Oleh-Oleh dari {{ $toko->nama_toko }}</h1>
                 </div>
-                <div class="row">
+                <div class="row" style="margin-bottom: -20px">
                     <div class="col-3">
                         <div class="nama-beli">
-                            <div class="teks-nama">
-                                <h2>Toko Bolu Jago</h2>
-                                <h2 id="buka">Buka <span id="jam-buka">(07.00-10.00)</span></h2>
-                                <div class="info-beli">
-                                    <i class="icon-buka bi bi-geo-alt-fill"><span class="text-beli">Jalan Ir. Soekarno 5B</span></i> <br>
-                                    <i class="icon-buka bi bi-telephone-fill"><span class="text-beli">(031) 12345678</span></i>
+                            <div class="teks-nama ">
+                                <h2 class="" style="margin-top: 33px">Spikoe Surabaya</h2>
+                                <h2 id="buka" style="color: red">Rp <span id="jam-buka">100.000</span></h2>
+                                <h2 id="buka" style="color: red">#1 <span id="jam-buka">Spikoe di Toko Ini</span></h2>
+                                <div class="d-flex justify-content-center mb-3">
+                                    <a href="" class="btn btn-light text-dark" style="border-radius: 20px">Rekomendasikan <i class="fas fa-thumbs-up"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -150,11 +415,11 @@
                     <div class="col-3">
                         <div class="nama-beli">
                             <div class="teks-nama">
-                                <h2>Toko Bolu Jago</h2>
-                                <h2 id="buka">Buka <span id="jam-buka">(07.00-10.00)</span></h2>
-                                <div class="info-beli">
-                                    <i class="icon-buka bi bi-geo-alt-fill"><span class="text-beli">Jalan Ir. Soekarno 5B</span></i> <br>
-                                    <i class="icon-buka bi bi-telephone-fill"><span class="text-beli">(031) 12345678</span></i>
+                                <h2 style="margin-top: 33px">Spikoe Surabaya</h2>
+                                <h2 id="buka" style="color: red">Rp <span id="jam-buka">100.000</span></h2>
+                                <h2 id="buka" style="color: red">#2 <span id="jam-buka">Spikoe di Toko Ini</span></h2>
+                                <div class="d-flex justify-content-center mb-3">
+                                    <a href="" class="btn btn-light text-dark" style="border-radius: 20px">Rekomendasikan <i class="fas fa-thumbs-up"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -166,11 +431,11 @@
                     <div class="col-3">
                         <div class="nama-beli">
                             <div class="teks-nama">
-                                <h2>Toko Bolu Jago</h2>
-                                <h2 id="buka">Buka <span id="jam-buka">(07.00-10.00)</span></h2>
-                                <div class="info-beli">
-                                    <i class="icon-buka bi bi-geo-alt-fill"><span class="text-beli">Jalan Ir. Soekarno 5B</span></i> <br>
-                                    <i class="icon-buka bi bi-telephone-fill"><span class="text-beli">(031) 12345678</span></i>
+                                <h2 style="margin-top: 33px">Spikoe Surabaya</h2>
+                                <h2 id="buka" style="color: red">Rp <span id="jam-buka">100.000</span></h2>
+                                <h2 id="buka" style="color: red">#3 <span id="jam-buka">Spikoe di Toko Ini</span></h2>
+                                <div class="d-flex justify-content-center mb-3">
+                                    <a href="" class="btn btn-light text-dark" style="border-radius: 20px">Rekomendasikan <i class="fas fa-thumbs-up"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -182,11 +447,11 @@
                     <div class="col-3">
                         <div class="nama-beli">
                             <div class="teks-nama">
-                                <h2>Toko Bolu Jago</h2>
-                                <h2 id="buka">Buka <span id="jam-buka">(07.00-10.00)</span></h2>
-                                <div class="info-beli">
-                                    <i class="icon-buka bi bi-geo-alt-fill"><span class="text-beli">Jalan Ir. Soekarno 5B</span></i> <br>
-                                    <i class="icon-buka bi bi-telephone-fill"><span class="text-beli">(031) 12345678</span></i>
+                                <h2 style="margin-top: 33px">Spikoe Surabaya</h2>
+                                <h2 id="buka" style="color: red">Rp <span id="jam-buka">100.000</span></h2>
+                                <h2 id="buka" style="color: red">#4 <span id="jam-buka">Spikoe di Toko Ini</span></h2>
+                                <div class="d-flex justify-content-center mb-3">
+                                    <a href="" class="btn btn-light text-dark" style="border-radius: 20px">Rekomendasikan <i class="fas fa-thumbs-up"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -198,8 +463,8 @@
                 </div>
             </div>
         </section>
-       
-       
+
+
         {{-- <div class="container ">
         <div class="row mt-3">
             <div class="col-4">
@@ -233,7 +498,7 @@
         </div>
         <hr>
     </div> --}}
-        <div class="container" style="background: #fff4ec">
+        <div class="container" style="">
             <h1>Informasi {{ $toko->nama_toko }}</h1>
             <div class="row">
                 <div class="col-6">
@@ -241,14 +506,14 @@
                 $embed = $toko->map_toko;
                 $peta = stripslashes($embed);
                 echo $embed;
-    
+
                 @endphp --}}
-    
+
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31660.513906147913!2d112.79651086582963!3d-7.290317142661231!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7f09c510751b5%3A0xb04b9f70e748e85!2sKeputih%2C%20Sukolilo%2C%20Surabaya%20City%2C%20East%20Java!5e0!3m2!1sen!2sid!4v1650439226496!5m2!1sen!2sid"
                         width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
-    
+
                 </div>
                 <div class="col-6">
                     <div class="row">
@@ -261,9 +526,9 @@
                             @else
                             <h3 style="color: red" class="fw-bold">TUTUP</h3>
                             @endif
-                            
+
                             <H5>{{ $toko->jam_operasional }}</H5>
-    
+
                         </div>
                     </div>
                     <h3 class="mt-2">Fasilitas Toko</h3>
@@ -293,7 +558,7 @@
                                 </p>
                             </div>
                         @endforeach
-    
+
                         {{-- <div class="col-5" >
                        <p> <i class="fas fa-car-alt"></i> Wifi Gratis</p>
                     </div>
@@ -306,7 +571,7 @@
                     <div class="col-5" >
                        <p> <i class="fas fa-car-alt"></i> Makan di Tempat</p>
                     </div> --}}
-    
+
                     </div>
                     <h3 class="mt-2">Di Sekitar Toko</h3>
                     <div class="row">
@@ -385,7 +650,7 @@
                                         href="www.spikoekuno.co.id"><i>{{ $k }}</i></span>
                                 </div>
                             @endforeach
-    
+
                             {{-- <div class="col-6">
                             <i class='far fa-address-book'></i> <a href="www.spikoekuno.co.id">www.spikoekuno.co.id</a>
                         </div>
@@ -396,9 +661,9 @@
                     </div>
                 </div>
             </div>
-    
+
         </div>
-        <div class="container carousel" style="background: #fff4ec">
+        <div class="container carousel" style="">
             <h1 class="mt-3">Galeri {{ $toko->nama_toko }}</h1>
             <div class="container" style="position: center">
                 @php
@@ -436,10 +701,10 @@
                     <span class="sr-only">Next</span>
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 </a>
-    
+
             </div>
-    
-    
+
+
         </div>
     </div>
 @endsection
