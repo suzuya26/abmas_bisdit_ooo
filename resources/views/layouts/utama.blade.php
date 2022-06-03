@@ -297,7 +297,7 @@ transform: rotate(37.85deg);
                                     </div>
                                 </div>
                                 @endif
-                               
+
                             </div>
                         </div>
                     </div>
@@ -528,11 +528,11 @@ transform: rotate(37.85deg);
                                             height="285.65px">
                                         </div>
                                     </div>
-                                    
+
 
                                 </div>
                             </div>
-                        
+
                     </div>
                 </div>
             </div>

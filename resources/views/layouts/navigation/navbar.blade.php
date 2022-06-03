@@ -9,7 +9,7 @@
         font-weight: 600;
         font-size: 13.5453px;
         line-height: 94.8%;
-        color: #F4ECE1;
+        color: #EDEDED;
         transition: .3s;
         /* display: flex; */
         align-items: center;
