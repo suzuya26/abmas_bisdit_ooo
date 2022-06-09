@@ -369,6 +369,7 @@
                                 <div class="col-6">
                                     <p>Pernah kunjungi toko ini?</p>
                                     <livewire:rekomendasi-index :idtoko="$idtoko"></livewire:rekomendasi-index>
+
                                 </div>
                                 <div class="col-6">
                                     <p>Ingin kunjungi toko ini?</p>
@@ -664,7 +665,7 @@
             </div>
 
         </div>
-        <div class="container carousel" style="">
+        {{-- <div class="container carousel" style="">
             <h1 class="mt-3">Galeri {{ $toko->nama_toko }}</h1>
             <div class="container" style="position: center">
                 @php
@@ -706,6 +707,47 @@
             </div>
 
 
+        </div> --}}
+        <div class="container">
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="https://cdn.discordapp.com/attachments/964470483875672094/984464204658524160/dodol_cempedak.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h4 class="text-center">Tampak Depan Toko</h4>
+
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="https://media.discordapp.net/attachments/964470483875672094/984466254255493140/unknown.png" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h4 class="text-center">Tampak Belakang Toko</h4>
+
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="https://media.discordapp.net/attachments/964470483875672094/984466785589940294/unknown.png" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h4 class="text-center">Tampak Samping Toko</h4>
+
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
         </div>
     </div>
+
 @endsection

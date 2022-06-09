@@ -120,19 +120,20 @@ transform: rotate(37.85deg);
             background: #9B9B9B;
             border-radius: 40px;
         }
+
 </style>
 <div class="section utama" style="background: #C4C4C4; height:450px">
     <div class="container">
         <div class="row">
-            <div class="col-6 mt-5">
+            <div class="col-sm-6 mt-5">
                 <h1 class="judul">Oasis Oleh-Oleh</h1> <br> <br>
-                <p class="deskripsi">
+                <p class="deskripsi" style="text-align: justify">
                     Oasis oleh - oleh merupakan website utama untuk membantu umat manusia memenuhi kebutuhannya dalam mencari oleh - oleh khas daerah Indonesia.
                 </p>
                 <button class="buttonCari">Cari Sekarang!</button>
             </div>
             {{-- <div class="col-1"></div> --}}
-            <div class="col-5">
+            <div class="col-sm-5">
                 <img src="{{ asset('img/utama.png') }}" alt="" width="678px" height="450px" style="object-position: center">
             </div>
         </div>
@@ -142,19 +143,19 @@ transform: rotate(37.85deg);
     <h1 class="judul text-center mt-5 mb-3">Why Oasis?</h1>
     <div class="container" style="width: 100%">
         <div class="row text-center">
-            <div class="col-3">
+            <div class="col-sm-3">
                 <img src="{{ asset('img/informasi.png') }}" alt="" width="200px" height="200px">
                 <h5 class="mt-1 fw-bold">Informasi Satu Sumber</h5>
                 <p class="penjelasan">Semua informasi oleh-oleh tiap daerah dapat ditemukan dalam satu platform</p>
             </div>
             <div class="col-1"></div>
-            <div class="col-4 ">
+            <div class="col-sm-4 ">
                 <img src="{{ asset('img/mitra.png') }}" alt="" width="200px" height="200px">
                 <h5 class="mt-1 fw-bold">Mitra dan Toko Terpercaya</h5>
                 <p class="penjelasan">Kami melakukan kurasi dan penelitian untuk menampilkan Toko Oleh-oleh terbaik dan terpercaya</p>
             </div>
             <div class="col-1"></div>
-            <div class="col-3">
+            <div class="col-sm-3">
                 <img src="{{ asset('img/time.png') }}" alt="" width="200px" height="200px">
                 <h5 class="mt-1 fw-bold">Efisien Waktu</h5>
                 <p class="penjelasan">Nikmati waktu liburan dengan maksimal tanpa perlu mencari rekomendasi toko oleh-oleh di kota wisatamu</p>
@@ -170,7 +171,7 @@ transform: rotate(37.85deg);
 
     <div class="container mt-2" style="width: 100%">
         <div class="row" style="margin: auto">
-            <div class="col-4">
+            <div class="col-sm-4 mb-3">
                 <div class="rectangle">
                     <img src="{{ asset('img/kurasi.png') }}" alt="" width="143px" height="143px" class="mt-5" style="margin-left:28%">
                     <h3 class="text-center mt-4 fw-bold">Kurasi Data</h3> <br>
@@ -179,7 +180,7 @@ transform: rotate(37.85deg);
 
             </div>
             {{-- <div class="col-1"></div> --}}
-            <div class="col-4">
+            <div class="col-sm-4 mb-3">
                 <div class="rectangle" style="margin-top:-32px ">
                     <img src="{{ asset('img/pengumpulan.png') }}" alt="" width="143px" height="143px" class="mt-5" style="margin-left:28%">
                     <h3 class="text-center mt-4  fw-bold">Pengumpulan Data</h3> <br>
@@ -187,7 +188,7 @@ transform: rotate(37.85deg);
                 </div>
             </div>
             {{-- <div class="col-1"></div> --}}
-            <div class="col-4">
+            <div class="col-sm-4 mb-3">
                 <div class="rectangle">
                     <img src="{{ asset('img/cari.png') }}" alt="" width="143px" height="143px" class="mt-5" style="margin-left:28%">
                     <h3 class="text-center mt-4  fw-bold">Cari Oleh-oleh</h3> <br>
@@ -195,8 +196,8 @@ transform: rotate(37.85deg);
                 </div>
             </div>
         </div>
-        <img src="{{ asset('img/arrow-left.png') }}" alt="" width="74px" class="arrow-left">
-        <img src="{{ asset('img/arrow-right.png') }}" alt="" width="84px" class="arrow-right">
+        {{-- <img src="{{ asset('img/arrow-left.png') }}" alt="" width="74px" class="arrow-left">
+        <img src="{{ asset('img/arrow-right.png') }}" alt="" width="84px" class="arrow-right"> --}}
         {{-- <img src="{{ asset('img/daun.png') }}" alt="" class="daun" width="100px" height="100px"> --}}
     </div>
 </section>
@@ -233,7 +234,7 @@ transform: rotate(37.85deg);
                         <div class="carousel-item active">
                             <div class="row">
                                 @foreach ($olehPopuler->slice(0,4) as $v)
-                                <div class="col-3">
+                                <div class="col-sm-3">
                                     <div class="nama-beli">
                                         <div class="teks-nama">
                                             <h2>{{$v->namaoleh}}</h2>
@@ -255,7 +256,7 @@ transform: rotate(37.85deg);
                                 <div class="carousel-item">
                                     <div class="row">
                                         @foreach ($olehPopuler->slice(4, 4) as $v)
-                                        <div class="col-3">
+                                        <div class="col-sm-3">
                                             <div class="nama-beli">
                                                 <div class="teks-nama">
                                                     <h2>{{$v->namaoleh}}</h2>
@@ -278,7 +279,7 @@ transform: rotate(37.85deg);
                                 <div class="carousel-item">
                                     <div class="row">
                                         @foreach ($olehPopuler->slice(8, 4) as $v)
-                                        <div class="col-3">
+                                        <div class="col-sm-3">
                                             <div class="nama-beli">
                                                 <div class="teks-nama">
                                                     <h2>{{$v->namaoleh}}</h2>
@@ -328,7 +329,7 @@ transform: rotate(37.85deg);
                     <div class="carousel">
                         <div class="carousel-item active">
                             <div class="row">
-                                <div class="col-3">
+                                <div class="col-sm-3">
                                     <div class="nama-beli">
                                         <div class="teks-nama">
                                             <h2>Toko Bolu Jago</h2>
@@ -344,7 +345,7 @@ transform: rotate(37.85deg);
                                         height="285.65px">
                                     </div>
                                 </div>
-                                <div class="col-3">
+                                <div class="col-sm-3">
                                     <div class="nama-beli">
                                         <div class="teks-nama">
                                             <h2>Toko Bolu Jago</h2>
@@ -360,7 +361,7 @@ transform: rotate(37.85deg);
                                         height="285.65px">
                                     </div>
                                 </div>
-                                <div class="col-3">
+                                <div class="col-sm-3">
                                     <div class="nama-beli">
                                         <div class="teks-nama">
                                             <h2>Toko Bolu Jago</h2>
@@ -376,7 +377,7 @@ transform: rotate(37.85deg);
                                         height="285.65px">
                                     </div>
                                 </div>
-                                <div class="col-3">
+                                <div class="col-sm-3">
                                     <div class="nama-beli">
                                         <div class="teks-nama">
                                             <h2>Toko Bolu Jago</h2>
@@ -396,7 +397,7 @@ transform: rotate(37.85deg);
                         </div>
                             <div class="carousel-item">
                                 <div class="row">
-                                    <div class="col-3">
+                                    <div class="col-sm-3">
                                         <div class="nama-beli">
                                             <div class="teks-nama">
                                                 <h2>Toko Bolu Jago</h2>
@@ -412,7 +413,7 @@ transform: rotate(37.85deg);
                                             height="285.65px">
                                         </div>
                                     </div>
-                                    <div class="col-3">
+                                    <div class="col-sm-3">
                                         <div class="nama-beli">
                                             <div class="teks-nama">
                                                 <h2>Toko Bolu Jago</h2>
@@ -428,7 +429,7 @@ transform: rotate(37.85deg);
                                             height="285.65px">
                                         </div>
                                     </div>
-                                    <div class="col-3">
+                                    <div class="col-sm-3">
                                         <div class="nama-beli">
                                             <div class="teks-nama">
                                                 <h2>Toko Bolu Jago</h2>
@@ -444,7 +445,7 @@ transform: rotate(37.85deg);
                                             height="285.65px">
                                         </div>
                                     </div>
-                                    <div class="col-3">
+                                    <div class="col-sm-3">
                                         <div class="nama-beli">
                                             <div class="teks-nama">
                                                 <h2>Toko Bolu Jago</h2>
@@ -464,7 +465,7 @@ transform: rotate(37.85deg);
                             </div>
                             <div class="carousel-item">
                                 <div class="row">
-                                    <div class="col-3">
+                                    <div class="col-sm-3">
                                         <div class="nama-beli">
                                             <div class="teks-nama">
                                                 <h2>Toko Bolu Jago</h2>
@@ -480,7 +481,7 @@ transform: rotate(37.85deg);
                                             height="285.65px">
                                         </div>
                                     </div>
-                                    <div class="col-3">
+                                    <div class="col-sm-3">
                                         <div class="nama-beli">
                                             <div class="teks-nama">
                                                 <h2>Toko Bolu Jago</h2>
@@ -496,7 +497,7 @@ transform: rotate(37.85deg);
                                             height="285.65px">
                                         </div>
                                     </div>
-                                    <div class="col-3">
+                                    <div class="col-sm-3">
                                         <div class="nama-beli">
                                             <div class="teks-nama">
                                                 <h2>Toko Bolu Jago</h2>
@@ -512,7 +513,7 @@ transform: rotate(37.85deg);
                                             height="285.65px">
                                         </div>
                                     </div>
-                                    <div class="col-3">
+                                    <div class="col-sm-3">
                                         <div class="nama-beli">
                                             <div class="teks-nama">
                                                 <h2>Toko Bolu Jago</h2>
@@ -562,7 +563,7 @@ transform: rotate(37.85deg);
                             <div class="carousel-item active">
                                 <div class="row">
                                     @foreach ($harga->slice(0, 4) as $rek)
-                                    <div class="col-3" onclick="location.href='/varianoleh/{{$rek->idoleh}}'">
+                                    <div class="col-sm-3" onclick="location.href='/varianoleh/{{$rek->idoleh}}'">
                                         <div class="nama-beli">
                                             <div class="teks-nama">
                                                 <h2>{{ $rek->namaoleh }}</h2>
@@ -575,7 +576,7 @@ transform: rotate(37.85deg);
                                         </div>
                                         <div class="foto-beli">
                                             <img src="{{ $rek->gambarutama }}" width= "301px"
-                                            height="285.65px">
+                                            height="285.65px" style="border-radius: 20px">
                                         </div>
                                     </div>
                                     @endforeach
@@ -585,7 +586,7 @@ transform: rotate(37.85deg);
                         <div class="carousel-item">
                             <div class="row">
                                 @foreach ($harga->slice(4, 4) as $rek)
-                                <div class="col-3" onclick="location.href='/varianoleh/{{$rek->idoleh}}'">
+                                <div class="col-sm-3" onclick="location.href='/varianoleh/{{$rek->idoleh}}'">
                                     <div class="nama-beli">
                                         <div class="teks-nama">
                                             <h2>{{ $rek->namaoleh }}</h2>
@@ -598,7 +599,7 @@ transform: rotate(37.85deg);
                                     </div>
                                     <div class="foto-beli">
                                         <img src="{{ $rek->gambarutama }}" width= "301px"
-                                        height="285.65px">
+                                        height="285.65px" style="border-radius: 20px">
                                     </div>
                                 </div>
                                 @endforeach
@@ -609,7 +610,7 @@ transform: rotate(37.85deg);
                         <div class="carousel-item">
                             <div class="row">
                                 @foreach ($harga->slice(8, 4) as $rek)
-                                <div class="col-3" onclick="location.href='/varianoleh/{{$rek->idoleh}}'">
+                                <div class="col-sm-3" onclick="location.href='/varianoleh/{{$rek->idoleh}}'">
                                     <div class="nama-beli">
                                         <div class="teks-nama">
                                             <h2>{{ $rek->namaoleh }}</h2>
@@ -622,7 +623,7 @@ transform: rotate(37.85deg);
                                     </div>
                                     <div class="foto-beli">
                                         <img src="{{ $rek->gambarutama }}" width= "301px"
-                                        height="285.65px">
+                                        height="285.65px" style="border-radius: 20px">
                                     </div>
                                 </div>
                                 @endforeach
