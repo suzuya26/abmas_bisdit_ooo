@@ -51,7 +51,7 @@ class MitraController extends Controller
             'website_mitra' => $request->web,
             'sosmed_mitra' => $request->ig,
         ]);
-        
+
         if(!empty($request->input('fasilitas_mitra'))){
             $checkbox = join('---', $request->input('fasilitas_mitra'));
             DB::table('toko_mitra')->where('idmitra',$id)->update(['fasilitas_mitra'=>$checkbox]);
