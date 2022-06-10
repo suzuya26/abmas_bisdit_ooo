@@ -64,8 +64,12 @@
             font-size: 60px;
             line-height: 50px;
         }
+        p {
+            font-family: 'Poppins';
+            font-style: normal;
+        }
 
-        p,
+
         h4 {
             font-family: 'Quicksand';
             font-style: normal;
@@ -95,6 +99,9 @@
             font-size: 28px;
             line-height: 28px;
         }
+        .desc {
+            text-align: left;
+        }
 
         #rank {
             font-weight: 700;
@@ -117,8 +124,9 @@
         .button-rekom {}
 
         .info {
-            padding: 60px 100px 60px 100px;
-            text-align: center;
+            padding: 21px 18px 21px 18px;
+            background-color: #DEECF3;
+            border-radius: 20px;
         }
 
         .infocard {
@@ -144,9 +152,9 @@
         }
 
         .gambar-modal {
-            width: 532px;
-            height: 280px;
-
+            width: 301px;
+            height: 139px;
+            border-radius: 10px;
         }
 
         .modal-isi {
@@ -175,6 +183,7 @@
             width: 550px;
             margin-top: 20px;
             font-size: 24px;
+
         }
 
         .poin-detail {
@@ -200,7 +209,14 @@
         }
 
         .icon-isi {
-            padding: 100px 50px 0px 50px;
+            margin-top: 10px;
+            justify-content: space-between;
+            text-align: center;
+            font-size: 10px;
+
+        }
+        .komposisi {
+            justify-content: start;
         }
 
         .icon-komposisi {
@@ -218,17 +234,23 @@
             padding: 0px 0px 20px 32px;
         }
 
-        .kotak-icon {
-            width: 100px;
-            height: 90px;
-            background: #FFF7F7;
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-            border-radius: 30px;
+        .icon {
             vertical-align: center;
+            text-align: center;
+            justify-content: center;
+        }
+        .kotak {
+            padding-top: 8px;
+            width: 56px;
+            height: 50px;
+            background: #E3E3E3;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 15px;
+            margin-bottom: 5px;
         }
 
         .kotak-icon img {
-            padding: 25px 0px 0px 0px;
+            padding: 10px 0px 0px 0px;
         }
 
         .kotak-icon-plusmin {
@@ -491,7 +513,7 @@
                             </div>
                             <div class="button-rekom col-6">
                                 <p>Ingin beli produk ini?</p>
-                                <a href="" class="button-oleh">Tambah ke list</a>
+                                <livewire:listoleh-index :idoleh="$idoleh"></livewire:listoleh-index>
                             </div>
                         </div>
                     </div>
@@ -548,64 +570,6 @@
                     </div>
                     {{-- <a href="#" class="link-dark text-end col-12">Lebih Banyak >>></a> --}}
                 </div>
-                {{-- <div class="col-3">
-                    <div class="nama-beli">
-                        <div class="teks-nama">
-                            <h2>Toko Bolu Jago</h2>
-                            <h2 id="buka">Buka <span id="jam-buka">(07.00-10.00)</span></h2>
-                            <div class="info-beli">
-                                <i class="icon-buka bi bi-geo-alt-fill"><span class="text-beli">Jalan Ir. Soekarno 5B</span></i> <br>
-                                <i class="icon-buka bi bi-telephone-fill"><span class="text-beli">(031) 12345678</span></i>
-                            </div>
-                            <div class="button-selengkapnya">
-                                <label id="selengkapnya" class="button-oleh text-beli">Selengkapnya</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="foto-beli">
-                        <img src="{{ asset('img/utama.png') }}" width= "280px"
-                        height="285.65px">
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="nama-beli">
-                        <div class="teks-nama">
-                            <h2>Toko Bolu Jago</h2>
-                            <h2 id="buka">Buka <span id="jam-buka">(07.00-10.00)</span></h2>
-                            <div class="info-beli">
-                                <i class="icon-buka bi bi-geo-alt-fill"><span class="text-beli">Jalan Ir. Soekarno 5B</span></i> <br>
-                                <i class="icon-buka bi bi-telephone-fill"><span class="text-beli">(031) 12345678</span></i>
-                            </div>
-                            <div class="button-selengkapnya">
-                                <label id="selengkapnya" class="button-oleh text-beli">Selengkapnya</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="foto-beli">
-                        <img src="{{ asset('img/oleholeh.png') }}" width= "280px"
-                        height="285.65px">
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="nama-beli">
-                        <div class="teks-nama">
-                            <h2>Toko Bolu Jago</h2>
-                            <h2 id="buka">Buka <span id="jam-buka">(07.00-10.00)</span></h2>
-                            <div class="info-beli">
-                                <i class="icon-buka bi bi-geo-alt-fill"><span class="text-beli">Jalan Ir. Soekarno 5B</span></i> <br>
-                                <i class="icon-buka bi bi-telephone-fill"><span class="text-beli">(031) 12345678</span></i>
-                            </div>
-                            <div class="button-selengkapnya">
-                                <label id="selengkapnya" class="button-oleh text-beli">Selengkapnya</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="foto-beli">
-                        <img src="{{ asset('img/oleholeh.png') }}" width= "280px"
-                        height="285.65px">
-                    </div>
-                </div> --}}
-
             </div>
         </section>
         <section id="funfact">
@@ -614,7 +578,119 @@
                     <h1>Informasi Produk</h1>
                 </div>
                 <div class="row mt-4">
-                    <div class="info col-4">
+                    <div class="col-6">
+
+                    <div class="info row mt-4">
+                        <div class="desc col-6 ">
+                            <h1>Detail</h1>
+                            <img class="mx-auto d-block mt-5" src="{{ asset('img/detail.png') }}" alt="" width="168px"
+                                height="168px">
+                            <p class="text-desc">Informasi penting terkait Varian, Rasa, Bahan Dasar untuk menyesuaikan seleramu</p>
+                            <div class="poin mt-3">
+                            <i class="icon-buka bi bi-people-fill" style="color: #616067"><span class="text-beli"> {{ $v->satuan }}</span></i><br>
+                            <i class="icon-buka bi bi-geo-alt-fill"><span class="text-beli"> {{ $v->kota }},
+                                {{ $v->provinsi }}</span></i>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <img class="gambar-modal" src={{ $v->gambarutama }}>
+                            <div class="icon-isi row">
+                                <div class="col-4 sub-menu">
+                                    <img src="{{ asset('img/rasa.png') }}" width="19px" height="19px">
+                                    <span class="menu-title">{{ $v->namarasa }}</span>
+                                </div>
+                                <div class="col-4 sub-menu">
+                                    <img src="{{ asset('img/caramasak.png') }}" width="19px" height="19px">
+                                    <span class="menu-title">{{ $v->namamasak }}</span>
+                                </div>
+                                <div class="col-4 sub-menu">
+                                    <img src="{{ asset('img/tekstur.png') }}" width="19px" height="19px">
+                                    <span class="menu-title">{{ $v->namatekstur }}</span>
+                                </div>
+                            </div>
+                            @php
+                                $komposisi = preg_split('/, /', $v->komposisi);
+                            @endphp
+                            <div class="mt-3">
+                                <h2>Ingridients</h2>
+                                <div class="icon-isi komposisi row">
+                                    @foreach ($komposisi as $t)
+                                    @php
+                                        $k=ucwords(strtolower($t));
+                                        $k=str_replace("Dan ", "",$k);
+                                        $k=str_replace(".", "",$k);
+                                    @endphp
+                                    <div class="icon col-3">
+                                        @if ($k==="Tepung")
+                                        <div class="kotak">
+                                            <img src="{{ asset('img/tepung.png') }}" width="37px" height="37px">
+                                        </div>
+                                        @elseif ($k==="Gula"||$k==="Gula Halus"||$k==="Gula Aren")
+                                        <div class="kotak">
+                                            <img src="{{ asset('img/gula.png') }}" width="37px" height="37px">
+                                        </div>
+                                        @elseif ($k==="telur"||$k==="Telur")
+                                        <div class="kotak">
+                                            <img src="{{ asset('img/telur.png') }}" width="37px" height="37px">
+                                        </div>
+                                        @elseif ($k==="Mentega"||$k==="Mentega Putih")
+                                        <div class="kotak">
+                                            <img src="{{ asset('img/butter.png') }}" width="37px" height="37px">
+                                        </div>
+                                        @elseif ($k==="Topping Pilihan"||$k==="Topping")
+                                        <div class="kotak">
+                                            <img src="{{ asset('img/coklat.png') }}" width="37px" height="37px">
+                                        </div>
+                                        @elseif ($k==="Beras"||$k==="Nasi"||$k==="Garam"||$k==="Beras Ketan")
+                                        <div class="kotak">
+                                            <img src="https://media.discordapp.net/attachments/964470483875672094/965147746132697128/Beras.png" width="37px" height="37px">
+                                        </div>
+                                        @elseif ($k==="Kopi")
+                                        <div class="kotak">
+                                            <img src="https://media.discordapp.net/attachments/964470483875672094/965147894573334538/coffee-bean.png" width="37px" height="37px">
+                                        </div>
+                                        @elseif ($k==="Daging")
+                                        <div class="kotak">
+                                            <img src="https://media.discordapp.net/attachments/964470483875672094/965148001452568646/Daging.png" width="37px" height="37px">
+                                        </div>
+                                        @elseif ($k==="Jamur")
+                                        <div class="kotak">
+                                            <img src="https://media.discordapp.net/attachments/964470483875672094/965148203366383646/Jamur.png?width=703&height=703" width="37px" height="37px">
+                                        </div>
+                                        @elseif ($k==="Susu"||$k==="Air"||$k==="Santan")
+                                        <div class="kotak">
+                                            <img src="https://media.discordapp.net/attachments/964470483875672094/965148369188175902/Susu.png" width="37px" height="37px">
+                                        </div>
+                                        @elseif ($k==="Tahu")
+                                        <div class="kotak">
+                                            <img src="https://media.discordapp.net/attachments/964470483875672094/965148408803364905/tahu.png" width="37px" height="37px">
+                                        </div>
+                                        @elseif ($k==="Cokelat")
+                                        <div class="kotak">
+                                            <img src="{{ asset('img/coklat.png') }}" width="37px" height="37px">
+                                        </div>
+                                        @elseif ($k==="Tempe")
+                                        <div class="kotak">
+                                            <img src="https://img.icons8.com/plasticine/100/undefined/tempeh.png" width="37px" height="37px">
+                                        </div>
+                                        @else
+                                        <div class="kotak">
+                                            <img src="{{ asset('img/tepung.png') }}" width="37px" height="37px">
+                                        </div>
+                                        @endif
+
+                                            <p>{{$k}}</p>
+
+                                    </div>
+                                    @endforeach
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    </div>
+                    {{-- <div class="info col-4">
                         <div class="card infocard">
                             <img class="mx-auto d-block mt-5" src="{{ asset('img/detail.png') }}" alt="" width="168px"
                                 height="168px">
@@ -654,7 +730,7 @@
                                 </a>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </section>
