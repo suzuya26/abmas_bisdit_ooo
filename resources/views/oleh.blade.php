@@ -64,7 +64,7 @@
             font-size: 60px;
             line-height: 50px;
         }
-        p {
+        p,h2 {
             font-family: 'Poppins';
             font-style: normal;
         }
@@ -610,9 +610,10 @@
                             </div>
                             @php
                                 $komposisi = preg_split('/, /', $v->komposisi);
+                                $c=count($komposisi);
                             @endphp
                             <div class="mt-3">
-                                <h2>Ingridients</h2>
+                                <h2>Ingridients ({{$c}})</h2>
                                 <div class="icon-isi komposisi row">
                                     @foreach ($komposisi as $t)
                                     @php
@@ -625,11 +626,11 @@
                                         <div class="kotak">
                                             <img src="{{ asset('img/tepung.png') }}" width="37px" height="37px">
                                         </div>
-                                        @elseif ($k==="Gula"||$k==="Gula Halus"||$k==="Gula Aren")
+                                        @elseif ($k==="Gula"||$k==="Gula Halus"||$k==="Gula Aren"||$k==="Gula Pasir")
                                         <div class="kotak">
                                             <img src="{{ asset('img/gula.png') }}" width="37px" height="37px">
                                         </div>
-                                        @elseif ($k==="telur"||$k==="Telur")
+                                        @elseif ($k==="Telur")
                                         <div class="kotak">
                                             <img src="{{ asset('img/telur.png') }}" width="37px" height="37px">
                                         </div>
