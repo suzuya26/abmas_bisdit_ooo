@@ -25,8 +25,8 @@ use App\Http\Controllers\UtamaController;
 |
 */
 
-Route::get('/', [IndexController::class, 'index']);
-Route::get('/utama', [UtamaController::class, 'show']);
+// Route::get('/', [IndexController::class, 'index']);
+Route::get('/', [UtamaController::class, 'show']);
 Route::get('varianoleh/{idoleh}', [OlehController::class, 'detailvarianoleh']);
 Route::get('login', [LoginController::class, 'index'])->middleware('guest');
 Route::post('login', [LoginController::class, 'auth']);
@@ -44,7 +44,7 @@ Route::get('/favorit/hapus/{idbookmark}',[FavoriteController::class,'hapusfavori
 Route::get('mitras/{id}', [MitraController::class, 'mitras']);
 
 Route::get('/daftarproduk', function () {return view('mitra.daftarproduk');});
-Route::get('/tambahproduk', function () {return view('mitra.tambahproduk');});
+Route::get('/daftarproduk/tambahproduk', function () {return view('mitra.tambahproduk');});
 Route::get('/updateprofil', function () {return view('mitra.updateprofil');});
 
 Route::get('/toko/{idtoko}', [TokoController::class, 'show']);
@@ -59,7 +59,7 @@ Route::get('/edit/{id}', [MitraController::class, 'edit'])->name('edit');
 Route::get('/daftarproduk/{id}', [ProdukController::class, 'daftarproduk'])->name('daftarproduk');
 Route::get('/mitra/{idMitra}', [MitraController::class, 'show'])->middleware('mitra')->name('mitra');
 Route::get('/edit/tambahproduk/{id}', [ProdukController::class, 'tambahproduk'])->name('tambahproduk');
-Route::post('/tambah/{id}', [ProdukController::class, 'tambah']);
+Route::post('/tambah', [ProdukController::class, 'tambah']);
 
 Route::get('oleh/{idoleh}', [OlehController::class, 'detailoleh']);
 

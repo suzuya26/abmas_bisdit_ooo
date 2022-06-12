@@ -102,7 +102,7 @@
             <img src="{{ asset('admintemplate/') }}/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
           </div>
           <div class="info">
-            <a href="/profil" class="d-block">{{$toko_mitra->nama_mitra}}</a>
+            <a href="/profil" class="d-block">{{Auth::user()->mitra_id}}</a>
           </div>
         </div>
 
@@ -121,7 +121,7 @@
 
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link">
+              <a  class="nav-link">
                 <i class="nav-icon fas fas fas fa-cart-arrow-down"></i>
                 <p>
                   Produk
@@ -130,7 +130,7 @@
               </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="tambahproduk/{{Auth::user()->mitra_id}}" class="nav-link">
+                  <a href="tambahproduk" class="nav-link">
                     <i class="nav-icon fas fas fa-cart-plus"></i>
                     <p>Tambah Produk</p>
                   </a>
@@ -161,21 +161,7 @@
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
       <!-- Content Header (Page header) -->
-      <div class="content-header">
-        <div class="container-fluid">
-          <div class="row mb-2">
-            <div class="col-sm-6">
-              <h1 class="m-0 text-dark">Dashboard</h1>
-            </div><!-- /.col -->
-            <div class="col-sm-6">
-              <ol class="breadcrumb float-sm-right">
-                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                <li class="breadcrumb-item active">Dashboard</li>
-              </ol>
-            </div><!-- /.col -->
-          </div><!-- /.row -->
-        </div><!-- /.container-fluid -->
-      </div>
+      
       <!-- /.content-header -->
 
       <!-- Main content -->

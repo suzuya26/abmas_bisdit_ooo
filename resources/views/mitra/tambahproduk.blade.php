@@ -20,7 +20,7 @@
 
     <!-- Main content -->
     <section class="content">
-        <form action="{{ url('tambah/'.$mitra_produk->idmitra) }}" method="POST">
+        <form action="/tambah" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="container-fluid">
                 <div class="row">
@@ -35,13 +35,12 @@
                                     </button>
                                 </div>
                             </div>
-                            <input name="idmitra" type="hidden" value="{{ $mitra_produk->idmitra }}">
+                            <input name="idmitra" type="hidden" value="">
                             <input name="idoleh" type="hidden" value="1">
                             <div class="card-body">
                                 <div class="form-group">
                                     <label for="formFileMultiple" class="form-label">Gambar Produk</label>
-                                    <input class="form-control" name="gambar_produk" type="file" id="formFileMultiple"
-                                        multiple>
+                                    <input class="form-control" name="file" type="file" id="formFileMultiple">
                                 </div>
                                 <div class="form-group">
                                     <label for="inputName">Nama Produk</label>

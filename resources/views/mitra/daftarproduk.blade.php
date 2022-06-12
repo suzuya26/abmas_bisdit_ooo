@@ -22,6 +22,12 @@
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
+        @if (session()->has('successs'))
+        <div class="alert alert-primary alert-dismissible fade show" role="alert">
+            {{ session('success') }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        @endif
         <!-- Small boxes (Stat box) -->
         <div class="card">
           <div class="card-header border-0">
@@ -48,11 +54,11 @@
               <tbody>
                 <tr>
                   <td>
-                    <img src={{ $mitra_produk->gambar_produk_mitra }} alt="Product 1" class="img-circle img-size-32 mr-2">
-                    {{ $mitra_produk->nama_produk_mitra }}
+                    <img src="{{ url('/data_file/'.$m->gambar_produkMitra) }}" alt="Product 1" class="img-circle img-size-32 mr-2">
+                    {{ $m->nama_produk_mitra }}
                   </td>
-                  <td>Rp.{{ $mitra_produk->harga_produk_mitra }}</td>
-                  <td>{{ $mitra_produk->id_produk_mitra }}</td>
+                  <td>Rp.{{ $m->harga_produk_mitra }}</td>
+                  <td>{{ $m->stok_produk_mitra }}</td>
                 </tr>
               </tbody>
               @endforeach
