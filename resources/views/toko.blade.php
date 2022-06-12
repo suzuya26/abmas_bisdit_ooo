@@ -358,10 +358,15 @@
                             <div class="col-8 mt-3">
                                 <h1 style="font-size: 65px">{{ $toko->nama_toko }}</h1>
                             </div>
-                            <p><i class="far fa-clock"></i> 1998 - sekarang</p>
+                            {{-- <p><i class="far fa-clock"></i> 1998 - sekarang</p> --}}
                             <div class="info-beli2">
-                                <i class="icon-buka bi bi-geo-alt-fill"><span class="text-beli">Jalan Ir. Soekarno 5B</span></i> <br>
-                                <i class="icon-buka bi bi-telephone-fill" style="color: black"><span class="text-beli">(031) 12345678</span></i> <br>
+                                @if ($toko->alamat_toko)
+                                <i class="icon-buka bi bi-geo-alt-fill"><span class="text-beli">{{ $toko->alamat_toko }}</span></i> <br>
+                                @endif
+                                @if ($toko->kontak_toko)
+                                <i class="icon-buka bi bi-telephone-fill" style="color: black"><span class="text-beli">{{ $toko->kontak_toko }}</span></i> <br>
+                                @endif
+
                                 <a href="" class="btn btn-dark mt-3" style="width:175px;border-radius:30px;font-size:1.5rem">Cari Lokasi!</a>
                             </div>
 
@@ -510,12 +515,12 @@
                 echo $embed;
 
                 @endphp --}}
-
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31660.513906147913!2d112.79651086582963!3d-7.290317142661231!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7f09c510751b5%3A0xb04b9f70e748e85!2sKeputih%2C%20Sukolilo%2C%20Surabaya%20City%2C%20East%20Java!5e0!3m2!1sen!2sid!4v1650439226496!5m2!1sen!2sid"
-                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
-
+                {{-- @php
+                $embed = $toko->map_toko;
+                $peta = stripslashes($embed);
+                echo $embed;
+                 @endphp --}}
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.810738251949!2d112.73625441469171!3d-7.262368294757861!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7f95e1910b90f%3A0x9ec46785d9c7f081!2sTunjungan%20Plaza%2C%20Jl.%20Basuki%20Rahmat%20No.8-12%2C%20Kedungdoro%2C%20Kec.%20Tegalsari%2C%20Kota%20SBY%2C%20Jawa%20Timur%2060261!5e0!3m2!1sid!2sid!4v1655028595740!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
                 <div class="col-6">
                     <div class="row">
@@ -529,7 +534,7 @@
                             <h3 style="color: red" class="fw-bold">TUTUP</h3>
                             @endif
 
-                            <H5>{{ $toko->jam_operasional }}</H5>
+                            <H5>{{ $toko->jam_buka }} - {{ $toko->jam_tutup }}</H5>
 
                         </div>
                     </div>
@@ -555,6 +560,9 @@
                                     @endif
                                     @if ($f === 'Makan di Tempat')
                                         <i class="fas fa-utensils"></i>
+                                    @endif
+                                    @if ($f === 'Toilet')
+                                        <i class="fas fa-toilet"></i>
                                     @endif
                                     {{ $f }}
                                 </p>
@@ -642,16 +650,24 @@
             </div> --}}
                 <div class="row">
                     <div class="col-8">
-                        @php
+                        {{-- @php
                             $kontak_toko = preg_split('/---/', $toko->kontak_toko);
-                        @endphp
+                        @endphp --}}
                         <div class="row">
-                            @foreach ($kontak_toko as $k)
-                                <div class="col-6">
-                                    <i class='far fa-address-book'></i> <span
-                                        href="www.spikoekuno.co.id"><i>{{ $k }}</i></span>
-                                </div>
-                            @endforeach
+                            {{-- @foreach ($kontak_toko as $k) --}}
+                            @if ($toko->website_toko)
+                            <div class="col-6">
+                                <i class='fas fa-globe'></i> <a href="{{ $toko->website_toko }}" style="color: black;text-decoration:none">{{ $toko->website_toko }}</a>
+                            </div>
+                            @endif
+                            @if ($toko->sosmed_toko)
+                            <div class="col-6">
+                                <i class="fab fa-instagram"></i> <span
+                                    href="www.spikoekuno.co.id"><i>{{ $toko->sosmed_toko }}</i></span>
+                            </div>
+                            @endif
+
+                            {{-- @endforeach --}}
 
                             {{-- <div class="col-6">
                             <i class='far fa-address-book'></i> <a href="www.spikoekuno.co.id">www.spikoekuno.co.id</a>
@@ -708,6 +724,10 @@
 
 
         </div> --}}
+        @php
+            $galeri_toko = preg_split('/---/', $toko->galeri_toko);
+            $galeri_toko_caption = preg_split('/---/', $toko->galeri_toko_caption);
+        @endphp
         <div class="container">
             <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
@@ -716,36 +736,29 @@
                   <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
                 </div>
                 <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img src="https://cdn.discordapp.com/attachments/964470483875672094/984464204658524160/dodol_cempedak.jpg" class="d-block w-100" alt="...">
+                    @foreach ($galeri_toko as $key => $gt)
+                    @foreach ($galeri_toko_caption as $gc)
+                  <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
+                    <img src="{{ $gt }}" class="d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
-                      <h4 class="text-center">Tampak Depan Toko</h4>
-
+                        <h4 class="text-center">{{ $gc }}</h4>
                     </div>
                   </div>
-                  <div class="carousel-item">
-                    <img src="https://media.discordapp.net/attachments/964470483875672094/984466254255493140/unknown.png" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                      <h4 class="text-center">Tampak Belakang Toko</h4>
+                    @endforeach
+                    @endforeach
 
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <img src="https://media.discordapp.net/attachments/964470483875672094/984466785589940294/unknown.png" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                      <h4 class="text-center">Tampak Samping Toko</h4>
-
-                    </div>
-                  </div>
                 </div>
+                @if (count($galeri_toko)>1)
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                @endif
+
               </div>
         </div>
     </div>
