@@ -598,7 +598,7 @@
                                 height="168px">
                             <p class="text-desc">Informasi penting terkait Varian, Rasa, Bahan Dasar untuk menyesuaikan seleramu</p>
                             <div class="poin mt-3">
-                            <i class="icon-buka bi bi-people-fill" style="color: #616067"><span class="text-beli"> {{ $v->satuan }}</span></i><br>
+                            <i class="icon-buka bi bi-people-fill" style="color: #616067"><span class="text-beli"> {{ $v->namacocok }}</span></i><br>
                             <i class="icon-buka bi bi-geo-alt-fill"><span class="text-beli"> {{ $v->kota }},
                                 {{ $v->provinsi }}</span></i>
                             </div>
