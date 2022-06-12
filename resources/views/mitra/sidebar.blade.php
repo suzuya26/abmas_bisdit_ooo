@@ -112,7 +112,7 @@
             <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
             <li class="nav-item">
-              <a href="/mitras/{{Auth::user()->mitra_id}}" class="nav-link">
+              <a href="/dashboard/{{Auth::user()->mitra_id}}" class="nav-link">
                 <i class="nav-icon fas fa-tachometer-alt"></i>
                 <p>
                   Dashboard
@@ -130,13 +130,13 @@
               </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="tambahproduk" class="nav-link">
+                  <a href="/tambahproduk" class="nav-link">
                     <i class="nav-icon fas fas fa-cart-plus"></i>
                     <p>Tambah Produk</p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="daftarproduk/{{Auth::user()->mitra_id}}" class="nav-link">
+                  <a href="/daftarproduk/{{Auth::user()->mitra_id}}" class="nav-link">
                     <i class="nav-icon fas fas fas fas fa-list"></i>
                     <p>Daftar Produk</p>
                   </a>
@@ -161,7 +161,7 @@
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
       <!-- Content Header (Page header) -->
-      
+
       <!-- /.content-header -->
 
       <!-- Main content -->

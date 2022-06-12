@@ -41,5 +41,10 @@ class ProdukController extends Controller
         $mitra_produk = DB::table('mitra_produk')->where('idmitra', $id)->get();
         return view('mitra.daftarproduk', compact('mitra_produk'));
     }
+    public function dashboard($id){
+        $mitra_produk = DB::table('mitra_produk')->where('idmitra', $id)->get();
+        $toko_mitra = DB::table('toko_mitra')->where('idmitra', $id)->first();
+        return view('mitra.dashboard', compact('mitra_produk', 'toko_mitra'));
+    }
 
 }

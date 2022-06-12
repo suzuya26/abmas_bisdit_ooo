@@ -19,9 +19,13 @@
         margin-top: 50px
     }
     .search{
-        background: linear-gradient(92.73deg, rgba(244, 106, 6, 0.25) 8.08%, rgba(244, 106, 6, 0.11) 86.34%);
+        background: #EDEDED;
 box-shadow: 0px 9.9272px 33.0907px -13.2363px rgba(0, 0, 0, 0.1);
 border-radius: 24.818px;
+width: 185px;
+        height: 45px;
+        box-shadow: 0px 16.5453px 26.4725px -6.61813px rgba(0, 0, 0, 0.2);
+
     }
 </style>
     <nav class="navbar navbar-expand-md navbar-light" style="background: #ededed">
@@ -213,25 +217,47 @@ border-radius: 24.818px;
                     <li><a href="/register" class="nav-link px-2 btn btn-dark text-dark register2" style="border-radius:23.5714px; width:125px;height:45px;background:#EDEDED"><span>Register</span></a></li>
                 </ul>
             @endguest
-            @auth
-                <div class="dropdown text-end">
-                    <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="{{ auth()->user()->photo }}" width="32" height="32" class="rounded-circle">
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-start text-small" style="margin-right: 10px;"
-                        aria-labelledby=" dropdownUser1">
-                        <li><a class="dropdown-item" href="#">Profil</a></li>
-                        <li><a class="dropdown-item" href="/favorit">Favorit</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <form action="/logout" method="post">
-                            @csrf
-                            <button class="dropdown-item" type="submit">Logout</button>
-                        </form>
-                    </ul>
-                </div>
-            @endauth
+            @if (Auth::check() && Auth::user()->peran == 1)
+            <div class="dropdown text-end">
+                <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="{{ auth()->user()->photo }}" width="32" height="32" class="rounded-circle">
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-start text-small" style="margin-right: 10px;"
+                    aria-labelledby=" dropdownUser1">
+                    <li><a class="dropdown-item" href="/profil/{{ Auth::user()->mitra_id }}">Profil</a></li>
+                    <li><a class="dropdown-item" href="/favorit">Favorit</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <form action="/logout" method="post">
+                        @csrf
+                        <button class="dropdown-item" type="submit">Logout</button>
+                    </form>
+                </ul>
+            </div>
+            @endif
+            @if (Auth::check() && Auth::user()->peran == 0)
+            <div class="dropdown text-end">
+                <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="{{ auth()->user()->photo }}" width="32" height="32" class="rounded-circle">
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-start text-small" style="margin-right: 10px;"
+                    aria-labelledby=" dropdownUser1">
+                    <li><a class="dropdown-item" href="/favorit">Favorit</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <form action="/logout" method="post">
+                        @csrf
+                        <button class="dropdown-item" type="submit">Logout</button>
+                    </form>
+                </ul>
+            </div>
+            @endif
+            {{-- @auth
+
+            @endauth --}}
         </div>
     </nav>

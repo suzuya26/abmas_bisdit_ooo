@@ -302,65 +302,42 @@
             </div>
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="db-title m-0 text-dark " style="font-size: 25px;font-weight:600;">Produk Oleh-Oleh Mitra
-                        Jaya Favorit Customer</h1>
+                    <h1 class="db-title m-0 text-dark " style="font-size: 25px;font-weight:600;">Produk Oleh-Oleh {{  $toko_mitra->nama_mitra }}</h1>
                 </div>
             </div>
             <!-- Small boxes (Stat box) -->
             <div class="row">
+                @foreach ( $mitra_produk as $m)
                 <div class="col-md-3 mb-3">
                     <div class="card h-100">
                         <img class="img-fluid" alt="100%x280"
-                            src=https://cdn.discordapp.com/attachments/906163180328325130/914060163638505542/AlmondCrispyCheese_1.jpg>
+                            src="{{ url('/data_file/'.$m->gambar_produkMitra) }}" style="height: 250px;width:250px">
                         <div class="card-body">
-                            <h5 class="card-title">Almond Crispy Cheese</h5>
+                            <h5 class="card-title">{{ $m->nama_produk_mitra }}</h5>
                             <br>
-                            <h6 class="card-title">50 pcs</h6>
-                            <br>
+                            <h6 class="card-title"> Rp{{ $m->harga_produk_mitra }}</h6>
+                            {{-- <br>
                             <div class="card-footer bg-transparent">
-                                Rp. 20.000
-                            </div>
+                                Rp{{ $m->harga_produk_mitra }}
+                            </div> --}}
                             <a href="/varianoleh/21" class="stretched-link"></a>
                         </div>
-                        <div class="card-footer bg-transparent">
-                            <p class="card-text bi bi-heart-fill">
-                                10 Orang Menyukai ini</p>
-                        </div>
                     </div>
                 </div>
-                <div class="col-md-3 mb-3">
-                    <div class="card h-100">
-                        <img class="img-fluid" alt="100%x280"
-                            src=https://cdn.discordapp.com/attachments/906163180328325130/916964212767621130/CokelatTempe.jpg>
-                        <div class="card-body">
-                            <h5 class="card-title">Cokelat Tempe</h5>
-                            <br>
-                            <h6 class="card-title">50 pcs</h6>
-                            <br>
-                            <div class="card-footer bg-transparent">
-                                Rp. 20.000
-                            </div>
-                            <a href="/varianoleh/22" class="stretched-link"></a>
-                        </div>
-                        <div class="card-footer bg-transparent">
-                            <p class="card-text bi bi-heart-fill">
-                                10 Orang Menyukai ini</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 mb-3">
-                    <div class="card h-100">
-                        <img class="img-fluid" alt="100%x280"
-                            src=https://cdn.discordapp.com/attachments/906163180328325130/916964212767621130/CokelatTempe.jpg>
-                        <div class="card-body">
-                            <h5 class="card-title">Cokelat Tempe</h5>
-                            <br>
-                            <h6 class="card-title">50 pcs</h6>
-                            <br>
-                            <div class="card-footer bg-transparent">
-                                Rp. 20.000
-                            </div>
+                @endforeach
 
+                {{-- <div class="col-md-3 mb-3">
+                    <div class="card h-100">
+                        <img class="img-fluid" alt="100%x280"
+                            src=https://cdn.discordapp.com/attachments/906163180328325130/916964212767621130/CokelatTempe.jpg>
+                        <div class="card-body">
+                            <h5 class="card-title">Cokelat Tempe</h5>
+                            <br>
+                            <h6 class="card-title">50 pcs</h6>
+                            <br>
+                            <div class="card-footer bg-transparent">
+                                Rp. 20.000
+                            </div>
                             <a href="/varianoleh/22" class="stretched-link"></a>
                         </div>
                         <div class="card-footer bg-transparent">
@@ -368,27 +345,7 @@
                                 10 Orang Menyukai ini</p>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-3 mb-3">
-                    <div class="card h-100">
-                        <img class="img-fluid" alt="100%x280"
-                            src=https://cdn.discordapp.com/attachments/906163180328325130/916962624820879431/PiaMalang_2.jpg>
-                        <div class="card-body">
-                            <h5 class="card-title">Bakpia Khas Malang</h5>
-                            <br>
-                            <h6 class="card-title">50 pcs</h6>
-                            <br>
-                            <div class="card-footer bg-transparent">
-                                Rp. 20.000
-                            </div>
-                            <a href="/varianoleh/24" class="stretched-link"></a>
-                        </div>
-                        <div class="card-footer bg-transparent">
-                            <p class="card-text bi bi-heart-fill">
-                                10 Orang Menyukai ini</p>
-                        </div>
-                    </div>
-                </div>
+                </div> --}}
             </div>
             <!-- /.row -->
             <!-- Main row -->

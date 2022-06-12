@@ -139,6 +139,441 @@ transform: rotate(37.85deg);
         </div>
     </div>
 </div>
+<section class="mt-5">
+    <div class="container">
+     @auth
+     <h2>Hi, <span class="fw-bold"><i>{{ Auth::user()->name }}!</i></span></h2>
+     @else
+     <h2>Hi, <span class="fw-bold"><i>Tamu!</i></span></h2>
+     @endauth
+     <h2>Sekarang lokasi kamu ada di</h2>
+     <h2><i class="fas fa-map-marker-alt" style="color: rgb(255, 148, 49)"></i> {{ $kota . ', ' . $provinsi }}</h2>
+    </div>
+ </section> <hr>
+ @if (count($olehPopuler) > 0)
+ <section style="margin-bottom: 200px" class="mt-3">
+     <div class="container">
+         <h1 class="fw-bold mt-5">Rekomendasi Oleh-oleh Khas {{$kota}}</h1>
+     <div class="row">
+         <div class="col-8"></div>
+             <div class="col-4 text-end">
+                 <a class="btn btn-dark text-light mb-3 mr-1 btn-sm"
+                     data-bs-target="#carouselExampleIndicators1" role="button" data-bs-slide="prev">
+                     <i class="bi bi-arrow-left"></i>
+                 </a>
+                 <a class="btn btn-dark text-light mb-3 btn-sm" data-bs-target="#carouselExampleIndicators1"
+                     role="button" data-bs-slide="next">
+                     <i class="bi bi-arrow-right"></i>
+                 </a>
+             </div>
+             <div class="col-12">
+                 <div id="carouselExampleIndicators1" class="carousel slide" data-ride="carousel">
+                     <div class="carousel">
+                         <div class="carousel-item active">
+                             <div class="row">
+                                 @foreach ($olehPopuler->slice(0,4) as $v)
+                                 <div class="col-sm-3">
+                                     <div class="nama-beli">
+                                         <div class="teks-nama">
+                                             <h2>{{$v->namaoleh}}</h2>
+                                             <h5 id="buka" class=""><span class="text-danger fw-bold">Rp</span> <span id="jam-buka">{{ number_format($v->hargamin) }} - {{ number_format($v->hargamax) }}</span></h5>
+                                             <div class="info-beli" style="font-size: 25px">
+                                                 <i class="fas fa-thumbs-up"><span class="text-beli"><span class="text-danger"> 350</span> Users</span></i> <br>
+                                             </div>
+                                         </div>
+                                     </div>
+                                     <div class="foto-beli">
+                                         <img src="{{ $v->gambarutama }}" width= "301px"
+                                         height="285.65px" style="border-radius: 20%">
+                                     </div>
+                                 </div>
+                                 @endforeach
+                             </div>
+                         </div>
+                                 @if (count($olehPopuler)>4)
+                                 <div class="carousel-item">
+                                     <div class="row">
+                                         @foreach ($olehPopuler->slice(4, 4) as $v)
+                                         <div class="col-sm-3">
+                                             <div class="nama-beli">
+                                                 <div class="teks-nama">
+                                                     <h2>{{$v->namaoleh}}</h2>
+                                                     <h5 id="buka" class=""><span class="text-danger fw-bold">Rp</span> <span id="jam-buka">{{ $v->hargamin }} - {{ $v->hargamax }}</span></h5>
+                                                     <div class="info-beli" style="font-size: 25px">
+                                                         <i class="fas fa-thumbs-up"><span class="text-beli"><span class="text-danger"> 350</span> Users</span></i> <br>
+                                                     </div>
+                                                 </div>
+                                             </div>
+                                             <div class="foto-beli">
+                                                 <img src="{{ $v->gambarutama }}" width= "301px"
+                                                 height="285.65px">
+                                             </div>
+                                         </div>
+                                         @endforeach
+                                     </div>
+                                 </div>
+                                 @endif
+                                 @if (count($olehPopuler)>8)
+                                 <div class="carousel-item">
+                                     <div class="row">
+                                         @foreach ($olehPopuler->slice(8, 4) as $v)
+                                         <div class="col-sm-3">
+                                             <div class="nama-beli">
+                                                 <div class="teks-nama">
+                                                     <h2>{{$v->namaoleh}}</h2>
+                                                     <h5 id="buka" class=""><span class="text-danger fw-bold">Rp</span> <span id="jam-buka">{{ $v->hargamin }} - {{ $v->hargamax }}</span></h5>
+                                                     <div class="info-beli" style="font-size: 25px">
+                                                         <i class="fas fa-thumbs-up"><span class="text-beli"><span class="text-danger"> 350</span> Users</span></i> <br>
+                                                     </div>
+                                                 </div>
+                                             </div>
+                                             <div class="foto-beli">
+                                                 <img src="{{ $v->gambarutama }}" width= "301px"
+                                                 height="285.65px">
+                                             </div>
+                                         </div>
+                                         @endforeach
+                                     </div>
+                                 </div>
+                                 @endif
+
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+     </div>
+     </div>
+ </section>
+ @endif
+ <section style="margin-bottom: 200px">
+     <div class="container">
+         <h1 class="fw-bold">Rekomendasi Toko Oleh-oleh yang Sering Dikunjungi</h1>
+         <div class="row">
+             <div class="col-8"></div>
+             <div class="col-4 text-end">
+                 <a class="btn btn-dark text-light mb-3 mr-1 btn-sm"
+                     data-bs-target="#carouselExampleIndicators2" role="button" data-bs-slide="prev">
+                     <i class="bi bi-arrow-left"></i>
+                 </a>
+                 <a class="btn btn-dark text-light mb-3 btn-sm" data-bs-target="#carouselExampleIndicators2"
+                     role="button" data-bs-slide="next">
+                     <i class="bi bi-arrow-right"></i>
+                 </a>
+             </div>
+             <div class="col-12">
+                 <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
+
+                     <div class="carousel">
+                         <div class="carousel-item active">
+                             <div class="row">
+                                 <div class="col-sm-3">
+                                     <div class="nama-beli">
+                                         <div class="teks-nama">
+                                             <h2>Toko Bolu Jago</h2>
+                                             <h5 id="buka" class=""><span class="text-success fw-bold">BUKA</span> <span id="jam-buka">(07.00-10.00)</span></h5>
+                                             <div class="info-beli">
+                                                 <i class="icon-buka bi bi-geo-alt-fill"><span class="text-beli">Jalan Ir. Soekarno 5B</span></i> <br>
+                                                 <i class="icon-buka bi bi-telephone-fill"><span class="text-beli">(031) 12345678</span></i>
+                                             </div>
+                                         </div>
+                                     </div>
+                                     <div class="foto-beli">
+                                         <img src="{{ asset('img/logo-halal.png') }}" width= "301px"
+                                         height="285.65px">
+                                     </div>
+                                 </div>
+                                 <div class="col-sm-3">
+                                     <div class="nama-beli">
+                                         <div class="teks-nama">
+                                             <h2>Toko Bolu Jago</h2>
+                                             <h5 id="buka" class=""><span class="text-success fw-bold">BUKA</span> <span id="jam-buka">(07.00-10.00)</span></h5>
+                                             <div class="info-beli">
+                                                 <i class="icon-buka bi bi-geo-alt-fill"><span class="text-beli">Jalan Ir. Soekarno 5B</span></i> <br>
+                                                 <i class="icon-buka bi bi-telephone-fill"><span class="text-beli">(031) 12345678</span></i>
+                                             </div>
+                                         </div>
+                                     </div>
+                                     <div class="foto-beli">
+                                         <img src="{{ asset('img/logo-halal.png') }}" width= "301px"
+                                         height="285.65px">
+                                     </div>
+                                 </div>
+                                 <div class="col-sm-3">
+                                     <div class="nama-beli">
+                                         <div class="teks-nama">
+                                             <h2>Toko Bolu Jago</h2>
+                                             <h5 id="buka" class=""><span class="text-success fw-bold">BUKA</span> <span id="jam-buka">(07.00-10.00)</span></h5>
+                                             <div class="info-beli">
+                                                 <i class="icon-buka bi bi-geo-alt-fill"><span class="text-beli">Jalan Ir. Soekarno 5B</span></i> <br>
+                                                 <i class="icon-buka bi bi-telephone-fill"><span class="text-beli">(031) 12345678</span></i>
+                                             </div>
+                                         </div>
+                                     </div>
+                                     <div class="foto-beli">
+                                         <img src="{{ asset('img/logo-halal.png') }}" width= "301px"
+                                         height="285.65px">
+                                     </div>
+                                 </div>
+                                 <div class="col-sm-3">
+                                     <div class="nama-beli">
+                                         <div class="teks-nama">
+                                             <h2>Toko Bolu Jago</h2>
+                                             <h5 id="buka" class=""><span class="text-success fw-bold">BUKA</span> <span id="jam-buka">(07.00-10.00)</span></h5>
+                                             <div class="info-beli">
+                                                 <i class="icon-buka bi bi-geo-alt-fill"><span class="text-beli">Jalan Ir. Soekarno 5B</span></i> <br>
+                                                 <i class="icon-buka bi bi-telephone-fill"><span class="text-beli">(031) 12345678</span></i>
+                                             </div>
+                                         </div>
+                                     </div>
+                                     <div class="foto-beli">
+                                         <img src="{{ asset('img/logo-halal.png') }}" width= "301px"
+                                         height="285.65px">
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+                             <div class="carousel-item">
+                                 <div class="row">
+                                     <div class="col-sm-3">
+                                         <div class="nama-beli">
+                                             <div class="teks-nama">
+                                                 <h2>Toko Bolu Jago</h2>
+                                                 <h5 id="buka" class=""><span class="text-success fw-bold">BUKA</span> <span id="jam-buka">(07.00-10.00)</span></h5>
+                                                 <div class="info-beli">
+                                                     <i class="icon-buka bi bi-geo-alt-fill"><span class="text-beli">Jalan Ir. Soekarno 5B</span></i> <br>
+                                                     <i class="icon-buka bi bi-telephone-fill"><span class="text-beli">(031) 12345678</span></i>
+                                                 </div>
+                                             </div>
+                                         </div>
+                                         <div class="foto-beli">
+                                             <img src="{{ asset('img/logo-halal.png') }}" width= "301px"
+                                             height="285.65px">
+                                         </div>
+                                     </div>
+                                     <div class="col-sm-3">
+                                         <div class="nama-beli">
+                                             <div class="teks-nama">
+                                                 <h2>Toko Bolu Jago</h2>
+                                                 <h5 id="buka" class=""><span class="text-success fw-bold">BUKA</span> <span id="jam-buka">(07.00-10.00)</span></h5>
+                                                 <div class="info-beli">
+                                                     <i class="icon-buka bi bi-geo-alt-fill"><span class="text-beli">Jalan Ir. Soekarno 5B</span></i> <br>
+                                                     <i class="icon-buka bi bi-telephone-fill"><span class="text-beli">(031) 12345678</span></i>
+                                                 </div>
+                                             </div>
+                                         </div>
+                                         <div class="foto-beli">
+                                             <img src="{{ asset('img/logo-halal.png') }}" width= "301px"
+                                             height="285.65px">
+                                         </div>
+                                     </div>
+                                     <div class="col-sm-3">
+                                         <div class="nama-beli">
+                                             <div class="teks-nama">
+                                                 <h2>Toko Bolu Jago</h2>
+                                                 <h5 id="buka" class=""><span class="text-success fw-bold">BUKA</span> <span id="jam-buka">(07.00-10.00)</span></h5>
+                                                 <div class="info-beli">
+                                                     <i class="icon-buka bi bi-geo-alt-fill"><span class="text-beli">Jalan Ir. Soekarno 5B</span></i> <br>
+                                                     <i class="icon-buka bi bi-telephone-fill"><span class="text-beli">(031) 12345678</span></i>
+                                                 </div>
+                                             </div>
+                                         </div>
+                                         <div class="foto-beli">
+                                             <img src="{{ asset('img/logo-halal.png') }}" width= "301px"
+                                             height="285.65px">
+                                         </div>
+                                     </div>
+                                     <div class="col-sm-3">
+                                         <div class="nama-beli">
+                                             <div class="teks-nama">
+                                                 <h2>Toko Bolu Jago</h2>
+                                                 <h5 id="buka" class=""><span class="text-success fw-bold">BUKA</span> <span id="jam-buka">(07.00-10.00)</span></h5>
+                                                 <div class="info-beli">
+                                                     <i class="icon-buka bi bi-geo-alt-fill"><span class="text-beli">Jalan Ir. Soekarno 5B</span></i> <br>
+                                                     <i class="icon-buka bi bi-telephone-fill"><span class="text-beli">(031) 12345678</span></i>
+                                                 </div>
+                                             </div>
+                                         </div>
+                                         <div class="foto-beli">
+                                             <img src="{{ asset('img/logo-halal.png') }}" width= "301px"
+                                             height="285.65px">
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+                             <div class="carousel-item">
+                                 <div class="row">
+                                     <div class="col-sm-3">
+                                         <div class="nama-beli">
+                                             <div class="teks-nama">
+                                                 <h2>Toko Bolu Jago</h2>
+                                                 <h5 id="buka" class=""><span class="text-success fw-bold">BUKA</span> <span id="jam-buka">(07.00-10.00)</span></h5>
+                                                 <div class="info-beli">
+                                                     <i class="icon-buka bi bi-geo-alt-fill"><span class="text-beli">Jalan Ir. Soekarno 5B</span></i> <br>
+                                                     <i class="icon-buka bi bi-telephone-fill"><span class="text-beli">(031) 12345678</span></i>
+                                                 </div>
+                                             </div>
+                                         </div>
+                                         <div class="foto-beli">
+                                             <img src="{{ asset('img/logo-halal.png') }}" width= "301px"
+                                             height="285.65px">
+                                         </div>
+                                     </div>
+                                     <div class="col-sm-3">
+                                         <div class="nama-beli">
+                                             <div class="teks-nama">
+                                                 <h2>Toko Bolu Jago</h2>
+                                                 <h5 id="buka" class=""><span class="text-success fw-bold">BUKA</span> <span id="jam-buka">(07.00-10.00)</span></h5>
+                                                 <div class="info-beli">
+                                                     <i class="icon-buka bi bi-geo-alt-fill"><span class="text-beli">Jalan Ir. Soekarno 5B</span></i> <br>
+                                                     <i class="icon-buka bi bi-telephone-fill"><span class="text-beli">(031) 12345678</span></i>
+                                                 </div>
+                                             </div>
+                                         </div>
+                                         <div class="foto-beli">
+                                             <img src="{{ asset('img/logo-halal.png') }}" width= "301px"
+                                             height="285.65px">
+                                         </div>
+                                     </div>
+                                     <div class="col-sm-3">
+                                         <div class="nama-beli">
+                                             <div class="teks-nama">
+                                                 <h2>Toko Bolu Jago</h2>
+                                                 <h5 id="buka" class=""><span class="text-success fw-bold">BUKA</span> <span id="jam-buka">(07.00-10.00)</span></h5>
+                                                 <div class="info-beli">
+                                                     <i class="icon-buka bi bi-geo-alt-fill"><span class="text-beli">Jalan Ir. Soekarno 5B</span></i> <br>
+                                                     <i class="icon-buka bi bi-telephone-fill"><span class="text-beli">(031) 12345678</span></i>
+                                                 </div>
+                                             </div>
+                                         </div>
+                                         <div class="foto-beli">
+                                             <img src="{{ asset('img/logo-halal.png') }}" width= "301px"
+                                             height="285.65px">
+                                         </div>
+                                     </div>
+                                     <div class="col-sm-3">
+                                         <div class="nama-beli">
+                                             <div class="teks-nama">
+                                                 <h2>Toko Bolu Jago</h2>
+                                                 <h5 id="buka" class=""><span class="text-success fw-bold">BUKA</span> <span id="jam-buka">(07.00-10.00)</span></h5>
+                                                 <div class="info-beli">
+                                                     <i class="icon-buka bi bi-geo-alt-fill"><span class="text-beli">Jalan Ir. Soekarno 5B</span></i> <br>
+                                                     <i class="icon-buka bi bi-telephone-fill"><span class="text-beli">(031) 12345678</span></i>
+                                                 </div>
+                                             </div>
+                                         </div>
+                                         <div class="foto-beli">
+                                             <img src="{{ asset('img/logo-halal.png') }}" width= "301px"
+                                             height="285.65px">
+                                         </div>
+                                     </div>
+
+
+                                 </div>
+                             </div>
+
+                     </div>
+                 </div>
+             </div>
+             {{-- <a href="#" class="link-dark text-end col-12">Lebih Banyak >>></a> --}}
+         </div>
+     </div>
+ </section>
+ @if (count($harga) > 0)
+ <section style="margin-bottom:200px">
+     <div class="container">
+         <h1 class="fw-bold">Rekomendasi Oleh-Oleh dengan harga di bawah Rp40.000</h1>
+             <div class="row">
+                 <div class="col-8"></div>
+                 <div class="col-4 text-end">
+                 <a class="btn btn-dark text-light mb-3 mr-1 btn-sm"
+                     data-bs-target="#carouselExampleIndicators3" role="button" data-bs-slide="prev">
+                     <i class="bi bi-arrow-left"></i>
+                 </a>
+                 <a class="btn btn-dark text-light mb-3 btn-sm" data-bs-target="#carouselExampleIndicators3"
+                     role="button" data-bs-slide="next">
+                     <i class="bi bi-arrow-right"></i>
+                 </a>
+                 </div>
+                 <div class="col-12">
+                     <div id="carouselExampleIndicators3" class="carousel slide" data-ride="carousel">
+                         <div class="carousel">
+                             <div class="carousel-item active">
+                                 <div class="row">
+                                     @foreach ($harga->slice(0, 4) as $rek)
+                                     <div class="col-sm-3" onclick="location.href='/varianoleh/{{$rek->idoleh}}'">
+                                         <div class="nama-beli">
+                                             <div class="teks-nama">
+                                                 <h2>{{ $rek->namaoleh }}</h2>
+                                                 <h5 id="buka" class=""><span class="text-danger fw-bold">Rp</span> <span id="jam-buka">{{ number_format($rek->hargamin) }}</span></h5>
+                                                 <div class="info-beli">
+                                                     <span class="text-beli" style="font-size: 1.2rem">Pasar Atom</span> <br>
+                                                     <i class="fas fa-map-marker-alt"> <span class="text-beli" style="font-size: 0.8rem">Jalan Jemursari Raya IV</span></i>
+                                                 </div>
+                                             </div>
+                                         </div>
+                                         <div class="foto-beli">
+                                             <img src="{{ $rek->gambarutama }}" width= "301px"
+                                             height="285.65px" style="border-radius: 20px">
+                                         </div>
+                                     </div>
+                                     @endforeach
+                                 </div>
+                             </div>
+                         @if (count($harga) > 4)
+                         <div class="carousel-item">
+                             <div class="row">
+                                 @foreach ($harga->slice(4, 4) as $rek)
+                                 <div class="col-sm-3" onclick="location.href='/varianoleh/{{$rek->idoleh}}'">
+                                     <div class="nama-beli">
+                                         <div class="teks-nama">
+                                             <h2>{{ $rek->namaoleh }}</h2>
+                                             <h5 id="buka" class=""><span class="text-danger fw-bold">Rp</span> <span id="jam-buka">{{ number_format($rek->hargamin) }}</span></h5>
+                                             <div class="info-beli">
+                                                 <span class="text-beli" style="font-size: 1.2rem">Pasar Atom</span> <br>
+                                                 <i class="fas fa-map-marker-alt"> <span class="text-beli" style="font-size: 0.8rem">Jalan Jemursari Raya IV</span></i>
+                                             </div>
+                                         </div>
+                                     </div>
+                                     <div class="foto-beli">
+                                         <img src="{{ $rek->gambarutama }}" width= "301px"
+                                         height="285.65px" style="border-radius: 20px">
+                                     </div>
+                                 </div>
+                                 @endforeach
+                             </div>
+                         </div>
+                         @endif
+                         @if (count($harga) > 8)
+                         <div class="carousel-item">
+                             <div class="row">
+                                 @foreach ($harga->slice(8, 4) as $rek)
+                                 <div class="col-sm-3" onclick="location.href='/varianoleh/{{$rek->idoleh}}'">
+                                     <div class="nama-beli">
+                                         <div class="teks-nama">
+                                             <h2>{{ $rek->namaoleh }}</h2>
+                                             <h5 id="buka" class=""><span class="text-danger fw-bold">Rp</span> <span id="jam-buka">{{ number_format($rek->hargamin) }}</span></h5>
+                                             <div class="info-beli">
+                                                 <span class="text-beli" style="font-size: 1.2rem">Pasar Atom</span> <br>
+                                                 <i class="fas fa-map-marker-alt"> <span class="text-beli" style="font-size: 0.8rem">Jalan Jemursari Raya IV</span></i>
+                                             </div>
+                                         </div>
+                                     </div>
+                                     <div class="foto-beli">
+                                         <img src="{{ $rek->gambarutama }}" width= "301px"
+                                         height="285.65px" style="border-radius: 20px">
+                                     </div>
+                                 </div>
+                                 @endforeach
+                             </div>
+                         </div>
+                         @endif
+                         </div>
+                     </div>
+                 </div>
+             </div>
+     </div>
+ </section>
 <section class="p-4">
     <h1 class="judul text-center mt-5 mb-3">Why Oasis?</h1>
     <div class="container" style="width: 100%">
@@ -163,9 +598,6 @@ transform: rotate(37.85deg);
         </div>
     </div>
 </section>
-<div class="" style="overflow: hidden">
-    <img src="{{ asset('img/daun.png') }}" alt="" class="daun" height="303.08px" width="305.51px">
-</div>
 <section style="background: rgba(244, 106, 6, 0.48);overflow:hidden" class="p-5">
     <h1 class="judul text-center mt-3" style="margin-bottom: 78px">How We Work?</h1>
 
@@ -201,440 +633,6 @@ transform: rotate(37.85deg);
         {{-- <img src="{{ asset('img/daun.png') }}" alt="" class="daun" width="100px" height="100px"> --}}
     </div>
 </section>
-<section class="mt-5">
-   <div class="container">
-    @auth
-    <h2>Hi, <span class="fw-bold"><i>{{ Auth::user()->name }}!</i></span></h2>
-    @else
-    <h2>Hi, <span class="fw-bold"><i>Tamu!</i></span></h2>
-    @endauth
-    <h2>Sekarang lokasi kamu ada di</h2>
-    <h2><i class="fas fa-map-marker-alt" style="color: rgb(255, 148, 49)"></i> {{ $kota . ', ' . $provinsi }}</h2>
-   </div>
-</section> <hr>
-@if (count($olehPopuler) > 0)
-<section style="margin-bottom: 200px" class="mt-3">
-    <div class="container">
-        <h1 class="fw-bold mt-5">Rekomendasi Oleh-oleh Khas {{$kota}}</h1>
-    <div class="row">
-        <div class="col-8"></div>
-            <div class="col-4 text-end">
-                <a class="btn btn-dark text-light mb-3 mr-1 btn-sm"
-                    data-bs-target="#carouselExampleIndicators1" role="button" data-bs-slide="prev">
-                    <i class="bi bi-arrow-left"></i>
-                </a>
-                <a class="btn btn-dark text-light mb-3 btn-sm" data-bs-target="#carouselExampleIndicators1"
-                    role="button" data-bs-slide="next">
-                    <i class="bi bi-arrow-right"></i>
-                </a>
-            </div>
-            <div class="col-12">
-                <div id="carouselExampleIndicators1" class="carousel slide" data-ride="carousel">
-                    <div class="carousel">
-                        <div class="carousel-item active">
-                            <div class="row">
-                                @foreach ($olehPopuler->slice(0,4) as $v)
-                                <div class="col-sm-3">
-                                    <div class="nama-beli">
-                                        <div class="teks-nama">
-                                            <h2>{{$v->namaoleh}}</h2>
-                                            <h5 id="buka" class=""><span class="text-danger fw-bold">Rp</span> <span id="jam-buka">{{ number_format($v->hargamin) }} - {{ number_format($v->hargamax) }}</span></h5>
-                                            <div class="info-beli" style="font-size: 25px">
-                                                <i class="fas fa-thumbs-up"><span class="text-beli"><span class="text-danger"> 350</span> Users</span></i> <br>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="foto-beli">
-                                        <img src="{{ $v->gambarutama }}" width= "301px"
-                                        height="285.65px" style="border-radius: 20%">
-                                    </div>
-                                </div>
-                                @endforeach
-                            </div>
-                        </div>
-                                @if (count($olehPopuler)>4)
-                                <div class="carousel-item">
-                                    <div class="row">
-                                        @foreach ($olehPopuler->slice(4, 4) as $v)
-                                        <div class="col-sm-3">
-                                            <div class="nama-beli">
-                                                <div class="teks-nama">
-                                                    <h2>{{$v->namaoleh}}</h2>
-                                                    <h5 id="buka" class=""><span class="text-danger fw-bold">Rp</span> <span id="jam-buka">{{ $v->hargamin }} - {{ $v->hargamax }}</span></h5>
-                                                    <div class="info-beli" style="font-size: 25px">
-                                                        <i class="fas fa-thumbs-up"><span class="text-beli"><span class="text-danger"> 350</span> Users</span></i> <br>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="foto-beli">
-                                                <img src="{{ $v->gambarutama }}" width= "301px"
-                                                height="285.65px">
-                                            </div>
-                                        </div>
-                                        @endforeach
-                                    </div>
-                                </div>
-                                @endif
-                                @if (count($olehPopuler)>8)
-                                <div class="carousel-item">
-                                    <div class="row">
-                                        @foreach ($olehPopuler->slice(8, 4) as $v)
-                                        <div class="col-sm-3">
-                                            <div class="nama-beli">
-                                                <div class="teks-nama">
-                                                    <h2>{{$v->namaoleh}}</h2>
-                                                    <h5 id="buka" class=""><span class="text-danger fw-bold">Rp</span> <span id="jam-buka">{{ $v->hargamin }} - {{ $v->hargamax }}</span></h5>
-                                                    <div class="info-beli" style="font-size: 25px">
-                                                        <i class="fas fa-thumbs-up"><span class="text-beli"><span class="text-danger"> 350</span> Users</span></i> <br>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="foto-beli">
-                                                <img src="{{ $v->gambarutama }}" width= "301px"
-                                                height="285.65px">
-                                            </div>
-                                        </div>
-                                        @endforeach
-                                    </div>
-                                </div>
-                                @endif
 
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    </div>
-    </div>
-</section>
-@endif
-<section style="margin-bottom: 200px">
-    <div class="container">
-        <h1 class="fw-bold">Rekomendasi Toko Oleh-oleh yang Sering Dikunjungi</h1>
-        <div class="row">
-            <div class="col-8"></div>
-            <div class="col-4 text-end">
-                <a class="btn btn-dark text-light mb-3 mr-1 btn-sm"
-                    data-bs-target="#carouselExampleIndicators2" role="button" data-bs-slide="prev">
-                    <i class="bi bi-arrow-left"></i>
-                </a>
-                <a class="btn btn-dark text-light mb-3 btn-sm" data-bs-target="#carouselExampleIndicators2"
-                    role="button" data-bs-slide="next">
-                    <i class="bi bi-arrow-right"></i>
-                </a>
-            </div>
-            <div class="col-12">
-                <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
-
-                    <div class="carousel">
-                        <div class="carousel-item active">
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <div class="nama-beli">
-                                        <div class="teks-nama">
-                                            <h2>Toko Bolu Jago</h2>
-                                            <h5 id="buka" class=""><span class="text-success fw-bold">BUKA</span> <span id="jam-buka">(07.00-10.00)</span></h5>
-                                            <div class="info-beli">
-                                                <i class="icon-buka bi bi-geo-alt-fill"><span class="text-beli">Jalan Ir. Soekarno 5B</span></i> <br>
-                                                <i class="icon-buka bi bi-telephone-fill"><span class="text-beli">(031) 12345678</span></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="foto-beli">
-                                        <img src="{{ asset('img/logo-halal.png') }}" width= "301px"
-                                        height="285.65px">
-                                    </div>
-                                </div>
-                                <div class="col-sm-3">
-                                    <div class="nama-beli">
-                                        <div class="teks-nama">
-                                            <h2>Toko Bolu Jago</h2>
-                                            <h5 id="buka" class=""><span class="text-success fw-bold">BUKA</span> <span id="jam-buka">(07.00-10.00)</span></h5>
-                                            <div class="info-beli">
-                                                <i class="icon-buka bi bi-geo-alt-fill"><span class="text-beli">Jalan Ir. Soekarno 5B</span></i> <br>
-                                                <i class="icon-buka bi bi-telephone-fill"><span class="text-beli">(031) 12345678</span></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="foto-beli">
-                                        <img src="{{ asset('img/logo-halal.png') }}" width= "301px"
-                                        height="285.65px">
-                                    </div>
-                                </div>
-                                <div class="col-sm-3">
-                                    <div class="nama-beli">
-                                        <div class="teks-nama">
-                                            <h2>Toko Bolu Jago</h2>
-                                            <h5 id="buka" class=""><span class="text-success fw-bold">BUKA</span> <span id="jam-buka">(07.00-10.00)</span></h5>
-                                            <div class="info-beli">
-                                                <i class="icon-buka bi bi-geo-alt-fill"><span class="text-beli">Jalan Ir. Soekarno 5B</span></i> <br>
-                                                <i class="icon-buka bi bi-telephone-fill"><span class="text-beli">(031) 12345678</span></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="foto-beli">
-                                        <img src="{{ asset('img/logo-halal.png') }}" width= "301px"
-                                        height="285.65px">
-                                    </div>
-                                </div>
-                                <div class="col-sm-3">
-                                    <div class="nama-beli">
-                                        <div class="teks-nama">
-                                            <h2>Toko Bolu Jago</h2>
-                                            <h5 id="buka" class=""><span class="text-success fw-bold">BUKA</span> <span id="jam-buka">(07.00-10.00)</span></h5>
-                                            <div class="info-beli">
-                                                <i class="icon-buka bi bi-geo-alt-fill"><span class="text-beli">Jalan Ir. Soekarno 5B</span></i> <br>
-                                                <i class="icon-buka bi bi-telephone-fill"><span class="text-beli">(031) 12345678</span></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="foto-beli">
-                                        <img src="{{ asset('img/logo-halal.png') }}" width= "301px"
-                                        height="285.65px">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                            <div class="carousel-item">
-                                <div class="row">
-                                    <div class="col-sm-3">
-                                        <div class="nama-beli">
-                                            <div class="teks-nama">
-                                                <h2>Toko Bolu Jago</h2>
-                                                <h5 id="buka" class=""><span class="text-success fw-bold">BUKA</span> <span id="jam-buka">(07.00-10.00)</span></h5>
-                                                <div class="info-beli">
-                                                    <i class="icon-buka bi bi-geo-alt-fill"><span class="text-beli">Jalan Ir. Soekarno 5B</span></i> <br>
-                                                    <i class="icon-buka bi bi-telephone-fill"><span class="text-beli">(031) 12345678</span></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="foto-beli">
-                                            <img src="{{ asset('img/logo-halal.png') }}" width= "301px"
-                                            height="285.65px">
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-3">
-                                        <div class="nama-beli">
-                                            <div class="teks-nama">
-                                                <h2>Toko Bolu Jago</h2>
-                                                <h5 id="buka" class=""><span class="text-success fw-bold">BUKA</span> <span id="jam-buka">(07.00-10.00)</span></h5>
-                                                <div class="info-beli">
-                                                    <i class="icon-buka bi bi-geo-alt-fill"><span class="text-beli">Jalan Ir. Soekarno 5B</span></i> <br>
-                                                    <i class="icon-buka bi bi-telephone-fill"><span class="text-beli">(031) 12345678</span></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="foto-beli">
-                                            <img src="{{ asset('img/logo-halal.png') }}" width= "301px"
-                                            height="285.65px">
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-3">
-                                        <div class="nama-beli">
-                                            <div class="teks-nama">
-                                                <h2>Toko Bolu Jago</h2>
-                                                <h5 id="buka" class=""><span class="text-success fw-bold">BUKA</span> <span id="jam-buka">(07.00-10.00)</span></h5>
-                                                <div class="info-beli">
-                                                    <i class="icon-buka bi bi-geo-alt-fill"><span class="text-beli">Jalan Ir. Soekarno 5B</span></i> <br>
-                                                    <i class="icon-buka bi bi-telephone-fill"><span class="text-beli">(031) 12345678</span></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="foto-beli">
-                                            <img src="{{ asset('img/logo-halal.png') }}" width= "301px"
-                                            height="285.65px">
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-3">
-                                        <div class="nama-beli">
-                                            <div class="teks-nama">
-                                                <h2>Toko Bolu Jago</h2>
-                                                <h5 id="buka" class=""><span class="text-success fw-bold">BUKA</span> <span id="jam-buka">(07.00-10.00)</span></h5>
-                                                <div class="info-beli">
-                                                    <i class="icon-buka bi bi-geo-alt-fill"><span class="text-beli">Jalan Ir. Soekarno 5B</span></i> <br>
-                                                    <i class="icon-buka bi bi-telephone-fill"><span class="text-beli">(031) 12345678</span></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="foto-beli">
-                                            <img src="{{ asset('img/logo-halal.png') }}" width= "301px"
-                                            height="285.65px">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="row">
-                                    <div class="col-sm-3">
-                                        <div class="nama-beli">
-                                            <div class="teks-nama">
-                                                <h2>Toko Bolu Jago</h2>
-                                                <h5 id="buka" class=""><span class="text-success fw-bold">BUKA</span> <span id="jam-buka">(07.00-10.00)</span></h5>
-                                                <div class="info-beli">
-                                                    <i class="icon-buka bi bi-geo-alt-fill"><span class="text-beli">Jalan Ir. Soekarno 5B</span></i> <br>
-                                                    <i class="icon-buka bi bi-telephone-fill"><span class="text-beli">(031) 12345678</span></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="foto-beli">
-                                            <img src="{{ asset('img/logo-halal.png') }}" width= "301px"
-                                            height="285.65px">
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-3">
-                                        <div class="nama-beli">
-                                            <div class="teks-nama">
-                                                <h2>Toko Bolu Jago</h2>
-                                                <h5 id="buka" class=""><span class="text-success fw-bold">BUKA</span> <span id="jam-buka">(07.00-10.00)</span></h5>
-                                                <div class="info-beli">
-                                                    <i class="icon-buka bi bi-geo-alt-fill"><span class="text-beli">Jalan Ir. Soekarno 5B</span></i> <br>
-                                                    <i class="icon-buka bi bi-telephone-fill"><span class="text-beli">(031) 12345678</span></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="foto-beli">
-                                            <img src="{{ asset('img/logo-halal.png') }}" width= "301px"
-                                            height="285.65px">
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-3">
-                                        <div class="nama-beli">
-                                            <div class="teks-nama">
-                                                <h2>Toko Bolu Jago</h2>
-                                                <h5 id="buka" class=""><span class="text-success fw-bold">BUKA</span> <span id="jam-buka">(07.00-10.00)</span></h5>
-                                                <div class="info-beli">
-                                                    <i class="icon-buka bi bi-geo-alt-fill"><span class="text-beli">Jalan Ir. Soekarno 5B</span></i> <br>
-                                                    <i class="icon-buka bi bi-telephone-fill"><span class="text-beli">(031) 12345678</span></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="foto-beli">
-                                            <img src="{{ asset('img/logo-halal.png') }}" width= "301px"
-                                            height="285.65px">
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-3">
-                                        <div class="nama-beli">
-                                            <div class="teks-nama">
-                                                <h2>Toko Bolu Jago</h2>
-                                                <h5 id="buka" class=""><span class="text-success fw-bold">BUKA</span> <span id="jam-buka">(07.00-10.00)</span></h5>
-                                                <div class="info-beli">
-                                                    <i class="icon-buka bi bi-geo-alt-fill"><span class="text-beli">Jalan Ir. Soekarno 5B</span></i> <br>
-                                                    <i class="icon-buka bi bi-telephone-fill"><span class="text-beli">(031) 12345678</span></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="foto-beli">
-                                            <img src="{{ asset('img/logo-halal.png') }}" width= "301px"
-                                            height="285.65px">
-                                        </div>
-                                    </div>
-
-
-                                </div>
-                            </div>
-
-                    </div>
-                </div>
-            </div>
-            {{-- <a href="#" class="link-dark text-end col-12">Lebih Banyak >>></a> --}}
-        </div>
-    </div>
-</section>
-@if (count($harga) > 0)
-<section style="margin-bottom:200px">
-    <div class="container">
-        <h1 class="fw-bold">Rekomendasi Oleh-Oleh dengan harga di bawah Rp40.000</h1>
-            <div class="row">
-                <div class="col-8"></div>
-                <div class="col-4 text-end">
-                <a class="btn btn-dark text-light mb-3 mr-1 btn-sm"
-                    data-bs-target="#carouselExampleIndicators3" role="button" data-bs-slide="prev">
-                    <i class="bi bi-arrow-left"></i>
-                </a>
-                <a class="btn btn-dark text-light mb-3 btn-sm" data-bs-target="#carouselExampleIndicators3"
-                    role="button" data-bs-slide="next">
-                    <i class="bi bi-arrow-right"></i>
-                </a>
-                </div>
-                <div class="col-12">
-                    <div id="carouselExampleIndicators3" class="carousel slide" data-ride="carousel">
-                        <div class="carousel">
-                            <div class="carousel-item active">
-                                <div class="row">
-                                    @foreach ($harga->slice(0, 4) as $rek)
-                                    <div class="col-sm-3" onclick="location.href='/varianoleh/{{$rek->idoleh}}'">
-                                        <div class="nama-beli">
-                                            <div class="teks-nama">
-                                                <h2>{{ $rek->namaoleh }}</h2>
-                                                <h5 id="buka" class=""><span class="text-danger fw-bold">Rp</span> <span id="jam-buka">{{ number_format($rek->hargamin) }}</span></h5>
-                                                <div class="info-beli">
-                                                    <span class="text-beli" style="font-size: 1.2rem">Pasar Atom</span> <br>
-                                                    <i class="fas fa-map-marker-alt"> <span class="text-beli" style="font-size: 0.8rem">Jalan Jemursari Raya IV</span></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="foto-beli">
-                                            <img src="{{ $rek->gambarutama }}" width= "301px"
-                                            height="285.65px" style="border-radius: 20px">
-                                        </div>
-                                    </div>
-                                    @endforeach
-                                </div>
-                            </div>
-                        @if (count($harga) > 4)
-                        <div class="carousel-item">
-                            <div class="row">
-                                @foreach ($harga->slice(4, 4) as $rek)
-                                <div class="col-sm-3" onclick="location.href='/varianoleh/{{$rek->idoleh}}'">
-                                    <div class="nama-beli">
-                                        <div class="teks-nama">
-                                            <h2>{{ $rek->namaoleh }}</h2>
-                                            <h5 id="buka" class=""><span class="text-danger fw-bold">Rp</span> <span id="jam-buka">{{ number_format($rek->hargamin) }}</span></h5>
-                                            <div class="info-beli">
-                                                <span class="text-beli" style="font-size: 1.2rem">Pasar Atom</span> <br>
-                                                <i class="fas fa-map-marker-alt"> <span class="text-beli" style="font-size: 0.8rem">Jalan Jemursari Raya IV</span></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="foto-beli">
-                                        <img src="{{ $rek->gambarutama }}" width= "301px"
-                                        height="285.65px" style="border-radius: 20px">
-                                    </div>
-                                </div>
-                                @endforeach
-                            </div>
-                        </div>
-                        @endif
-                        @if (count($harga) > 8)
-                        <div class="carousel-item">
-                            <div class="row">
-                                @foreach ($harga->slice(8, 4) as $rek)
-                                <div class="col-sm-3" onclick="location.href='/varianoleh/{{$rek->idoleh}}'">
-                                    <div class="nama-beli">
-                                        <div class="teks-nama">
-                                            <h2>{{ $rek->namaoleh }}</h2>
-                                            <h5 id="buka" class=""><span class="text-danger fw-bold">Rp</span> <span id="jam-buka">{{ number_format($rek->hargamin) }}</span></h5>
-                                            <div class="info-beli">
-                                                <span class="text-beli" style="font-size: 1.2rem">Pasar Atom</span> <br>
-                                                <i class="fas fa-map-marker-alt"> <span class="text-beli" style="font-size: 0.8rem">Jalan Jemursari Raya IV</span></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="foto-beli">
-                                        <img src="{{ $rek->gambarutama }}" width= "301px"
-                                        height="285.65px" style="border-radius: 20px">
-                                    </div>
-                                </div>
-                                @endforeach
-                            </div>
-                        </div>
-                        @endif
-                        </div>
-                    </div>
-                </div>
-            </div>
-    </div>
-</section>
 @endif
 @endsection

@@ -41,10 +41,10 @@ Route::get('mitra', [MitraController::class, 'mitra']);
 Route::get('search', [SearchController::class, 'search']);
 Route::get('/favorit/hapus/{idbookmark}',[FavoriteController::class,'hapusfavorit']);
 
-Route::get('mitras/{id}', [MitraController::class, 'mitras']);
+Route::get('/dashboard/{id}', [ProdukController::class, 'dashboard']);
 
 Route::get('/daftarproduk', function () {return view('mitra.daftarproduk');});
-Route::get('/daftarproduk/tambahproduk', function () {return view('mitra.tambahproduk');});
+Route::get('/tambahproduk', function () {return view('mitra.tambahproduk');});
 Route::get('/updateprofil', function () {return view('mitra.updateprofil');});
 
 Route::get('/toko/{idtoko}', [TokoController::class, 'show']);
