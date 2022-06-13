@@ -62,6 +62,7 @@ Route::get('/edit/tambahproduk/{id}', [ProdukController::class, 'tambahproduk'])
 Route::post('/tambah', [ProdukController::class, 'tambah']);
 
 Route::get('oleh/{idoleh}', [OlehController::class, 'detailoleh']);
+Route::get('/produk/hapus/{id}', [ProdukController::class, 'hapus']);
 
 
 

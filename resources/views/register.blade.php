@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
     <link href="{{ url('css/jquery.flexdatalist.min.css') }}" rel="stylesheet" type="text/css">
+    <link rel="icon" href="https://media.discordapp.net/attachments/950320671496482847/981772771765915658/OASIS_1_1.png">
 </head>
 
 <body>

@@ -50,6 +50,8 @@ class MitraController extends Controller
             'kontak_mitra' => $request->kontak,
             'website_mitra' => $request->web,
             'sosmed_mitra' => $request->ig,
+            'jam_buka'=>$request->jam_buka,
+            'jam_tutup'=>$request->jam_tutup
         ]);
 
         if(!empty($request->input('fasilitas_mitra'))){

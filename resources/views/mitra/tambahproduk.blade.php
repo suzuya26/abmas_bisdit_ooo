@@ -40,7 +40,8 @@
                             <div class="card-body">
                                 <div class="form-group">
                                     <label for="formFileMultiple" class="form-label">Gambar Produk</label>
-                                    <input class="form-control" name="file" type="file" id="formFileMultiple">
+                                    <img src="" alt="" class="img-preview" style="width: 400px;height:400px">
+                                    <input class="form-control" name="file" type="file" id="image" onchange="previewImage()">
                                 </div>
                                 <div class="form-group">
                                     <label for="inputName">Nama Produk</label>
@@ -49,10 +50,6 @@
                                 <div class="form-group">
                                     <label for="inputName">Harga Produk</label>
                                     <input type="number" name="harga_produk" placeholder="Rp." class="form-control">
-                                </div>
-                                <div class="form-group">
-                                    <label for="inputName">Stok</label>
-                                    <input type="number" name="stok_produk" class="form-control">
                                 </div>
                                 <div class="form-group">
                                     <label for="inputStatus">Kemasan</label>
@@ -79,5 +76,19 @@
         <!-- /.row (main row) -->
         </div><!-- /.container-fluid -->
     </section>
+    <script>
+        function previewImage()
+        {
+            const image = document.querySelector('#image');
+            const imgPreview = document.querySelector('.img-preview');
+            imgPreview.style.display = 'block';
+            const oFReader = new FileReader();
+            oFReader.readAsDataURL(image.files[0]);
+
+            oFReader.onload = function(oFREvent){
+                imgPreview.src = oFREvent.target.result;
+            }
+        }
+    </script>
     <!-- /.content -->
 @endsection

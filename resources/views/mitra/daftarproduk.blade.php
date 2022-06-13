@@ -47,7 +47,7 @@
                 <tr>
                   <th>Produk</th>
                   <th>Harga</th>
-                  <th>Stok</th>
+                  <th>Action</th>
                 </tr>
               </thead>
               @foreach ($mitra_produk as $m)
@@ -58,7 +58,7 @@
                     {{ $m->nama_produk_mitra }}
                   </td>
                   <td>Rp.{{ $m->harga_produk_mitra }}</td>
-                  <td>{{ $m->stok_produk_mitra }}</td>
+                  <td><a href="" class="btn btn-warning">Edit</a> | <a href="/produk/hapus/{{ $m->id_produk_mitra }}" class="btn btn-danger">Hapus</a></td>
                 </tr>
               </tbody>
               @endforeach

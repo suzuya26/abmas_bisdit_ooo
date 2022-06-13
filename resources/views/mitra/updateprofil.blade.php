@@ -151,7 +151,7 @@ h1 {
                                                                 </button>
                                                             </div>
                                                         </div>
-                            
+
                                                         <div class="card-body">
                                                             <div class="form-group">
                                                                 <label for="inputName" class="form-label">Nama Toko</label>
@@ -166,14 +166,14 @@ h1 {
                                                                 <div class="row">
                                                                     <div class="col-2">
                                                                         <label for="inputName" style="font-size: 0.8rem">Jam Buka</label>
-                                                                        <input type="text" name="alamat" value="{{ $toko_mitra->jam_buka}}" class="form-control">
+                                                                        <input type="text" name="jam_buka" value="{{ $toko_mitra->jam_buka}}" class="form-control">
                                                                     </div>
                                                                     <div class="col-2">
                                                                         <label for="inputName" style="font-size: 0.8rem">Jam Tutup</label>
-                                                                        <input type="text" name="alamat" value="{{ $toko_mitra->jam_tutup}}" class="form-control">
+                                                                        <input type="text" name="jam_tutup" value="{{ $toko_mitra->jam_tutup}}" class="form-control">
                                                                     </div>
                                                                 </div>
-                            
+
                                                             </div>
                                                             <div class="form-group">
                                                                 <label for="inputName">Fasilitas Toko</label> <br>
@@ -187,7 +187,7 @@ h1 {
                                                                         <label><input type="checkbox" name="fasilitas_mitra[]" {{in_array('Wifi Gratis', $checkbox) ? 'checked' : ''}} value="wifi"> Wifi Gratis</label> <br>
                                                                         <label><input type="checkbox" name="fasilitas_mitra[]" {{in_array('Pembayaran Nontunai', $checkbox) ? 'checked' : ''}} value="Pembayaran Nontunai"> Pembayaran Nontunai</label>
                                                                     </div>
-                                                                </div>         
+                                                                </div>
                                                             </div>
                                                             <div class="form-group">
                                                                 <label for="inputName">Sekitar Toko</label> <br>
@@ -276,7 +276,7 @@ h1 {
                                                     </div>
                                                     <!-- /.card -->
                                                 </div>
-                            
+
                                             </div>
                                             <div class="row ">
                                                 <div class="col-12 mb-3">
@@ -311,8 +311,8 @@ h1 {
                                                                     @else
                                                                     <img src="" alt="" class="img-preview img-fluid col-sm-6">
                                                                     @endif
-                                                                    <img src="" alt=""></div> <br>
-                                                                    
+                                                                    <img src="" alt="">
+                                                                </div> <br>
                                                                 <label for="formFile" class="form-label">Pilih Gambar</label>
                                                                 <input class="form-control" class="image" name="image" type="file" id="image" onchange="previewImage()">
                                                                 @error('image')
@@ -328,7 +328,7 @@ h1 {
                                                     </div>
                                                 </div>
                                             </div>
-                                        </form>   
+                                        </form>
                                     </div>
                                 </div>
                                 <div class="tab-pane fade" id="gambar-2" role="tabpanel" aria-labelledby="profile-tab">
@@ -356,7 +356,7 @@ h1 {
                                                                     <img src="" alt="" class="img-preview img-fluid col-sm-6">
                                                                     @endif
                                                                     <img src="" alt=""></div> <br>
-                                                                    
+
                                                                 <label for="formFile" class="form-label">Pilih Gambar</label>
                                                                 <input class="form-control" name="image" type="file"  id="image2" onchange="previewImage2()">
                                                                 @error('image')
@@ -372,7 +372,7 @@ h1 {
                                                     </div>
                                                 </div>
                                             </div>
-                                        </form>   
+                                        </form>
                                     </div>
                                 </div>
                                 <div class="tab-pane fade" id="gambar-3" role="tabpanel" aria-labelledby="profile-tab">
@@ -400,7 +400,7 @@ h1 {
                                                                     <img src="" alt="" class="img-preview img-fluid col-sm-6">
                                                                     @endif
                                                                     <img src="" alt=""></div> <br>
-                                                                    
+
                                                                 <label for="formFile" class="form-label">Pilih Gambar</label>
                                                                 <input class="form-control" name="image" type="file" id="image3" onchange="previewImage3()">
                                                                 @error('image')
@@ -416,7 +416,7 @@ h1 {
                                                     </div>
                                                 </div>
                                             </div>
-                                        </form>   
+                                        </form>
                                     </div>
                                 </div>
                                 <div class="tab-pane fade" id="gambar-4" role="tabpanel" aria-labelledby="profile-tab">
@@ -444,7 +444,7 @@ h1 {
                                                                     <img src="" alt="" class="img-preview img-fluid col-sm-6">
                                                                     @endif
                                                                     <img src="" alt=""></div> <br>
-                                                                    
+
                                                                 <label for="formFile" class="form-label">Pilih Gambar</label>
                                                                 <input class="form-control" name="image" type="file" id="image4" onchange="previewImage4()">
                                                                 @error('image')
@@ -460,7 +460,7 @@ h1 {
                                                     </div>
                                                 </div>
                                             </div>
-                                        </form>   
+                                        </form>
                                     </div>
                                 </div>
                                 <div class="tab-pane fade" id="gambar-5" role="tabpanel" aria-labelledby="profile-tab">
@@ -488,7 +488,7 @@ h1 {
                                                                     <img src="" alt="" class="img-preview img-fluid col-sm-6">
                                                                     @endif
                                                                     <img src="" alt=""></div> <br>
-                                                                    
+
                                                                 <label for="formFile" class="form-label">Pilih Gambar</label>
                                                                 <input class="form-control" name="image" type="file" id="image5" onchange="previewImage5()">
                                                                 @error('image')
@@ -504,17 +504,17 @@ h1 {
                                                     </div>
                                                 </div>
                                             </div>
-                                        </form>   
+                                        </form>
                                     </div>
                                 </div>
-                                
-                               
+
+
                             </div>
                         </div>
                     </div>
-                
-            
-        
+
+
+
     </section>
     <!-- /.content -->
     <script>

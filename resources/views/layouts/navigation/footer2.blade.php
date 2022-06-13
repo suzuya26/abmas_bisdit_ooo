@@ -3,7 +3,7 @@
             color: white;
         }
     </style>
-    <footer class="py-3 my-4 mt-auto text-center text-white" style="background: rgb(243, 106, 6); color:white">
+    <footer class="py-3 my-4 mt-auto text-center text-white" style="background: #C4C4C4; color:white">
       <ul class="nav justify-content-center pb-2">
         <li class="nav-item text-white"><a href="#" class="nav-link px-2 text-white ">Register</a></li>
         <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Forum</a></li>

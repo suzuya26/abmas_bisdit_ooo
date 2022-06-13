@@ -25,7 +25,6 @@ class ProdukController extends Controller
             'harga_produk_mitra' => $request->harga_produk,
             'kemasan_produk_mitra' => $request->kemasan_produk,
             'idmitra' => Auth::user()->mitra_id,
-            'stok_produk_mitra'=>$request->stok_produk,
             'idoleh' => 1,
             'gambar_produkMitra' => $nama_file
         ]);
@@ -45,6 +44,10 @@ class ProdukController extends Controller
         $mitra_produk = DB::table('mitra_produk')->where('idmitra', $id)->get();
         $toko_mitra = DB::table('toko_mitra')->where('idmitra', $id)->first();
         return view('mitra.dashboard', compact('mitra_produk', 'toko_mitra'));
+    }
+    public function hapus($id){
+        DB::table('mitra_produk')->where('id_produk_mitra', $id)->delete();
+        return redirect('/daftarproduk/'.Auth::user()->mitra_id);
     }
 
 }
