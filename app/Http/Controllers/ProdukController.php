@@ -36,6 +36,10 @@ class ProdukController extends Controller
         $mitra_produk = DB::table('mitra_produk')->where('id_produk_mitra', $id)->first();
         return view('mitra.tambahproduk', compact('mitra_produk'));
     }
+    public function editproduk($id){
+        $mitra_produk = DB::table('mitra_produk')->where('id_produk_mitra', $id)->get();
+        return view('mitra.editproduk', compact('mitra_produk'));
+    }
     public function daftarproduk($id){
         $mitra_produk = DB::table('mitra_produk')->where('idmitra', $id)->get();
         return view('mitra.daftarproduk', compact('mitra_produk'));
@@ -48,6 +52,28 @@ class ProdukController extends Controller
     public function hapus($id){
         DB::table('mitra_produk')->where('id_produk_mitra', $id)->delete();
         return redirect('/daftarproduk/'.Auth::user()->mitra_id);
+    }
+    public function update(Request $request)
+        {
+    $this->validate($request, [
+        'file' => 'required|file|image|mimes:jpeg,png,jpg|max:2048'
+    ]);
+    // menyimpan data file yang diupload ke variabel $file
+    $file = $request->file('file');
+    $nama_file = time()."_".$file->getClientOriginalName();
+   // isi dengan nama folder tempat kemana file diupload
+    $tujuan_upload = 'data_file';
+    $file->move($tujuan_upload,$nama_file);
+	// update data pegawai
+	DB::table('mitra_produk')->where('id_produk_mitra', $request->id_produk_mitra)->update([
+		    'nama_produk_mitra' => $request->nama_produk,
+            'harga_produk_mitra' => $request->harga_produk,
+            'kemasan_produk_mitra' => $request->kemasan_produk,
+            'idmitra' => Auth::user()->mitra_id,
+            'gambar_produkMitra' => $nama_file
+	]);
+	// alihkan halaman ke halaman pegawai
+	return redirect('/daftarproduk/'.Auth::user()->mitra_id);
     }
 
 }
