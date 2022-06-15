@@ -19,6 +19,7 @@ class CreateMitraProduk extends Migration
             $table->mediumText('gambar_produkMitra');
             $table->integer('harga_produk_mitra');
             $table->string('kemasan_produk_mitra');
+            $table->integer('stok_produk_mitra');
             $table->bigInteger('idmitra')->unsigned();
             $table->foreign('idmitra')->references('idmitra')->on('toko_mitra');
             $table->bigInteger('idoleh')->unsigned();
