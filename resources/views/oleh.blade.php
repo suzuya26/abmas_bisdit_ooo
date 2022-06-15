@@ -602,7 +602,7 @@
                                                         </div>
                                                         <div class="button-selengkapnya">
                                                             <label id="selengkapnya" class="button-oleh text-beli"><a
-                                                                    href="">Selengkapnya</a></label>
+                                                                    href="/toko/{{$t->idtempatbeli}}">Selengkapnya</a></label>
                                                         </div>
                                                     </div>
                                                 </div>

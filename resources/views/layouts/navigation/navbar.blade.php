@@ -202,7 +202,7 @@ width: 185px;
                     </form>
                 </li>
                 <li>
-                    <a class="nav-link text-dark" href="/mitra">Mitra</a>
+                    <a class="nav-link text-dark" href="/profil/{{Auth::user()->mitra_id}}">Mitra</a>
                 </li>
             </ul>
         </div>
