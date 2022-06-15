@@ -252,16 +252,18 @@ transform: rotate(37.85deg);
          <h1 class="fw-bold">Rekomendasi Oleh-oleh Khas {{$kota}}</h1>
          <div class="row">
              <div class="col-8"></div>
+             @if (count($olehKeluarga)>4)
              <div class="col-4 text-end">
-                 <a class="btn btn-dark text-light mb-3 mr-1 btn-sm"
-                     data-bs-target="#carouselExampleIndicators2" role="button" data-bs-slide="prev">
-                     <i class="bi bi-arrow-left"></i>
-                 </a>
-                 <a class="btn btn-dark text-light mb-3 btn-sm" data-bs-target="#carouselExampleIndicators2"
-                     role="button" data-bs-slide="next">
-                     <i class="bi bi-arrow-right"></i>
-                 </a>
-             </div>
+                <a class="btn btn-dark text-light mb-3 mr-1 btn-sm"
+                    data-bs-target="#carouselExampleIndicators2" role="button" data-bs-slide="prev">
+                    <i class="bi bi-arrow-left"></i>
+                </a>
+                <a class="btn btn-dark text-light mb-3 btn-sm" data-bs-target="#carouselExampleIndicators2"
+                    role="button" data-bs-slide="next">
+                    <i class="bi bi-arrow-right"></i>
+                </a>
+            </div>
+             @endif
              <div class="col-12">
                  <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
 
