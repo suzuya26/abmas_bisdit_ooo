@@ -102,7 +102,7 @@
             <img src="{{ asset('admintemplate/') }}/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
           </div>
           <div class="info">
-            <a href="/profil" class="d-block">{{Auth::user()->mitra_id}}</a>
+            <a href="/profil/{{Auth::user()->mitra_id}}" class="d-block">{{Auth::user()->name}}</a>
           </div>
         </div>
 
