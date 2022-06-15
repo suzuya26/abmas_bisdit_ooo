@@ -20,9 +20,6 @@ class CreateFavoritTable extends Migration
             $table->bigInteger('id')->unsigned();
             $table->foreign('id')->references('id')->on('users');
         });
-        Schema::table('varianoleh', function (Blueprint $table) {
-           $table->bigInteger('favorit_count')->nullable();
-        });
     }
 
     /**

@@ -19,8 +19,16 @@ class CreateMitraTable extends Migration
             $table->string('kontak',25);
             $table->bigInteger('idlokasi')->unsigned();
             $table->foreign('idlokasi')->references('idlokasi')->on('lokasi');
-            $table->mediumText('logo');
+            $table->mediumText('foto_mitra');
             $table->text('deskripsimitra');
+            $table->string('cicip');
+            $table->mediumText('gmap_mitra');
+            $table->string('alamat_mitra');
+            $table->string('jam_buka_mitra');
+            $table->string('jam_tutup_mitra');
+            $table->text('link');
+            $table->mediumInteger('galeri_toko');
+            $table->mediumText('galeri_toko_caption');
             $table->timestamps();
         });
     }

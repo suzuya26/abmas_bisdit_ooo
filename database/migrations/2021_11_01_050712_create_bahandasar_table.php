@@ -18,6 +18,7 @@ class CreateBahandasarTable extends Migration
             $table->string('namabahan',50);
             $table->mediumText('gambarbahan');
             $table->text('pantangan')->nullable();
+            $table->text('manfaat')->nullable();
             $table->timestamps();
         });
     }

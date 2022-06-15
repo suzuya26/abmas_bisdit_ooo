@@ -14,11 +14,6 @@ class UbahKolomKolom extends Migration
     public function up()
     {
         //
-        Schema::table('varianoleh', function (Blueprint $table) {
-            $table->integer('hargamin')->nullable();
-            $table->integer('hargamax')->nullable();
-        });
-
         Schema::table('tempatbeli', function (Blueprint $table) {
             $table->text('best_seller')->nullable();
             $table->string('satuan')->nullable();

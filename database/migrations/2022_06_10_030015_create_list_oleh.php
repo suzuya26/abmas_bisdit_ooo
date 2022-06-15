@@ -20,9 +20,6 @@ class CreateListOleh extends Migration
             $table->bigInteger('id')->unsigned();
             $table->foreign('id')->references('id')->on('users')->onDelete('cascade');
         });
-        Schema::table('varianoleh', function (Blueprint $table) {
-            $table->bigInteger('list_count')->nullable();
-         });
     }
 
     /**

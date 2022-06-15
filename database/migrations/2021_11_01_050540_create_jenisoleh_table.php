@@ -13,11 +13,11 @@ class CreateTipeolehTable extends Migration
      */
     public function up()
     {
-        Schema::create('tipeoleh', function (Blueprint $table) {
-            $table->id('idtipe');
-            $table->string('namatipe',25);
-            $table->text('deskripsitipe');
-            $table->mediumText('gambartipe',255);
+        Schema::create('jenisoleh', function (Blueprint $table) {
+            $table->id('idjenis');
+            $table->string('namajenis',25);
+            $table->text('deskripsijenis');
+            $table->mediumText('gambarjenis',255);
             $table->timestamps();
         });
     }

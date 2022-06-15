@@ -16,7 +16,7 @@ class CreateMitraProduk extends Migration
         Schema::create('mitra_produk', function (Blueprint $table) {
             $table->id('id_produk_mitra');
             $table->string('nama_produk_mitra');
-            $table->mediumText('gambar_produk_mitra');
+            $table->mediumText('gambar_produkMitra');
             $table->integer('harga_produk_mitra');
             $table->string('kemasan_produk_mitra');
             $table->bigInteger('idmitra')->unsigned();
