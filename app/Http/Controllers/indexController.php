@@ -90,6 +90,21 @@ class IndexController extends Controller
             ->limit(12)
             ->get();
 
+        $olehSekitar = DB::table('varianoleh')
+            ->join('lokasi', 'lokasi.idlokasi', '=', 'varianoleh.idlokasi')
+            ->where([
+                ['kota', '=', $kota],
+
+            ])
+            ->orWhere([
+                ['provinsi', '=', $provinsi],
+
+            ])
+            ->orderBy('favorit_count', 'desc')
+
+            ->limit(12)
+            ->get();
+
         $harga = DB::table('varianoleh')
             ->join('lokasi', 'lokasi.idlokasi', '=', 'varianoleh.idlokasi')
             ->where([

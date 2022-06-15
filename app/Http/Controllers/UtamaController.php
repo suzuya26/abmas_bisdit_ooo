@@ -62,15 +62,10 @@ class UtamaController extends Controller
             ->join('lokasi', 'lokasi.idlokasi', '=', 'varianoleh.idlokasi')
             ->where([
                 ['kota', '=', $kota],
-                ['namacocok', 'like', '%Group%'],
-                // ['favorit_count', '>', 0]
+
             ])
             ->orderBy('favorit_count', 'desc')
-            ->orWhere([
-                ['provinsi', '=', $provinsi],
-                ['namacocok', 'like', '%Group%'],
-                // ['favorit_count', '>', 0]
-            ])
+
             ->limit(12)
             ->get();
 
@@ -78,11 +73,26 @@ class UtamaController extends Controller
             ->join('lokasi', 'lokasi.idlokasi', '=', 'varianoleh.idlokasi')
             ->where([
                 ['kota', '=', $kota],
-                ['favorit_count', '>', 0]
+                ['rekomendasioleh_count', '>', 0]
             ])
             ->orWhere([
                 ['provinsi', '=', $provinsi],
-                ['favorit_count', '>', 0]
+                ['rekomendasioleh_count', '>', 0]
+            ])
+            ->orderBy('rekomendasioleh_count', 'desc')
+
+            ->limit(12)
+            ->get();
+
+        $olehSekitar = DB::table('varianoleh')
+            ->join('lokasi', 'lokasi.idlokasi', '=', 'varianoleh.idlokasi')
+            ->where([
+                ['kota', '=', $kota],
+
+            ])
+            ->orWhere([
+                ['provinsi', '=', $provinsi],
+
             ])
             ->orderBy('favorit_count', 'desc')
 
