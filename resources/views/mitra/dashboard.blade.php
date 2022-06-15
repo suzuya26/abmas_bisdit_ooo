@@ -315,7 +315,7 @@
                         <div class="card-body">
                             <h5 class="card-title">{{ $m->nama_produk_mitra }}</h5>
                             <br>
-                            <h6 class="card-title"> Rp{{ $m->harga_produk_mitra }}</h6>
+                            <h6 class="card-title"> Rp.{{ $m->harga_produk_mitra }}</h6>
                             {{-- <br>
                             <div class="card-footer bg-transparent">
                                 Rp{{ $m->harga_produk_mitra }}

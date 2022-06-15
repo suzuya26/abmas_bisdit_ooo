@@ -54,7 +54,7 @@
               <tbody>
                 <tr>
                   <td>
-                    <img src="{{ url('/data_file/'.$m->gambar_produkMitra) }}" alt="Product 1" class="img-circle img-size-32 mr-2">
+                    <img src="{{ url('/data_file/'.$m->gambar_produkMitra) }}" alt="Product 1" class="img-size-32 mr-2">
                     {{ $m->nama_produk_mitra }}
                   </td>
                   <td>Rp.{{ $m->harga_produk_mitra }}</td>
