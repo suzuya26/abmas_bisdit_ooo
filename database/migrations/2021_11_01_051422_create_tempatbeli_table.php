@@ -24,6 +24,18 @@ class CreateTempatbeliTable extends Migration
             $table->foreign('idlokasi')->references('idlokasi')->on('lokasi');
             $table->bigInteger('idmitra')->nullable()->unsigned();
             $table->foreign('idmitra')->references('idmitra')->on('mitra');
+            $table->text('bundle')->nullable();
+            $table->string('kemasan')->nullable();
+            $table->text('alamat')->nullable();
+            $table->text('link')->nullable();
+            $table->mediumText('google_map')->nullable();
+            $table->string('jambuka')->nullable();
+            $table->string('rentang_harga')->nullable();
+            $table->text('best_seller')->nullable();
+            $table->string('satuan')->nullable();
+            $table->tinyInteger('bpom')->nullable();
+            $table->string('cara_bayar')->nullable();
+            $table->string('sosmed')->nullable();
             $table->timestamps();
         });
     }

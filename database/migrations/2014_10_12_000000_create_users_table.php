@@ -19,9 +19,12 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->string('photo');
+            $table->mediumText('photo');
             $table->rememberToken();
             $table->timestamps();
+            $table->string('pernah_wisata',255);
+            $table->integer('peran');
+            $table->bigInteger('mitra_id');
         });
     }
 

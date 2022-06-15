@@ -761,7 +761,7 @@
                                         $kadarluarsa = preg_split('/---/', $v->kadarluarsa);
                                     @endphp
                                     @php
-                                        $carapenyimpanan = str_replace('Bisa disimpan di ', '', $v->carapenyimpanan);
+                                        $carapenyimpanan = str_replace('zddfas', '', $v->carapenyimpanan);
                                     @endphp
                                     @php
                                         $carapenyajian = str_replace(' menjadi beberapa bagian,', ' dan ', $v->carapenyajian);

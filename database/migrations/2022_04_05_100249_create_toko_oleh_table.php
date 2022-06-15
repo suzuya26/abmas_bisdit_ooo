@@ -18,12 +18,21 @@ class CreateTokoOlehTable extends Migration
             $table->string('nama_toko');
             $table->mediumText('gambar_utama');
             $table->mediumText('map_toko');
-            $table->string('jam_operasional');
             $table->text('fasilitas_toko');
-            $table->text('sekitar_toko');
+            $table->text('jenis_sekitar');
             $table->text('kontak_toko');
             $table->longText('galeri_toko');
-            $table->string('galeri_toko_caption');
+            $table->mediumText('galeri_toko_caption');
+            $table->string('jam_buka');
+            $table->string('jam_tutup');
+            $table->bigInteger('rekomendasi_count')->nullable();
+            $table->bigInteger('list_count')->nullable();
+            $table->integer('idlokasi');
+            $table->foreign('idlokasi')->references('idlokasi')->on('lokasi');
+            $table->string('nama_lokasi');
+            $table->string('sosmed_toko');
+            $table->string('website_toko');
+            $table->string('alamat_toko');
             $table->timestamps();
         });
 

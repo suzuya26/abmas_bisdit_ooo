@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateVarianJenisTable extends Migration
+class CreateVarianjenisTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateVarianJenisTable extends Migration
      */
     public function up()
     {
-        Schema::create('varian_jenis', function (Blueprint $table) {
+        Schema::create('varianjenis', function (Blueprint $table) {
             $table->id('id_varian');
             $table->string('namavarian',25);
             $table->text('deskripsivarian');
@@ -31,6 +31,6 @@ class CreateVarianJenisTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('varian_jenis');
+        Schema::dropIfExists('varianjenis');
     }
 }

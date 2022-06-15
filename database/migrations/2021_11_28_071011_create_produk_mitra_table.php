@@ -19,10 +19,11 @@ class CreateProdukMitraTable extends Migration
             $table->text('gambar_produk_mitra');
             $table->string('harga_produk_mitra');
             $table->bigInteger('status_produkmitra');
-            $table->bigInteger('idoleh')->unsigned();
+            $table->bigInteger('idoleh')->unsigned()->nullable();
             $table->foreign('idoleh')->references('idoleh')->on('varianoleh');
             $table->bigInteger('idmitra')->unsigned();
             $table->foreign('idmitra')->references('idmitra')->on('mitra');
+            $table->tinyInteger('best_seller')->nullable();
         });
     }
 

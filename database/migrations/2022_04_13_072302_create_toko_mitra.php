@@ -19,15 +19,22 @@ class CreateTokoMitra extends Migration
             $table->string('alamat_mitra');
             $table->mediumText('gambar_utama')->nullable();
             $table->mediumText('map_mitra')->nullable();
-            $table->string('jam_operasional')->nullable();
             $table->text('fasilitas_mitra')->nullable();
             $table->text('sekitar_mitra')->nullable();
             $table->text('kontak_mitra')->nullable();
             $table->text('website_mitra')->nullable();
             $table->text('sosmed_mitra')->nullable();
             $table->longText('galeri_mitra')->nullable();
-            $table->string('galeri_mitra_caption')->nullable();
+            $table->mediumText('galeri_mitra_caption');
+            $table->string('jam_buka');
+            $table->string('jam_tutup');
+            $table->string('gambar_1')->nullable();
+            $table->string('gambar_2')->nullable();
+            $table->string('gambar_3')->nullable();
+            $table->string('gambar_4')->nullable();
+            $table->string('gambar_5')->nullable();
             $table->timestamps();
+
         });
     }
 
