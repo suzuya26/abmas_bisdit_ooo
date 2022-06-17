@@ -7,7 +7,7 @@
 
     <title>Oasis Oleh-Oleh</title>
     <link rel="icon" href="https://media.discordapp.net/attachments/950320671496482847/981772771765915658/OASIS_1_1.png"
-      
+
         type="image/x-icon">
 
     {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet"> --}}

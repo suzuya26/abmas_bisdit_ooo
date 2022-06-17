@@ -87,22 +87,27 @@ filter: drop-shadow(40px 54px 64px rgba(0, 0, 0, 0.25));
 transform: rotate(37.85deg);
 
     }
+    .caro {
+        align-items: center;
+        justify-content: center;
+    }
+
     .nama-beli {
-            margin:50px 50px 50px 15px;
-            width: 280px;
-            height: 400px;
-            left: 16px;
-            top: 32px;
             background: #DEECF3;
             /* Shadow01 */
             box-shadow: 0px 24px 48px rgba(0, 24, 52, 0.080899);
-            border-radius: 40px;
+            border-radius: 0px 0px 40px 40px;
+            height: 145px;
+            width: 280px;
+            margin-left: 10.5px;
+            margin-top: -30px;
+            padding-top: 20px;
 
         }
         .teks-nama {
             vertical-align: bottom;
             text-align: left;
-            padding: 250px 25px 0px 30px;
+            padding: 20px 25px 0px 30px;
         }
         .teks-nama h2 {
             font-family: 'Poppins';
@@ -112,13 +117,11 @@ transform: rotate(37.85deg);
             line-height: 32px;
         }
         .foto-beli {
-            margin:-500px -50px 0px 0px;
             width: 301px;
             height: 285.65px;
-            left: 5px;
-            top: 32px;
             background: #9B9B9B;
             border-radius: 40px;
+            display: block;
         }
 
 </style>
@@ -172,19 +175,18 @@ transform: rotate(37.85deg);
                          <div class="carousel-item active">
                              <div class="row">
                                  @foreach ($olehPopuler->slice(0,4) as $rek)
-                                 <div class="col-sm-3" onclick="location.href='/oleh/{{$rek->idoleh}}'">
+                                 <div class="caro col-sm-3" onclick="location.href='/oleh/{{$rek->idoleh}}'">
+                                    <div class="foto-beli">
+                                        <img src="{{ $rek->gambarutama }}" width= "301px"
+                                        height="285.65px" style="border-radius: 20px">
+                                    </div>
                                     <div class="nama-beli">
                                         <div class="teks-nama">
                                             <h2>{{ $rek->namaoleh }}</h2>
-
                                             <div class="info-beli" style="font-size: 25px">
                                                 <i class="fas fa-thumbs-up"><span class="text-beli"><span class="text-danger"> {{$rek->rekomendasioleh_count}}</span> Users</span></i> <br>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="foto-beli">
-                                        <img src="{{ $rek->gambarutama }}" width= "301px"
-                                        height="285.65px" style="border-radius: 20px">
                                     </div>
                                 </div>
                                  @endforeach
@@ -195,20 +197,19 @@ transform: rotate(37.85deg);
                                      <div class="row">
                                          @foreach ($olehPopuler->slice(4, 4) as $v)
                                          <div class="col-sm-3" onclick="location.href='/oleh/{{$rek->idoleh}}'">
-                                             <div class="nama-beli">
-                                                 <div class="teks-nama">
-                                                     <h2>{{$v->namaoleh}}</h2>
-                                                     <h5 id="buka" class=""><span class="text-danger fw-bold">Rp</span> <span id="jam-buka">{{ $v->hargamin }} - {{ $v->hargamax }}</span></h5>
-                                                     <div class="info-beli" style="font-size: 25px">
-                                                         <i class="fas fa-thumbs-up"><span class="text-beli"><span class="text-danger"> {{$v->rekomendasioleh_count}}</span> Users</span></i> <br>
-                                                     </div>
-                                                 </div>
-                                             </div>
-                                             <div class="foto-beli">
-                                                 <img src="{{ $v->gambarutama }}" width= "301px"
-                                                 height="285.65px">
-                                             </div>
-                                         </div>
+                                            <div class="foto-beli">
+                                                <img src="{{ $rek->gambarutama }}" width= "301px"
+                                                height="285.65px" style="border-radius: 20px">
+                                            </div>
+                                            <div class="nama-beli">
+                                                <div class="teks-nama">
+                                                    <h2>{{ $rek->namaoleh }}</h2>
+                                                    <div class="info-beli" style="font-size: 25px">
+                                                        <i class="fas fa-thumbs-up"><span class="text-beli"><span class="text-danger"> {{$rek->rekomendasioleh_count}}</span> Users</span></i> <br>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                          @endforeach
                                      </div>
                                  </div>
@@ -218,20 +219,20 @@ transform: rotate(37.85deg);
                                      <div class="row">
                                          @foreach ($olehPopuler->slice(8, 4) as $v)
                                          <div class="col-sm-3" onclick="location.href='/oleh/{{$rek->idoleh}}'">
-                                             <div class="nama-beli">
-                                                 <div class="teks-nama">
-                                                     <h2>{{$v->namaoleh}}</h2>
-                                                     <h5 id="buka" class=""><span class="text-danger fw-bold">Rp</span> <span id="jam-buka">{{ $v->hargamin }} - {{ $v->hargamax }}</span></h5>
-                                                     <div class="info-beli" style="font-size: 25px">
-                                                         <i class="fas fa-thumbs-up"><span class="text-beli"><span class="text-danger"> {{$v->rekomendasioleh_count}}</span> Users</span></i> <br>
-                                                     </div>
-                                                 </div>
-                                             </div>
-                                             <div class="foto-beli">
-                                                 <img src="{{ $v->gambarutama }}" width= "301px"
-                                                 height="285.65px">
-                                             </div>
-                                         </div>
+                                            <div class="foto-beli">
+                                                <img src="{{ $rek->gambarutama }}" width= "301px"
+                                                height="285.65px" style="border-radius: 20px">
+                                            </div>
+                                            <div class="nama-beli">
+                                                <div class="teks-nama">
+                                                    <h2>{{ $rek->namaoleh }}</h2>
+
+                                                    <div class="info-beli" style="font-size: 25px">
+                                                        <i class="fas fa-thumbs-up"><span class="text-beli"><span class="text-danger"> {{$rek->rekomendasioleh_count}}</span> Users</span></i> <br>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                          @endforeach
                                      </div>
                                  </div>
@@ -271,7 +272,11 @@ transform: rotate(37.85deg);
                          <div class="carousel-item active">
                              <div class="row">
                                 @foreach ($olehKeluarga->slice(0, 4) as $rek)
-                                <div class="col-sm-3" onclick="location.href='/oleh/{{$rek->idoleh}}'">
+                                <div class="caro col-sm-3" onclick="location.href='/oleh/{{$rek->idoleh}}'">
+                                    <div class="foto-beli">
+                                        <img src="{{ $rek->gambarutama }}" width= "301px"
+                                        height="285.65px" style="border-radius: 20px">
+                                    </div>
                                     <div class="nama-beli">
                                         <div class="teks-nama">
                                             <h2>{{ $rek->namaoleh }}</h2>
@@ -281,10 +286,6 @@ transform: rotate(37.85deg);
                                                 {{-- <i class="fas fa-map-marker-alt"> <span class="text-beli" style="font-size: 0.8rem">Jalan Jemursari Raya IV</span></i> --}}
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="foto-beli">
-                                        <img src="{{ $rek->gambarutama }}" width= "301px"
-                                        height="285.65px" style="border-radius: 20px">
                                     </div>
                                 </div>
                                  @endforeach
@@ -342,7 +343,11 @@ transform: rotate(37.85deg);
                              <div class="carousel-item">
                                  <div class="row">
                                     @foreach ($olehKeluarga->slice(4, 4) as $rek)
-                                    <div class="col-sm-3" onclick="location.href='/oleh/{{$rek->idoleh}}'">
+                                    <div class="caro col-sm-3" onclick="location.href='/oleh/{{$rek->idoleh}}'">
+                                        <div class="foto-beli">
+                                            <img src="{{ $rek->gambarutama }}" width= "301px"
+                                            height="285.65px" style="border-radius: 20px">
+                                        </div>
                                         <div class="nama-beli">
                                             <div class="teks-nama">
                                                 <h2>{{ $rek->namaoleh }}</h2>
@@ -352,10 +357,6 @@ transform: rotate(37.85deg);
                                                     {{-- <i class="fas fa-map-marker-alt"> <span class="text-beli" style="font-size: 0.8rem">Jalan Jemursari Raya IV</span></i> --}}
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="foto-beli">
-                                            <img src="{{ $rek->gambarutama }}" width= "301px"
-                                            height="285.65px" style="border-radius: 20px">
                                         </div>
                                     </div>
                                     @endforeach
@@ -415,6 +416,10 @@ transform: rotate(37.85deg);
                                  <div class="row">
                                     @foreach ($olehKeluarga->slice(8, 4) as $rek)
                                     <div class="col-sm-3" onclick="location.href='/oleh/{{$rek->idoleh}}'">
+                                        <div class="foto-beli">
+                                            <img src="{{ $rek->gambarutama }}" width= "301px"
+                                            height="285.65px" style="border-radius: 20px">
+                                        </div>
                                         <div class="nama-beli">
                                             <div class="teks-nama">
                                                 <h2>{{ $rek->namaoleh }}</h2>
@@ -424,10 +429,6 @@ transform: rotate(37.85deg);
                                                     {{-- <i class="fas fa-map-marker-alt"> <span class="text-beli" style="font-size: 0.8rem">Jalan Jemursari Raya IV</span></i> --}}
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="foto-beli">
-                                            <img src="{{ $rek->gambarutama }}" width= "301px"
-                                            height="285.65px" style="border-radius: 20px">
                                         </div>
                                     </div>
                                     @endforeach
@@ -515,6 +516,10 @@ transform: rotate(37.85deg);
                                  <div class="row">
                                      @foreach ($harga->slice(0, 4) as $rek)
                                      <div class="col-sm-3" onclick="location.href='/oleh/{{$rek->idoleh}}'">
+                                        <div class="foto-beli">
+                                            <img src="{{ $rek->gambarutama }}" width= "301px"
+                                            height="285.65px" style="border-radius: 20px">
+                                        </div>
                                          <div class="nama-beli">
                                              <div class="teks-nama">
                                                  <h2>{{ $rek->namaoleh }}</h2>
@@ -525,10 +530,6 @@ transform: rotate(37.85deg);
                                                  </div>
                                              </div>
                                          </div>
-                                         <div class="foto-beli">
-                                             <img src="{{ $rek->gambarutama }}" width= "301px"
-                                             height="285.65px" style="border-radius: 20px">
-                                         </div>
                                      </div>
                                      @endforeach
                                  </div>
@@ -538,6 +539,10 @@ transform: rotate(37.85deg);
                              <div class="row">
                                  @foreach ($harga->slice(4, 4) as $rek)
                                  <div class="col-sm-3" onclick="location.href='/oleh/{{$rek->idoleh}}'">
+                                    <div class="foto-beli">
+                                        <img src="{{ $rek->gambarutama }}" width= "301px"
+                                        height="285.65px" style="border-radius: 20px">
+                                    </div>
                                      <div class="nama-beli">
                                          <div class="teks-nama">
                                              <h2>{{ $rek->namaoleh }}</h2>
@@ -547,10 +552,6 @@ transform: rotate(37.85deg);
                                                  {{-- <i class="fas fa-map-marker-alt"> <span class="text-beli" style="font-size: 0.8rem">Jalan Jemursari Raya IV</span></i> --}}
                                              </div>
                                          </div>
-                                     </div>
-                                     <div class="foto-beli">
-                                         <img src="{{ $rek->gambarutama }}" width= "301px"
-                                         height="285.65px" style="border-radius: 20px">
                                      </div>
                                  </div>
                                  @endforeach
@@ -562,8 +563,12 @@ transform: rotate(37.85deg);
                              <div class="row">
                                  @foreach ($harga->slice(8, 4) as $rek)
                                  <div class="col-sm-3" onclick="location.href='/oleh/{{$rek->idoleh}}'">
+                                    <div class="foto-beli">
+                                        <img src="{{ $rek->gambarutama }}" width= "301px"
+                                        height="285.65px" style="border-radius: 20px">
+                                    </div>
                                      <div class="nama-beli">
-                                         <div class="teks-nama">
+                                         <div class="row teks-nama">
                                              <h2>{{ $rek->namaoleh }}</h2>
                                              <h5 id="buka" class=""><span class="text-danger fw-bold">Rp</span> <span id="jam-buka">{{ number_format($rek->hargamin) }}</span></h5>
                                              <div class="info-beli">
@@ -571,10 +576,6 @@ transform: rotate(37.85deg);
                                                  {{-- <i class="fas fa-map-marker-alt"> <span class="text-beli" style="font-size: 0.8rem">Jalan Jemursari Raya IV</span></i> --}}
                                              </div>
                                          </div>
-                                     </div>
-                                     <div class="foto-beli">
-                                         <img src="{{ $rek->gambarutama }}" width= "301px"
-                                         height="285.65px" style="border-radius: 20px">
                                      </div>
                                  </div>
                                  @endforeach
@@ -587,6 +588,7 @@ transform: rotate(37.85deg);
              </div>
      </div>
  </section>
+ @endif
 <section class="p-4">
     <h1 class="judul text-center mt-5 mb-3">Why Oasis?</h1>
     <div class="container" style="width: 100%">
@@ -647,5 +649,5 @@ transform: rotate(37.85deg);
     </div>
 </section>
 
-@endif
+
 @endsection

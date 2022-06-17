@@ -25,6 +25,7 @@
 
         .container .carousel {
             position: relative;
+            justify-content: space-evenly;
             bottom: 0;
             left: 0;
             right: 0;
@@ -124,7 +125,6 @@
             justify-content: start;
         }
 
-        .button-rekom {}
 
         .info {
         }
@@ -147,41 +147,6 @@
             color: #555555;
         }
 
-        .modal-content {
-            width: 1364px;
-            height: 700px;
-            background: linear-gradient(108.91deg, #FCB581 16.49%, rgba(248, 195, 159, 0.830833) 67%, rgba(250, 248, 248, 0.72) 100.1%);
-            border-radius: 100px;
-
-        }
-
-        .gambar-modal {
-            width: 301px;
-            height: 139px;
-            border-radius: 10px;
-        }
-
-        .modal-isi {
-            margin: 50px 0px 0px 50px;
-        }
-
-        .modal-isi h2 {
-            margin-top: 24px;
-            font-family: 'Poppins';
-            font-style: normal;
-            font-weight: 700;
-            font-size: 50px;
-            line-height: 50px;
-        }
-
-        .modal-isi i {
-            font-family: 'Quicksand';
-            font-style: normal;
-            font-weight: 700;
-            font-size: 24px;
-            line-height: 28px;
-            margin-top: 28px;
-        }
 
         .poin {
             width: 550px;
@@ -204,12 +169,7 @@
             line-height: 75px;
         }
 
-        .card-icon {
-            width: 530px;
-            text-align: center;
-            padding: 50px 50px 50px 50px;
 
-        }
 
         .icon-info {
             width: 415px;
@@ -221,7 +181,7 @@
 
         .icon-isi {
             margin-top: 10px;
-            justify-content: space-between;
+            justify-content: space-evenly;
             text-align: center;
         }
 
@@ -297,64 +257,14 @@
             margin-bottom: 5px;
         }
 
-        .kotak-icon img {
-            padding: 10px 0px 0px 0px;
-        }
-
-        .kotak-icon-plusmin {
-            vertical-align: center;
-            padding: 100px 0px 100px 50px;
-        }
-
-        .kotak-icon-plusmin-bawah {
-            vertical-align: center;
-            padding: 0px 0px 100px 50px;
-        }
-
-        .kotak-icon-plusmin img {
-            margin: 15px 0px 0px 0px;
-            padding: 0px 0px 0px 0px;
-        }
-
-        .kotak-icon-plusmin-bawah {
-            vertical-align: center;
-            padding: -100px 0px 0px 50px;
-        }
-
-        .kotak-icon-plusmin-bawah img {
-            margin: 15px 0px 0px 0px;
-            padding: 0px 0px 0px 0px;
-        }
-
-        .icon-komposisi-atas {
-            margin-top: 24px;
-        }
-
-        .icon-komposisi-bawah {
-            margin: auto;
-            padding: 0px 50px 50px 80px;
-            text-align: center;
-            vertical-align: center;
-        }
-
-        .kelebihan ul {
-            list-style-type: "➕";
-            text-align: left;
-            padding: 50px 10px 0px 20px;
-            line-height: 25px;
-        }
-
-        .kekurangan ul {
-            list-style-type: "➖";
-            text-align: left;
-            padding: 0px 10px 0px 20px;
-            line-height: 25px;
+        .komposisi-text {
+            width: 56px;
         }
 
         .foto-beli {
-            margin: -550px -50px 50px 15px;
-            width: 280px;
-            height: 285.65px;
+
+            width: 105%;
+            height: 57%;
             left: 16px;
             top: 32px;
             background: #9B9B9B;
@@ -366,22 +276,21 @@
         }
 
         .nama-beli {
-            margin: 50px 50px 50px 15px;
-            width: 280px;
-            height: 450px;
-            left: 16px;
-            top: 32px;
+            border-radius: 0px 0px 40px 40px;
+            width: 105%;
+            height: 70%;
             background: #DEECF3;
             /* Shadow01 */
             box-shadow: 0px 24px 48px rgba(0, 24, 52, 0.080899);
-            border-radius: 40px;
 
         }
 
         .teks-nama {
             vertical-align: bottom;
             text-align: left;
-            padding: 250px 25px 0px 30px;
+            padding: 5px;
+            padding-left: 15px;
+            line-height: 32px;
         }
 
         .teks-nama h2 {
@@ -393,7 +302,7 @@
         }
 
         #carousel {
-            margin-top: 400px;
+            margin-top: 100px;
         }
 
         #buka {
@@ -442,10 +351,11 @@
         .text-beli {
             margin-left: 5px;
             color: #333333;
+            line-height: 18px;
         }
 
         #funfact {
-            margin-top: 300px;
+            margin-top: 200px;
         }
 
         .foto-oleh {
@@ -455,6 +365,7 @@
         .foto-oleh img {
             border-radius: 100px 0px 0px 0px;
         }
+
 
         .livewire {
             position: absolute;
@@ -470,11 +381,9 @@
             margin-top: 12px;
             vertical-align: bottom;
             box-shadow: 5px 5px 20px lightgray;
-            justify-content: center;
         }
 
         .button-selengkapnya {
-            justify-content: center;
             font-family: 'Poppins';
             font-style: normal;
             font-weight: 700;
@@ -576,54 +485,183 @@
                 </div>
             </div>
         </section>
+        @if (count($tempatbeli)>0)
         <section id="tempatbeli">
             <div class="container">
                 <h1 class="tempatbeli">Tempat Beli</h1>
                 <div class="row">
+                    <div class="col-8"></div>
+                    @if (count($tempatbeli)>4)
+                    <div class="col-4 text-end">
+                        <a class="btn btn-dark text-light mb-3 mr-1 btn-sm"
+                            data-bs-target="#carouselExampleIndicators" role="button" data-bs-slide="prev">
+                            <i class="bi bi-arrow-left"></i>
+                        </a>
+                        <a class="btn btn-dark text-light mb-3 btn-sm" data-bs-target="#carouselExampleIndicators"
+                            role="button" data-bs-slide="next">
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                    @endif
                     <div class="col-12">
-                        <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
+                        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                             <div class="carousel">
                                 <div class="carousel-item active">
                                     <div class="row">
-                                        @foreach ($tempatbeli as $t)
-                                            <div class="col-3">
-                                                <div class="nama-beli">
-                                                    <div class="teks-nama">
-                                                        <h2 style="color: black">{{ $t->merk }}</h2>
-                                                        <h5 id="buka" class=""><span
-                                                                class="text-success fw-bold">BUKA</span> <span
-                                                                id="jam-buka">({{ $t->jambuka }})</span></h5>
-                                                        <div class="info-beli">
-                                                            <i class="icon-buka bi bi-geo-alt-fill"><span
-                                                                    class="text-beli">{{ $t->alamat }}</span></i>
-                                                            <br>
-                                                            <i class="icon-buka bi bi-telephone-fill"><span
-                                                                    class="text-beli">(031) 12345678</span></i>
-                                                        </div>
-                                                        <div class="button-selengkapnya">
-                                                            <label id="selengkapnya" class="button-oleh text-beli"><a
-                                                                    href="/toko/{{$t->idtempatbeli}}">Selengkapnya</a></label>
-                                                        </div>
+                                        @foreach ($tempatbeli->slice(0, 4) as $t)
+                                        <div class="col-3 ">
+                                            <div class="foto-beli">
+                                                <img src="{{ $t->gambarproduk }}" width="100%" height="100%">
+                                            </div>
+                                            <div class="nama-beli">
+                                                <div class="row teks-nama">
+                                                    <h2 style="color: black">{{ $t->merk }}</h2>
+                                                    <h5 id="buka" class=""><span
+                                                            class="text-success fw-bold">BUKA</span> <span
+                                                            id="jam-buka">({{ $t->jambuka }})</span></h5>
+                                                    <div class="row info-beli">
+                                                        <i class="icon-buka bi bi-geo-alt-fill"><span
+                                                                class="text-beli">{{ $t->alamat }}</span></i>
+                                                        <br>
+                                                        <i class="icon-buka bi bi-telephone-fill"><span
+                                                                class="text-beli">(031) 12345678</span></i>
+                                                    </div>
+                                                    <div class="button-selengkapnya">
+                                                        <label id="selengkapnya" class="button-oleh text-beli"><a
+                                                                data-bs-toggle="modal" data-bs-target="#tempatbeli">Selengkapnya</a></label>
                                                     </div>
                                                 </div>
-                                                <div class="foto-beli">
-                                                    <img src="{{ $t->gambarproduk }}" width="280px" height="285.65px">
-                                                </div>
                                             </div>
+                                        </div>
+                                            <div class="modal fade" id="tempatbeli" tabindex="2" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                  <div class="modal-content">
+                                                    <div class="modal-header">
+                                                      <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                      ...
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                      <button type="button" class="btn btn-primary">Save changes</button>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
                                         @endforeach
                                     </div>
                                 </div>
+                                @if (count($tempatbeli)>4)
+                                <div class="carousel-item">
+                                    <div class="row">
+                                        @foreach ($tempatbeli->slice(4, 4) as $t)
+                                        <div class="col-3 ">
+                                            <div class="foto-beli">
+                                                <img src="{{ $t->gambarproduk }}" width="100%" height="100%">
+                                            </div>
+                                            <div class="nama-beli">
+                                                <div class="row teks-nama">
+                                                    <h2 style="color: black">{{ $t->merk }}</h2>
+                                                    <h5 id="buka" class=""><span
+                                                            class="text-success fw-bold">BUKA</span> <span
+                                                            id="jam-buka">({{ $t->jambuka }})</span></h5>
+                                                    <div class="row info-beli">
+                                                        <i class="icon-buka bi bi-geo-alt-fill"><span
+                                                                class="text-beli">{{ $t->alamat }}</span></i>
+                                                        <br>
+                                                        <i class="icon-buka bi bi-telephone-fill"><span
+                                                                class="text-beli">(031) 12345678</span></i>
+                                                    </div>
+                                                    <div class="button-selengkapnya">
+                                                        <label id="selengkapnya" class="button-oleh text-beli"><a
+                                                                data-bs-toggle="modal" data-bs-target="#tempatbeli">Selengkapnya</a></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal fade" id="tempatbeli" tabindex="2" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                              <div class="modal-content">
+                                                <div class="modal-header">
+                                                  <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                  ...
+                                                </div>
+                                                <div class="modal-footer">
+                                                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                  <button type="button" class="btn btn-primary">Save changes</button>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        @endforeach
+                                    </div>
+                                </div>
+                                @endif
+                                @if (count($tempatbeli)>8)
+                                <div class="carousel-item">
+                                    <div class="row">
+                                        @foreach ($tempatbeli->slice(8, 4) as $t)
+                                        <div class="col-3 ">
+                                            <div class="foto-beli">
+                                                <img src="{{ $t->gambarproduk }}" width="100%" height="100%">
+                                            </div>
+                                            <div class="nama-beli">
+                                                <div class="row teks-nama">
+                                                    <h2 style="color: black">{{ $t->merk }}</h2>
+                                                    <h5 id="buka" class=""><span
+                                                            class="text-success fw-bold">BUKA</span> <span
+                                                            id="jam-buka">({{ $t->jambuka }})</span></h5>
+                                                    <div class="row info-beli">
+                                                        <i class="icon-buka bi bi-geo-alt-fill"><span
+                                                                class="text-beli">{{ $t->alamat }}</span></i>
+                                                        <br>
+                                                        <i class="icon-buka bi bi-telephone-fill"><span
+                                                                class="text-beli">(031) 12345678</span></i>
+                                                    </div>
+                                                    <div class="button-selengkapnya">
+                                                        <label id="selengkapnya" class="button-oleh text-beli"><a
+                                                                data-bs-toggle="modal" data-bs-target="#tempatbeli">Selengkapnya</a></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal fade" id="tempatbeli" tabindex="2" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                              <div class="modal-content">
+                                                <div class="modal-header">
+                                                  <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                  ...
+                                                </div>
+                                                <div class="modal-footer">
+                                                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                  <button type="button" class="btn btn-primary">Save changes</button>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        @endforeach
+                                    </div>
+                                </div>
+                                @endif
                             </div>
                         </div>
                     </div>
-                    {{-- <a href="#" class="link-dark text-end col-12">Lebih Banyak >>></a> --}}
                 </div>
             </div>
         </section>
+        @endif
         <section id="funfact">
             <div class="container">
                 <div class="Informasi mt-3">
-                    <h1>Informasi Produk</h1>
+
                 </div>
                 <div class="row mt-4">
                     <div class="strip col-7">
@@ -746,7 +784,9 @@
                                                             height="37px">
                                                     </div>
                                                 @endif
-                                                <p>{{ $k }}</p>
+                                                <div class="komposisi-text">
+                                                    <span>{{ $k }}</span>
+                                                </div>
                                             </div>
                                         @endforeach
                                     </div>

@@ -43,22 +43,28 @@
         .carousel-control {
             width: 0%;
         }
-        .nama-beli {
-            margin:50px 50px 50px 15px;
-            width: 280px;
-            height: 400px;
-            left: 16px;
-            top: 32px;
+        .caro {
+        align-items: center;
+        justify-content: center;
+        margin-top: 25px;
+    }
+
+    .nama-beli {
             background: #DEECF3;
             /* Shadow01 */
             box-shadow: 0px 24px 48px rgba(0, 24, 52, 0.080899);
-            border-radius: 40px;
+            border-radius: 0px 0px 40px 40px;
+            height: 145px;
+            width: 280px;
+            margin-left: 10.5px;
+            margin-top: -30px;
+            padding-top: 15px;
 
         }
         .teks-nama {
             vertical-align: bottom;
             text-align: left;
-            padding: 250px 25px 0px 30px;
+            padding-left: 20px;
         }
         .teks-nama h2 {
             font-family: 'Poppins';
@@ -68,13 +74,11 @@
             line-height: 32px;
         }
         .foto-beli {
-        margin:-500px -50px 0px 0px;
             width: 301px;
             height: 285.65px;
-            left: 5px;
-            top: 32px;
             background: #9B9B9B;
             border-radius: 40px;
+            display: block;
         }
         #jam-buka, #buka{
             font-size: 1.3rem
@@ -246,38 +250,8 @@
             padding: 0px 10px 0px 20px;
             line-height: 25px;
         }
-        .foto-beli {
-            margin:-500px -50px 0px 0px;
-            width: 301px;
-            height: 285.65px;
-            left: 5px;
-            top: 32px;
-            background: #9B9B9B;
-            border-radius: 40px;
-        }
-        .nama-beli {
-            margin:50px 50px 50px 15px;
-            width: 280px;
-            height: 450px;
-            left: 16px;
-            top: 32px;
-            background: #DEECF3;
-            /* Shadow01 */
-            box-shadow: 0px 24px 48px rgba(0, 24, 52, 0.080899);
-            border-radius: 40px;
 
-        }
-        .teks-nama {
-            vertical-align: bottom;
-            text-align: left;
-            padding: 250px 25px 0px 30px;
-        }
-        .teks-nama h2 {
-            font-family: 'Poppins';
-            font-style: normal;
-            font-weight: 700;
-            font-size: 25px;
-            line-height: 32px;
+
         }
         #carousel {
             margin-top: 300px;
@@ -403,70 +377,20 @@
                     <h1>Produk Oleh-Oleh dari {{ $toko->nama_toko }}</h1>
                 </div>
                 <div class="row" >
-                    <div class="col-3">
+                    @foreach ($toko as $t)
+                    <div class="caro col-3">
+                        <div class="foto-beli">
+                            <img src="{{ asset('img/utama.png') }}" width= "301px"
+                            height="285.65px" style="border-radius: 20px">
+                        </div>
                         <div class="nama-beli">
                             <div class="teks-nama ">
                                 <h2 class="" style="margin-top: 33px">Spikoe Surabaya</h2>
                                 <h2 id="buka" style="color: red">Rp <span id="jam-buka">100.000</span></h2>
-                                <h2 id="buka" style="color: red">#1 <span id="jam-buka">Spikoe di Toko Ini</span></h2>
-                                <div class="d-flex justify-content-center mb-3">
-                                    <a href="" class="btn btn-light text-dark" style="border-radius: 20px">Rekomendasikan <i class="fas fa-thumbs-up"></i></a>
-                                </div>
                             </div>
                         </div>
-                        <div class="foto-beli">
-                            <img src="{{ asset('img/logo-halal.png') }}" width= "301px"
-                            height="285.65px">
-                        </div>
                     </div>
-                    <div class="col-3">
-                        <div class="nama-beli">
-                            <div class="teks-nama">
-                                <h2 style="margin-top: 33px">Spikoe Surabaya</h2>
-                                <h2 id="buka" style="color: red">Rp <span id="jam-buka">100.000</span></h2>
-                                <h2 id="buka" style="color: red">#2 <span id="jam-buka">Spikoe di Toko Ini</span></h2>
-                                <div class="d-flex justify-content-center mb-3">
-                                    <a href="" class="btn btn-light text-dark" style="border-radius: 20px">Rekomendasikan <i class="fas fa-thumbs-up"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="foto-beli">
-                            <img src="{{ asset('img/logo-halal.png') }}" width= "301px"
-                            height="285.65px">
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="nama-beli">
-                            <div class="teks-nama">
-                                <h2 style="margin-top: 33px">Spikoe Surabaya</h2>
-                                <h2 id="buka" style="color: red">Rp <span id="jam-buka">100.000</span></h2>
-                                <h2 id="buka" style="color: red">#3 <span id="jam-buka">Spikoe di Toko Ini</span></h2>
-                                <div class="d-flex justify-content-center mb-3">
-                                    <a href="" class="btn btn-light text-dark" style="border-radius: 20px">Rekomendasikan <i class="fas fa-thumbs-up"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="foto-beli">
-                            <img src="{{ asset('img/logo-halal.png') }}" width= "301px"
-                            height="285.65px">
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="nama-beli">
-                            <div class="teks-nama">
-                                <h2 style="margin-top: 33px">Spikoe Surabaya</h2>
-                                <h2 id="buka" style="color: red">Rp <span id="jam-buka">100.000</span></h2>
-                                <h2 id="buka" style="color: red">#4 <span id="jam-buka">Spikoe di Toko Ini</span></h2>
-                                <div class="d-flex justify-content-center mb-3">
-                                    <a href="" class="btn btn-light text-dark" style="border-radius: 20px">Rekomendasikan <i class="fas fa-thumbs-up"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="foto-beli">
-                            <img src="{{ asset('img/logo-halal.png') }}" width= "301px"
-                            height="285.65px">
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </section>
