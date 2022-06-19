@@ -386,7 +386,7 @@
                         <div class="nama-beli">
                             <div class="teks-nama ">
                                 <h2 class="" style="margin-top: 33px">{{$t->nama_produk_mitra}}</h2>
-                                <h2 id="buka" style="color: red">Rp <span id="jam-buka">{{$t->harga_produk_mitra}}</span></h2>
+                                <h2 id="buka" style="color: red">Rp <span id="jam-buka">{{number_format($t->harga_produk_mitra)}}</span></h2>
                             </div>
                         </div>
                     </div>

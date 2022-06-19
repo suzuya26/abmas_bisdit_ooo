@@ -9,27 +9,12 @@
             background: #F5EDE1;
         }
 
-        .Rectangle-bg {
-            background: #F5EDE1;
-            border-radius: 0px;
-            padding: 30px 0px 30px 30px;
-
-        }
 
         .carousel-item {
             color: white;
             position: relative;
             background-position: center;
             background-size: cover;
-        }
-
-        .container .carousel {
-            position: relative;
-            justify-content: space-evenly;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 40px;
         }
 
         .carousel-caption {
@@ -134,19 +119,8 @@
             border-right: 1px solid black;
         }
 
-        .infocard {
-            width: 309px;
-            height: 450px;
-            background: #F5EDE1;
-            border-radius: 100px;
-            text-align: center;
-            filter: drop-shadow(27.46px 5.75px 5.75px rgba(0, 0, 0, 0.25));
-        }
 
-        .bi-chevron-compact-down {
-            font-size: 36px;
-            color: #555555;
-        }
+
 
 
         .poin {
@@ -263,7 +237,7 @@
         }
 
         .foto-beli {
-            width: 110%;
+            width: 100%;
             height: 80%;
             background: #9B9B9B;
             border-radius: 20px;
@@ -278,8 +252,8 @@
             /* Shadow01 */
             box-shadow: 0px 24px 48px rgba(0, 24, 52, 0.080899);
             border-radius: 0px 0px 40px 40px;
-            height: 75%;
-            width: 100%;
+            height: 70%;
+            width: 93%;
             margin-left: 10.5px;
             margin-top: -15px;
             padding-top: 20px;
@@ -334,6 +308,11 @@
         .tempatbeli {
             margin: 100px 0px 0px 0px;
             vertical-align: center;
+        }
+
+
+        .tempat-beli {
+            margin: 0px 0px 0px 0px;
         }
 
         .info-beli i {
@@ -489,7 +468,7 @@
         <section id="tempatbeli">
             <div class="container">
                 <h1 class="tempatbeli">Tempat Beli</h1>
-                <div class="row">
+                <div class=" row">
                     <div class="col-8"></div>
                     @if (count($tempatbeli)>4)
                     <div class="col-4 text-end">
@@ -509,15 +488,18 @@
                                 <div class="carousel-item active">
                                     <div class="row">
                                         @foreach ($tempatbeli->slice(0, 4) as $t)
-                                        <div class="col-3 ">
+                                        <div class="tempat-beli col-3 ">
                                             <div class="foto-beli">
                                                 <img src="{{ $t->gambarproduk }}" width="100%" height="100%">
                                             </div>
                                             <div class="nama-beli">
                                                 <div class="row teks-nama">
                                                     <h2 style="color: black">{{ $t->merk }}</h2>
-                                                    <h5 id="buka" class=""><span
-                                                            class="text-success fw-bold">BUKA</span> <span
+                                                    <h5 id="buka" class="">@if($check)
+                                                        <h3 style="color: #8fd14f" class="fw-bold">BUKA</h3>
+                                                        @else
+                                                        <h3 style="color: red" class="fw-bold">TUTUP</h3>
+                                                        @endif <span
                                                             id="jam-buka">({{ $t->jambuka }})</span></h5>
                                                     <div class="row info-beli">
                                                         <i class="icon-buka bi bi-geo-alt-fill"><span
@@ -526,10 +508,10 @@
                                                         <i class="icon-buka bi bi-telephone-fill"><span
                                                                 class="text-beli">(031) 12345678</span></i>
                                                     </div>
-                                                    <div class="button-selengkapnya">
+                                                    {{-- <div class="button-selengkapnya">
                                                         <label id="selengkapnya" class="button-oleh text-beli"><a
                                                                 data-bs-toggle="modal" data-bs-target="#tempatbeli">Selengkapnya</a></label>
-                                                    </div>
+                                                    </div> --}}
                                                 </div>
                                             </div>
                                         </div>
@@ -557,15 +539,18 @@
                                 <div class="carousel-item">
                                     <div class="row">
                                         @foreach ($tempatbeli->slice(4, 4) as $t)
-                                        <div class="col-3 ">
+                                        <div class="tempat-beli col-3 ">
                                             <div class="foto-beli">
                                                 <img src="{{ $t->gambarproduk }}" width="100%" height="100%">
                                             </div>
                                             <div class="nama-beli">
                                                 <div class="row teks-nama">
                                                     <h2 style="color: black">{{ $t->merk }}</h2>
-                                                    <h5 id="buka" class=""><span
-                                                            class="text-success fw-bold">BUKA</span> <span
+                                                    <h5 id="buka" class="">@if($check)
+                                                        <h3 style="color: #8fd14f" class="fw-bold">BUKA</h3>
+                                                        @else
+                                                        <h3 style="color: red" class="fw-bold">TUTUP</h3>
+                                                        @endif <span
                                                             id="jam-buka">({{ $t->jambuka }})</span></h5>
                                                     <div class="row info-beli">
                                                         <i class="icon-buka bi bi-geo-alt-fill"><span
@@ -574,30 +559,13 @@
                                                         <i class="icon-buka bi bi-telephone-fill"><span
                                                                 class="text-beli">(031) 12345678</span></i>
                                                     </div>
-                                                    <div class="button-selengkapnya">
+                                                    {{-- <div class="button-selengkapnya">
                                                         <label id="selengkapnya" class="button-oleh text-beli"><a
                                                                 data-bs-toggle="modal" data-bs-target="#tempatbeli">Selengkapnya</a></label>
-                                                    </div>
+                                                    </div> --}}
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="modal fade" id="tempatbeli" tabindex="2" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                            <div class="modal-dialog">
-                                              <div class="modal-content">
-                                                <div class="modal-header">
-                                                  <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                </div>
-                                                <div class="modal-body">
-                                                  ...
-                                                </div>
-                                                <div class="modal-footer">
-                                                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                                  <button type="button" class="btn btn-primary">Save changes</button>
-                                                </div>
-                                              </div>
-                                            </div>
-                                          </div>
                                         @endforeach
                                     </div>
                                 </div>
@@ -606,15 +574,18 @@
                                 <div class="carousel-item">
                                     <div class="row">
                                         @foreach ($tempatbeli->slice(8, 4) as $t)
-                                        <div class="col-3 ">
+                                        <div class="tempat-beli col-3 ">
                                             <div class="foto-beli">
                                                 <img src="{{ $t->gambarproduk }}" width="100%" height="100%">
                                             </div>
                                             <div class="nama-beli">
                                                 <div class="row teks-nama">
                                                     <h2 style="color: black">{{ $t->merk }}</h2>
-                                                    <h5 id="buka" class=""><span
-                                                            class="text-success fw-bold">BUKA</span> <span
+                                                    <h5 id="buka" class="">@if($check)
+                                                        <h3 style="color: #8fd14f" class="fw-bold">BUKA</h3>
+                                                        @else
+                                                        <h3 style="color: red" class="fw-bold">TUTUP</h3>
+                                                        @endif <span
                                                             id="jam-buka">({{ $t->jambuka }})</span></h5>
                                                     <div class="row info-beli">
                                                         <i class="icon-buka bi bi-geo-alt-fill"><span
@@ -623,10 +594,10 @@
                                                         <i class="icon-buka bi bi-telephone-fill"><span
                                                                 class="text-beli">(031) 12345678</span></i>
                                                     </div>
-                                                    <div class="button-selengkapnya">
+                                                    {{-- <div class="button-selengkapnya">
                                                         <label id="selengkapnya" class="button-oleh text-beli"><a
                                                                 data-bs-toggle="modal" data-bs-target="#tempatbeli">Selengkapnya</a></label>
-                                                    </div>
+                                                    </div> --}}
                                                 </div>
                                             </div>
                                         </div>

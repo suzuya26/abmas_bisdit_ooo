@@ -377,6 +377,20 @@
                     <h1>Produk Oleh-Oleh dari {{ $toko->nama_toko }}</h1>
                 </div>
                 <div class="row" >
+                    {{-- @foreach ($produk_toko as $t)
+                    <div class="caro col-3">
+                        <div class="foto-beli">
+                            <img src="{{ asset('img/utama.png') }}" width= "301px"
+                            height="285.65px" style="border-radius: 20px">
+                        </div>
+                        <div class="nama-beli">
+                            <div class="teks-nama ">
+                                <h2 class="" style="margin-top: 33px">Spikoe Surabaya</h2>
+                                <h2 id="buka" style="color: red">Rp <span id="jam-buka">100.000</span></h2>
+                            </div>
+                        </div>
+                    </div>
+                    @endforeach --}}
                     @foreach ($toko as $t)
                     <div class="caro col-3">
                         <div class="foto-beli">

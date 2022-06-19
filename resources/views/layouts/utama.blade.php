@@ -322,7 +322,7 @@ transform: rotate(37.85deg);
                                                 @if($check)
                                                 <h3 style="color: #0CBB3D;font-size:24px" class="fw-bold">BUKA <span style="color: #000000; font-size:18px">({{ $toko->jam_buka }} - {{ $toko->jam_tutup }})</span> </h3>
                                                 @else
-                                                <h3 style="color: red" class="fw-bold">TUTUP <span>({{ $toko->jam_buka }} - {{ $toko->jam_tutup }})</span> </h3>
+                                                <h3 style="color: red" class="fw-bold">TUTUP <span style="color: #000000; font-size:18px">({{ $toko->jam_buka }} - {{ $toko->jam_tutup }})</span> </h3>
                                                 @endif
                                                 <i class="icon-buka bi bi-geo-alt-fill"><span
                                                     class="alamat-beli">{{ $rek->alamat_toko }}</span></i><br><br>
@@ -350,7 +350,7 @@ transform: rotate(37.85deg);
                                                         @if($check)
                                                         <h3 style="color: #0CBB3D;font-size:24px" class="fw-bold">BUKA <span style="color: #000000; font-size:18px">({{ $toko->jam_buka }} - {{ $toko->jam_tutup }})</span> </h3>
                                                         @else
-                                                        <h3 style="color: red" class="fw-bold">TUTUP <span>({{ $toko->jam_buka }} - {{ $toko->jam_tutup }})</span> </h3>
+                                                        <h3 style="color: red" class="fw-bold">TUTUP <span style="color: #000000; font-size:18px">({{ $toko->jam_buka }} - {{ $toko->jam_tutup }})</span> </h3>
                                                         @endif
                                                         <i class="icon-buka bi bi-geo-alt-fill"><span
                                                             class="alamat-beli">{{ $rek->alamat_toko }}</span></i><br><br>
@@ -379,7 +379,7 @@ transform: rotate(37.85deg);
                                                         @if($check)
                                                         <h3 style="color: #0CBB3D;font-size:24px" class="fw-bold">BUKA <span style="color: #000000; font-size:18px">({{ $toko->jam_buka }} - {{ $toko->jam_tutup }})</span> </h3>
                                                         @else
-                                                        <h3 style="color: red" class="fw-bold">TUTUP <span>({{ $toko->jam_buka }} - {{ $toko->jam_tutup }})</span> </h3>
+                                                        <h3 style="color: red" class="fw-bold">TUTUP <span style="color: #000000; font-size:18px">({{ $toko->jam_buka }} - {{ $toko->jam_tutup }})</span> </h3>
                                                         @endif
                                                         <i class="icon-buka bi bi-geo-alt-fill"><span
                                                             class="alamat-beli">{{ $rek->alamat_toko }}</span></i><br><br>
