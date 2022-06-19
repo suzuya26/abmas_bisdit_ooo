@@ -513,7 +513,21 @@
 
                     @foreach ($galeri_mitra_caption as $key => $gc)
                   <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
+                    @if ($loop->iteration=1)
                     <img src="{{ asset('data_file/') }}/{{$toko->gambar_1}}" class="d-block w-100" alt="...">
+                    @endif
+                    @if ($loop->iteration=2)
+                    <img src="{{ asset('data_file/') }}/{{$toko->gambar_2}}" class="d-block w-100" alt="...">
+                    @endif
+                    @if ($loop->iteration=3)
+                    <img src="{{ asset('data_file/') }}/{{$toko->gambar_3}}" class="d-block w-100" alt="...">
+                    @endif
+                    @if ($loop->iteration=4)
+                    <img src="{{ asset('data_file/') }}/{{$toko->gambar_4}}" class="d-block w-100" alt="...">
+                    @endif
+                    @if ($loop->iteration=5)
+                    <img src="{{ asset('data_file/') }}/{{$toko->gambar_5}}" class="d-block w-100" alt="...">
+                    @endif
                     <div class="carousel-caption d-none d-md-block">
                         <h4 class="text-center">{{ $gc }}</h4>
                     </div>
@@ -522,7 +536,7 @@
 
 
                 </div>
-                @if (count($galeri_mitra)>1)
+
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
@@ -531,7 +545,7 @@
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
                   </button>
-                @endif
+
 
               </div>
         </div>

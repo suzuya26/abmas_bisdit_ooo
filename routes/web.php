@@ -65,7 +65,7 @@ Route::post('/tambah', [ProdukController::class, 'tambah']);
 Route::get('oleh/{idoleh}', [OlehController::class, 'detailoleh']);
 Route::get('/produk/hapus/{id}', [ProdukController::class, 'hapus']);
 Route::get('/produk/edit/{id}', [ProdukController::class, 'editproduk']);
-Route::put('/produk/update', [ProdukController::class, 'update']);
+Route::post('/produk/update/{id}', [ProdukController::class, 'update']);
 
 
 

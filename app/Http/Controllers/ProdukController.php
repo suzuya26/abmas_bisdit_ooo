@@ -53,25 +53,35 @@ class ProdukController extends Controller
         DB::table('mitra_produk')->where('id_produk_mitra', $id)->delete();
         return redirect('/daftarproduk/'.Auth::user()->mitra_id);
     }
-    public function update(Request $request)
+    public function update(Request $request, $id)
         {
     $this->validate($request, [
-        'file' => 'required|file|image|mimes:jpeg,png,jpg|max:4096'
+        'file' => 'required|image|mimes:jpeg,png,jpg|max:4096'
     ]);
     // menyimpan data file yang diupload ke variabel $file
+    if ($request->hasFile('file')) {
     $file = $request->file('file');
-    $nama_file = time()."_".$file->getClientOriginalName();
+    $nama_file = $file->getClientOriginalName();
    // isi dengan nama folder tempat kemana file diupload
-    $tujuan_upload = 'data_file';
-    $file->move($tujuan_upload,$nama_file);
-	// update data pegawai
-	DB::table('mitra_produk')->where('id_produk_mitra', $request->id_produk_mitra)->update([
+    $file->move('data_file',$nama_file);
+    $mitra = DB::table('mitra_produk')->where('id_produk_mitra', $id);
+    $mitra->update([
 		    'nama_produk_mitra' => $request->nama_produk,
             'harga_produk_mitra' => $request->harga_produk,
             'kemasan_produk_mitra' => $request->kemasan_produk,
             'idmitra' => Auth::user()->mitra_id,
-            'gambar_produkMitra' => $nama_file
+            'gambar_produkMitra' => $nama_file,
+	]);}
+	// update data pegawai
+    $mitra = DB::table('mitra_produk')->where('id_produk_mitra', $id);
+    $mitra->update([
+		    'nama_produk_mitra' => $request->nama_produk,
+            'harga_produk_mitra' => $request->harga_produk,
+            'kemasan_produk_mitra' => $request->kemasan_produk,
+            'idmitra' => Auth::user()->mitra_id,
+            'gambar_produkMitra' => $nama_file,
 	]);
+
 	// alihkan halaman ke halaman pegawai
 	return redirect('/daftarproduk/'.Auth::user()->mitra_id);
     }

@@ -21,9 +21,9 @@
     <!-- Main content -->
     <section class="content">
         @foreach ($mitra_produk as $m)
-        <form action="/produk/update" method="POST" enctype="multipart/form-data">
+        <form action="{{ url('/produk/update/'.$m->id_produk_mitra) }}" method="POST" enctype="multipart/form-data">
             @csrf
-            {{ method_field('PUT') }}
+
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12">
@@ -43,7 +43,7 @@
                                 <div class="form-group">
                                     <label for="formFileMultiple" class="form-label">Gambar Produk</label> <br>
                                     <img style="width: 400px;height:400px" src="{{ url('/data_file/'.$m->gambar_produkMitra) }}" alt="" class="img-preview" style="width: 400px;height:400px">
-                                    <input class="form-control" name="file" type="file" id="image" onchange="previewImage()">
+                                    <input class="form-control" name="file" type="file" name="file" id="image" onchange="previewImage()">
                                 </div>
                                 <input type="hidden" name="id_produk_mitra" value="{{ $m->id_produk_mitra }}">
                                 <div class="form-group">
