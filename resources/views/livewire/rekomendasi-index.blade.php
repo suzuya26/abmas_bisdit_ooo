@@ -26,12 +26,12 @@ $rekomendasiIdToko;
         @if (Rekomendasi::where(['idtoko' => $idtoko, 'id' => auth()->user()->id])->exists())
             {{-- <a wire:click="rekomendasi({{ $idtoko }})" class="btn btn-light btn-lg bi bi-heart-fill">
                 {{ $count }}</a> --}}
-                <a wire:click="rekomendasi({{ $idtoko }})" href="" class="button-toko bg-light" style="background:white">Rekomendasikan
+                <a wire:click="rekomendasi({{ $idtoko }})"  class="button-toko bg-light" style="background:white">Rekomendasikan
                     <i class="fas fa-thumbs-up " style="font-size: 1.3rem"></i>
                 </a>
         @else
             {{-- <a wire:click="rekomendasi({{ $idtoko }})" class="btn btn-light btn-lg bi bi-heart"></a> --}}
-            <a style="width:200px;font-size:0.8rem" wire:click="rekomendasi({{ $idtoko }})" href="" class=" button-toko" style="">Rekomendasikan
+            <a style="width:200px;font-size:0.8rem" wire:click="rekomendasi({{ $idtoko }})"  class=" button-toko" style="">Rekomendasikan
                 <i class="far fa-thumbs-up mt-3" style="font-size: 1.3rem"></i>
             </a>
         @endif

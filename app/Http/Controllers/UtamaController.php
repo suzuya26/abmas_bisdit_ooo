@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Stevebauman\Location\Facades\Location;
+use Carbon\Carbon;
 
 class UtamaController extends Controller
 {
@@ -58,7 +59,7 @@ class UtamaController extends Controller
             ->limit(12)
             ->get();
 
-        $olehKeluarga = DB::table('varianoleh')
+        $olehPopuler = DB::table('varianoleh')
             ->join('lokasi', 'lokasi.idlokasi', '=', 'varianoleh.idlokasi')
             ->where([
                 ['kota', '=', $kota],
@@ -69,17 +70,17 @@ class UtamaController extends Controller
             ->limit(12)
             ->get();
 
-        $olehPopuler = DB::table('varianoleh')
-            ->join('lokasi', 'lokasi.idlokasi', '=', 'varianoleh.idlokasi')
+        $tokoPopuler = DB::table('toko_oleh')
+            ->join('lokasi', 'lokasi.idlokasi', '=', 'toko_oleh.idlokasi')
             ->where([
                 ['kota', '=', $kota],
-                ['rekomendasioleh_count', '>', 0]
+                ['rekomendasi_count', '>=', 0]
             ])
             ->orWhere([
                 ['provinsi', '=', $provinsi],
-                ['rekomendasioleh_count', '>', 0]
+                ['rekomendasi_count', '>=', 0]
             ])
-            ->orderBy('rekomendasioleh_count', 'desc')
+            ->orderBy('rekomendasi_count')
 
             ->limit(12)
             ->get();
@@ -143,6 +144,11 @@ class UtamaController extends Controller
                     ->get();
             }
         }
-        return view('layouts.utama', compact('kota', 'provinsi', 'olehKolega', 'olehKeluarga', 'olehPopuler', 'harga', 'pernahwisata', 'lokasilalu', 'varianoleh'));
+        $toko = DB::table('toko_oleh')->first();
+        $now = Carbon::now();
+        $start = Carbon::createFromTimeString($toko->jam_buka);
+        $end = Carbon::createFromTimeString($toko->jam_tutup);
+        $check = $now->between($start, $end);
+        return view('layouts.utama', compact('kota', 'provinsi', 'olehKolega', 'tokoPopuler', 'olehPopuler', 'harga', 'pernahwisata', 'lokasilalu', 'varianoleh','toko','check'));
     }
 }

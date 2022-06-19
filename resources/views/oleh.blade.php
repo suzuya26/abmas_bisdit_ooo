@@ -105,6 +105,7 @@
 
         .desc {
             text-align: left;
+            margin-top: 20px;
         }
 
         #rank {
@@ -262,27 +263,26 @@
         }
 
         .foto-beli {
-
-            width: 105%;
-            height: 57%;
-            left: 16px;
-            top: 32px;
+            width: 110%;
+            height: 80%;
             background: #9B9B9B;
-            border-radius: 40px 40px 0px 0px;
+            border-radius: 20px;
         }
 
         .foto-beli img {
-            border-radius: 40px 40px 0px 0px;
+            border-radius: 20px;
         }
 
         .nama-beli {
-            border-radius: 0px 0px 40px 40px;
-            width: 105%;
-            height: 70%;
             background: #DEECF3;
             /* Shadow01 */
             box-shadow: 0px 24px 48px rgba(0, 24, 52, 0.080899);
-
+            border-radius: 0px 0px 40px 40px;
+            height: 75%;
+            width: 100%;
+            margin-left: 10.5px;
+            margin-top: -15px;
+            padding-top: 20px;
         }
 
         .teks-nama {
@@ -355,7 +355,7 @@
         }
 
         #funfact {
-            margin-top: 200px;
+            margin-top: 250px;
         }
 
         .foto-oleh {
@@ -522,7 +522,7 @@
                                                     <div class="row info-beli">
                                                         <i class="icon-buka bi bi-geo-alt-fill"><span
                                                                 class="text-beli">{{ $t->alamat }}</span></i>
-                                                        <br>
+                                                        <br><br>
                                                         <i class="icon-buka bi bi-telephone-fill"><span
                                                                 class="text-beli">(031) 12345678</span></i>
                                                     </div>
@@ -570,7 +570,7 @@
                                                     <div class="row info-beli">
                                                         <i class="icon-buka bi bi-geo-alt-fill"><span
                                                                 class="text-beli">{{ $t->alamat }}</span></i>
-                                                        <br>
+                                                        <br><br>
                                                         <i class="icon-buka bi bi-telephone-fill"><span
                                                                 class="text-beli">(031) 12345678</span></i>
                                                     </div>
@@ -619,7 +619,7 @@
                                                     <div class="row info-beli">
                                                         <i class="icon-buka bi bi-geo-alt-fill"><span
                                                                 class="text-beli">{{ $t->alamat }}</span></i>
-                                                        <br>
+                                                        <br><br>
                                                         <i class="icon-buka bi bi-telephone-fill"><span
                                                                 class="text-beli">(031) 12345678</span></i>
                                                     </div>
@@ -660,9 +660,6 @@
         @endif
         <section id="funfact">
             <div class="container">
-                <div class="Informasi mt-3">
-
-                </div>
                 <div class="row mt-4">
                     <div class="strip col-7">
                         <div class="info row mt-4">
@@ -780,7 +777,7 @@
                                                     </div>
                                                 @else
                                                     <div class="kotak">
-                                                        <img src="{{ asset('img/tepung.png') }}" width="37px"
+                                                        <img src="https://media.discordapp.net/attachments/964470483875672094/988016504559788042/placeholder-komposisi.png" width="37px"
                                                             height="37px">
                                                     </div>
                                                 @endif
@@ -792,6 +789,7 @@
                                     </div>
                                 </div>
                             </div>
+                            <br>
                             <div class="row ">
                                 <div class="desc row">
                                     <h1>Standar</h1>
