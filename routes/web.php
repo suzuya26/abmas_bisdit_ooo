@@ -49,6 +49,7 @@ Route::get('/updateprofil', function () {return view('mitra.updateprofil');});
 
 Route::get('/toko/{idtoko}', [TokoController::class, 'show']);
 Route::post('/update/{id}', [MitraController::class, 'update'])->name('update');
+Route::post('/updateGambarUtama/{id}', [MitraController::class, 'gambarutama']);
 Route::post('/updateGambar1/{id}', [MitraController::class, 'gambar1']);
 Route::post('/updateGambar2/{id}', [MitraController::class, 'gambar2']);
 Route::post('/updateGambar3/{id}', [MitraController::class, 'gambar3']);

@@ -116,6 +116,9 @@ h1 {
                                 <a class="nav-link" role="tab" data-toggle="tab" href="#informasi-toko">Informasi Toko</a>
                             </li>
                             <li class="cycle-tab-item">
+                                <a class="nav-link" role="tab" data-toggle="tab" href="#gambar-utama">Gambar Utama Toko </a>
+                            </li>
+                            <li class="cycle-tab-item">
                                 <a class="nav-link" role="tab" data-toggle="tab" href="#gambar-1">Gambar Toko 1 </a>
                             </li>
                             <li class="cycle-tab-item">
@@ -282,6 +285,50 @@ h1 {
                                                 <div class="col-12 mb-3">
                                                     <a href="{{ url('profil/'.$toko_mitra->idmitra) }}" class="btn btn-secondary">Cancel</a>
                                                     <input type="submit" value="Update Profil" class="btn btn-success float-right">
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="gambar-utama" role="tabpanel" aria-labelledby="profile-tab">
+                                    <div class="container-fluid">
+                                        <form action="{{ url('updateGambarUtama/'.$toko_mitra->idmitra) }}" enctype="multipart/form-data" method="POST">
+                                        @csrf
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="card card-primary">
+                                                        <div class="card-header">
+                                                            <h3 class="card-title">Gambar Mitra</h3>
+                                                            <div class="card-tools">
+                                                                <button type="button" class="btn btn-primary" data-card-widget="collapse"
+                                                                    title="Collapse">
+                                                                    <i class="fas fa-minus"></i>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <div class="mb-3">
+                                                                <div class="d-flex justify-content-center">
+                                                                    @if($toko_mitra->gambar_utama)
+                                                                    <img src="{{ url('/data_file/'.$toko_mitra->gambar_utama) }}" alt="" class="img-preview img-fluid col-sm-6">
+                                                                    @else
+                                                                    <img src="" alt="" class="img-preview img-fluid col-sm-6">
+                                                                    @endif
+                                                                    <img src="" alt="">
+                                                                </div> <br>
+                                                                <label for="formFile" class="form-label">Pilih Gambar</label>
+                                                                <input class="form-control" class="image" name="image" type="file" id="image" onchange="previewImage()">
+                                                                @error('image')
+                                                                    <div class="invalid-feedback">
+                                                                        {{ $message }}
+                                                                    </div>
+                                                                @enderror
+                                                              </div>
+                                                              <div class="form-group">
+                                                                <button type="submit" class="btn btn-success">Update Gambar</button>
+                                                        </div>
+                                                    </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </form>

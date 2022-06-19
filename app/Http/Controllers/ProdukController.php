@@ -12,7 +12,7 @@ class ProdukController extends Controller
     public function tambah(Request $request)
     {
         $this->validate($request, [
-			'file' => 'required|file|image|mimes:jpeg,png,jpg|max:2048'
+			'file' => 'required|file|image|mimes:jpeg,png,jpg|max:4096'
 		]);
 		// menyimpan data file yang diupload ke variabel $file
 		$file = $request->file('file');
@@ -56,7 +56,7 @@ class ProdukController extends Controller
     public function update(Request $request)
         {
     $this->validate($request, [
-        'file' => 'required|file|image|mimes:jpeg,png,jpg|max:2048'
+        'file' => 'required|file|image|mimes:jpeg,png,jpg|max:4096'
     ]);
     // menyimpan data file yang diupload ke variabel $file
     $file = $request->file('file');

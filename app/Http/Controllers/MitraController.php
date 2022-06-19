@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Carbon\Carbon;
 
 class MitraController extends Controller
 {
@@ -68,10 +69,31 @@ class MitraController extends Controller
         }
         return redirect('/profil/'.$id);
     }
+    public function gambarutama(Request $request, $id){
+        $mitra = DB::table('toko_mitra')->where('idmitra', $id);
+        $validatedData = $request->validate([
+            'image'=>'image|file|max:4096'
+        ]);
+        $file = $request->file('image');
+
+        $nama_file = time()."_".$file->getClientOriginalName();
+
+        $tujuan_upload = 'data_file';
+	    $file->move($tujuan_upload,$nama_file);
+
+        // if($request->file('image')){
+        //     $validatedData['image'] = $request->file('image')->store('post-images');
+        // }
+        $mitra->update([
+            'gambar_utama' => $nama_file
+        ]);
+        return redirect()->back();
+    }
+
     public function gambar1(Request $request, $id){
         $mitra = DB::table('toko_mitra')->where('idmitra', $id);
         $validatedData = $request->validate([
-            'image'=>'image|file|max:1024'
+            'image'=>'image|file|max:4096'
         ]);
         $file = $request->file('image');
 
@@ -91,7 +113,7 @@ class MitraController extends Controller
     public function gambar2(Request $request, $id){
         $mitra = DB::table('toko_mitra')->where('idmitra', $id);
         $validatedData = $request->validate([
-            'image'=>'image|file|max:1024'
+            'image'=>'image|file|max:4096'
         ]);
         $file = $request->file('image');
 
@@ -111,7 +133,7 @@ class MitraController extends Controller
     public function gambar3(Request $request, $id){
         $mitra = DB::table('toko_mitra')->where('idmitra', $id);
         $validatedData = $request->validate([
-            'image'=>'image|file|max:1024'
+            'image'=>'image|file|max:4096'
         ]);
         $file = $request->file('image');
 
@@ -131,7 +153,7 @@ class MitraController extends Controller
     public function gambar4(Request $request, $id){
         $mitra = DB::table('toko_mitra')->where('idmitra', $id);
         $validatedData = $request->validate([
-            'image'=>'image|file|max:1024'
+            'image'=>'image|file|max:4096'
         ]);
         $file = $request->file('image');
 
@@ -151,7 +173,7 @@ class MitraController extends Controller
     public function gambar5(Request $request, $id){
         $mitra = DB::table('toko_mitra')->where('idmitra', $id);
         $validatedData = $request->validate([
-            'image'=>'image|file|max:1024'
+            'image'=>'image|file|max:4096'
         ]);
         $file = $request->file('image');
 
@@ -189,7 +211,11 @@ class MitraController extends Controller
     public function show($id){
         $toko = DB::table('toko_mitra')->where('idmitra', $id)->first();
         $produk_mitra = DB::table('mitra_produk')->where('idmitra', $id)->get();
-        return view('mitra', compact('toko', 'produk_mitra'));
+        $now = Carbon::now();
+        $start = Carbon::createFromTimeString($toko->jam_buka);
+        $end = Carbon::createFromTimeString($toko->jam_tutup);
+        $check = $now->between($start, $end);
+        return view('mitra', compact('toko', 'produk_mitra','check'));
     }
     public function mitras($id){
         $toko_mitra = DB::table('toko_mitra')->join('users', 'mitra_id', '=', 'toko_mitra.idmitra')->select('toko_mitra.*', 'users.mitra_id')->where('idmitra', $id)->first();
