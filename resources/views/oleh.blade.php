@@ -7,6 +7,7 @@
 
         #header {
             background: #F5EDE1;
+            padding-bottom: 50px;
         }
 
 
@@ -197,8 +198,8 @@
             border-radius: 20px;
         }
 
-        .manfaat .isi {
-            padding: 10px;
+        .manfaat ul {
+            margin-left: -20px;
         }
 
         .icon-komposisi {
@@ -459,7 +460,6 @@
                                 <livewire:favorite-index :idoleh="$idoleh"></livewire:favorite-index>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -468,7 +468,7 @@
         <section id="tempatbeli">
             <div class="container">
                 <h1 class="tempatbeli">Tempat Beli</h1>
-                <div class=" row">
+                <div class="row" style="margin-top: 50px">
                     <div class="col-8"></div>
                     @if (count($tempatbeli)>4)
                     <div class="col-4 text-end">
@@ -803,16 +803,21 @@
                             @endphp
                             <div class="manfaat">
                                 <div class="isi">
-                                    <h1 class="ms-3 mt-2">Manfaat</h1>
-                                    <ul>
+                                    <h1 class=" mt-2">Manfaat</h1>
+                                    <ul style="list-style-type:none">
                                         @foreach ($manfaat as $mf)
                                             <li style="font-size: 16px">{{ $mf }}</li>
                                         @endforeach
                                     </ul>
-                                    <h1 class="ms-3 mt-2">Pantangan</h1>
-                                    <ul>
+                                    <h1 class=" mt-2">Pantangan</h1>
+                                    <ul style="list-style-type:none">
                                         @foreach ($pantangan as $mf)
+                                            @if ($loop->odd)
+                                            <li style="font-size: 24px; font-weight : 700"><h4>{{ $mf }}</h4></li>
+                                            @endif
+                                            @if ($loop->even)
                                             <li style="font-size: 16px">{{ $mf }}</li>
+                                            @endif
                                         @endforeach
                                     </ul>
                                 </div>
@@ -827,8 +832,8 @@
 
         <section id="carousel">
             <div class="container carousel">
-                <h1 class="mt-3">Galeri {{ $v->namaoleh }}</h1>
-                <div class="container" style="position: center">
+                <h1 class="mt-3">Galeri Oleh-Oleh</h1>
+                <div class="container" style="position: center; margin-top: 80px">
                     @php
                         $gambaroleh = preg_split('/---/', $v->gambaroleh);
                     @endphp

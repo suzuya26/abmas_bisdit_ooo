@@ -20,9 +20,6 @@ class CreateListToko extends Migration
             $table->bigInteger('id')->unsigned();
             $table->foreign('id')->references('id')->on('users')->onDelete('cascade');
         });
-        Schema::table('toko_oleh', function (Blueprint $table) {
-            $table->bigInteger('list_count')->nullable();
-         });
     }
 
     /**

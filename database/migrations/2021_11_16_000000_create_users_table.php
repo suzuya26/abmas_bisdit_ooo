@@ -24,8 +24,8 @@ class CreateUsersTable extends Migration
             $table->timestamps();
             $table->string('pernah_wisata',255);
             $table->integer('peran');
-            $table->bigInteger('mitra_id')->nullable();
-            $table->foreign('mitra_id')->references('idmitra')->on('toko_mitra');
+            $table->bigInteger('mitra_id')->nullable()->unsigned(); // aman
+            $table->foreign('mitra_id')->references('idmitra')->on ('toko_mitra');
         });
     }
 
