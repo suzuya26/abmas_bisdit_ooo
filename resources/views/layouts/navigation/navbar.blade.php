@@ -44,7 +44,7 @@ width: 185px;
                         <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdownMenuLink"
                             data-bs-auto-close="outside" data-bs-toggle="dropdown" aria-haspopup="true"
                             aria-expanded="false">
-                            Kategori
+                            Kategori Produk
                         </a>
                         <div class="dropdown-menu" style="margin-top: -1px; left: 0; right: 0;"
                             aria-labelledby="navbarDropdownMenuLink">
