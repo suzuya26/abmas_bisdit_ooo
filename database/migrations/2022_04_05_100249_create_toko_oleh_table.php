@@ -27,7 +27,7 @@ class CreateTokoOlehTable extends Migration
             $table->string('jam_tutup')->nullable();
             $table->bigInteger('rekomendasi_count')->nullable();
             $table->bigInteger('list_count')->nullable();
-            $table->integer('idlokasi');
+            $table->bigInteger('idlokasi')->unsigned(); // aman
             $table->foreign('idlokasi')->references('idlokasi')->on('lokasi');
             $table->string('nama_lokasi');
             $table->string('sosmed_toko');

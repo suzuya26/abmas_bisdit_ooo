@@ -27,14 +27,14 @@ class LoginController extends Controller
             $request->session()->regenerate();
             $id = Auth::user()->mitra_id;
             if(Auth::user()->peran==0){ // 0 == pelanggan
-                return redirect('/utama');
+                return redirect('/');
             }
             if(Auth::user()->peran==1){ // 1 == mitra
                 return redirect('/profil/'.$id);
-            } 
+            }
             if(Auth::user()->peran==2){ // 2 == admin
-                return redirect('/utama');
-            } 
+                return redirect('/');
+            }
             return redirect('/');
         }
 

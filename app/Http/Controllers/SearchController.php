@@ -29,6 +29,12 @@ class SearchController extends Controller
             ->distinct()
             ->paginate(8);
 
-        return view('search', compact('result', 'param'));
+        $hasil = DB::table('toko_oleh')
+            ->where('nama_toko', 'like', '%' . $param . '%')
+            ->orWhere('nama_lokasi', 'like', '%' . $param . '%')
+            ->distinct()
+            ->paginate(8);
+
+        return view('search', compact('result', 'param','hasil'));
     }
 }

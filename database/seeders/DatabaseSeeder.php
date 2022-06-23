@@ -13,6 +13,19 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        $this->call([
+            bahandasarseeder::class,
+            caramasakseeder::class,
+            FavoriteSeeder::class,
+            jenisolehseeder::class,
+            lokasiseeder::class,
+            produktokoseeder::class,
+            rasaseeder::class,
+            teksturseeder::class,
+            tempatbeliSeeder::class,
+            TokoSeeder::class,
+            varianjenisseeder::class,
+            varianolehseeder::class,
+        ]);
     }
 }
