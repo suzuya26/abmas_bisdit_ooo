@@ -19,13 +19,14 @@ class DatabaseSeeder extends Seeder
             FavoriteSeeder::class,
             jenisolehseeder::class,
             lokasiseeder::class,
-            produktokoseeder::class,
             rasaseeder::class,
             teksturseeder::class,
-            tempatbeliSeeder::class,
-            TokoSeeder::class,
             varianjenisseeder::class,
             varianolehseeder::class,
+            tempatbeliSeeder::class,
+            TokoSeeder::class,
+            produktokoseeder::class,
+
         ]);
     }
 }

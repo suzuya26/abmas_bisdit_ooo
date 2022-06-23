@@ -22,7 +22,7 @@ class produktokoseeder extends Seeder
 'harga_produk'=>'60000 - 75000',
 'kemasan_produk'=>'',
 'idtoko'=>'70',
-'idoleh'=>'',
+
 ]);
  DB::table('produk_toko')->insert
 ([
@@ -32,7 +32,7 @@ class produktokoseeder extends Seeder
 'harga_produk'=>'',
 'kemasan_produk'=>'',
 'idtoko'=>'70',
-'idoleh'=>'',
+
 ]);
  DB::table('produk_toko')->insert
 ([
@@ -42,7 +42,7 @@ class produktokoseeder extends Seeder
 'harga_produk'=>'',
 'kemasan_produk'=>'',
 'idtoko'=>'70',
-'idoleh'=>'',
+
 ]);
  DB::table('produk_toko')->insert
 ([
@@ -52,7 +52,7 @@ class produktokoseeder extends Seeder
 'harga_produk'=>'',
 'kemasan_produk'=>'',
 'idtoko'=>'70',
-'idoleh'=>'',
+
 ]);
  DB::table('produk_toko')->insert
 ([
@@ -62,7 +62,7 @@ class produktokoseeder extends Seeder
 'harga_produk'=>'',
 'kemasan_produk'=>'',
 'idtoko'=>'70',
-'idoleh'=>'',
+
 ]);
  DB::table('produk_toko')->insert
 ([
@@ -72,7 +72,7 @@ class produktokoseeder extends Seeder
 'harga_produk'=>'',
 'kemasan_produk'=>'',
 'idtoko'=>'71',
-'idoleh'=>'',
+
 ]);
  DB::table('produk_toko')->insert
 ([
@@ -82,7 +82,7 @@ class produktokoseeder extends Seeder
 'harga_produk'=>'',
 'kemasan_produk'=>'',
 'idtoko'=>'71',
-'idoleh'=>'',
+
 ]);
  DB::table('produk_toko')->insert
 ([
@@ -92,7 +92,7 @@ class produktokoseeder extends Seeder
 'harga_produk'=>'',
 'kemasan_produk'=>'',
 'idtoko'=>'71',
-'idoleh'=>'',
+
 ]);
  DB::table('produk_toko')->insert
 ([
@@ -102,7 +102,7 @@ class produktokoseeder extends Seeder
 'harga_produk'=>'',
 'kemasan_produk'=>'',
 'idtoko'=>'71',
-'idoleh'=>'',
+
 ]);
  DB::table('produk_toko')->insert
 ([
@@ -112,7 +112,7 @@ class produktokoseeder extends Seeder
 'harga_produk'=>'25.000 - 35.000',
 'kemasan_produk'=>'Dus',
 'idtoko'=>'2',
-'idoleh'=>'',
+
 ]);
  DB::table('produk_toko')->insert
 ([
@@ -122,7 +122,7 @@ class produktokoseeder extends Seeder
 'harga_produk'=>'33.000',
 'kemasan_produk'=>'Dus',
 'idtoko'=>'4',
-'idoleh'=>'',
+
 ]);
  DB::table('produk_toko')->insert
 ([
@@ -132,7 +132,7 @@ class produktokoseeder extends Seeder
 'harga_produk'=>'19.000',
 'kemasan_produk'=>'Dus',
 'idtoko'=>'4',
-'idoleh'=>'',
+
 ]);
  DB::table('produk_toko')->insert
 ([
@@ -142,7 +142,7 @@ class produktokoseeder extends Seeder
 'harga_produk'=>'18.000',
 'kemasan_produk'=>'Dus',
 'idtoko'=>'5',
-'idoleh'=>'',
+
 ]);
  DB::table('produk_toko')->insert
 ([
@@ -152,7 +152,7 @@ class produktokoseeder extends Seeder
 'harga_produk'=>'160.000',
 'kemasan_produk'=>'Mika',
 'idtoko'=>'6',
-'idoleh'=>'',
+
 ]);
  DB::table('produk_toko')->insert
 ([
@@ -162,7 +162,7 @@ class produktokoseeder extends Seeder
 'harga_produk'=>'220.000',
 'kemasan_produk'=>'Mika',
 'idtoko'=>'6',
-'idoleh'=>'',
+
 ]);
  DB::table('produk_toko')->insert
 ([
@@ -172,7 +172,7 @@ class produktokoseeder extends Seeder
 'harga_produk'=>'38.000',
 'kemasan_produk'=>'Plastik',
 'idtoko'=>'7',
-'idoleh'=>'',
+
 ]);
  DB::table('produk_toko')->insert
 ([
@@ -182,7 +182,7 @@ class produktokoseeder extends Seeder
 'harga_produk'=>'32.000-40.000',
 'kemasan_produk'=>'Dus',
 'idtoko'=>'8',
-'idoleh'=>'',
+
 ]);
  DB::table('produk_toko')->insert
 ([
@@ -192,7 +192,7 @@ class produktokoseeder extends Seeder
 'harga_produk'=>'18.000-35.000',
 'kemasan_produk'=>'Dus',
 'idtoko'=>'10',
-'idoleh'=>'',
+
 ]);
  DB::table('produk_toko')->insert
 ([
@@ -202,7 +202,7 @@ class produktokoseeder extends Seeder
 'harga_produk'=>'35.000',
 'kemasan_produk'=>'Dus',
 'idtoko'=>'11',
-'idoleh'=>'',
+
 ]);
  DB::table('produk_toko')->insert
 ([
@@ -212,7 +212,7 @@ class produktokoseeder extends Seeder
 'harga_produk'=>'64.000',
 'kemasan_produk'=>'Dus',
 'idtoko'=>'12',
-'idoleh'=>'',
+
 ]);
  DB::table('produk_toko')->insert
 ([
@@ -222,7 +222,7 @@ class produktokoseeder extends Seeder
 'harga_produk'=>'27.000',
 'kemasan_produk'=>'Plastik',
 'idtoko'=>'14',
-'idoleh'=>'',
+
 ]);
  DB::table('produk_toko')->insert
 ([
@@ -232,7 +232,7 @@ class produktokoseeder extends Seeder
 'harga_produk'=>'15.500',
 'kemasan_produk'=>'Plastik',
 'idtoko'=>'15',
-'idoleh'=>'',
+
 ]);
  DB::table('produk_toko')->insert
 ([
@@ -242,7 +242,7 @@ class produktokoseeder extends Seeder
 'harga_produk'=>'38.000',
 'kemasan_produk'=>'Dus',
 'idtoko'=>'16',
-'idoleh'=>'',
+
 ]);
  DB::table('produk_toko')->insert
 ([
@@ -252,7 +252,7 @@ class produktokoseeder extends Seeder
 'harga_produk'=>'50.400',
 'kemasan_produk'=>'Plastik',
 'idtoko'=>'17',
-'idoleh'=>'',
+
 ]);
  DB::table('produk_toko')->insert
 ([
@@ -262,7 +262,7 @@ class produktokoseeder extends Seeder
 'harga_produk'=>'45.000 - 55.000',
 'kemasan_produk'=>'Dus',
 'idtoko'=>'19',
-'idoleh'=>'',
+
 ]);
  DB::table('produk_toko')->insert
 ([
@@ -272,7 +272,7 @@ class produktokoseeder extends Seeder
 'harga_produk'=>'148.000',
 'kemasan_produk'=>'Dus',
 'idtoko'=>'23',
-'idoleh'=>'',
+
 ]);
  DB::table('produk_toko')->insert
 ([
@@ -282,7 +282,7 @@ class produktokoseeder extends Seeder
 'harga_produk'=>'39.000',
 'kemasan_produk'=>'Plastik',
 'idtoko'=>'23',
-'idoleh'=>'',
+
 ]);
  DB::table('produk_toko')->insert
 ([
@@ -292,7 +292,7 @@ class produktokoseeder extends Seeder
 'harga_produk'=>'35.000',
 'kemasan_produk'=>'Dus',
 'idtoko'=>'23',
-'idoleh'=>'',
+
 ]);
  DB::table('produk_toko')->insert
 ([
@@ -302,7 +302,7 @@ class produktokoseeder extends Seeder
 'harga_produk'=>'14.000-70.000',
 'kemasan_produk'=>'Dus',
 'idtoko'=>'24',
-'idoleh'=>'',
+
 ]);
  DB::table('produk_toko')->insert
 ([
@@ -312,7 +312,7 @@ class produktokoseeder extends Seeder
 'harga_produk'=>'32.000-35.000',
 'kemasan_produk'=>'Plastik',
 'idtoko'=>'25',
-'idoleh'=>'',
+
 ]);
  DB::table('produk_toko')->insert
 ([
@@ -322,7 +322,7 @@ class produktokoseeder extends Seeder
 'harga_produk'=>'32.500',
 'kemasan_produk'=>'Plastik',
 'idtoko'=>'26',
-'idoleh'=>'',
+
 ]);
  DB::table('produk_toko')->insert
 ([
@@ -332,7 +332,7 @@ class produktokoseeder extends Seeder
 'harga_produk'=>'25.000',
 'kemasan_produk'=>'Dus',
 'idtoko'=>'28',
-'idoleh'=>'',
+
 ]);
  DB::table('produk_toko')->insert
 ([
@@ -342,7 +342,7 @@ class produktokoseeder extends Seeder
 'harga_produk'=>'35.000',
 'kemasan_produk'=>'Dus',
 'idtoko'=>'28',
-'idoleh'=>'',
+
 ]);
  DB::table('produk_toko')->insert
 ([
@@ -352,7 +352,7 @@ class produktokoseeder extends Seeder
 'harga_produk'=>'72.000',
 'kemasan_produk'=>'Plastik',
 'idtoko'=>'31',
-'idoleh'=>'',
+
 ]);
     }
 }

@@ -17,12 +17,12 @@ class CreateProdukToko extends Migration
             $table->id('id_produk');
             $table->string('nama_produk');
             $table->mediumText('gambar_produk');
-            $table->integer('harga_produk');
+            $table->string('harga_produk');
             $table->string('kemasan_produk');
             $table->bigInteger('idtoko')->unsigned();
             $table->foreign('idtoko')->references('idtoko')->on('toko_oleh');
-            $table->bigInteger('idoleh')->unsigned();
-            $table->foreign('idoleh')->references('idoleh')->on('varianoleh');
+            // $table->bigInteger('idoleh')->unsigned();
+            // $table->foreign('idoleh')->references('idoleh')->on('varianoleh');
             $table->timestamps();
         });
     }

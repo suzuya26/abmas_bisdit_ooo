@@ -105,7 +105,7 @@ class varianjenisseeder extends Seeder
             'namavarian'=>'Gorengan',
             'deskripsivarian'=>'Gorengan adalah istilah yang mencakup berbagai jenis makanan yang dicelup adonan tepung dan kemudian digoreng rendam dalam minyak goreng panas yang banyak.',
             'gambarvarian'=>'https://cdn.discordapp.com/attachments/906163180328325130/906459474770944030/Gorengan.jpg',
-'idjenis'=>'12'
+'idjenis'=>'2'
 
 
         ]);

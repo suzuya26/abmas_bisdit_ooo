@@ -22,7 +22,7 @@ class CreateVarianolehTable extends Migration
             $table->text('deskripsioleh'); // aman
             $table->bigInteger('idjenis')->unsigned(); // aman
             $table->foreign('idjenis')->references('idjenis')->on('jenisoleh');
-            $table->bigInteger('id_varian')->unsigned(); // aman
+            $table->bigInteger('id_varian')->nullable()->unsigned(); // aman
             $table->foreign('id_varian')->references('id_varian')->on('varianjenis');
             $table->bigInteger('idrasa')->unsigned(); // aman
             $table->foreign('idrasa')->references('idrasa')->on('rasa');
@@ -36,7 +36,7 @@ class CreateVarianolehTable extends Migration
             $table->bigInteger('idlokasi')->unsigned(); // aman
             $table->foreign('idlokasi')->references('idlokasi')->on('lokasi');
             $table->string('satuan');
-            $table->boolean('statushalal'); // aman
+            $table->boolean('statushalal')->nullable(); // aman
             $table->string('kadarluarsa'); // aman
             $table->string('carapenyimpanan',255); // aman
             $table->string('carapenyajian',255); // aman
@@ -48,7 +48,7 @@ class CreateVarianolehTable extends Migration
             $table->integer('hargamin')->nullable();
             $table->integer('hargamax')->nullable();
             $table->boolean('vegan')->nullable();
-            $table->boolean('vegatarian')->nullable();
+            $table->boolean('vegetarian')->nullable();
             $table->boolean('gluten_free')->nullable();
             $table->bigInteger('list_count')->nullable();
             $table->bigInteger('rekomendasioleh_count')->nullable();
