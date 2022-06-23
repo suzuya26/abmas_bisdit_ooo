@@ -23,8 +23,8 @@ class CreateTokoOlehTable extends Migration
             $table->text('kontak_toko');
             $table->longText('galeri_toko');
             $table->mediumText('galeri_toko_caption');
-            $table->string('jam_buka');
-            $table->string('jam_tutup');
+            $table->string('jam_buka')->nullable();
+            $table->string('jam_tutup')->nullable();
             $table->bigInteger('rekomendasi_count')->nullable();
             $table->bigInteger('list_count')->nullable();
             $table->integer('idlokasi');
