@@ -391,16 +391,16 @@
                         </div>
                     </div>
                     @endforeach --}}
-                    @foreach ($produk_toko as $p)
+                    @foreach ($toko as $t)
                     <div class="caro col-3">
                         <div class="foto-beli">
-                            <img src="{{ $p->gambar_produk }}" width= "301px"
+                            <img src="{{ asset('img/utama.png') }}" width= "301px"
                             height="285.65px" style="border-radius: 20px">
                         </div>
                         <div class="nama-beli">
                             <div class="teks-nama ">
-                                <h2 class="" style="margin-top: 33px">{{ $p->nama_produk }}</h2>
-                                <h2 id="buka" style="color: red">Rp <span id="jam-buka">{{ $p->harga_produk }}</span></h2>
+                                <h2 class="" style="margin-top: 33px">Spikoe Surabaya</h2>
+                                <h2 id="buka" style="color: red">Rp <span id="jam-buka">100.000</span></h2>
                             </div>
                         </div>
                     </div>
@@ -458,7 +458,7 @@
                 $peta = stripslashes($embed);
                 echo $embed;
                  @endphp --}}
-                {!! $toko->map_toko !!}
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.810738251949!2d112.73625441469171!3d-7.262368294757861!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7f95e1910b90f%3A0x9ec46785d9c7f081!2sTunjungan%20Plaza%2C%20Jl.%20Basuki%20Rahmat%20No.8-12%2C%20Kedungdoro%2C%20Kec.%20Tegalsari%2C%20Kota%20SBY%2C%20Jawa%20Timur%2060261!5e0!3m2!1sid!2sid!4v1655028595740!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
                 <div class="col-6">
                     <div class="row">
