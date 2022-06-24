@@ -16,7 +16,7 @@ class TokoController extends Controller
         $start = Carbon::createFromTimeString($toko->jam_buka);
         $end = Carbon::createFromTimeString($toko->jam_tutup);
         $check = $now->between($start, $end);
-        return view('toko', compact('toko', 'produk_toko', 'idtoko', 'check'));
+        return view('toko', compact('toko', 'idtoko', 'check', 'produk_toko'));
     }
 
 }

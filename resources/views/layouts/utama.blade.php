@@ -28,7 +28,7 @@
         left: 100px;
         font-family: 'Poppins';
         font-style: normal;
-        font-size: 60px;
+        font-size: 90px;
         line-height: 50px;
         font-family: 'Quicksand';
         font-style: normal;
@@ -169,8 +169,8 @@ transform: rotate(37.85deg);
         <div class="row">
             <div class="col-sm-6 mt-5">
                 <h1 class="judul">Oasis Oleh-Oleh</h1> <br> <br>
-                <p class="deskripsi" style="text-align: justify">
-                    Oasis oleh - oleh merupakan website utama untuk membantu umat manusia memenuhi kebutuhannya dalam mencari oleh - oleh khas daerah Indonesia.
+                <p class="deskripsi" style="text-align: justify;">
+                    Website Pencarian Oleh-oleh terlengkap untuk kamu yang sedang mencari oleh-oleh khas dari seluruh daerah di Indonesia.
                 </p>
                 <button class="buttonCari">Cari Sekarang!</button>
             </div>
@@ -229,7 +229,7 @@ transform: rotate(37.85deg);
                                             <h2>{{ $rek->namaoleh }}</h2>
                                             <h2 id="buka" style="color: red">Rp <span id="jam-buka">{{ number_format($rek->hargamin) }}</span></h2>
                                             <div class="info-beli" style="font-size: 18px">
-                                                <i class="fas fa-thumbs-up"><span class="text-beli"><span class="text-danger"> {{$rek->rekomendasioleh_count}}</span> Users</span></i> <br>
+                                                <i class="fas fa-thumbs-up"><span class="text-beli"><span class="text-danger"> {{$rek->favorit_count}}</span> Users</span></i> <br>
                                             </div>
                                         </div>
                                     </div>
@@ -434,7 +434,7 @@ transform: rotate(37.85deg);
                                                  <h2>{{ $rek->namaoleh }}</h2>
                                                  <h5 id="buka" class=""><span class="text-danger fw-bold">Rp</span> <span id="jam-buka">{{ number_format($rek->hargamin) }}</span></h5>
                                                  <div class="info-beli">
-                                                     <span class="text-beli" style="font-size: 1.2rem">{{$rek->kota}}</span> <br>
+                                                     <span class="text-beli" style="font-size: 1.4rem">{{$rek->kota}}</span> <br>
                                                      {{-- <i class="fas fa-map-marker-alt"> <span class="text-beli" style="font-size: 0.8rem">Jalan Jemursari Raya IV</span></i> --}}
                                                  </div>
                                              </div>
