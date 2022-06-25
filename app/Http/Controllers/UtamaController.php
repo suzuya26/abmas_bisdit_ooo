@@ -74,7 +74,7 @@ class UtamaController extends Controller
             ->join('lokasi', 'lokasi.idlokasi', '=', 'toko_oleh.idlokasi')
             ->where([
                 ['kota', '=', $kota],
-                ['rekomendasi_count', '>=', 0]
+                // ['rekomendasi_count', '>=', 0]
             ])
             ->orWhere([
                 ['provinsi', '=', $provinsi],

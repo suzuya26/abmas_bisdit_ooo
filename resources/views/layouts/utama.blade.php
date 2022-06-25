@@ -130,6 +130,7 @@ transform: rotate(37.85deg);
             background: #9B9B9B;
             border-radius: 20px;
             display: block;
+            transition: .3s;
         }
         #buka {
             font-family: 'Poppins';
@@ -162,6 +163,10 @@ transform: rotate(37.85deg);
         .info-beli {
             line-height: 12px;
         }
+        .foto-beli:hover{
+            width: 103%;
+            cursor: pointer;
+        }
 
 </style>
 <div class="section utama" style="background: #C4C4C4; height:450px">
@@ -170,9 +175,9 @@ transform: rotate(37.85deg);
             <div class="col-sm-6 mt-5">
                 <h1 class="judul">Oasis Oleh-Oleh</h1> <br> <br>
                 <p class="deskripsi" style="text-align: justify;">
-                    Website Pencarian Oleh-oleh terlengkap untuk kamu yang sedang mencari oleh-oleh khas dari seluruh daerah di Indonesia.
+                    Website pencarian oleh-oleh terlengkap untuk kamu yang sedang mencari oleh-oleh khas dari seluruh daerah di Indonesia.
                 </p>
-                <button class="buttonCari">Cari Sekarang!</button>
+               <a href="#oleh"> <button class="buttonCari">Cari Sekarang!</button></a>
             </div>
             {{-- <div class="col-1"></div> --}}
             <div class="col-sm-5">
@@ -188,7 +193,7 @@ transform: rotate(37.85deg);
      @else
      <h2>Hi, <span class="fw-bold"><i>Tamu!</i></span></h2>
      @endauth
-     <h2>Sekarang lokasi kamu ada di</h2>
+     <h2 id="oleh">Sekarang lokasi kamu ada di</h2>
      <h2><i class="fas fa-map-marker-alt" style="color: rgb(255, 148, 49)"></i> {{ $kota . ', ' . $provinsi }}</h2>
     </div>
  </section> <hr>
@@ -292,7 +297,7 @@ transform: rotate(37.85deg);
  @if (count($tokoPopuler) > 0)
  <section style="margin-bottom: 200px" class="mt-3">
      <div class="container">
-         <h1 class="fw-bold mt-5">Rekomendasi Toko Oleh-oleh yang Sering Dikunjungi</h1>
+         <h1 class="fw-bold mt-5">Rekomendasi Toko Oleh-Oleh di {{ $kota }}</h1>
      <div class="row">
          <div class="col-8"></div>
              <div class="col-4 text-end">

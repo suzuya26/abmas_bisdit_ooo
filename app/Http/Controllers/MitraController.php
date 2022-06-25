@@ -9,20 +9,26 @@ use Carbon\Carbon;
 
 class MitraController extends Controller
 {
-    public function mitra($idMitra){
-        $mitra = DB::table('produk_mitra')
-        ->join('mitra_produk', 'mitra_produk.idmitra', '=', 'produk_mitra.idmitra')
-        ->get();
-        $idmitra = '';
-        foreach ($mitra as $m) {
-            $idmitra = $m->idmitra;
-        }
-        $produkmitra= DB::table('produk_mitra')
-        ->where('produk_mitra.idmitra',$idmitra)
-        ->join('mitra', 'mitra.idmitra', '=', 'produk_mitra.idmitra')
-        ->get();
-        $toko_mitra = DB::table('toko_mitra')->join('users', 'mitra_id', '=', 'toko_mitra.idmitra')->select('toko_mitra.*', 'users.mitra_id')->where('idmitra', $id)->first();
-        return view('mitra', compact('mitra','produkmitra', 'toko_mitra', $idMitra));
+    // public function mitra($idMitra){
+    //     $mitra = DB::table('produk_mitra')
+    //     ->join('mitra_produk', 'mitra_produk.idmitra', '=', 'produk_mitra.idmitra')
+    //     ->get();
+    //     $idmitra = '';
+    //     foreach ($mitra as $m) {
+    //         $idmitra = $m->idmitra;
+    //     }
+    //     $produkmitra= DB::table('produk_mitra')
+    //     ->where('produk_mitra.idmitra',$idmitra)
+    //     ->join('mitra', 'mitra.idmitra', '=', 'produk_mitra.idmitra')
+    //     ->get();
+    //     $toko_mitra = DB::table('toko_mitra')->join('users', 'mitra_id', '=', 'toko_mitra.idmitra')->select('toko_mitra.*', 'users.mitra_id')->where('idmitra', $id)->first();
+    //     return view('mitra', compact('mitra','produkmitra', 'toko_mitra', $idMitra));
+    // }
+    public function mitra(){
+        $toko = DB::table('toko_oleh')->where('idtoko', 81)->first();
+        $produk_toko = DB::table('produk_toko')->where('idtoko', 81)->get();
+        $idtoko = 81;
+        return view('mitra', compact(['toko', 'idtoko', 'produk_toko']));
     }
     public function index($id){
         // $nama_mitra = DB::table('users')->join('toko_mitra', 'idmitra', '=', 'mitra_id')->select('users.*','toko_mitra.*')->get();

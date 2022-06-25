@@ -18,7 +18,7 @@
                             <h5 class="card-title">{{ $d->namaoleh }}</h5>
                             <p class="card-text">{{ $d->namavarian }}</p>
                         </div>
-                        <a href="/varianoleh/{{ $d->idoleh }}" class="stretched-link"></a>
+                        <a href="/oleh/{{ $d->idoleh }}" class="stretched-link"></a>
                     </div>
                 </div>
                 @endforeach
@@ -47,7 +47,7 @@
                                 </a>
                             </div>
                         </div>
-                        <a href="/varianoleh/{{ $d->idoleh }}" class="stretched-link"></a>
+                        <a href="/oleh/{{ $d->idoleh }}" class="stretched-link"></a>
                     </div>
                 </div>
                 @endforeach
@@ -76,7 +76,7 @@
                                 </a>
                             </div>
                         </div>
-                        <a href="/varianoleh/{{ $d->idoleh }}" class="stretched-link"></a>
+                        <a href="/oleh/{{ $d->idoleh }}" class="stretched-link"></a>
                     </div>
                 </div>
                 @endforeach
@@ -105,7 +105,7 @@
                                 </a>
                             </div>
                         </div>
-                        <a href="/varianoleh/{{ $d->idoleh }}" class="stretched-link"></a>
+                        <a href="/oleh/{{ $d->idoleh }}" class="stretched-link"></a>
                     </div>
                 </div>
                 @endforeach
@@ -134,7 +134,7 @@
                                 </a>
                             </div>
                         </div>
-                        <a href="/varianoleh/{{ $d->idoleh }}" class="stretched-link"></a>
+                        <a href="/oleh/{{ $d->idoleh }}" class="stretched-link"></a>
                     </div>
                 </div>
                 @endforeach
@@ -164,7 +164,7 @@
                                 </a>
                             </div>
                         </div>
-                        <a href="/varianoleh/{{ $d->idoleh }}" class="stretched-link"></a>
+                        <a href="/oleh/{{ $d->idoleh }}" class="stretched-link"></a>
                     </div>
                 </div>
                 @endforeach

@@ -354,5 +354,215 @@ class produktokoseeder extends Seeder
 'idtoko'=>'31',
 
 ]);
+ DB::table('produk_toko')->insert
+([
+ 'id_produk'=>35,
+'nama_produk'=>'Dodol Rumput laut',
+'gambar_produk'=>'https://cdn.discordapp.com/attachments/964470483875672094/982186077622255647/dodol_rumput_laut.jpg',
+'harga_produk'=>'25000',
+'kemasan_produk'=>'Kotak',
+'idtoko'=>76,
+
+]);
+ DB::table('produk_toko')->insert
+([
+ 'id_produk'=>36,
+'nama_produk'=>'Kopi flores',
+'gambar_produk'=>'https://cdn.discordapp.com/attachments/964470483875672094/982186077899092008/kopi_flores.jpg',
+'harga_produk'=>'50000',
+'kemasan_produk'=>'Pouch',
+'idtoko'=>75,
+
+]);
+ DB::table('produk_toko')->insert
+([
+ 'id_produk'=>37,
+'nama_produk'=>'pia kukus',
+'gambar_produk'=>'https://cdn.discordapp.com/attachments/964470483875672094/982186078201053214/pia_kukus.jpg',
+'harga_produk'=>'35000',
+'kemasan_produk'=>'Kotak',
+'idtoko'=>74,
+
+]);
+ DB::table('produk_toko')->insert
+([
+ 'id_produk'=>38,
+'nama_produk'=>'Kacang disco',
+'gambar_produk'=>'https://cdn.discordapp.com/attachments/964470483875672094/982188726044217355/kacang_disco.jpg',
+'harga_produk'=>'30000',
+'kemasan_produk'=>'Kotak',
+'idtoko'=>74,
+
+]);
+ DB::table('produk_toko')->insert
+([
+ 'id_produk'=>39,
+'nama_produk'=>'Pia Putra Kusuma',
+'gambar_produk'=>'https://cdn.discordapp.com/attachments/964470483875672094/982188726618849280/pia_putra_kusuma.jpg',
+'harga_produk'=>'64300',
+'kemasan_produk'=>'Kotak',
+'idtoko'=>78,
+
+]);
+ DB::table('produk_toko')->insert
+([
+ 'id_produk'=>99,
+'nama_produk'=>'Kopi Pinago',
+'gambar_produk'=>'https://cdn.discordapp.com/attachments/964470483875672094/982188726291664916/kopi_pinago.jpg',
+'harga_produk'=>'40000',
+'kemasan_produk'=>'Kotak',
+'idtoko'=>78,
+
+]);
+ DB::table('produk_toko')->insert
+([
+ 'id_produk'=>40,
+'nama_produk'=>'Sambusa',
+'gambar_produk'=>'https://cdn.discordapp.com/attachments/964470483875672094/982226855639805992/sambusa.jpg',
+'harga_produk'=>'1000',
+'kemasan_produk'=>'plastik',
+'idtoko'=>78,
+
+]);
+ DB::table('produk_toko')->insert
+([
+ 'id_produk'=>41,
+'nama_produk'=>'Kasippi',
+'gambar_produk'=>'https://cdn.discordapp.com/attachments/964470483875672094/982226855098728448/Kasippi.webp',
+'harga_produk'=>'25000',
+'kemasan_produk'=>'plastik',
+'idtoko'=>79,
+
+]);
+ DB::table('produk_toko')->insert
+([
+ 'id_produk'=>98,
+'nama_produk'=>'Banua Cokelat',
+'gambar_produk'=>'https://cdn.discordapp.com/attachments/964470483875672094/982226854855446578/cokelat_benua.jpg',
+'harga_produk'=>'25000',
+'kemasan_produk'=>'kotak',
+'idtoko'=>80,
+
+]);
+ DB::table('produk_toko')->insert
+([
+ 'id_produk'=>42,
+'nama_produk'=>'Kopi Kulawi',
+'gambar_produk'=>'https://cdn.discordapp.com/attachments/964470483875672094/982226855434268682/kopi_kulawi.png',
+'harga_produk'=>'30000',
+'kemasan_produk'=>'Pouch',
+'idtoko'=>80,
+
+]);
+ DB::table('produk_toko')->insert
+([
+ 'id_produk'=>43,
+'nama_produk'=>'Klappertaart manado',
+'gambar_produk'=>'https://cdn.discordapp.com/attachments/964470483875672094/982229248481824808/Klappertaart_manado.jpg',
+'harga_produk'=>'85000',
+'kemasan_produk'=>'kotak',
+'idtoko'=>81,
+
+]);
+ DB::table('produk_toko')->insert
+([
+ 'id_produk'=>44,
+'nama_produk'=>'Pala Manis',
+'gambar_produk'=>'https://cdn.discordapp.com/attachments/964470483875672094/982229248720924722/Pala_manis.jpg',
+'harga_produk'=>'32000',
+'kemasan_produk'=>'plastik',
+'idtoko'=>81,
+
+]);
+ DB::table('produk_toko')->insert
+([
+ 'id_produk'=>45,
+'nama_produk'=>'Kacang goyang',
+'gambar_produk'=>'https://cdn.discordapp.com/attachments/964470483875672094/982229248242745404/Kacang_goyang.jpg',
+'harga_produk'=>'40000',
+'kemasan_produk'=>'plastik',
+'idtoko'=>81,
+
+]);
+ DB::table('produk_toko')->insert
+([
+ 'id_produk'=>46,
+'nama_produk'=>'Cokelat Bali',
+'gambar_produk'=>'https://cdn.discordapp.com/attachments/964470483875672094/982230759010107442/coklat_bali.jpeg',
+'harga_produk'=>'50000',
+'kemasan_produk'=>'plastik',
+'idtoko'=>74,
+
+]);
+ DB::table('produk_toko')->insert
+([
+ 'id_produk'=>47,
+'nama_produk'=>'Pia legong',
+'gambar_produk'=>'https://cdn.discordapp.com/attachments/964470483875672094/982230759286911076/pia_legong.jpg',
+'harga_produk'=>'125000',
+'kemasan_produk'=>'kotak',
+'idtoko'=>74,
+
+]);
+ DB::table('produk_toko')->insert
+([
+ 'id_produk'=>48,
+'nama_produk'=>'Kopi khas Lombok',
+'gambar_produk'=>'https://cdn.discordapp.com/attachments/964470483875672094/990133740401479691/Kopi_khas_Lombok.jpg',
+'harga_produk'=>'25000',
+'kemasan_produk'=>'Pouch',
+'idtoko'=>75,
+
+]);
+ DB::table('produk_toko')->insert
+([
+ 'id_produk'=>49,
+'nama_produk'=>'Daging Sei Babi',
+'gambar_produk'=>'https://cdn.discordapp.com/attachments/964470483875672094/982232713748701224/Daging_Sei_Babi.webp',
+'harga_produk'=>'135000',
+'kemasan_produk'=>'plastik',
+'idtoko'=>76,
+
+]);
+ DB::table('produk_toko')->insert
+([
+ 'id_produk'=>50,
+'nama_produk'=>'Kue Karawo',
+'gambar_produk'=>'https://cdn.discordapp.com/attachments/964470483875672094/982233019488296960/Kue_Karawo.jpg',
+'harga_produk'=>'50000',
+'kemasan_produk'=>'Toples',
+'idtoko'=>78,
+
+]);
+ DB::table('produk_toko')->insert
+([
+ 'id_produk'=>51,
+'nama_produk'=>'Cokelat Macoa',
+'gambar_produk'=>'https://cdn.discordapp.com/attachments/964470483875672094/982234837928800266/coklat_makoa.jpg',
+'harga_produk'=>'25000',
+'kemasan_produk'=>'plastik',
+'idtoko'=>78,
+
+]);
+ DB::table('produk_toko')->insert
+([
+ 'id_produk'=>52,
+'nama_produk'=>'Sambel Ikan Roa',
+'gambar_produk'=>'https://cdn.discordapp.com/attachments/964470483875672094/982234253641285642/Sambel_Ikan_Roa.jpg',
+'harga_produk'=>'25000',
+'kemasan_produk'=>'Toples',
+'idtoko'=>81,
+
+]);
+ DB::table('produk_toko')->insert
+([
+ 'id_produk'=>53,
+'nama_produk'=>'Durian Montong Palu',
+'gambar_produk'=>'https://cdn.discordapp.com/attachments/964470483875672094/982234253418975302/Durian_Montong_Palu.jpg',
+'harga_produk'=>'65000',
+'kemasan_produk'=>'Toples',
+'idtoko'=>80,
+
+]);
     }
 }

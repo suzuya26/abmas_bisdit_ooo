@@ -202,7 +202,7 @@ width: 185px;
                     </form>
                 </li>
                 <li>
-                    <a class="nav-link text-dark" href="/,itra">Mitra</a>
+                    <a class="nav-link text-dark" href="/mitra">Mitra</a>
                 </li>
             </ul>
         </div>

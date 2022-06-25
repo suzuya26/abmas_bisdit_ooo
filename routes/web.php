@@ -37,7 +37,7 @@ Route::get('daerah', [FilterController::class, 'daerahasal']);
 Route::get('filter/{kategori}/{by}', [FilterController::class, 'filterby']);
 Route::get('jenis/{jenis}', [FilterController::class, 'varianjenis']);
 Route::get('favorit', [FavoriteController::class, 'favorit']);
-Route::get('mitra', [MitraController::class, 'mitra']);
+Route::get('/mitra', [MitraController::class, 'mitra']);
 Route::get('search', [SearchController::class, 'search']);
 Route::get('/favorit/hapus/{idbookmark}',[FavoriteController::class,'hapusfavorit']);
 
