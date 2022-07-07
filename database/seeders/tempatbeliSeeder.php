@@ -30,7 +30,7 @@ class tempatbeliSeeder extends Seeder
             'idlokasi'=>6,
             'idoleh'=>1,
             'idmitra'=>null,
-            'bpom'=>'',
+
             ]);
             DB::table('tempatbeli')->insert([
             'idtempatbeli'=>2,
@@ -46,7 +46,7 @@ class tempatbeliSeeder extends Seeder
             'idlokasi'=>6,
             'idoleh'=>2,
             'idmitra'=>null,
-            'bpom'=>'',
+
             ]);
             DB::table('tempatbeli')->insert([
             'idtempatbeli'=>3,
@@ -62,7 +62,7 @@ class tempatbeliSeeder extends Seeder
             'idlokasi'=>39,
             'idoleh'=>3,
             'idmitra'=>null,
-            'bpom'=>'',
+
             ]);
             DB::table('tempatbeli')->insert([
             'idtempatbeli'=>4,
@@ -78,7 +78,7 @@ class tempatbeliSeeder extends Seeder
             'idlokasi'=>39,
             'idoleh'=>3,
             'idmitra'=>null,
-            'bpom'=>'',
+
             ]);
             DB::table('tempatbeli')->insert([
             'idtempatbeli'=>5,
@@ -94,7 +94,7 @@ class tempatbeliSeeder extends Seeder
             'idlokasi'=>53,
             'idoleh'=>4,
             'idmitra'=>null,
-            'bpom'=>'',
+
             ]);
             DB::table('tempatbeli')->insert([
             'idtempatbeli'=>6,
@@ -110,7 +110,7 @@ class tempatbeliSeeder extends Seeder
             'idlokasi'=>75,
             'idoleh'=>5,
             'idmitra'=>null,
-            'bpom'=>'',
+
             ]);
             DB::table('tempatbeli')->insert([
             'idtempatbeli'=>7,
@@ -126,7 +126,7 @@ class tempatbeliSeeder extends Seeder
             'idlokasi'=>75,
             'idoleh'=>5,
             'idmitra'=>null,
-            'bpom'=>'',
+
             ]);
             DB::table('tempatbeli')->insert([
             'idtempatbeli'=>8,
@@ -142,7 +142,7 @@ class tempatbeliSeeder extends Seeder
             'idlokasi'=>75,
             'idoleh'=>5,
             'idmitra'=>null,
-            'bpom'=>'',
+
             ]);
             DB::table('tempatbeli')->insert([
             'idtempatbeli'=>9,
@@ -158,7 +158,7 @@ class tempatbeliSeeder extends Seeder
             'idlokasi'=>75,
             'idoleh'=>5,
             'idmitra'=>null,
-            'bpom'=>'',
+
             ]);
             DB::table('tempatbeli')->insert([
             'idtempatbeli'=>10,
@@ -174,7 +174,7 @@ class tempatbeliSeeder extends Seeder
             'idlokasi'=>53,
             'idoleh'=>6,
             'idmitra'=>null,
-            'bpom'=>'',
+
             ]);
             DB::table('tempatbeli')->insert([
             'idtempatbeli'=>11,
@@ -190,7 +190,7 @@ class tempatbeliSeeder extends Seeder
             'idlokasi'=>53,
             'idoleh'=>6,
             'idmitra'=>null,
-            'bpom'=>'',
+
             ]);
             DB::table('tempatbeli')->insert([
             'idtempatbeli'=>12,
@@ -206,7 +206,7 @@ class tempatbeliSeeder extends Seeder
             'idlokasi'=>53,
             'idoleh'=>7,
             'idmitra'=>null,
-            'bpom'=>'',
+
             ]);
             DB::table('tempatbeli')->insert([
             'idtempatbeli'=>13,
@@ -222,7 +222,7 @@ class tempatbeliSeeder extends Seeder
             'idlokasi'=>50,
             'idoleh'=>8,
             'idmitra'=>null,
-            'bpom'=>'',
+
             ]);
             DB::table('tempatbeli')->insert([
             'idtempatbeli'=>14,
@@ -238,7 +238,7 @@ class tempatbeliSeeder extends Seeder
             'idlokasi'=>50,
             'idoleh'=>8,
             'idmitra'=>null,
-            'bpom'=>'',
+
             ]);
             DB::table('tempatbeli')->insert([
             'idtempatbeli'=>15,
@@ -254,7 +254,7 @@ class tempatbeliSeeder extends Seeder
             'idlokasi'=>65,
             'idoleh'=>9,
             'idmitra'=>null,
-            'bpom'=>'',
+
             ]);
             DB::table('tempatbeli')->insert([
             'idtempatbeli'=>16,
@@ -270,7 +270,7 @@ class tempatbeliSeeder extends Seeder
             'idlokasi'=>65,
             'idoleh'=>10,
             'idmitra'=>null,
-            'bpom'=>'',
+
             ]);
             DB::table('tempatbeli')->insert([
             'idtempatbeli'=>17,
@@ -286,7 +286,7 @@ class tempatbeliSeeder extends Seeder
             'idlokasi'=>65,
             'idoleh'=>10,
             'idmitra'=>null,
-            'bpom'=>'',
+
             ]);
             DB::table('tempatbeli')->insert([
             'idtempatbeli'=>18,
@@ -302,7 +302,7 @@ class tempatbeliSeeder extends Seeder
             'idlokasi'=>65,
             'idoleh'=>10,
             'idmitra'=>null,
-            'bpom'=>'',
+
             ]);
             DB::table('tempatbeli')->insert([
             'idtempatbeli'=>19,
@@ -318,7 +318,7 @@ class tempatbeliSeeder extends Seeder
             'idlokasi'=>66,
             'idoleh'=>11,
             'idmitra'=>null,
-            'bpom'=>'',
+
             ]);
             DB::table('tempatbeli')->insert([
             'idtempatbeli'=>20,
@@ -334,7 +334,7 @@ class tempatbeliSeeder extends Seeder
             'idlokasi'=>66,
             'idoleh'=>12,
             'idmitra'=>null,
-            'bpom'=>'',
+
             ]);
             DB::table('tempatbeli')->insert([
             'idtempatbeli'=>21,
@@ -350,7 +350,7 @@ class tempatbeliSeeder extends Seeder
             'idlokasi'=>66,
             'idoleh'=>12,
             'idmitra'=>null,
-            'bpom'=>'',
+
             ]);
             DB::table('tempatbeli')->insert([
             'idtempatbeli'=>22,
@@ -366,7 +366,7 @@ class tempatbeliSeeder extends Seeder
             'idlokasi'=>66,
             'idoleh'=>12,
             'idmitra'=>null,
-            'bpom'=>'',
+
             ]);
             DB::table('tempatbeli')->insert([
             'idtempatbeli'=>23,
@@ -382,7 +382,7 @@ class tempatbeliSeeder extends Seeder
             'idlokasi'=>72,
             'idoleh'=>13,
             'idmitra'=>null,
-            'bpom'=>'',
+
             ]);
             DB::table('tempatbeli')->insert([
             'idtempatbeli'=>24,
@@ -398,7 +398,7 @@ class tempatbeliSeeder extends Seeder
             'idlokasi'=>55,
             'idoleh'=>14,
             'idmitra'=>null,
-            'bpom'=>'',
+
             ]);
             DB::table('tempatbeli')->insert([
             'idtempatbeli'=>25,
@@ -414,7 +414,7 @@ class tempatbeliSeeder extends Seeder
             'idlokasi'=>55,
             'idoleh'=>15,
             'idmitra'=>null,
-            'bpom'=>'',
+
             ]);
             DB::table('tempatbeli')->insert([
             'idtempatbeli'=>26,
@@ -430,7 +430,7 @@ class tempatbeliSeeder extends Seeder
             'idlokasi'=>19,
             'idoleh'=>16,
             'idmitra'=>null,
-            'bpom'=>'',
+
             ]);
             DB::table('tempatbeli')->insert([
             'idtempatbeli'=>27,
@@ -446,7 +446,7 @@ class tempatbeliSeeder extends Seeder
             'idlokasi'=>19,
             'idoleh'=>16,
             'idmitra'=>null,
-            'bpom'=>'',
+
             ]);
             DB::table('tempatbeli')->insert([
             'idtempatbeli'=>28,
@@ -462,7 +462,7 @@ class tempatbeliSeeder extends Seeder
             'idlokasi'=>19,
             'idoleh'=>16,
             'idmitra'=>null,
-            'bpom'=>'',
+
             ]);
             DB::table('tempatbeli')->insert([
             'idtempatbeli'=>29,
@@ -478,7 +478,7 @@ class tempatbeliSeeder extends Seeder
             'idlokasi'=>19,
             'idoleh'=>16,
             'idmitra'=>null,
-            'bpom'=>'',
+
             ]);
             DB::table('tempatbeli')->insert([
             'idtempatbeli'=>30,
@@ -494,7 +494,7 @@ class tempatbeliSeeder extends Seeder
             'idlokasi'=>19,
             'idoleh'=>16,
             'idmitra'=>null,
-            'bpom'=>'',
+
             ]);
             DB::table('tempatbeli')->insert([
             'idtempatbeli'=>31,
@@ -510,7 +510,7 @@ class tempatbeliSeeder extends Seeder
             'idlokasi'=>66,
             'idoleh'=>17,
             'idmitra'=>null,
-            'bpom'=>'',
+
             ]);
             DB::table('tempatbeli')->insert([
             'idtempatbeli'=>32,
@@ -526,7 +526,7 @@ class tempatbeliSeeder extends Seeder
             'idlokasi'=>94,
             'idoleh'=>18,
             'idmitra'=>null,
-            'bpom'=>'',
+
             ]);
             DB::table('tempatbeli')->insert([
             'idtempatbeli'=>33,
@@ -542,7 +542,7 @@ class tempatbeliSeeder extends Seeder
             'idlokasi'=>72,
             'idoleh'=>19,
             'idmitra'=>null,
-            'bpom'=>'',
+
             ]);
             DB::table('tempatbeli')->insert([
             'idtempatbeli'=>34,
@@ -558,7 +558,7 @@ class tempatbeliSeeder extends Seeder
             'idlokasi'=>72,
             'idoleh'=>20,
             'idmitra'=>null,
-            'bpom'=>'',
+
             ]);
             DB::table('tempatbeli')->insert([
             'idtempatbeli'=>35,
@@ -574,7 +574,7 @@ class tempatbeliSeeder extends Seeder
             'idlokasi'=>null,
             'idoleh'=>null,
             'idmitra'=>null,
-            'bpom'=>'',
+
             ]);
             DB::table('tempatbeli')->insert([
             'idtempatbeli'=>36,
@@ -590,7 +590,7 @@ class tempatbeliSeeder extends Seeder
             'idlokasi'=>'https://cdn.discordapp.com/attachments/906163180328325130/914554181568856124/SpikoeResepKuno.jpg',
             'idoleh'=>null,
             'idmitra'=>null,
-            'bpom'=>'',
+
             ]);
             DB::table('tempatbeli')->insert([
             'idtempatbeli'=>37,
@@ -606,7 +606,7 @@ class tempatbeliSeeder extends Seeder
             'idlokasi'=>'https://cdn.discordapp.com/attachments/906163180328325130/914554076530901052/Livana.jpg',
             'idoleh'=>null,
             'idmitra'=>null,
-            'bpom'=>'',
+
             ]);
             DB::table('tempatbeli')->insert([
             'idtempatbeli'=>38,
@@ -622,7 +622,7 @@ class tempatbeliSeeder extends Seeder
             'idlokasi'=>null,
             'idoleh'=>null,
             'idmitra'=>null,
-            'bpom'=>'',
+
             ]);
             DB::table('tempatbeli')->insert([
             'idtempatbeli'=>39,
@@ -638,7 +638,7 @@ class tempatbeliSeeder extends Seeder
             'idlokasi'=>'https://cdn.discordapp.com/attachments/906163180328325130/914553951788097576/Dneven.jpg',
             'idoleh'=>null,
             'idmitra'=>null,
-            'bpom'=>'',
+
             ]);
             DB::table('tempatbeli')->insert([
             'idtempatbeli'=>40,
@@ -654,7 +654,7 @@ class tempatbeliSeeder extends Seeder
             'idlokasi'=>'https://cdn.discordapp.com/attachments/906163180328325130/914553857617567744/SpikuAyu_1.jpg',
             'idoleh'=>null,
             'idmitra'=>null,
-            'bpom'=>'',
+
             ]);
             DB::table('tempatbeli')->insert([
             'idtempatbeli'=>41,
@@ -670,7 +670,7 @@ class tempatbeliSeeder extends Seeder
             'idlokasi'=>null,
             'idoleh'=>null,
             'idmitra'=>null,
-            'bpom'=>'',
+
             ]);
             DB::table('tempatbeli')->insert([
             'idtempatbeli'=>42,
@@ -686,7 +686,7 @@ class tempatbeliSeeder extends Seeder
             'idlokasi'=>'https://cdn.discordapp.com/attachments/906163180328325130/914553679598739466/TahubaxoIbuPudji.jpg',
             'idoleh'=>null,
             'idmitra'=>null,
-            'bpom'=>'',
+
             ]);
             DB::table('tempatbeli')->insert([
             'idtempatbeli'=>43,
@@ -702,7 +702,7 @@ class tempatbeliSeeder extends Seeder
             'idlokasi'=>null,
             'idoleh'=>23,
             'idmitra'=>null,
-            'bpom'=>'',
+
             ]);
             DB::table('tempatbeli')->insert([
             'idtempatbeli'=>44,
@@ -718,7 +718,7 @@ class tempatbeliSeeder extends Seeder
             'idlokasi'=>null,
             'idoleh'=>24,
             'idmitra'=>null,
-            'bpom'=>'',
+
             ]);
             DB::table('tempatbeli')->insert([
             'idtempatbeli'=>45,
@@ -734,7 +734,7 @@ class tempatbeliSeeder extends Seeder
             'idlokasi'=>39,
             'idoleh'=>25,
             'idmitra'=>null,
-            'bpom'=>'',
+
             ]);
             DB::table('tempatbeli')->insert([
             'idtempatbeli'=>46,
@@ -750,7 +750,7 @@ class tempatbeliSeeder extends Seeder
             'idlokasi'=>'https://cdn.discordapp.com/attachments/906163180328325130/914553573981966336/Dyriana.jpg',
             'idoleh'=>null,
             'idmitra'=>null,
-            'bpom'=>'',
+
             ]);
             DB::table('tempatbeli')->insert([
             'idtempatbeli'=>47,
@@ -766,7 +766,7 @@ class tempatbeliSeeder extends Seeder
             'idlokasi'=>'https://cdn.discordapp.com/attachments/906163180328325130/914553445376200785/Bonafide.jpg',
             'idoleh'=>null,
             'idmitra'=>null,
-            'bpom'=>'',
+
             ]);
             DB::table('tempatbeli')->insert([
             'idtempatbeli'=>48,
@@ -782,7 +782,7 @@ class tempatbeliSeeder extends Seeder
             'idlokasi'=>'https://cdn.discordapp.com/attachments/906163180328325130/914553413222682654/Juwana.jpg',
             'idoleh'=>null,
             'idmitra'=>null,
-            'bpom'=>'',
+
             ]);
             DB::table('tempatbeli')->insert([
             'idtempatbeli'=>49,
@@ -798,7 +798,7 @@ class tempatbeliSeeder extends Seeder
             'idlokasi'=>'https://cdn.discordapp.com/attachments/906163180328325130/914553284289761312/Djoe.jpg',
             'idoleh'=>null,
             'idmitra'=>null,
-            'bpom'=>'',
+
             ]);
             DB::table('tempatbeli')->insert([
             'idtempatbeli'=>50,
@@ -814,7 +814,7 @@ class tempatbeliSeeder extends Seeder
             'idlokasi'=>40,
             'idoleh'=>28,
             'idmitra'=>null,
-            'bpom'=>'',
+
             ]);
             DB::table('tempatbeli')->insert([
             'idtempatbeli'=>51,
@@ -830,7 +830,7 @@ class tempatbeliSeeder extends Seeder
             'idlokasi'=>32,
             'idoleh'=>29,
             'idmitra'=>null,
-            'bpom'=>'',
+
             ]);
             DB::table('tempatbeli')->insert([
             'idtempatbeli'=>52,
@@ -846,7 +846,7 @@ class tempatbeliSeeder extends Seeder
             'idlokasi'=>32,
             'idoleh'=>29,
             'idmitra'=>null,
-            'bpom'=>'',
+
             ]);
             DB::table('tempatbeli')->insert([
             'idtempatbeli'=>53,
@@ -862,7 +862,7 @@ class tempatbeliSeeder extends Seeder
             'idlokasi'=>32,
             'idoleh'=>29,
             'idmitra'=>null,
-            'bpom'=>'',
+
             ]);
             DB::table('tempatbeli')->insert([
             'idtempatbeli'=>54,
@@ -878,7 +878,7 @@ class tempatbeliSeeder extends Seeder
             'idlokasi'=>'https://cdn.discordapp.com/attachments/906163180328325130/914555715006369792/KaswariLampion.jpg',
             'idoleh'=>null,
             'idmitra'=>null,
-            'bpom'=>'',
+
             ]);
             DB::table('tempatbeli')->insert([
             'idtempatbeli'=>55,
@@ -894,7 +894,7 @@ class tempatbeliSeeder extends Seeder
             'idlokasi'=>57,
             'idoleh'=>31,
             'idmitra'=>null,
-            'bpom'=>'',
+
             ]);
             DB::table('tempatbeli')->insert([
             'idtempatbeli'=>56,
@@ -910,7 +910,7 @@ class tempatbeliSeeder extends Seeder
             'idlokasi'=>64,
             'idoleh'=>32,
             'idmitra'=>null,
-            'bpom'=>'',
+
             ]);
             DB::table('tempatbeli')->insert([
             'idtempatbeli'=>57,
@@ -926,7 +926,7 @@ class tempatbeliSeeder extends Seeder
             'idlokasi'=>66,
             'idoleh'=>33,
             'idmitra'=>null,
-            'bpom'=>'',
+
             ]);
             DB::table('tempatbeli')->insert([
             'idtempatbeli'=>58,
@@ -942,7 +942,7 @@ class tempatbeliSeeder extends Seeder
             'idlokasi'=>66,
             'idoleh'=>33,
             'idmitra'=>null,
-            'bpom'=>'',
+
             ]);
             DB::table('tempatbeli')->insert([
             'idtempatbeli'=>59,
@@ -958,7 +958,7 @@ class tempatbeliSeeder extends Seeder
             'idlokasi'=>66,
             'idoleh'=>33,
             'idmitra'=>null,
-            'bpom'=>'',
+
             ]);
             DB::table('tempatbeli')->insert([
             'idtempatbeli'=>60,
@@ -974,7 +974,7 @@ class tempatbeliSeeder extends Seeder
             'idlokasi'=>66,
             'idoleh'=>33,
             'idmitra'=>null,
-            'bpom'=>'',
+
             ]);
             DB::table('tempatbeli')->insert([
             'idtempatbeli'=>61,
@@ -990,7 +990,7 @@ class tempatbeliSeeder extends Seeder
             'idlokasi'=>66,
             'idoleh'=>33,
             'idmitra'=>null,
-            'bpom'=>'',
+
             ]);
             DB::table('tempatbeli')->insert([
             'idtempatbeli'=>62,
@@ -1006,7 +1006,7 @@ class tempatbeliSeeder extends Seeder
             'idlokasi'=>66,
             'idoleh'=>33,
             'idmitra'=>null,
-            'bpom'=>'',
+
             ]);
             DB::table('tempatbeli')->insert([
             'idtempatbeli'=>63,
@@ -1022,7 +1022,7 @@ class tempatbeliSeeder extends Seeder
             'idlokasi'=>66,
             'idoleh'=>33,
             'idmitra'=>null,
-            'bpom'=>'',
+
             ]);
             DB::table('tempatbeli')->insert([
             'idtempatbeli'=>64,
@@ -1038,7 +1038,7 @@ class tempatbeliSeeder extends Seeder
             'idlokasi'=>59,
             'idoleh'=>34,
             'idmitra'=>null,
-            'bpom'=>'',
+
             ]);
             DB::table('tempatbeli')->insert([
             'idtempatbeli'=>65,
@@ -1054,7 +1054,7 @@ class tempatbeliSeeder extends Seeder
             'idlokasi'=>59,
             'idoleh'=>35,
             'idmitra'=>null,
-            'bpom'=>'',
+
             ]);
             DB::table('tempatbeli')->insert([
             'idtempatbeli'=>66,
@@ -1070,7 +1070,7 @@ class tempatbeliSeeder extends Seeder
             'idlokasi'=>59,
             'idoleh'=>36,
             'idmitra'=>null,
-            'bpom'=>'',
+
             ]);
             DB::table('tempatbeli')->insert([
             'idtempatbeli'=>67,
@@ -1086,7 +1086,7 @@ class tempatbeliSeeder extends Seeder
             'idlokasi'=>59,
             'idoleh'=>36,
             'idmitra'=>null,
-            'bpom'=>'',
+
             ]);
             DB::table('tempatbeli')->insert([
             'idtempatbeli'=>68,
@@ -1102,7 +1102,7 @@ class tempatbeliSeeder extends Seeder
             'idlokasi'=>59,
             'idoleh'=>36,
             'idmitra'=>null,
-            'bpom'=>'',
+
             ]);
     }
 }
