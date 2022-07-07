@@ -23,13 +23,14 @@ class UtamaController extends Controller
         $decoded = json_decode($response, true);
         $address = $decoded['address'];
 
-        if ($address['city'] == 'Daerah Khusus Ibukota Jakarta') {
-            $kota = 'Jakarta';
-        } elseif ($address['city'] == 'Daerah Istimewa Yogyakarta') {
-            $kota = 'Yogyakarta';
-        } else {
-            $kota = $address['city'];
-        }
+        // if ($address['city'] == 'Daerah Khusus Ibukota Jakarta') {
+        //     $kota = 'Jakarta';
+        // } elseif ($address['city'] == 'Daerah Istimewa Yogyakarta') {
+        //     $kota = 'Yogyakarta';
+        // } else {
+        //     $kota = $address['city'];
+        // }
+        $kota = 'Surabaya';
 
         if (array_key_exists('state', $address)) {
             $provinsi = $address['state'];
