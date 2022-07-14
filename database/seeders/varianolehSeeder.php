@@ -51,7 +51,8 @@ DB::table('varianoleh')->insert([ 'idoleh'=>'2', 'namaoleh'=>'Medan Napoleon', '
 'idlokasi'=>'6',
 'idbahan'=>'3',
 ]);
-DB::table('varianoleh')->insert([ 'idoleh'=>'3', 'namaoleh'=>'Mantau', 'namalain'=>'', 'gambarutama'=>'https://cdn.discordapp.com/attachments/906163180328325130/906356985228832768/Mantau_2.jpg',
+DB::table('varianoleh')->insert([
+    'idoleh'=>'3', 'namaoleh'=>'Mantau', 'namalain'=>'', 'gambarutama'=>'https://cdn.discordapp.com/attachments/906163180328325130/906356985228832768/Mantau_2.jpg',
 'gambaroleh'=>'https://cdn.discordapp.com/attachments/906163180328325130/906356985228832768/Mantau_2.jpg---https://cdn.discordapp.com/attachments/906163180328325130/906463876990787604/Mantau_3.jpeg---https://cdn.discordapp.com/attachments/906163180328325130/906169613123993600/Mantau_1.jpg',
 'deskripsioleh'=>'Mantau merupakan makanan yang sering disantap oleh warga kota Minyak saat sarapan di pagi hari ditemani dengan kopi susu ataupun di sore hari dengan lauk lainnya.---Oleh  - oleh ini cocok menjadi oleh - oleh untuk keluarga karena dapat disantap oleh seluruh kalangan umur dan dapat disesuaikan ingin disajikan sendiri atau dengan makanan tambahan.',
 'komposisi'=>'Tepung Terigu, Fermipan, Gula, Garam, Air, Susu, Ragi, Mentega Putih',
