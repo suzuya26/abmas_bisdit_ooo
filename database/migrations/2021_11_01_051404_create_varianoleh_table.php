@@ -15,7 +15,7 @@ class CreateVarianolehTable extends Migration
     {
         Schema::create('varianoleh', function (Blueprint $table) {
             $table->id('idoleh'); // aman
-            $table->string('namaoleh',25); // aman
+            $table->string('namaoleh',255); // aman
             $table->string('namalain',255)->nullable(); // aman
             $table->text('gambarutama'); // aman
             $table->mediumText('gambaroleh'); // aman
@@ -28,7 +28,7 @@ class CreateVarianolehTable extends Migration
             $table->foreign('idrasa')->references('idrasa')->on('rasa');
             $table->bigInteger('idtekstur')->unsigned(); // aman
             $table->foreign('idtekstur')->references('idtekstur')->on('tekstur');
-            $table->bigInteger('idbahan')->unsigned(); // aman
+            $table->bigInteger('idbahan')->unsigned()->default(1); // aman
             $table->foreign('idbahan')->references('idbahan')->on('bahandasar');
             $table->string('komposisi',255); // aman
             $table->bigInteger('idmasak')->unsigned(); // aman
