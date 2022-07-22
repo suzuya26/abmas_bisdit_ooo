@@ -13,8 +13,10 @@ class UtamaController extends Controller
     public function show(Request $request){
         $varianoleh = DB::table('varianoleh')->where('idlokasi', '=', '66')->get();
         $ip = request()->ip();
-        $ip = request()->header('X-Forwarded-For');
+        // $ip = request()->header('REMOTE_ADDR');
+
         $location = Location::get("'" . $ip . "'");
+        // $location = Location::get($ip);
         $key = 'pk.025798fb95072c0fb2b76c1ad03e9da6';
         $lat = $location->latitude;
         $lon = $location->longitude;
@@ -31,7 +33,6 @@ class UtamaController extends Controller
         //     $kota = $address['city'];
         // }
         $kota = 'Surabaya';
-
         if (array_key_exists('state', $address)) {
             $provinsi = $address['state'];
         } else {
