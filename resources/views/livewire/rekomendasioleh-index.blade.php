@@ -15,7 +15,7 @@ $rekomendasiIdoleh;
 @endforeach
 <div>
     @auth
-        <div class="align-items-center">
+        <div class="align-items-center" style="overflow-wrap: anywhere">
             @if (Rekomendasioleh::where(['idoleh' => $idoleh, 'id' => auth()->user()->id])->exists())
                 <label><a wire:click="rekomendasioleh({{ $idoleh }})" class="button-oleh">Rekomendasikan <i class="bi bi-hand-thumbs-up-fill"></i></a></label>
             @else
@@ -26,7 +26,7 @@ $rekomendasiIdoleh;
 
     @endauth
     @guest
-        <div class="align-items-center">
+        <div class="align-items-center" style="overflow-wrap: anywhere">
             <label><a  data-toggle="modal" data-target="#exampleModal" class=" button-oleh" style="">Rekomendasikan <i class="bi bi-hand-thumbs-up"></i></a></a></label>
         </div>
     @endguest

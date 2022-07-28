@@ -21,18 +21,10 @@
         transition: .3s
     }
     .deskripsi{
-        left: 6.94%;
-        right: 54.17%;
-        width: 539px;
-        height: 145px;
         left: 100px;
-        font-family: 'Poppins';
-        font-style: normal;
-        font-size: 90px;
-        line-height: 50px;
         font-family: 'Quicksand';
         font-style: normal;
-        font-size: 30px;
+        font-size: 150%;
         line-height: 28px;
         color: #000000;
     }
@@ -169,10 +161,10 @@ transform: rotate(37.85deg);
         }
 
 </style>
-<div class="section utama" style="background: #C4C4C4; height:450px">
+<div class="section utama" style="background: #C4C4C4;">
     <div class="container">
         <div class="row">
-            <div class="col-sm-6 mt-5">
+            <div class="col-6 mt-5">
                 <h1 class="judul">Oasis Oleh-Oleh</h1> <br> <br>
                 <p class="deskripsi" style="text-align: justify;">
                     Website pencarian oleh-oleh terlengkap untuk kamu yang sedang mencari oleh-oleh khas dari seluruh daerah di Indonesia.
@@ -180,8 +172,8 @@ transform: rotate(37.85deg);
                <a href="#oleh"> <button class="buttonCari">Cari Sekarang!</button></a>
             </div>
             {{-- <div class="col-1"></div> --}}
-            <div class="col-sm-5">
-                <img src="{{ asset('img/utama.png') }}" alt="" width="678px" height="450px" style="object-position: center">
+            <div class="col-6">
+                <img src="{{ asset('img/utama.png') }}" alt="" width="100%" height="100%" style="object-position: center">
             </div>
         </div>
     </div>

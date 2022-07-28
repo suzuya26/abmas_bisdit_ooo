@@ -22,7 +22,7 @@ $rekomendasiIdToko;
         }
     </style>
 @auth
-    <div class="align-items-center">
+    <div class="align-items-center" style="overflow-wrap: anywhere">
         @if (Rekomendasi::where(['idtoko' => $idtoko, 'id' => auth()->user()->id])->exists())
             {{-- <a wire:click="rekomendasi({{ $idtoko }})" class="btn btn-light btn-lg bi bi-heart-fill">
                 {{ $count }}</a> --}}
@@ -41,7 +41,7 @@ $rekomendasiIdToko;
     </div>
 @endauth
 @guest
-    <div class="align-items-center">
+    <div class="align-items-center" style="overflow-wrap: anywhere">
         <a data-toggle="modal" data-target="#exampleModal"  class=" button-toko fw-bold" style="color:#333">Rekomendasikan <i class="far fa-thumbs-up" style="font-size: 1.3rem"></i></a>
         <p class="mt-3"><i class="fas fa-thumbs-up mt-3" style="font-size: 1.3rem"></i> {{ $count }}  orang</p>
     </div>

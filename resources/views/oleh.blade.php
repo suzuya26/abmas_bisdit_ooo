@@ -417,15 +417,15 @@
                 <div class="row Rectangle-bg">
                     <div class="deskripsi-utama col-6 mt-3">
                         <div class="row ">
-                            <div class="col-8 mt-3">
-                                <h1>{{ $v->namaoleh }}</h1>
+                            <div class="col-md-8 col-sm-12   mt-3">
+                                <h1 style="overflow-wrap: anywhere">{{ $v->namaoleh }}</h1>
                             </div>
                             <br>
                             @if ($v->statushalal === 1)
-                                <div class="col-2 mt-3">
+                                <div class="col-md-2 col-sm-4 mt-3">
                                     <img src="{{ asset('img/logo-halal.png') }}" width="75px" height="75px">
                                 </div>
-                                <div class="col-2 mt-3">
+                                <div class="col-md-2 col-sm-4 mt-3">
                                     <img src="{{ asset('img/logo-mui.png') }}" width="75px" height="75px">
                                 </div>
                             @endif
@@ -435,7 +435,7 @@
                                 $desc = preg_split('/---/', $v->deskripsioleh);
                             @endphp
                             @foreach ($desc as $desk)
-                                <p style="text-align: justify">{{ $desk }}</p>
+                                <p style="text-align: justify" >{{ $desk }}</p>
                             @endforeach
                         </div>
                         <div class="row stat">
@@ -455,7 +455,7 @@
                     </div>
                     <div class="col-6 mt-3">
                         <div class="foto-oleh">
-                            <img src="{{ $v->gambarutama }}" width="645px" height="679px">
+                            <img src="{{ $v->gambarutama }}" width="100%" height="679px">
                             <div class="livewire col-2 d-flex justify-content-end">
                                 <livewire:favorite-index :idoleh="$idoleh"></livewire:favorite-index>
                             </div>
@@ -488,7 +488,7 @@
                                 <div class="carousel-item active">
                                     <div class="row">
                                         @foreach ($tempatbeli->slice(0, 4) as $t)
-                                        <div class="tempat-beli col-3 ">
+                                        <div class="tempat-beli col-md-3 col-sm-6">
                                             <div class="foto-beli">
                                                 <img src="{{ $t->gambarproduk }}" width="100%" height="100%">
                                             </div>
@@ -539,7 +539,7 @@
                                 <div class="carousel-item">
                                     <div class="row">
                                         @foreach ($tempatbeli->slice(4, 4) as $t)
-                                        <div class="tempat-beli col-3 ">
+                                        <div class="tempat-beli col-md-3 col-sm-6 ">
                                             <div class="foto-beli">
                                                 <img src="{{ $t->gambarproduk }}" width="100%" height="100%">
                                             </div>
@@ -574,7 +574,7 @@
                                 <div class="carousel-item">
                                     <div class="row">
                                         @foreach ($tempatbeli->slice(8, 4) as $t)
-                                        <div class="tempat-beli col-3 ">
+                                        <div class="tempat-beli col-md-3 col-sm-6 ">
                                             <div class="foto-beli">
                                                 <img src="{{ $t->gambarproduk }}" width="100%" height="100%">
                                             </div>
@@ -635,33 +635,33 @@
                     <div class="strip col-7">
                         <div class="info row mt-4">
                             <div class="desc row">
-                                <h1>Detail Produk</h1>
+                                <h1 style="overflow-wrap: anywhere">Detail Produk</h1>
                                 <p class="text-desc">Informasi penting terkait Varian, Rasa, Bahan Dasar untuk
                                     menyesuaikan seleramu</p>
                             </div>
                             <div class="row">
                                 <div class="icon-isi row">
-                                    <div class="col-2 sub-menu">
+                                    <div class="col-md-2 col-sm-6 sub-menu">
                                         <p class="title">Rasa</p>
                                         <img src="{{ asset('img/rasa.png') }}" width="45px" height="45px">
                                         <p class="menu-title">{{ $v->namarasa }}</p>
                                     </div>
-                                    <div class="col-2 sub-menu">
+                                    <div class="col-md-2 col-sm-6 sub-menu">
                                         <p class="title">Cara Masak</p>
                                         <img src="{{ asset('img/caramasak.png') }}" width="45px" height="45px">
                                         <p class="menu-title">{{ $v->namamasak }}</p>
                                     </div>
-                                    <div class="col-2 sub-menu">
+                                    <div class="col-md-2 col-sm-6 sub-menu">
                                         <p class="title">Tekstur</p>
                                         <img src="{{ asset('img/tekstur.png') }}" width="45px" height="45px">
                                         <p class="menu-title">{{ $v->namatekstur }}</p>
                                     </div>
-                                    <div class="col-2 sub-menu">
+                                    <div class="col-md-2 col-sm-6 sub-menu">
                                         <p class="title">Porsi</p>
                                         <img src="{{ asset('img/perorangan.png') }}" width="45px" height="45px">
                                         <p class="menu-title">{{ $v->namacocok }}</p>
                                     </div>
-                                    <div class="col-2 sub-menu">
+                                    <div class="col-md-2 col-sm-6 sub-menu">
                                         <p class="title">Asal Daerah</p>
                                         <img src="{{ asset('img/lokasi.png') }}" width="45px" height="45px">
                                         <p class="menu-title">{{ $v->kota }}</p>
@@ -680,7 +680,7 @@
                                                 $k = str_replace('Dan ', '', $k);
                                                 $k = str_replace('.', '', $k);
                                             @endphp
-                                            <div class="icon col-2">
+                                            <div class="icon col-md-2 col-sm-4">
                                                 @if ($k === 'Tepung')
                                                     <div class="kotak">
                                                         <img src="{{ asset('img/tepung.png') }}" width="37px"
@@ -763,7 +763,7 @@
                             <br>
                             <div class="row ">
                                 <div class="desc row">
-                                    <h1>Standar</h1>
+                                    <h1 style="overflow-wrap: anywhere">Standar</h1>
                                     <p class="text-desc">Spesifikasi ketahanan lama produk untuk menjaga kualitas
                                         oleh-oleh yang khas</p>
                                     @php
@@ -776,17 +776,17 @@
                                         $carapenyajian = str_replace(' menjadi beberapa bagian,', ' dan ', $v->carapenyajian);
                                     @endphp
                                     <div class="poin-standar row mt-3">
-                                        <div class="col-3">
+                                        <div class="col-sm-12 col-md-3">
                                             <p class="title-standar">Ketahanan</p>
                                             @foreach ($kadarluarsa as $kd)
                                                 <p class="menu-title-standar">{{ $kd }}</p>
                                             @endforeach
                                         </div>
-                                        <div class="col-3">
+                                        <div class="col-md-3 col-sm-12">
                                             <p class="title-standar">Penyimpanan</p>
                                             <p class="menu-title-standar">{{ $carapenyimpanan }}</p>
                                         </div>
-                                        <div class="col-3">
+                                        <div class="col-md-3 col-sm-12">
                                             <p class="title-standar">Cara Penyajian</p>
                                             <p class="menu-title-standar">{{ $carapenyajian }}</p>
                                         </div>
@@ -795,15 +795,15 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-5">
-                        <div class="col-4">
+                    <div class="col-md-5 col-sm-12">
+                        <div class="col-6">
                             @php
                                 $pantangan = preg_split('/---/', $v->pantangan);
                                 $manfaat = preg_split('/---/', $v->manfaat);
                             @endphp
                             <div class="manfaat">
                                 <div class="isi">
-                                    <h1 class=" mt-2">Manfaat</h1>
+                                    <h1 class= mt-2">Manfaat</h1>
                                     <ul style="list-style-type:none">
                                         @foreach ($manfaat as $mf)
                                             <li style="font-size: 16px">{{ $mf }}</li>
@@ -824,7 +824,6 @@
 
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
