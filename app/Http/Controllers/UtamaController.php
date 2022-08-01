@@ -3,14 +3,22 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\favorite;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Stevebauman\Location\Facades\Location;
 use Carbon\Carbon;
-
+use App\Models\Page;
 class UtamaController extends Controller
 {
+
     public function show(Request $request){
+
+
+        $page = Page::first();
+        $page->visitsCounter()->increment();
+
+
         $varianoleh = DB::table('varianoleh')->where('idlokasi', '=', '66')->get();
         $ip = request()->ip();
         // $ip = request()->header('REMOTE_ADDR');
@@ -151,6 +159,6 @@ class UtamaController extends Controller
         $start = Carbon::createFromTimeString($toko->jam_buka);
         $end = Carbon::createFromTimeString($toko->jam_tutup);
         $check = $now->between($start, $end);
-        return view('layouts.utama', compact('kota', 'provinsi', 'olehKolega', 'tokoPopuler', 'olehPopuler', 'harga', 'pernahwisata', 'lokasilalu', 'varianoleh','toko','check'));
+        return view('layouts.utama', compact('kota', 'provinsi', 'olehKolega', 'tokoPopuler', 'olehPopuler', 'harga', 'pernahwisata', 'lokasilalu', 'varianoleh','toko','check','page'));
     }
 }

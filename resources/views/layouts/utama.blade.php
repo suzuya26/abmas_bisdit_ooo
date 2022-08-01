@@ -165,10 +165,12 @@ transform: rotate(37.85deg);
     <div class="container">
         <div class="row">
             <div class="col-6 mt-5">
-                <h1 class="judul">Oasis Oleh-Oleh</h1> <br> <br>
+                <h1 class="judul">Oasis Oleh-Oleh</h1>
+                 <br> <br>
                 <p class="deskripsi" style="text-align: justify;">
                     Website pencarian oleh-oleh terlengkap untuk kamu yang sedang mencari oleh-oleh khas dari seluruh daerah di Indonesia.
                 </p>
+
                <a href="#oleh"> <button class="buttonCari">Cari Sekarang!</button></a>
             </div>
             {{-- <div class="col-1"></div> --}}

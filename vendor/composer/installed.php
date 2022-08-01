@@ -1,11 +1,11 @@
 <?php return array(
     'root' => array(
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => NULL,
+        'reference' => '502105f3d5a5fc420d429b52e4726aea4400077c',
         'name' => 'laravel/laravel',
         'dev' => true,
     ),
@@ -17,6 +17,15 @@
             'install_path' => __DIR__ . '/../asm89/stack-cors',
             'aliases' => array(),
             'reference' => '73e5b88775c64ccc0b84fb60836b30dc9d92ac4a',
+            'dev_requirement' => false,
+        ),
+        'awssat/laravel-visits' => array(
+            'pretty_version' => '3.0.3',
+            'version' => '3.0.3.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../awssat/laravel-visits',
+            'aliases' => array(),
+            'reference' => '7db3b7374c44ebafc7358ac7d603261962c1e8c0',
             'dev_requirement' => false,
         ),
         'brick/math' => array(
@@ -433,6 +442,15 @@
                 0 => 'v8.83.11',
             ),
         ),
+        'jaybizzle/crawler-detect' => array(
+            'pretty_version' => 'v1.2.111',
+            'version' => '1.2.111.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../jaybizzle/crawler-detect',
+            'aliases' => array(),
+            'reference' => 'd572ed4a65a70a2d2871dc5137c9c5b7e69745ab',
+            'dev_requirement' => false,
+        ),
         'kodova/hamcrest-php' => array(
             'dev_requirement' => true,
             'replaced' => array(
@@ -449,12 +467,12 @@
             'dev_requirement' => false,
         ),
         'laravel/laravel' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => NULL,
+            'reference' => '502105f3d5a5fc420d429b52e4726aea4400077c',
             'dev_requirement' => false,
         ),
         'laravel/sail' => array(
@@ -1061,6 +1079,15 @@
             'reference' => 'c6c1022351a901512170118436c764e473f6de8c',
             'dev_requirement' => true,
         ),
+        'spatie/laravel-referer' => array(
+            'pretty_version' => '1.8.0',
+            'version' => '1.8.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../spatie/laravel-referer',
+            'aliases' => array(),
+            'reference' => '681f45b173cc2beefbcc5daacea6fc7929bec689',
+            'dev_requirement' => false,
+        ),
         'stevebauman/location' => array(
             'pretty_version' => 'v6.4.0',
             'version' => '6.4.0.0',
@@ -1350,6 +1377,15 @@
             'install_path' => __DIR__ . '/../tijsverkoyen/css-to-inline-styles',
             'aliases' => array(),
             'reference' => 'da444caae6aca7a19c0c140f68c6182e337d5b1c',
+            'dev_requirement' => false,
+        ),
+        'torann/geoip' => array(
+            'pretty_version' => '3.0.2',
+            'version' => '3.0.2.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../torann/geoip',
+            'aliases' => array(),
+            'reference' => 'f16d5df66ecb6ba4ffaef52abef519fbc19596d3',
             'dev_requirement' => false,
         ),
         'vlucas/phpdotenv' => array(

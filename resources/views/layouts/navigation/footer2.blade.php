@@ -16,4 +16,7 @@
         <li class="nav-item"><a href="#" class="nav-link px-2 text-white mx-2"><i style="font-size:2rem" class="fab fa-instagram"></i></a></li>
       </ul>
       <p class="text-center">&copy; 2022. Oasis. All rights reserved.</p>
+      @isset($page)
+      <p>Visitor : {{ visits($page)->period('month')->count()}}</p>
+      @endisset</h1>
     </footer>

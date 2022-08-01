@@ -36,6 +36,8 @@ class ComposerStaticInitf652ca7f737fafc952c5096923a38919
         '40275907c8566c390185147049ef6e5d' => __DIR__ . '/..' . '/livewire/livewire/src/helpers.php',
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         'b6b991a57620e2fb6b2f66f03fe9ddc2' => __DIR__ . '/..' . '/symfony/string/Resources/functions.php',
+        '1e298922c3e2134d42dcdb03e6d5f55a' => __DIR__ . '/..' . '/torann/geoip/src/helpers.php',
+        'ac4ced6690157c667ba34e00e797e03f' => __DIR__ . '/..' . '/awssat/laravel-visits/src/helpers.php',
         'ed962a97bd972bc82007176b647d4e36' => __DIR__ . '/..' . '/facade/ignition/src/helpers.php',
     );
 
@@ -55,6 +57,7 @@ class ComposerStaticInitf652ca7f737fafc952c5096923a38919
         ),
         'T' => 
         array (
+            'Torann\\GeoIP\\' => 13,
             'TijsVerkoyen\\CssToInlineStyles\\' => 31,
             'Tests\\' => 6,
         ),
@@ -87,6 +90,7 @@ class ComposerStaticInitf652ca7f737fafc952c5096923a38919
             'Symfony\\Component\\CssSelector\\' => 30,
             'Symfony\\Component\\Console\\' => 26,
             'Stevebauman\\Location\\' => 21,
+            'Spatie\\Referer\\' => 15,
         ),
         'R' => 
         array (
@@ -133,6 +137,10 @@ class ComposerStaticInitf652ca7f737fafc952c5096923a38919
             'Laravel\\SerializableClosure\\' => 28,
             'Laravel\\Sanctum\\' => 16,
             'Laravel\\Sail\\' => 13,
+        ),
+        'J' => 
+        array (
+            'Jaybizzle\\CrawlerDetect\\' => 24,
         ),
         'I' => 
         array (
@@ -186,6 +194,7 @@ class ComposerStaticInitf652ca7f737fafc952c5096923a38919
         ),
         'A' => 
         array (
+            'Awssat\\Visits\\' => 14,
             'Asm89\\Stack\\' => 12,
             'App\\' => 4,
         ),
@@ -209,6 +218,10 @@ class ComposerStaticInitf652ca7f737fafc952c5096923a38919
         'Webmozart\\Assert\\' => 
         array (
             0 => __DIR__ . '/..' . '/webmozart/assert/src',
+        ),
+        'Torann\\GeoIP\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/torann/geoip/src',
         ),
         'TijsVerkoyen\\CssToInlineStyles\\' => 
         array (
@@ -326,6 +339,10 @@ class ComposerStaticInitf652ca7f737fafc952c5096923a38919
         array (
             0 => __DIR__ . '/..' . '/stevebauman/location/src',
         ),
+        'Spatie\\Referer\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/spatie/laravel-referer/src',
+        ),
         'Ramsey\\Uuid\\' => 
         array (
             0 => __DIR__ . '/..' . '/ramsey/uuid/src',
@@ -438,6 +455,10 @@ class ComposerStaticInitf652ca7f737fafc952c5096923a38919
         'Laravel\\Sail\\' => 
         array (
             0 => __DIR__ . '/..' . '/laravel/sail/src',
+        ),
+        'Jaybizzle\\CrawlerDetect\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/jaybizzle/crawler-detect/src',
         ),
         'Illuminate\\Support\\' => 
         array (
@@ -556,6 +577,10 @@ class ComposerStaticInitf652ca7f737fafc952c5096923a38919
         array (
             0 => __DIR__ . '/..' . '/brick/math/src',
         ),
+        'Awssat\\Visits\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/awssat/laravel-visits/src',
+        ),
         'Asm89\\Stack\\' => 
         array (
             0 => __DIR__ . '/..' . '/asm89/stack-cors/src',
@@ -607,6 +632,7 @@ class ComposerStaticInitf652ca7f737fafc952c5096923a38919
         'App\\Models\\Rekomendasi' => __DIR__ . '/../..' . '/app/Models/Rekomendasi.php',
         'App\\Models\\Rekomendasioleh' => __DIR__ . '/../..' . '/app/Models/Rekomendasioleh.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
+        'App\\Models\\Visits' => __DIR__ . '/../..' . '/app/Models/Visits.php',
         'App\\Models\\favorite' => __DIR__ . '/../..' . '/app/Models/favorite.php',
         'App\\Models\\listOleh' => __DIR__ . '/../..' . '/app/Models/listOleh.php',
         'App\\Models\\listToko' => __DIR__ . '/../..' . '/app/Models/listToko.php',
@@ -619,6 +645,19 @@ class ComposerStaticInitf652ca7f737fafc952c5096923a38919
         'Asm89\\Stack\\Cors' => __DIR__ . '/..' . '/asm89/stack-cors/src/Cors.php',
         'Asm89\\Stack\\CorsService' => __DIR__ . '/..' . '/asm89/stack-cors/src/CorsService.php',
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
+        'Awssat\\Visits\\Commands\\CleanCommand' => __DIR__ . '/..' . '/awssat/laravel-visits/src/Commands/CleanCommand.php',
+        'Awssat\\Visits\\DataEngines\\DataEngine' => __DIR__ . '/..' . '/awssat/laravel-visits/src/DataEngines/DataEngine.php',
+        'Awssat\\Visits\\DataEngines\\EloquentEngine' => __DIR__ . '/..' . '/awssat/laravel-visits/src/DataEngines/EloquentEngine.php',
+        'Awssat\\Visits\\DataEngines\\RedisEngine' => __DIR__ . '/..' . '/awssat/laravel-visits/src/DataEngines/RedisEngine.php',
+        'Awssat\\Visits\\Keys' => __DIR__ . '/..' . '/awssat/laravel-visits/src/Keys.php',
+        'Awssat\\Visits\\Models\\Visit' => __DIR__ . '/..' . '/awssat/laravel-visits/src/Models/Visit.php',
+        'Awssat\\Visits\\Reset' => __DIR__ . '/..' . '/awssat/laravel-visits/src/Reset.php',
+        'Awssat\\Visits\\Traits\\Lists' => __DIR__ . '/..' . '/awssat/laravel-visits/src/Traits/Lists.php',
+        'Awssat\\Visits\\Traits\\Periods' => __DIR__ . '/..' . '/awssat/laravel-visits/src/Traits/Periods.php',
+        'Awssat\\Visits\\Traits\\Record' => __DIR__ . '/..' . '/awssat/laravel-visits/src/Traits/Record.php',
+        'Awssat\\Visits\\Traits\\Setters' => __DIR__ . '/..' . '/awssat/laravel-visits/src/Traits/Setters.php',
+        'Awssat\\Visits\\Visits' => __DIR__ . '/..' . '/awssat/laravel-visits/src/Visits.php',
+        'Awssat\\Visits\\VisitsServiceProvider' => __DIR__ . '/..' . '/awssat/laravel-visits/src/VisitsServiceProvider.php',
         'Brick\\Math\\BigDecimal' => __DIR__ . '/..' . '/brick/math/src/BigDecimal.php',
         'Brick\\Math\\BigInteger' => __DIR__ . '/..' . '/brick/math/src/BigInteger.php',
         'Brick\\Math\\BigNumber' => __DIR__ . '/..' . '/brick/math/src/BigNumber.php',
@@ -727,7 +766,19 @@ class ComposerStaticInitf652ca7f737fafc952c5096923a38919
         'Database\\Factories\\UserFactory' => __DIR__ . '/../..' . '/database/factories/UserFactory.php',
         'Database\\Seeders\\DatabaseSeeder' => __DIR__ . '/../..' . '/database/seeders/DatabaseSeeder.php',
         'Database\\Seeders\\FavoriteSeeder' => __DIR__ . '/../..' . '/database/seeders/FavoriteSeeder.php',
+        'Database\\Seeders\\MitraSeeder' => __DIR__ . '/../..' . '/database/seeders/MitraSeeder.php',
         'Database\\Seeders\\TokoSeeder' => __DIR__ . '/../..' . '/database/seeders/TokoSeeder.php',
+        'Database\\Seeders\\bahandasarseeder' => __DIR__ . '/../..' . '/database/seeders/bahandasarseeder.php',
+        'Database\\Seeders\\caramasakseeder' => __DIR__ . '/../..' . '/database/seeders/caramasakseeder.php',
+        'Database\\Seeders\\jenisolehseeder' => __DIR__ . '/../..' . '/database/seeders/jenisolehseeder.php',
+        'Database\\Seeders\\lokasiseeder' => __DIR__ . '/../..' . '/database/seeders/lokasiseeder.php',
+        'Database\\Seeders\\produktokoseeder' => __DIR__ . '/../..' . '/database/seeders/produktokoseeder.php',
+        'Database\\Seeders\\rasaseeder' => __DIR__ . '/../..' . '/database/seeders/rasaseeder.php',
+        'Database\\Seeders\\teksturseeder' => __DIR__ . '/../..' . '/database/seeders/teksturseeder.php',
+        'Database\\Seeders\\tempatbeliSeeder' => __DIR__ . '/../..' . '/database/seeders/tempatbeliSeeder.php',
+        'Database\\Seeders\\varianjenisseeder' => __DIR__ . '/../..' . '/database/seeders/varianjenisseeder.php',
+        'Database\\Seeders\\varianoleh2seeder' => __DIR__ . '/../..' . '/database/seeders/varianoleh2seeder.php',
+        'Database\\Seeders\\varianolehSeeder' => __DIR__ . '/../..' . '/database/seeders/varianolehSeeder.php',
         'DeepCopy\\DeepCopy' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/DeepCopy.php',
         'DeepCopy\\Exception\\CloneException' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/Exception/CloneException.php',
         'DeepCopy\\Exception\\PropertyException' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/Exception/PropertyException.php',
@@ -3086,6 +3137,11 @@ class ComposerStaticInitf652ca7f737fafc952c5096923a38919
         'Illuminate\\View\\ViewFinderInterface' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/View/ViewFinderInterface.php',
         'Illuminate\\View\\ViewName' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/View/ViewName.php',
         'Illuminate\\View\\ViewServiceProvider' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/View/ViewServiceProvider.php',
+        'Jaybizzle\\CrawlerDetect\\CrawlerDetect' => __DIR__ . '/..' . '/jaybizzle/crawler-detect/src/CrawlerDetect.php',
+        'Jaybizzle\\CrawlerDetect\\Fixtures\\AbstractProvider' => __DIR__ . '/..' . '/jaybizzle/crawler-detect/src/Fixtures/AbstractProvider.php',
+        'Jaybizzle\\CrawlerDetect\\Fixtures\\Crawlers' => __DIR__ . '/..' . '/jaybizzle/crawler-detect/src/Fixtures/Crawlers.php',
+        'Jaybizzle\\CrawlerDetect\\Fixtures\\Exclusions' => __DIR__ . '/..' . '/jaybizzle/crawler-detect/src/Fixtures/Exclusions.php',
+        'Jaybizzle\\CrawlerDetect\\Fixtures\\Headers' => __DIR__ . '/..' . '/jaybizzle/crawler-detect/src/Fixtures/Headers.php',
         'JsonException' => __DIR__ . '/..' . '/symfony/polyfill-php73/Resources/stubs/JsonException.php',
         'Laravel\\Sail\\Console\\InstallCommand' => __DIR__ . '/..' . '/laravel/sail/src/Console/InstallCommand.php',
         'Laravel\\Sail\\Console\\PublishCommand' => __DIR__ . '/..' . '/laravel/sail/src/Console/PublishCommand.php',
@@ -5187,6 +5243,14 @@ class ComposerStaticInitf652ca7f737fafc952c5096923a38919
         'SebastianBergmann\\Type\\UnknownType' => __DIR__ . '/..' . '/sebastian/type/src/type/UnknownType.php',
         'SebastianBergmann\\Type\\VoidType' => __DIR__ . '/..' . '/sebastian/type/src/type/VoidType.php',
         'SebastianBergmann\\Version' => __DIR__ . '/..' . '/sebastian/version/src/Version.php',
+        'Spatie\\Referer\\CaptureReferer' => __DIR__ . '/..' . '/spatie/laravel-referer/src/CaptureReferer.php',
+        'Spatie\\Referer\\Exceptions\\InvalidConfiguration' => __DIR__ . '/..' . '/spatie/laravel-referer/src/Exceptions/InvalidConfiguration.php',
+        'Spatie\\Referer\\Helpers\\Url' => __DIR__ . '/..' . '/spatie/laravel-referer/src/Helpers/Url.php',
+        'Spatie\\Referer\\Referer' => __DIR__ . '/..' . '/spatie/laravel-referer/src/Referer.php',
+        'Spatie\\Referer\\RefererServiceProvider' => __DIR__ . '/..' . '/spatie/laravel-referer/src/RefererServiceProvider.php',
+        'Spatie\\Referer\\Source' => __DIR__ . '/..' . '/spatie/laravel-referer/src/Source.php',
+        'Spatie\\Referer\\Sources\\RequestHeader' => __DIR__ . '/..' . '/spatie/laravel-referer/src/Sources/RequestHeader.php',
+        'Spatie\\Referer\\Sources\\UtmSource' => __DIR__ . '/..' . '/spatie/laravel-referer/src/Sources/UtmSource.php',
         'Stevebauman\\Location\\Drivers\\Driver' => __DIR__ . '/..' . '/stevebauman/location/src/Drivers/Driver.php',
         'Stevebauman\\Location\\Drivers\\GeoPlugin' => __DIR__ . '/..' . '/stevebauman/location/src/Drivers/GeoPlugin.php',
         'Stevebauman\\Location\\Drivers\\IpApi' => __DIR__ . '/..' . '/stevebauman/location/src/Drivers/IpApi.php',
@@ -6002,6 +6066,22 @@ class ComposerStaticInitf652ca7f737fafc952c5096923a38919
         'TijsVerkoyen\\CssToInlineStyles\\Css\\Property\\Property' => __DIR__ . '/..' . '/tijsverkoyen/css-to-inline-styles/src/Css/Property/Property.php',
         'TijsVerkoyen\\CssToInlineStyles\\Css\\Rule\\Processor' => __DIR__ . '/..' . '/tijsverkoyen/css-to-inline-styles/src/Css/Rule/Processor.php',
         'TijsVerkoyen\\CssToInlineStyles\\Css\\Rule\\Rule' => __DIR__ . '/..' . '/tijsverkoyen/css-to-inline-styles/src/Css/Rule/Rule.php',
+        'Torann\\GeoIP\\Cache' => __DIR__ . '/..' . '/torann/geoip/src/Cache.php',
+        'Torann\\GeoIP\\Console\\Clear' => __DIR__ . '/..' . '/torann/geoip/src/Console/Clear.php',
+        'Torann\\GeoIP\\Console\\Update' => __DIR__ . '/..' . '/torann/geoip/src/Console/Update.php',
+        'Torann\\GeoIP\\Contracts\\ServiceInterface' => __DIR__ . '/..' . '/torann/geoip/src/Contracts/ServiceInterface.php',
+        'Torann\\GeoIP\\Facades\\GeoIP' => __DIR__ . '/..' . '/torann/geoip/src/Facades/GeoIP.php',
+        'Torann\\GeoIP\\GeoIP' => __DIR__ . '/..' . '/torann/geoip/src/GeoIP.php',
+        'Torann\\GeoIP\\GeoIPServiceProvider' => __DIR__ . '/..' . '/torann/geoip/src/GeoIPServiceProvider.php',
+        'Torann\\GeoIP\\Location' => __DIR__ . '/..' . '/torann/geoip/src/Location.php',
+        'Torann\\GeoIP\\Services\\AbstractService' => __DIR__ . '/..' . '/torann/geoip/src/Services/AbstractService.php',
+        'Torann\\GeoIP\\Services\\IPApi' => __DIR__ . '/..' . '/torann/geoip/src/Services/IPApi.php',
+        'Torann\\GeoIP\\Services\\IPData' => __DIR__ . '/..' . '/torann/geoip/src/Services/IPData.php',
+        'Torann\\GeoIP\\Services\\IPFinder' => __DIR__ . '/..' . '/torann/geoip/src/Services/IPFinder.php',
+        'Torann\\GeoIP\\Services\\IPGeoLocation' => __DIR__ . '/..' . '/torann/geoip/src/Services/IPGeoLocation.php',
+        'Torann\\GeoIP\\Services\\MaxMindDatabase' => __DIR__ . '/..' . '/torann/geoip/src/Services/MaxMindDatabase.php',
+        'Torann\\GeoIP\\Services\\MaxMindWebService' => __DIR__ . '/..' . '/torann/geoip/src/Services/MaxMindWebService.php',
+        'Torann\\GeoIP\\Support\\HttpClient' => __DIR__ . '/..' . '/torann/geoip/src/Support/HttpClient.php',
         'UnhandledMatchError' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/UnhandledMatchError.php',
         'ValueError' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/ValueError.php',
         'Webmozart\\Assert\\Assert' => __DIR__ . '/..' . '/webmozart/assert/src/Assert.php',
