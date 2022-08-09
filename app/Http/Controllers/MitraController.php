@@ -26,9 +26,9 @@ class MitraController extends Controller
     // }
     public function mitra(){
         $toko = DB::table('toko_oleh')->where('idtoko', 81)->first();
-        $produk_toko = DB::table('produk_toko')->where('idtoko', 81)->get();
+        $produk_mitra = DB::table('mitra_produk')->where('idmitra',81)->get();
         $idtoko = 81;
-        return view('mitra', compact(['toko', 'idtoko', 'produk_toko']));
+        return view('mitra', compact(['toko', 'idtoko', 'produk_mitra']));
     }
     public function index($id){
         // $nama_mitra = DB::table('users')->join('toko_mitra', 'idmitra', '=', 'mitra_id')->select('users.*','toko_mitra.*')->get();
@@ -196,7 +196,7 @@ class MitraController extends Controller
         ]);
         return redirect()->back();
     }
-    public function store(Request $request)
+    public function store(Request $request, $id)
     {
         $mitra = DB::table('toko_mitra');
        $mitra->create([
@@ -216,12 +216,12 @@ class MitraController extends Controller
     }
     public function show($id){
         $toko = DB::table('toko_mitra')->where('idmitra', $id)->first();
-        $produk_mitra = DB::table('mitra_produk')->where('idmitra', $id)->get();
+        $mitra_produk = DB::table('mitra_produk')->where('idmitra', $id)->get();
         $now = Carbon::now();
         $start = Carbon::createFromTimeString($toko->jam_buka);
         $end = Carbon::createFromTimeString($toko->jam_tutup);
         $check = $now->between($start, $end);
-        return view('mitra', compact('toko', 'produk_mitra','check'));
+        return view('mitra', compact('toko', 'mitra_produk','check'));
     }
     public function mitras($id){
         $toko_mitra = DB::table('toko_mitra')->join('users', 'mitra_id', '=', 'toko_mitra.idmitra')->select('toko_mitra.*', 'users.mitra_id')->where('idmitra', $id)->first();
