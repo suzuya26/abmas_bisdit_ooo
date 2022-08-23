@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
+use App\Models\Page;
 
 class MitraController extends Controller
 {
@@ -24,6 +25,25 @@ class MitraController extends Controller
     //     $toko_mitra = DB::table('toko_mitra')->join('users', 'mitra_id', '=', 'toko_mitra.idmitra')->select('toko_mitra.*', 'users.mitra_id')->where('idmitra', $id)->first();
     //     return view('mitra', compact('mitra','produkmitra', 'toko_mitra', $idMitra));
     // }
+    public function all(){
+        $page = Page::first();
+        $page->visitsCounter()->increment();
+
+        $tokooleh = DB::table('toko_oleh')
+            ->where([
+                ['idtoko', '>=', 0]
+            ])
+            ->orderBy('rekomendasi_count')
+            ->get();
+
+        $toko = DB::table('toko_oleh')->first();
+        $now = Carbon::now();
+        $start = Carbon::createFromTimeString($toko->jam_buka);
+        $end = Carbon::createFromTimeString($toko->jam_tutup);
+        $check = $now->between($start, $end);
+        return view('mitra_all', compact('tokooleh','toko','check','page'));
+    }
+
     public function mitra(){
         $toko = DB::table('toko_oleh')->where('idtoko', 81)->first();
         $produk_toko = DB::table('produk_toko')->where('idtoko', 81)->get();
@@ -215,13 +235,16 @@ class MitraController extends Controller
         return redirect('/profil/'.$id);
     }
     public function show($id){
+        $page = Page::first();
+        $page->visitsCounter()->increment();
+
         $toko = DB::table('toko_mitra')->where('idmitra', $id)->first();
         $produk_mitra = DB::table('mitra_produk')->where('idmitra', $id)->get();
         $now = Carbon::now();
         $start = Carbon::createFromTimeString($toko->jam_buka);
         $end = Carbon::createFromTimeString($toko->jam_tutup);
         $check = $now->between($start, $end);
-        return view('mitra', compact('toko', 'produk_mitra','check'));
+        return view('mitra', compact('toko', 'produk_mitra','check','page'));
     }
     public function mitras($id){
         $toko_mitra = DB::table('toko_mitra')->join('users', 'mitra_id', '=', 'toko_mitra.idmitra')->select('toko_mitra.*', 'users.mitra_id')->where('idmitra', $id)->first();

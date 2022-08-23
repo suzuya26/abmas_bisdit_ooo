@@ -6,11 +6,15 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
+use App\Models\Page;
 
 class OlehController extends Controller
 {
     public function detailvarianoleh($idoleh)
     {
+        $page = Page::first();
+        $page->visitsCounter()->increment();
+
         $varianoleh = DB::table('varianoleh')
             ->leftjoin('bahandasar', 'bahandasar.idbahan', '=', 'varianoleh.idbahan')
             ->leftjoin('lokasi', 'lokasi.idlokasi', '=', 'varianoleh.idlokasi')
@@ -56,11 +60,14 @@ class OlehController extends Controller
             ->limit(9)
             ->get();
 
-        return view('varianoleh', compact('varianoleh', 'tempatbeli', 'rekomlokasi', 'rekomvarianjenis', 'idoleh'));
+        return view('varianoleh', compact('varianoleh', 'tempatbeli', 'rekomlokasi', 'rekomvarianjenis', 'idoleh','page'));
     }
 
     public function detailoleh($idoleh)
     {
+        $page = Page::first();
+        $page->visitsCounter()->increment();
+
         $varianoleh = DB::table('varianoleh')
             ->leftjoin('bahandasar', 'bahandasar.idbahan', '=', 'varianoleh.idbahan')
             ->leftjoin('lokasi', 'lokasi.idlokasi', '=', 'varianoleh.idlokasi')
@@ -114,6 +121,6 @@ class OlehController extends Controller
             $check = $now->between($start, $end);
 
 
-        return view('oleh', compact('varianoleh', 'tempatbeli', 'rekomlokasi', 'rekomvarianjenis', 'idoleh','toko','jam','check'));
+        return view('oleh', compact('varianoleh', 'tempatbeli', 'rekomlokasi', 'rekomvarianjenis', 'idoleh','toko','jam','check','page'));
     }
 }

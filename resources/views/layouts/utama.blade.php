@@ -82,6 +82,7 @@ transform: rotate(37.85deg);
     .caro {
         align-items: center;
         justify-content: center;
+        margin-bottom: 20px;
     }
     .icon-buka {
             color: red;
@@ -97,11 +98,12 @@ transform: rotate(37.85deg);
             /* Shadow01 */
             box-shadow: 0px 24px 48px rgba(0, 24, 52, 0.080899);
             border-radius: 0px 0px 40px 40px;
-            height: 64%;
+            height: 300px;
             width: 93%;
             margin-left: 10.5px;
             margin-top: -30px;
             padding-top: 20px;
+            padding-bottom: 40%;
 
         }
         .teks-nama {
@@ -118,7 +120,7 @@ transform: rotate(37.85deg);
         }
         .foto-beli {
             width: 100%;
-            height: 100%;
+            height: 300px;
             background: #9B9B9B;
             border-radius: 20px;
             display: block;
