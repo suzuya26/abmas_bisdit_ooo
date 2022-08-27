@@ -19,11 +19,10 @@
       </ul>
       @isset($page)
       @if ( visits($page)->period('month')->count() < 1)
-      <h3>Visitor {{ visits($page)->period('month')->count()}}</h3>
+      <p>Visitor {{ visits($page)->period('month')->count()}}</p>
       @elseif ( visits($page)->period('month')->count() > 1)
-      <h3>Visitors {{ visits($page)->period('month')->count()}}</h3>
+      <p>Visitors {{ visits($page)->period('month')->count()}}</p>
       @endif
-
       @endisset
       <p class="text-center">&copy; 2022. Oasis. All rights reserved.</p>
 

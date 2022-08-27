@@ -25,6 +25,9 @@ class MitraController extends Controller
     //     $toko_mitra = DB::table('toko_mitra')->join('users', 'mitra_id', '=', 'toko_mitra.idmitra')->select('toko_mitra.*', 'users.mitra_id')->where('idmitra', $id)->first();
     //     return view('mitra', compact('mitra','produkmitra', 'toko_mitra', $idMitra));
     // }
+
+
+
     public function all(){
         $page = Page::first();
         $page->visitsCounter()->increment();
@@ -34,7 +37,7 @@ class MitraController extends Controller
                 ['idtoko', '>=', 0]
             ])
             ->orderBy('rekomendasi_count')
-            ->get();
+            ->paginate(8)->onEachSide(1);
 
         $toko = DB::table('toko_oleh')->first();
         $now = Carbon::now();
@@ -42,6 +45,25 @@ class MitraController extends Controller
         $end = Carbon::createFromTimeString($toko->jam_tutup);
         $check = $now->between($start, $end);
         return view('mitra_all', compact('tokooleh','toko','check','page'));
+    }
+
+    public function filter(Request $request){
+        $page = Page::first();
+        $page->visitsCounter()->increment();
+        $toko = DB::table('toko_oleh')->first();
+            $now = Carbon::now();
+            $start = Carbon::createFromTimeString($toko->jam_buka);
+            $end = Carbon::createFromTimeString($toko->jam_tutup);
+            $check = $now->between($start, $end);
+        $param = trim($request->get('param'));
+
+        $tokooleh = DB::table('toko_oleh')
+            ->where('nama_toko', 'like', '%' . $param . '%')
+            ->orWhere('nama_lokasi', 'like', '%' . $param . '%')
+            ->distinct()
+            ->paginate(8)->onEachSide(1);
+
+        return view('mitra_all', compact('param','tokooleh','toko','check','page'));
     }
 
     public function mitra(){
@@ -251,5 +273,6 @@ class MitraController extends Controller
         $toko_mitra = DB::table('toko_mitra')->join('users', 'mitra_id', '=', 'toko_mitra.idmitra')->select('toko_mitra.*', 'users.mitra_id')->where('idmitra', $id)->first();
         return view('mitra.dashboard', compact('toko_mitra'));
     }
+
 
 }
