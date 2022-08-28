@@ -181,19 +181,19 @@
                 </div>
             </div>
         </div>
-        @if (count($tokooleh) > 0)
+        @if (count($tokomitra) > 0)
             <section id="tempatbeli" style="margin-bottom: 200px;margin-top:30px">
                 <div class="container">
                     <div class="row">
-                        @foreach ($tokooleh as $rek)
-                            <div class="caro col-sm-3" onclick="location.href='/toko/{{ $rek->idtoko }}'">
+                        @foreach ($tokomitra as $rek)
+                            <div class="caro col-sm-3" onclick="location.href='/toko/{{ $rek->idmitra }}'">
                                 <div class="foto-beli">
                                     <img src="{{ $rek->gambar_utama }}" width="100%" height="100%"
                                         style="border-radius: 20px">
                                 </div>
                                 <div class="nama-beli mb-5">
                                     <div class="teks-nama">
-                                        <h2>{{ $rek->nama_toko }}</h2>
+                                        <h2>{{ $rek->nama_mitra }}</h2>
                                         <div class="info-beli" style="font-size: 25px">
                                             @if ($check)
                                                 <h3 style="color: #0CBB3D;font-size:24px" class="fw-bold">BUKA
@@ -206,9 +206,9 @@
                                                         - {{ $rek->jam_tutup }})</span> </h3>
                                             @endif
                                             <i class="icon-buka bi bi-geo-alt-fill"><span
-                                                    class="alamat-beli">{{ $rek->alamat_toko }}</span></i><br><br>
+                                                    class="alamat-beli">{{ $rek->alamat_mitra }}</span></i><br><br>
                                             <i class="icon-buka bi bi-telephone-fill"><span
-                                                    class="alamat-beli">{{ $rek->kontak_toko }}</span></i>
+                                                    class="alamat-beli">{{ $rek->kontak_mitra }}</span></i>
                                         </div>
                                     </div>
                                 </div>
@@ -221,7 +221,7 @@
         <div class="row text-center" style="margin-top: -200px">
             <div class="col-4"></div>
             <div class="col-4 text-center">
-            {{ $tokooleh->links() }}
+            {{ $tokomitra->links() }}
             </div>
             <div class="col-4"></div>
         </div>
