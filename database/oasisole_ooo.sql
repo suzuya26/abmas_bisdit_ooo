@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.3.0-dev+20220715.346923e20a
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 28, 2022 at 04:47 AM
+-- Generation Time: Aug 27, 2022 at 03:52 PM
 -- Server version: 10.4.24-MariaDB
--- PHP Version: 8.0.18
+-- PHP Version: 7.4.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -890,17 +890,17 @@ CREATE TABLE `toko_mitra` (
   `gambar_3` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `gambar_4` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `gambar_5` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `jenis_sekitar` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `idlokasi` int(11) NOT NULL,
-  `nama_lokasi` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL
+  `jenis_sekitar` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `toko_mitra`
 --
 
-INSERT INTO `toko_mitra` (`idmitra`, `nama_mitra`, `alamat_mitra`, `gambar_utama`, `map_mitra`, `jam_operasional`, `fasilitas_mitra`, `sekitar_mitra`, `kontak_mitra`, `website_mitra`, `sosmed_mitra`, `galeri_mitra`, `created_at`, `updated_at`, `galeri_mitra_caption`, `jam_buka`, `jam_tutup`, `gambar_1`, `gambar_2`, `gambar_3`, `gambar_4`, `gambar_5`, `jenis_sekitar`, `idlokasi`, `nama_lokasi`) VALUES
-(1, 'Sentra UKM Siola', 'Jl. Tunjungan No.1-3, Genteng, Kec. Genteng, Kota SBY, Jawa Timur 60275', 'https://cdn.discordapp.com/attachments/964470483875672094/990108321312804944/867987.jpg', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15831.43752040468!2d112.72880496977537!3d-7.256840500000007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7f95d67d8c6c7%3A0xae38021c3316b375!2sOleh%20Oleh%20Khas%20Surabaya%20-%20Sentra%20UKM%20Siola!5e0!3m2!1sen!2sid!4v1656129854125!5m2!1sen!2sid\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>', NULL, 'Parkir Mobil & Motor---Toilet---Kantin---Ruang Tunggu', NULL, '085655927391', NULL, NULL, 'https://cdn.discordapp.com/attachments/964470483875672094/990106905034784799/IMG20220219141654.jpg---https://cdn.discordapp.com/attachments/964470483875672094/990106830044803132/IMG20220219141636.jpg', NULL, NULL, '', '10:00', '20:00', NULL, NULL, NULL, NULL, NULL, '', 66, NULL);
+INSERT INTO `toko_mitra` (`idmitra`, `nama_mitra`, `alamat_mitra`, `gambar_utama`, `map_mitra`, `jam_operasional`, `fasilitas_mitra`, `sekitar_mitra`, `kontak_mitra`, `website_mitra`, `sosmed_mitra`, `galeri_mitra`, `created_at`, `updated_at`, `galeri_mitra_caption`, `jam_buka`, `jam_tutup`, `gambar_1`, `gambar_2`, `gambar_3`, `gambar_4`, `gambar_5`, `jenis_sekitar`) VALUES
+(1, 'spikoekoe', 'Keputih, Surabaya', NULL, NULL, NULL, NULL, NULL, '085456623', 'www.spikoe.com', '@spikoekoe', NULL, NULL, NULL, 'Tampak Samping Toko---Jalan Tunjungan Plaza 78, Tunjungan, Plaza---Tampak Depan Toko---Jalan Tunjungan Plaza 78, Tunjungan, Plaza---Tampak Belakang Toko', '', '', NULL, NULL, NULL, NULL, NULL, ''),
+(9, 'daffa', 'Jalan Semangka', NULL, NULL, NULL, NULL, NULL, '085456623', 'www.spikoe.com', '@spikoekoe', NULL, NULL, NULL, '', '09:00', '12:00', NULL, NULL, NULL, NULL, NULL, ''),
+(81, 'Sentra UKM Siola', 'Jl. Tunjungan No.1-3, Genteng, Kec. Genteng, Kota SBY, Jawa Timur 60275', '1658072654_twibbon gandeng.png', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15831.43752040468!2d112.72880496977537!3d-7.256840500000007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7f95d67d8c6c7%3A0xae38021c3316b375!2sOleh%20Oleh%20Khas%20Surabaya%20-%20Sentra%20UKM%20Siola!5e0!3m2!1sen!2sid!4v1656129854125!5m2!1sen!2sid\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>', NULL, 'Parkir Mobil & Motor---Toilet---Kantin---Ruang Tunggu', NULL, '085655927391', '', '', 'https://cdn.discordapp.com/attachments/964470483875672094/990106905034784799/IMG20220219141654.jpg\n\n        https://cdn.discordapp.com/attachments/964470483875672094/990106830044803132/IMG20220219141636.jpg', NULL, NULL, '', '10:00', '20:00', NULL, NULL, NULL, NULL, NULL, '');
 
 -- --------------------------------------------------------
 
@@ -1216,24 +1216,24 @@ CREATE TABLE `visits` (
 --
 
 INSERT INTO `visits` (`id`, `primary_key`, `secondary_key`, `score`, `list`, `expired_at`, `created_at`, `updated_at`) VALUES
-(1, 'visits:pages_visits_day_total', NULL, 1, NULL, '2022-08-28 17:00:00', '2022-08-01 12:19:52', '2022-08-28 02:46:24'),
-(2, 'visits:pages_visits_day', '0', 0, NULL, '2022-08-28 17:00:00', '2022-08-01 12:19:52', '2022-08-28 02:46:24'),
-(3, 'visits:pages_visits_week_total', NULL, 12, NULL, '2022-08-28 17:00:00', '2022-08-01 12:19:52', '2022-08-28 02:46:24'),
-(4, 'visits:pages_visits_week', '0', 0, NULL, '2022-08-28 17:00:00', '2022-08-01 12:19:52', '2022-08-28 02:46:24'),
-(5, 'visits:pages_visits_month_total', NULL, 23, NULL, '2022-08-31 17:00:00', '2022-08-01 12:19:52', '2022-08-28 02:46:24'),
-(6, 'visits:pages_visits_month', '0', 0, NULL, '2022-08-31 17:00:00', '2022-08-01 12:19:52', '2022-08-28 02:46:24'),
-(7, 'visits:pages_visits_year_total', NULL, 23, NULL, '2022-12-31 17:00:00', '2022-08-01 12:19:52', '2022-08-28 02:46:24'),
-(8, 'visits:pages_visits_year', '0', 0, NULL, '2022-12-31 17:00:00', '2022-08-01 12:19:52', '2022-08-28 02:46:24'),
-(11, 'visits:pages_visits_total', NULL, 23, NULL, NULL, '2022-08-01 12:19:52', '2022-08-28 02:29:00'),
-(13, 'visits:pages_visits_day', '1', 1, NULL, '2022-08-28 17:00:00', '2022-08-01 12:19:52', '2022-08-28 02:46:24'),
-(14, 'visits:pages_visits_week', '1', 12, NULL, '2022-08-28 17:00:00', '2022-08-01 12:19:52', '2022-08-28 02:46:24'),
-(15, 'visits:pages_visits_month', '1', 23, NULL, '2022-08-31 17:00:00', '2022-08-01 12:19:52', '2022-08-28 02:46:24'),
-(16, 'visits:pages_visits_year', '1', 23, NULL, '2022-12-31 17:00:00', '2022-08-01 12:19:52', '2022-08-28 02:46:24'),
+(1, 'visits:pages_visits_day_total', NULL, 1, NULL, '2022-08-27 17:00:00', '2022-08-01 12:19:52', '2022-08-27 13:51:44'),
+(2, 'visits:pages_visits_day', '0', 0, NULL, '2022-08-27 17:00:00', '2022-08-01 12:19:52', '2022-08-27 13:51:44'),
+(3, 'visits:pages_visits_week_total', NULL, 10, NULL, '2022-08-28 17:00:00', '2022-08-01 12:19:52', '2022-08-27 13:51:44'),
+(4, 'visits:pages_visits_week', '0', 0, NULL, '2022-08-28 17:00:00', '2022-08-01 12:19:52', '2022-08-27 13:51:44'),
+(5, 'visits:pages_visits_month_total', NULL, 21, NULL, '2022-08-31 17:00:00', '2022-08-01 12:19:52', '2022-08-27 13:51:44'),
+(6, 'visits:pages_visits_month', '0', 0, NULL, '2022-08-31 17:00:00', '2022-08-01 12:19:52', '2022-08-27 13:51:44'),
+(7, 'visits:pages_visits_year_total', NULL, 21, NULL, '2022-12-31 17:00:00', '2022-08-01 12:19:52', '2022-08-27 13:51:44'),
+(8, 'visits:pages_visits_year', '0', 0, NULL, '2022-12-31 17:00:00', '2022-08-01 12:19:52', '2022-08-27 13:51:44'),
+(11, 'visits:pages_visits_total', NULL, 21, NULL, NULL, '2022-08-01 12:19:52', '2022-08-27 13:51:41'),
+(13, 'visits:pages_visits_day', '1', 1, NULL, '2022-08-27 17:00:00', '2022-08-01 12:19:52', '2022-08-27 13:51:44'),
+(14, 'visits:pages_visits_week', '1', 10, NULL, '2022-08-28 17:00:00', '2022-08-01 12:19:52', '2022-08-27 13:51:44'),
+(15, 'visits:pages_visits_month', '1', 21, NULL, '2022-08-31 17:00:00', '2022-08-01 12:19:52', '2022-08-27 13:51:44'),
+(16, 'visits:pages_visits_year', '1', 21, NULL, '2022-12-31 17:00:00', '2022-08-01 12:19:52', '2022-08-27 13:51:44'),
 (24, 'visits:pages_visits_recorded_ips:1:127.0.0.1', NULL, 1, NULL, '2022-08-05 05:27:32', '2022-08-05 05:26:32', '2022-08-05 05:26:32'),
-(25, 'visits:pages_visits', '1', 17, NULL, NULL, '2022-08-05 05:26:32', '2022-08-28 02:29:00'),
-(26, 'visits:pages_visits_referers:1', NULL, 17, NULL, NULL, '2022-08-05 05:26:32', '2022-08-28 02:29:00'),
-(27, 'visits:pages_visits_OSes:1', 'Windows', 17, NULL, NULL, '2022-08-05 05:26:32', '2022-08-28 02:29:00'),
-(28, 'visits:pages_visits_languages:1', 'en', 17, NULL, NULL, '2022-08-05 05:26:32', '2022-08-28 02:29:00'),
+(25, 'visits:pages_visits', '1', 15, NULL, NULL, '2022-08-05 05:26:32', '2022-08-27 13:51:41'),
+(26, 'visits:pages_visits_referers:1', NULL, 15, NULL, NULL, '2022-08-05 05:26:32', '2022-08-27 13:51:41'),
+(27, 'visits:pages_visits_OSes:1', 'Windows', 15, NULL, NULL, '2022-08-05 05:26:32', '2022-08-27 13:51:41'),
+(28, 'visits:pages_visits_languages:1', 'en', 15, NULL, NULL, '2022-08-05 05:26:32', '2022-08-27 13:51:41'),
 (29, 'visits:pages_visits_recorded_ips:1:127.0.0.1', NULL, 1, NULL, '2022-08-05 05:58:41', '2022-08-05 05:28:41', '2022-08-05 05:28:41'),
 (30, 'visits:pages_visits_recorded_ips:1:127.0.0.1', NULL, 1, NULL, '2022-08-09 15:45:56', '2022-08-09 15:15:56', '2022-08-09 15:15:56'),
 (31, 'visits:pages_visits_recorded_ips:1:127.0.0.1', NULL, 1, NULL, '2022-08-09 16:25:14', '2022-08-09 15:55:14', '2022-08-09 15:55:14'),
@@ -1247,9 +1247,7 @@ INSERT INTO `visits` (`id`, `primary_key`, `secondary_key`, `score`, `list`, `ex
 (39, 'visits:pages_visits_recorded_ips:1:127.0.0.1', NULL, 1, NULL, '2022-08-24 05:16:03', '2022-08-24 04:46:03', '2022-08-24 04:46:03'),
 (40, 'visits:pages_visits_recorded_ips:1:127.0.0.1', NULL, 1, NULL, '2022-08-24 06:02:02', '2022-08-24 05:32:02', '2022-08-24 05:32:02'),
 (41, 'visits:pages_visits_recorded_ips:1:127.0.0.1', NULL, 1, NULL, '2022-08-24 06:33:39', '2022-08-24 06:03:39', '2022-08-24 06:03:39'),
-(42, 'visits:pages_visits_recorded_ips:1:127.0.0.1', NULL, 1, NULL, '2022-08-27 14:21:41', '2022-08-27 13:51:41', '2022-08-27 13:51:41'),
-(43, 'visits:pages_visits_recorded_ips:1:127.0.0.1', NULL, 1, NULL, '2022-08-27 15:07:55', '2022-08-27 14:37:55', '2022-08-27 14:37:55'),
-(44, 'visits:pages_visits_recorded_ips:1:127.0.0.1', NULL, 1, NULL, '2022-08-28 02:59:00', '2022-08-28 02:29:00', '2022-08-28 02:29:00');
+(42, 'visits:pages_visits_recorded_ips:1:127.0.0.1', NULL, 1, NULL, '2022-08-27 14:21:41', '2022-08-27 13:51:41', '2022-08-27 13:51:41');
 
 --
 -- Indexes for dumped tables
@@ -1580,7 +1578,7 @@ ALTER TABLE `tempatbeli`
 -- AUTO_INCREMENT for table `toko_mitra`
 --
 ALTER TABLE `toko_mitra`
-  MODIFY `idmitra` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=83;
+  MODIFY `idmitra` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=82;
 
 --
 -- AUTO_INCREMENT for table `toko_oleh`
@@ -1610,7 +1608,7 @@ ALTER TABLE `varianoleh`
 -- AUTO_INCREMENT for table `visits`
 --
 ALTER TABLE `visits`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
 -- Constraints for dumped tables

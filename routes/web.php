@@ -67,7 +67,7 @@ Route::get('oleh/{idoleh}', [OlehController::class, 'detailoleh']);
 Route::get('/produk/hapus/{id}', [ProdukController::class, 'hapus']);
 Route::get('/produk/edit/{id}', [ProdukController::class, 'editproduk']);
 Route::post('/produk/update/{id}', [ProdukController::class, 'update']);
-Route::get('mitra', [MitraController::class, 'filter'])->name('filter');
+Route::get('/mitra', [MitraController::class, 'filter'])->name('filter');
 
 
 

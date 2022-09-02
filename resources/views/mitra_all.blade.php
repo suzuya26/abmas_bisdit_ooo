@@ -181,11 +181,13 @@
                 </div>
             </div>
         </div>
-        @if (count($tokooleh) > 0)
+        @if (count($tokomitra) > 0)
             <section id="tempatbeli" style="margin-bottom: 200px;margin-top:30px">
                 <div class="container">
                     <div class="row">
-                        @foreach ($tokooleh as $rek)
+
+                        @foreach ($tokomitra as $rek)
+
                             <div class="caro col-sm-3" onclick="location.href='/toko/{{ $rek->idmitra }}'">
                                 <div class="foto-beli">
                                     <img src="{{ $rek->gambar_utama }}" width="100%" height="100%"
@@ -193,7 +195,7 @@
                                 </div>
                                 <div class="nama-beli mb-5">
                                     <div class="teks-nama">
-                                        <h2>{{ $rek->nama_toko }}</h2>
+                                        <h2>{{ $rek->nama_mitra }}</h2>
                                         <div class="info-beli" style="font-size: 25px">
                                             @if ($check)
                                                 <h3 style="color: #0CBB3D;font-size:24px" class="fw-bold">BUKA
@@ -220,8 +222,10 @@
         @endif
         <div class="row text-center" style="margin-top: -200px">
             <div class="col-4"></div>
-            <div class="col-lg-4 col-sm-12 text-center">
-                {{ $tokooleh->links() }}
+
+            <div class="col-4 text-center">
+            {{ $tokomitra->links() }}
+
             </div>
             <div class="col-4"></div>
         </div>

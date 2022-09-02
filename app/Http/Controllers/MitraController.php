@@ -57,13 +57,15 @@ class MitraController extends Controller
             $check = $now->between($start, $end);
         $param = trim($request->get('param'));
 
-        $tokooleh = DB::table('toko_mitra')
+
+
+        $tokomitra = DB::table('toko_mitra')
             ->where('nama_mitra', 'like', '%' . $param . '%')
             ->orWhere('nama_lokasi', 'like', '%' . $param . '%')
             ->distinct()
             ->paginate(8)->onEachSide(1);
 
-        return view('mitra_all', compact('param','tokooleh','toko','check','page'));
+        return view('mitra_all', compact('param','tokomitra','toko','check','page'));
     }
 
     public function mitra(){
