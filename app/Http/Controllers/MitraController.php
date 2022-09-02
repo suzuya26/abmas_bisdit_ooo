@@ -50,15 +50,15 @@ class MitraController extends Controller
     public function filter(Request $request){
         $page = Page::first();
         $page->visitsCounter()->increment();
-        $toko = DB::table('toko_oleh')->first();
+        $toko = DB::table('toko_mitra')->first();
             $now = Carbon::now();
             $start = Carbon::createFromTimeString($toko->jam_buka);
             $end = Carbon::createFromTimeString($toko->jam_tutup);
             $check = $now->between($start, $end);
         $param = trim($request->get('param'));
 
-        $tokooleh = DB::table('toko_oleh')
-            ->where('nama_toko', 'like', '%' . $param . '%')
+        $tokooleh = DB::table('toko_mitra')
+            ->where('nama_mitra', 'like', '%' . $param . '%')
             ->orWhere('nama_lokasi', 'like', '%' . $param . '%')
             ->distinct()
             ->paginate(8)->onEachSide(1);

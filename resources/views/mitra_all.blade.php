@@ -172,10 +172,10 @@
                     <form action="{{ route('filter') }}" method="GET" class="filterproduk">
                         @csrf
                         <div class="input-group searchM col-4">
-                            <input style="" type="search" class="form-control searchF" placeholder="Cari Mitra"
+                            <input style="" type="search" class="form-control searchF" placeholder="Cari Mitra..."
                                 aria-label="Search" name="param">
-                            <span type="submit" class="input-group-addon my-2 mx-2"><img src="\img\icon.png" width="30px"
-                                    height="35px"></span>
+                            <button type="submit" class="input-group-addon my-2 ms-2 me-3" style="background-color: Transparent; border: transparent"><i
+                                    class="bi bi-search"></i></button>
                         </div>
                     </form>
                 </div>
@@ -186,7 +186,7 @@
                 <div class="container">
                     <div class="row">
                         @foreach ($tokooleh as $rek)
-                            <div class="caro col-sm-3" onclick="location.href='/toko/{{ $rek->idtoko }}'">
+                            <div class="caro col-sm-3" onclick="location.href='/toko/{{ $rek->idmitra }}'">
                                 <div class="foto-beli">
                                     <img src="{{ $rek->gambar_utama }}" width="100%" height="100%"
                                         style="border-radius: 20px">
@@ -206,9 +206,9 @@
                                                         - {{ $rek->jam_tutup }})</span> </h3>
                                             @endif
                                             <i class="icon-buka bi bi-geo-alt-fill"><span
-                                                    class="alamat-beli">{{ $rek->alamat_toko }}</span></i><br><br>
+                                                    class="alamat-beli">{{ $rek->alamat_mitra }}</span></i><br><br>
                                             <i class="icon-buka bi bi-telephone-fill"><span
-                                                    class="alamat-beli">{{ $rek->kontak_toko }}</span></i>
+                                                    class="alamat-beli">{{ $rek->kontak_mitra }}</span></i>
                                         </div>
                                     </div>
                                 </div>
@@ -220,8 +220,8 @@
         @endif
         <div class="row text-center" style="margin-top: -200px">
             <div class="col-4"></div>
-            <div class="col-4 text-center">
-            {{ $tokooleh->links() }}
+            <div class="col-lg-4 col-sm-12 text-center">
+                {{ $tokooleh->links() }}
             </div>
             <div class="col-4"></div>
         </div>

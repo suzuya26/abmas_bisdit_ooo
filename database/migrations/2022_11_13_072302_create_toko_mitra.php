@@ -26,6 +26,9 @@ class CreateTokoMitra extends Migration
             $table->text('sosmed_mitra')->nullable();
             $table->longText('galeri_mitra')->nullable();
             $table->mediumText('galeri_mitra_caption');
+            $table->bigInteger('idlokasi')->unsigned(); // aman
+            $table->foreign('idlokasi')->references('idlokasi')->on('lokasi');
+            $table->string('nama_lokasi');
             $table->string('jam_buka');
             $table->string('jam_tutup');
             $table->string('gambar_1')->nullable();
