@@ -18,10 +18,10 @@
         <li class="nav-item"><a href="#" class="nav-link px-2 text-white mx-2"><i style="font-size:2rem" class="fab fa-instagram"></i></a></li>
       </ul>
       @isset($page)
-      @if ( visits($page)->period('month')->count() < 1)
-      <p>Visitor {{ visits($page)->period('month')->count()}}</p>
-      @elseif ( visits($page)->period('month')->count() > 1)
-      <p>Visitors {{ visits($page)->period('month')->count()}}</p>
+      @if ( visits($page)->count() < 1)
+      <p>Visitor {{ visits($page)->count()}}</p>
+      @elseif ( visits($page)->count() > 1)
+      <p>Visitors {{ visits($page)->count()}}</p>
       @endif
       @endisset
       <p class="text-center">&copy; 2022. Oasis. All rights reserved.</p>
