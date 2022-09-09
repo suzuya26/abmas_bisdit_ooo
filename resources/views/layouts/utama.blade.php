@@ -108,7 +108,7 @@
             /* Shadow01 */
             box-shadow: 0px 24px 48px rgba(0, 24, 52, 0.080899);
             border-radius: 0px 0px 40px 40px;
-            height: 300px;
+            height: 200px;
             width: 93%;
             margin-left: 10.5px;
             margin-top: -30px;
@@ -215,7 +215,7 @@
     </section>
     <hr>
     @if (count($olehPopuler) > 0)
-        <section style="margin-bottom: 200px">
+        <section style="" class="mb-3">
             <div class="container">
                 <h1 class="fw-bold">Rekomendasi Oleh-oleh Khas {{ $kota }}</h1>
                 <div class="row">
@@ -332,7 +332,7 @@
         </section>
     @endif
     @if (count($tokoPopuler) > 0)
-        <section style="margin-bottom: 200px" class="mt-3">
+        <section style="" class="mt-3">
             <div class="container">
                 <h1 class="fw-bold mt-5">Rekomendasi Toko Oleh-Oleh di {{ $kota }}</h1>
                 <div class="row">
@@ -466,7 +466,7 @@
         </section>
     @endif
     @if (count($harga) > 0)
-        <section style="margin-bottom:200px">
+        <section style="mb-3" class="mb-5">
             <div class="container">
                 <h1 class="fw-bold">Rekomendasi Oleh-Oleh dengan harga di bawah Rp40.000</h1>
                 <div class="row">
@@ -578,7 +578,7 @@
         </section>
     @endif
     <section class="p-4">
-        <h1 class="judul text-center mt-5 mb-3">Why Oasis?</h1>
+        <h1 class="judul text-center mb-3">Why Oasis?</h1>
         <div class="container" style="width: 100%">
             <div class="row text-center">
                 <div class="col-sm-3">

@@ -330,15 +330,15 @@
                     <div class="deskripsi-utama col-6 mt-3">
                         <div class="row ">
                             <div class="col-8 mt-3">
-                                <h1 style="font-size: 65px">{{ $toko->nama_toko }}</h1>
+                                <h1 style="font-size: 65px">{{ $toko->nama_mitra }}</h1>
                             </div>
                             {{-- <p><i class="far fa-clock"></i> 1998 - sekarang</p> --}}
                             <div class="info-beli2">
-                                @if ($toko->alamat_toko)
-                                <i class="icon-buka bi bi-geo-alt-fill"><span class="text-beli">{{ $toko->alamat_toko }}</span></i> <br>
+                                @if ($toko->alamat_mitra)
+                                <i class="icon-buka bi bi-geo-alt-fill"><span class="text-beli">{{ $toko->alamat_mitra }}</span></i> <br>
                                 @endif
-                                @if ($toko->kontak_toko)
-                                <i class="icon-buka bi bi-telephone-fill" style="color: black"><span class="text-beli">{{ $toko->kontak_toko }}</span></i> <br>
+                                @if ($toko->kontak_mitra)
+                                <i class="icon-buka bi bi-telephone-fill" style="color: black"><span class="text-beli">{{ $toko->kontak_mitra }}</span></i> <br>
                                 @endif
 
                                 <a href="" class="btn btn-dark mt-3" style="width:175px;border-radius:30px;font-size:1.5rem">Cari Lokasi!</a>
@@ -347,14 +347,12 @@
                             <div class="row rekom mt-3">
                                 <div class="col-6">
                                     <p>Pernah kunjungi toko ini?</p>
-                                    <livewire:rekomendasi-index :idtoko="$idtoko"></livewire:rekomendasi-index>
+                                    <livewire:rekomendasi-index :idtoko="$idmitra"></livewire:rekomendasi-index>
 
                                 </div>
                                 <div class="col-6">
                                     <p>Ingin kunjungi toko ini?</p>
-                                    <livewire:list-toko-index :idtoko="$idtoko"></livewire:list-toko-index>
-                                    {{-- <a wire:click="rekomendasi({{ $idtoko }})" href="" class="button-toko bg-light" style="background:white">Tambah ke List   <i class="far fa-bookmark" style="font-size: 1.3rem"></i></a>
-                                    <p><i class="fas fa-bookmark mt-3" style="font-size: 1.3rem"></i> 5  orang</p> --}}
+                                    <livewire:list-toko-index :idtoko="$idmitra"></livewire:list-toko-index>
                                 </div>
                             </div>
                         </div>
@@ -362,103 +360,44 @@
                     <div class="col-6 mt-3">
                         <div class="foto-oleh">
                             <img src="{{ $toko->gambar_utama }}" width="785px" height="575px" >
-                            {{-- <div class="livewire col-2 d-flex justify-content-end">
-                                <livewire:favorite-index :idoleh="$idtoko"></livewire:favorite-index>
-                            </div> --}}
-                        </div>
 
                     </div>
                 </div>
             </div>
     </section>
-        <section id="tempatbeli" style="margin-bottom: 200px;margin-top:-30px">
+        <section id="tempatbeli" style="margin-top:-30px" class="mb-5">
             <div class="container">
                 <div class="tempatbeli row">
-                    <h1>Produk Oleh-Oleh dari {{ $toko->nama_toko }}</h1>
+                    <h1>Produk Oleh-Oleh dari {{ $toko->nama_mitra }}</h1>
                 </div>
-                <div class="row" >
-                    @foreach ($produk_toko as $t)
+                <div class="row">
+                    @foreach ($mitra_produk as $p)
                     <div class="caro col-3">
                         <div class="foto-beli">
-                            <img src="{{ $t->gambar_produk }}" width= "301px"
+                            @if ($p->gambar_produkMitra === null)
+                            <img src="{{ $p->gambar_produk_admin }}" alt=""  width= "301px"
                             height="285.65px" style="border-radius: 20px">
+                            @elseif ($p->gambar_produk_admin === null)
+                            <img src="{{ url('/data_file/'.$p->gambar_produkMitra) }}" alt=""  width= "301px"
+                            height="285.65px" style="border-radius: 20px">
+                            @endif
                         </div>
                         <div class="nama-beli">
                             <div class="teks-nama ">
-                                <h3 class="" style="margin-top: 33px;font-size:19px">{{ $t->nama_produk }}</h3>
-                                <h2 id="buka" style="color: red">Rp <span id="jam-buka">{{ $t->harga_produk }}</span></h2>
+                                <h2 class="" style="margin-top: 33px">{{ $p->nama_produk_mitra }}</h2>
+                                <h2 id="buka" style="color: red">Rp <span id="jam-buka">{{ $p->harga_produk_mitra }}</span></h2>
                             </div>
                         </div>
                     </div>
                     @endforeach
-                    {{-- @foreach ($produk_toko as $p)
-                    <div class="caro col-3">
-                        <div class="foto-beli">
-                            <img src="{{ $p->gambar_produk }}" width= "301px"
-                            height="285.65px" style="border-radius: 20px">
-                        </div>
-                        <div class="nama-beli">
-                            <div class="teks-nama ">
-                                <h2 class="" style="margin-top: 33px">{{ $p->nama_produk }}</h2>
-                                <h2 id="buka" style="color: red">Rp <span id="jam-buka">{{ $p->harga_produk }}</span></h2>
-                            </div>
-                        </div>
-                    </div>
-                    @endforeach --}}
                 </div>
             </div>
         </section>
-
-
-        {{-- <div class="container ">
-        <div class="row mt-3">
-            <div class="col-4">
-                <img width="410px" src="https://images.pexels.com/photos/9938862/pexels-photo-9938862.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
-            </div>
-            <div class="col-5 mt-4">
-                <h1>Spikoe Kunoe Coklade</h1>
-                <h3>Rp20.000</h3>
-                <a href="" class="btn btn-secondary" style="font-size: 1.7rem"><i><span style="color: orange; font-weight:bold">#1</span> Spikoe di toko ini</i></a>
-            </div>
-            <div class="col-3 mt-4">
-                <a href="" class=" button-produk"><i class="fa fa-thumbs-up" style="font-size:24px"></i> Rekomendasikan</a> <br>
-                <a href="" class=" mt-3 button-produk"><i class="far fa-bookmark" style="font-size:24px"></i> Simpan Produk</a>
-            </div>
-        </div>
-    </div> --}}
-        {{-- <div class="container ">
-        <div class="row mt-3">
-            <div class="col-4">
-                <img width="410px" src="https://images.pexels.com/photos/9938862/pexels-photo-9938862.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
-            </div>
-            <div class="col-5 mt-4">
-                <h1>Spikoe Kunoe Coklade</h1>
-                <h3>Rp20.000</h3>
-                <a href="" class="btn btn-secondary" style="font-size: 1.7rem"><i><span style="color: orange; font-weight:bold">#1</span> Spikoe di toko ini</i></a>
-            </div>
-            <div class="col-3 mt-4">
-                <a href="" class=" button-produk"><i class="fa fa-thumbs-up" style="font-size:24px"></i> Rekomendasikan</a> <br>
-                <a href="" class=" mt-3 button-produk"><i class="far fa-bookmark" style="font-size:24px"></i> Simpan Produk</a>
-            </div>
-        </div>
-        <hr>
-    </div> --}}
         <div class="container" style="">
-            <h1>Informasi {{ $toko->nama_toko }}</h1>
+            <h1>Informasi {{ $toko->nama_mitra }}</h1>
             <div class="row">
                 <div class="col-6">
-                    {{-- @php
-                $embed = $toko->map_toko;
-                $peta = stripslashes($embed);
-                echo $embed;
-
-                @endphp --}}
-                {{-- @php
-                $embed = $toko->map_toko;
-                $peta = stripslashes($embed);
-                echo $embed;
-                 @endphp --}}
-                {!! $toko->map_toko !!}
+                {!! $toko->map_mitra !!}
                 </div>
                 <div class="col-6">
                     <div class="row">
@@ -466,23 +405,22 @@
                             <i class='far fa-calendar-alt' style='font-size:66px'></i>
                         </div>
                         <div class="col-4">
+                            @if($check)
                             <h3 style="color: #8fd14f" class="fw-bold">BUKA</h3>
-                            {{-- @if($check)
-
                             @else
                             <h3 style="color: red" class="fw-bold">TUTUP</h3>
-                            @endif --}}
+                            @endif
 
                             <H5>{{ $toko->jam_buka }} - {{ $toko->jam_tutup }}</H5>
 
                         </div>
                     </div>
-                    <h3 class="mt-2">Fasilitas toko</h3>
+                    <h3 class="mt-2">Fasilitas Toko</h3>
                     <div class="row">
                         @php
-                            $fasil_toko = preg_split('/---/', $toko->fasilitas_toko);
+                            $fasil_mitra = preg_split('/---/', $toko->fasilitas_mitra);
                         @endphp
-                        @foreach ($fasil_toko as $f)
+                        @foreach ($fasil_mitra as $f)
                             <div class="col-5">
                                 <p>
                                     @if ($f === 'Parkir Mobil & Motor')
@@ -503,26 +441,20 @@
                                     @if ($f === 'Toilet')
                                         <i class="fas fa-toilet"></i>
                                     @endif
+                                    @if ($f === 'Kantin')
+                                        <i class="fa-solid fa-utensils"></i>
+                                    @endif
+                                    @if ($f === 'Ruang Tunggu')
+                                    <i class="fas fa-person-booth"></i>
+                                    @endif
                                     {{ $f }}
                                 </p>
                             </div>
                         @endforeach
 
-                        {{-- <div class="col-5" >
-                       <p> <i class="fas fa-car-alt"></i> Wifi Gratis</p>
                     </div>
-                    <div class="col-5" >
-                       <p> <i class="fas fa-car-alt"></i> Pesan Antar</p>
-                    </div>
-                    <div class="col-5" >
-                       <p> <i class="fas fa-car-alt"></i> Pembayaran Non-Tunai</p>
-                    </div>
-                    <div class="col-5" >
-                       <p> <i class="fas fa-car-alt"></i> Makan di Tempat</p>
-                    </div> --}}
-
-                    </div>
-                    <h3 class="mt-2">Di Sekitar toko</h3>
+                   <section>
+                    <h3 class="mt-2">Di Sekitar Toko</h3>
                     <div class="row">
                         @php
                             $sekita_toko = preg_split('/---/', $toko->jenis_sekitar);
@@ -539,54 +471,12 @@
                                 </div>
                             @endif
                         @endforeach
-                        {{-- @php
-                    $jenis_sekitar = preg_split('/---/', $toko->jenis_sekitar);
-                    $value_sekitar = preg_split('/---/', $toko->value_jenis_sekitar);
-                @endphp
-                @foreach ($jenis_sekitar as $j)
-                <div class="col-5" >
-                    @if ($j === 'ATM')
-                        <p> <i class="far fa-dollar-sign"></i></p>
-                    @endif
-                    @if ($j === 'Bandara')
-                        <p> <i class="far fa-plane-alt"></i></p>
-                    @endif
-                    @if ($j === 'Stasiun')
-                        <p> <i class="fas fa-train"></i></p>
-                    @endif
-                </div>
-                @endforeach
-                <div class="col-5" >
-                @foreach ($value_sekitar as $v)
-                    @if ($loop->odd)
-                    <p style="margin-left:30px"> {{ $v }}</p>
-                    @endif
-                    @if ($loop->odd)
-                    <p> {{ $v }}</p>
-                    @endif
-                @endforeach
-                </div> --}}
                     </div>
+                   </section>
                 </div>
             </div>
-            <h2 class="mt-3">Kontak dan Informasi toko:</h2>
+            <h2 class="mt-3">Kontak dan Informasi Toko:</h2>
             <div class="container" style="font-size: 1.5rem">
-                {{-- <div class="row">
-                <div class="col-3">
-                    <i class='far fa-address-book'></i> <a href="www.spikoekuno.co.id">www.spikoekuno.co.id</a>
-                </div>
-                <div class="col-3">
-                    <i class='far fa-address-book'></i> <span href="www.spikoekuno.co.id"><i>081283421383</i></span>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-3">
-                    <i class='far fa-address-book'></i> <span href="www.spikoekuno.co.id"><i>@spikoekunosby</i></span>
-                </div>
-                <div class="col-3">
-                    <i class='far fa-address-book'></i> <span ><i>@sspanikoekunosby</i></span>
-                </div>
-            </div> --}}
                 <div class="row">
                     <div class="col-8">
                         {{-- @php
@@ -594,78 +484,26 @@
                         @endphp --}}
                         <div class="row">
                             {{-- @foreach ($kontak_toko as $k) --}}
-                            @if ($toko->website_toko)
+                            @if ($toko->website_mitra)
                             <div class="col-6">
-                                <i class='fas fa-globe'></i> <a href="{{ $toko->website_toko }}" style="color: black;text-decoration:none">{{ $toko->website_toko }}</a>
+                                <i class='fas fa-globe'></i> <a href="{{ $toko->website_toko }}" style="color: black;text-decoration:none">{{ $toko->website_mitra }}</a>
                             </div>
                             @endif
-                            @if ($toko->sosmed_toko)
+                            @if ($toko->sosmed_mitra)
                             <div class="col-6">
                                 <i class="fab fa-instagram"></i> <span
-                                    href="www.spikoekuno.co.id"><i>{{ $toko->sosmed_toko }}</i></span>
+                                    href="www.spikoekuno.co.id"><i>{{ $toko->sosmed_mitra }}</i></span>
                             </div>
                             @endif
-
-                            {{-- @endforeach --}}
-
-                            {{-- <div class="col-6">
-                            <i class='far fa-address-book'></i> <a href="www.spikoekuno.co.id">www.spikoekuno.co.id</a>
-                        </div>
-                        <div class="col-6">
-                            <i class='far fa-address-book'></i> <a href="www.spikoekuno.co.id">www.spikoekuno.co.id</a>
-                        </div> --}}
                         </div>
                     </div>
                 </div>
             </div>
 
         </div>
-        {{-- <div class="container carousel" style="">
-            <h1 class="mt-3">Galeri {{ $toko->nama_toko }}</h1>
-            <div class="container" style="position: center">
-                @php
-                    $galeri_toko = preg_split('/---/', $toko->galeri_toko);
-                    $galeri_toko_caption = preg_split('/---/', $toko->galeri_toko_caption);
-                @endphp
-                <div id="myCarousel" class="carousel" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        @foreach ($galeri_toko as $key => $g)
-                            <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
-                                <img src="{{ $g }}" class="d-block w-100" alt="...">
-                            </div>
-                            @foreach ($galeri_toko_caption as $gc)
-                                <div class="carousel-caption">
-                                    <h1>
-                                        @if ($loop->odd)
-                                            {{ $gc }}
-                                        @endif
-                                    </h1><br><br>
-                                    <p>
-                                        @if ($loop->even)
-                                            {{ $gc }}
-                                        @endif
-                                    </p>
-                                </div>
-                            @endforeach
-                        @endforeach
-                    </div>
-                </div>
-                <a class="carousel-control-prev" href="#myCarousel" role="button" data-bs-slide="next">
-                    <span class="sr-only">Previous</span>
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                </a>
-                <a class="carousel-control-next" href="#myCarousel" role="button" data-bs-slide="prev">
-                    <span class="sr-only">Next</span>
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                </a>
-
-            </div>
-
-
-        </div> --}}
         @php
-            $galeri_toko = preg_split('/---/', $toko->galeri_toko);
-            $galeri_toko_caption = preg_split('/---/', $toko->galeri_toko_caption);
+            $galeri_toko = preg_split('/---/', $toko->galeri_mitra);
+            $galeri_toko_caption = preg_split('/---/', $toko->galeri_mitra_caption);
         @endphp
         <div class="container">
             <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">

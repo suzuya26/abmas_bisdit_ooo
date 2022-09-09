@@ -48,6 +48,7 @@ Route::get('/tambahproduk', function () {return view('mitra.tambahproduk');});
 Route::get('/updateprofil', function () {return view('mitra.updateprofil');});
 
 Route::get('/toko/{idtoko}', [TokoController::class, 'show']);
+
 Route::get('/mitra', [MitraController::class, 'all']);
 Route::post('/update/{id}', [MitraController::class, 'update'])->name('update');
 Route::post('/updateGambarUtama/{id}', [MitraController::class, 'gambarutama']);
@@ -59,7 +60,7 @@ Route::post('/updateGambar5/{id}', [MitraController::class, 'gambar5']);
 Route::get('/profil/{id}', [MitraController::class, 'index'])->name('profil');
 Route::get('/edit/{id}', [MitraController::class, 'edit'])->name('edit');
 Route::get('/daftarproduk/{id}', [ProdukController::class, 'daftarproduk'])->name('daftarproduk');
-Route::get('/mitra/{idMitra}', [MitraController::class, 'show'])->middleware('mitra')->name('mitra');
+// Route::get('/mitra/{idMitra}', [MitraController::class, 'show'])->middleware('mitra')->name('mitra');
 Route::get('/edit/tambahproduk/{id}', [ProdukController::class, 'tambahproduk'])->name('tambahproduk');
 Route::post('/tambah', [ProdukController::class, 'tambah']);
 
@@ -68,6 +69,7 @@ Route::get('/produk/hapus/{id}', [ProdukController::class, 'hapus']);
 Route::get('/produk/edit/{id}', [ProdukController::class, 'editproduk']);
 Route::post('/produk/update/{id}', [ProdukController::class, 'update']);
 Route::get('/mitra', [MitraController::class, 'filter'])->name('filter');
+Route::get('/mitra/{idtmitra}', [MitraController::class, 'show']);
 
 
 

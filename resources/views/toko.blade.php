@@ -371,7 +371,7 @@
                 </div>
             </div>
     </section>
-        <section id="tempatbeli" style="margin-bottom: 200px;margin-top:-30px">
+        <section id="tempatbeli" style="margin-top:-30px" class="mb-5">
             <div class="container">
                 <div class="tempatbeli row">
                     <h1>Produk Oleh-Oleh dari {{ $toko->nama_toko }}</h1>
@@ -408,41 +408,6 @@
                 </div>
             </div>
         </section>
-
-
-        {{-- <div class="container ">
-        <div class="row mt-3">
-            <div class="col-4">
-                <img width="410px" src="https://images.pexels.com/photos/9938862/pexels-photo-9938862.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
-            </div>
-            <div class="col-5 mt-4">
-                <h1>Spikoe Kunoe Coklade</h1>
-                <h3>Rp20.000</h3>
-                <a href="" class="btn btn-secondary" style="font-size: 1.7rem"><i><span style="color: orange; font-weight:bold">#1</span> Spikoe di Toko ini</i></a>
-            </div>
-            <div class="col-3 mt-4">
-                <a href="" class=" button-produk"><i class="fa fa-thumbs-up" style="font-size:24px"></i> Rekomendasikan</a> <br>
-                <a href="" class=" mt-3 button-produk"><i class="far fa-bookmark" style="font-size:24px"></i> Simpan Produk</a>
-            </div>
-        </div>
-    </div> --}}
-        {{-- <div class="container ">
-        <div class="row mt-3">
-            <div class="col-4">
-                <img width="410px" src="https://images.pexels.com/photos/9938862/pexels-photo-9938862.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
-            </div>
-            <div class="col-5 mt-4">
-                <h1>Spikoe Kunoe Coklade</h1>
-                <h3>Rp20.000</h3>
-                <a href="" class="btn btn-secondary" style="font-size: 1.7rem"><i><span style="color: orange; font-weight:bold">#1</span> Spikoe di Toko ini</i></a>
-            </div>
-            <div class="col-3 mt-4">
-                <a href="" class=" button-produk"><i class="fa fa-thumbs-up" style="font-size:24px"></i> Rekomendasikan</a> <br>
-                <a href="" class=" mt-3 button-produk"><i class="far fa-bookmark" style="font-size:24px"></i> Simpan Produk</a>
-            </div>
-        </div>
-        <hr>
-    </div> --}}
         <div class="container" style="">
             <h1>Informasi {{ $toko->nama_toko }}</h1>
             <div class="row">
@@ -502,6 +467,12 @@
                                     @if ($f === 'Toilet')
                                         <i class="fas fa-toilet"></i>
                                     @endif
+                                    @if ($f === 'Kantin')
+                                        <i class="fa-solid fa-utensils"></i>
+                                    @endif
+                                    @if ($f === 'Ruang Tunggu')
+                                    <i class="fas fa-person-booth"></i>
+                                    @endif
                                     {{ $f }}
                                 </p>
                             </div>
@@ -521,6 +492,7 @@
                     </div> --}}
 
                     </div>
+                   <section>
                     <h3 class="mt-2">Di Sekitar Toko</h3>
                     <div class="row">
                         @php
@@ -538,34 +510,8 @@
                                 </div>
                             @endif
                         @endforeach
-                        {{-- @php
-                    $jenis_sekitar = preg_split('/---/', $toko->jenis_sekitar);
-                    $value_sekitar = preg_split('/---/', $toko->value_jenis_sekitar);
-                @endphp
-                @foreach ($jenis_sekitar as $j)
-                <div class="col-5" >
-                    @if ($j === 'ATM')
-                        <p> <i class="far fa-dollar-sign"></i></p>
-                    @endif
-                    @if ($j === 'Bandara')
-                        <p> <i class="far fa-plane-alt"></i></p>
-                    @endif
-                    @if ($j === 'Stasiun')
-                        <p> <i class="fas fa-train"></i></p>
-                    @endif
-                </div>
-                @endforeach
-                <div class="col-5" >
-                @foreach ($value_sekitar as $v)
-                    @if ($loop->odd)
-                    <p style="margin-left:30px"> {{ $v }}</p>
-                    @endif
-                    @if ($loop->odd)
-                    <p> {{ $v }}</p>
-                    @endif
-                @endforeach
-                </div> --}}
                     </div>
+                   </section>
                 </div>
             </div>
             <h2 class="mt-3">Kontak dan Informasi Toko:</h2>

@@ -68,11 +68,11 @@ class MitraController extends Controller
         return view('mitra_all', compact('param','tokomitra','toko','check','page'));
     }
 
-    public function mitra(){
-        $toko = DB::table('toko_oleh')->where('idtoko', 81)->first();
-        $produk_mitra = DB::table('mitra_produk')->where('idmitra',81)->get();
+    public function mitra($idmitra){
+        $tokomitra = DB::table('toko_mitra')->where('idmitra', $idmitra)->first();
+        $produk_mitra = DB::table('mitra_produk')->where('idmitra', $idmitra)->get();
         $idtoko = 81;
-        return view('mitra', compact(['toko', 'idtoko', 'produk_mitra']));
+        return view('mitra', compact(['tokomitra', 'idtoko', 'produk_mitra']));
     }
     public function index($id){
         // $nama_mitra = DB::table('users')->join('toko_mitra', 'idmitra', '=', 'mitra_id')->select('users.*','toko_mitra.*')->get();
@@ -258,18 +258,18 @@ class MitraController extends Controller
         }
         return redirect('/profil/'.$id);
     }
-    public function show($id){
+    public function show($idmitra){
         $page = Page::first();
         $page->visitsCounter()->increment();
 
-        $toko = DB::table('toko_mitra')->where('idmitra', $id)->first();
-        $mitra_produk = DB::table('mitra_produk')->where('idmitra', $id)->get();
+        $toko = DB::table('toko_mitra')->where('idmitra', $idmitra)->first();
+        $mitra_produk = DB::table('mitra_produk')->where('idmitra', $idmitra)->get();
         $now = Carbon::now();
         $start = Carbon::createFromTimeString($toko->jam_buka);
         $end = Carbon::createFromTimeString($toko->jam_tutup);
         $check = $now->between($start, $end);
 
-        return view('mitra', compact('toko', 'produk_mitra','check','page'));
+        return view('mitra', compact('toko', 'mitra_produk','check','page', 'idmitra'));
     }
     public function mitras($id){
         $toko_mitra = DB::table('toko_mitra')->join('users', 'mitra_id', '=', 'toko_mitra.idmitra')->select('toko_mitra.*', 'users.mitra_id')->where('idmitra', $id)->first();

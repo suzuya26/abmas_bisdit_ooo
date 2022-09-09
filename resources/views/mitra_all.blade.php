@@ -73,7 +73,7 @@
             /* Shadow01 */
             box-shadow: 0px 24px 48px rgba(0, 24, 52, 0.080899);
             border-radius: 0px 0px 40px 40px;
-            height: 300px;
+            height: 250px;
             width: 93%;
             margin-left: 10.5px;
             margin-top: -30px;
@@ -188,14 +188,14 @@
 
                         @foreach ($tokomitra as $rek)
 
-                            <div class="caro col-sm-3" onclick="location.href='/toko/{{ $rek->idmitra }}'">
+                            <div class="caro col-sm-3" onclick="location.href='/mitra/{{ $rek->idmitra }}'">
                                 <div class="foto-beli">
                                     <img src="{{ $rek->gambar_utama }}" width="100%" height="100%"
                                         style="border-radius: 20px">
                                 </div>
                                 <div class="nama-beli mb-5">
                                     <div class="teks-nama">
-                                        <h2>{{ $rek->nama_mitra }}</h2>
+                                        <h2 class="display-2">{{ $rek->nama_mitra }}</h2>
                                         <div class="info-beli" style="font-size: 25px">
                                             @if ($check)
                                                 <h3 style="color: #0CBB3D;font-size:24px" class="fw-bold">BUKA
