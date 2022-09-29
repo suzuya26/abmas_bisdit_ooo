@@ -49,22 +49,23 @@
         margin-top: 25px;
     }
 
-    .nama-beli {
+        .nama-beli {
             background: #DEECF3;
             /* Shadow01 */
             box-shadow: 0px 24px 48px rgba(0, 24, 52, 0.080899);
             border-radius: 0px 0px 40px 40px;
-            height: 145px;
-            width: 280px;
+            height: 200px;
+            width: 93%;
             margin-left: 10.5px;
-            margin-top: -30px;
-            padding-top: 15px;
-
+            margin-top: -15px;
+            padding-top: 20px;
+            padding-bottom: 40%;
         }
         .teks-nama {
             vertical-align: bottom;
             text-align: left;
             padding-left: 20px;
+            overflow: hidden;
         }
         .teks-nama h2 {
             font-family: 'Poppins';
@@ -79,6 +80,8 @@
             background: #9B9B9B;
             border-radius: 40px;
             display: block;
+            object-fit: cover;
+            object-position: center;
         }
         #jam-buka, #buka{
             font-size: 1.3rem
@@ -316,11 +319,32 @@
         }
         .foto-oleh img {
             border-radius: 100px 0px 0px 0px;
+            object-fit: cover;
+            object-position: center;
         }
         .livewire {
             position: absolute;
             top : 600px;
             padding: 5px;
+        }
+        h1 {
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 48px;
+            line-height: 50px;
+        }
+
+        p  {
+            font-family: 'Poppins';
+            font-style: normal;
+        }
+
+
+        h4 {
+            font-family: 'Quicksand';
+            font-style: normal;
+            color: #555555;
         }
     </style>
     <div class="body" style="overflow:hidden">

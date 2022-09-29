@@ -138,6 +138,8 @@
             border-radius: 20px;
             display: block;
             transition: .3s;
+            object-fit: cover;
+            object-position: center;
         }
 
         #buka {
@@ -179,6 +181,11 @@
         .foto-beli:hover {
             width: 103%;
             cursor: pointer;
+        }
+
+        .foto-beli img {
+            object-fit: cover;
+            object-position: center;
         }
     </style>
     <div class="section utama" style="background: #C4C4C4;">

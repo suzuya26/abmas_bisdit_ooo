@@ -246,6 +246,8 @@
 
         .foto-beli img {
             border-radius: 20px;
+            object-fit: cover;
+            object-position: center;
         }
 
         .nama-beli {
@@ -340,10 +342,14 @@
         }
 
         .foto-oleh {
-            position: relative;
+
         }
 
         .foto-oleh img {
+            object-fit: cover;
+            object-position: center;
+            width: 700px;
+            height: 679px;
             border-radius: 100px 0px 0px 0px;
         }
 
@@ -456,10 +462,7 @@
                     </div>
                     <div class="col-6 mt-3">
                         <div class="foto-oleh">
-                            <img src="{{ $v->gambarutama }}" width="100%" height="679px">
-                            <div class="livewire col-2 d-flex justify-content-end">
-                                <livewire:favorite-index :idoleh="$idoleh"></livewire:favorite-index>
-                            </div>
+                            <img src="{{ $v->gambarutama }}">
                         </div>
                     </div>
                 </div>
