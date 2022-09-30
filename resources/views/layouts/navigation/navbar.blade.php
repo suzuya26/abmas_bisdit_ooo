@@ -108,7 +108,7 @@ width: 185px;
                                                     <div class="card h-100">
                                                         <img src="{{ $j->gambarjenis }}"
                                                             class="card-img-top d-block embed-responsive embed-responsive-16by9 rounded-top"
-                                                            style="object-fit: cover">
+                                                            style="object-fit: cover"width="200px" height="100px">
                                                         <div >
                                                             <h6 class="card-text m-2">{{ $j->namajenis }}</h6>
                                                             <a href="/jenis/{{ $j->namajenis }}"
@@ -126,7 +126,7 @@ width: 185px;
                                                     <div class="card h-100">
                                                         <img src="{{ $b->gambarbahan }}"
                                                             class="card-img-top d-block embed-responsive embed-responsive-16by9 rounded-top"
-                                                            style="object-fit: cover">
+                                                            style="object-fit: cover" width="200px" height="100px">
                                                         <div >
                                                             <h6 class="card-text m-2">{{ $b->namabahan }}
                                                             </h6>
@@ -145,7 +145,7 @@ width: 185px;
                                                     <div class="card h-100">
                                                         <img src="{{ $r->gambarasa }}"
                                                             class="card-img-top d-block embed-responsive embed-responsive-16by9 rounded-top"
-                                                            style="object-fit: cover">
+                                                            style="object-fit: cover" width="200px" height="100px">
                                                         <div >
                                                             <h6 class="card-text m-2">{{ $r->namarasa }}</h6>
                                                             <a href="/filter/rasa/{{ $r->namarasa }}"
@@ -163,7 +163,7 @@ width: 185px;
                                                     <div class="card h-100">
                                                         <img src="{{ $t->gambartekstur }}"
                                                             class="card-img-top d-block embed-responsive embed-responsive-16by9 rounded-top"
-                                                            style="object-fit: cover">
+                                                            style="object-fit: cover"width="200px" height="100px">
                                                         <div >
                                                             <h6 class="card-text m-2">{{ $t->namatekstur }}
                                                             </h6>
@@ -183,7 +183,7 @@ width: 185px;
                                                         <div class="card h-100">
                                                             <img src="{{ $m->gambarmasak }}"
                                                                 class="card-img-top d-block embed-responsive embed-responsive-16by9 rounded-top"
-                                                                style="object-fit: cover">
+                                                                style="object-fit: cover"width="200px" height="100px">
                                                             <div >
                                                                 <h6 class="card-text m-2">
                                                                     {{ $m->namamasak }}</h6>

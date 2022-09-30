@@ -319,6 +319,8 @@
         }
         .foto-oleh img {
             border-radius: 100px 0px 0px 0px;
+            object-fit: cover;
+            object-position: center;
 
         }
         .livewire {
