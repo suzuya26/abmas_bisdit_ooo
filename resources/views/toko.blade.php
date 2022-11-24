@@ -255,7 +255,7 @@
         }
 
 
-        }
+
         #carousel {
             margin-top: 300px;
         }

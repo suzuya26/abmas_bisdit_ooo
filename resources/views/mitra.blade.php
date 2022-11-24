@@ -54,7 +54,7 @@
             /* Shadow01 */
             box-shadow: 0px 24px 48px rgba(0, 24, 52, 0.080899);
             border-radius: 0px 0px 40px 40px;
-            height: 145px;
+            height: 200px;
             width: 280px;
             margin-left: 10.5px;
             margin-top: -30px;
@@ -79,6 +79,8 @@
             background: #9B9B9B;
             border-radius: 40px;
             display: block;
+            object-fit: cover;
+            object-position: center;
         }
         #jam-buka, #buka{
             font-size: 1.3rem
@@ -316,6 +318,8 @@
         }
         .foto-oleh img {
             border-radius: 100px 0px 0px 0px;
+            object-fit: cover;
+            object-position: center;
         }
         .livewire {
             position: absolute;

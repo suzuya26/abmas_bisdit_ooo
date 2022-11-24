@@ -10,7 +10,7 @@
                             <div class="card h-100">
                                 <img src="{{ $r->gambarutama }}"
                                     class="card-img-top d-block embed-responsive embed-responsive-16by9 rounded"
-                                    style="object-fit: cover">
+                                    style="object-fit: cover" width="200px" height="250px">
                                 <div class="card-body">
                                     <h5 class="card-title">
                                         {{ $r->namaoleh }}</h5>
@@ -30,7 +30,7 @@
                         <div class="card h-100">
                             <img src="{{ $r->gambar_utama }}"
                                 class="card-img-top d-block embed-responsive embed-responsive-16by9 rounded"
-                                style="object-fit: cover">
+                                style="object-fit: cover"  width="200px" height="250px">
                             <div class="card-body">
                                 <h5 class="card-title">
                                     {{ $r->nama_toko }}</h5>
